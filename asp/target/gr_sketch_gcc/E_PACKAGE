@@ -1,0 +1,7 @@
+E_PACKAGE asp_gr_sakura_gcc
+VERSION %date
+
+INCLUDE ../../MANIFEST
+INCLUDE ../../arch/rx630_gcc/MANIFEST
+#INCLUDE ../../arch/gcc/MANIFEST
+INCLUDE ../../cfg/MANIFEST

@@ -1,0 +1,29 @@
+CRE_TSK #tskid* { .tskatr &exinf &task +itskpri .stksz &stk? }
+DEF_TEX %tskid* { .texatr &texrtn }
+AID_TSK .notsk
+CRE_SEM #semid* { .sematr .isemcnt .maxsem }
+AID_SEM .nosem
+CRE_FLG #flgid* { .flgatr .iflgptn }
+AID_FLG .noflg
+CRE_DTQ #dtqid* { .dtqatr .dtqcnt &dtqmb? }
+AID_DTQ .nodtq
+CRE_PDQ #pdqid* { .pdqatr .pdqcnt +maxdpri &pdqmb? }
+AID_PDQ .nopdq
+CRE_MBX #mbxid* { .mbxatr +maxmpri? &mprihd? }
+AID_MBX .nombx
+CRE_MPF #mpfid* { .mpfatr .blkcnt .blksz &mpf? &mpfmb? }
+AID_MPF .nompf
+CRE_CYC #cycid* { .cycatr &exinf &cychdr .cyctim .cycphs }
+AID_CYC .nocyc
+CRE_ALM #almid* { .almatr &exinf &almhdr }
+AID_ALM .noalm
+CFG_INT .intno* { .intatr +intpri }
+ATT_ISR { .isratr &exinf .intno &isr +isrpri }
+AID_ISR .noisr
+DEF_INH .inhno* { .inhatr &inthdr }
+DEF_EXC .excno* { .excatr &exchdr }
+DEF_ICS { .istksz &istk? }
+DEF_KMM { .kmmsz &kmm? }
+ATT_INI { .iniatr &exinf &inirtn }
+ATT_TER { .teratr &exinf &terrtn }
+DEF_OVR { .ovratr &ovrhdr }
