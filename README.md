@@ -20,7 +20,7 @@ GR-CITRUSよりもメモリ容量が少ないGR-SAKURAでも動作し、Ethernet
 
 ## mrubyの省RAM化対策について
 
-mrubyの初期化直後の動的メモリの状態をGCがマークする要領でオブジェクトを辿り、[preset_symbols.cpp](https://github.com/h7ga40/gr_citrus/citrus_sketch/blob/master/src/preset_symbols.cpp)としてコードにダンプしました。
+mrubyの初期化直後の動的メモリの状態をGCがマークする要領でオブジェクトを辿り、[preset_symbols.cpp](https://github.com/h7ga40/gr_citrus/blob/master/citrus_sketch/src/preset_symbols.cpp)としてコードにダンプしました。
 ダンプするプログラムのコードは[ここ](https://github.com/h7ga40/BlocklyMruby/blob/master/msvc/mruby/objdump.c)にあります。  
 Rubyのクラス定義や文字列などの変化のないデータをROMに割り当てることで、RAMの使用量を減らしています。クラス定義でもインスタンス変数やメソッドは実行時に追加されるので、それらを収めるハッシュテーブルはRAMに割り当てていますが、初期化動作はROMからのコピーになるので、起動が早くなっていると思います。
 GCの動作などで、予め割り当てたメモリか実行時に追加したメモリかを区別する必要があるので、mruby本体にも変更を行っています。
