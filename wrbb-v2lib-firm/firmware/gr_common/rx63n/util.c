@@ -204,6 +204,8 @@ void assignPinFunction(int pin, int psel, int isel, int asel)
     if (pin >= 0 && pin < NUM_DIGITAL_PINS) {
         int port = digitalPinToPort(pin);
         int bit = digitalPinToBit(pin);
+        MPC.PWPR.BIT.B0WI = 0;
+        MPC.PWPR.BIT.PFSWE = 1;
         volatile PFS* pfs = (volatile PFS*)&MPC.P00PFS.BYTE + (8 * (port) + (bit));
         if (psel >= 0) {
             pfs->BIT.PSEL = psel;

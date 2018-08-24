@@ -62,68 +62,10 @@ target_initialize( void )
 	 */
 	prc_initialize();
 
-	/* IOポート初期化 */
-	/* P25を出力ポートにする */
-	sil_wrb_mem(PORT2_PDR_ADDR, 
-		sil_reb_mem(PORT2_PDR_ADDR) | PORT_PDR_B5_BIT);
-	/* PA0, PA1, PA2, PA6を出力ポートにする */
-	sil_wrb_mem(PORTA_PDR_ADDR,
-		sil_reb_mem(PORTA_PDR_ADDR) | PORT_PDR_B0_BIT | PORT_PDR_B1_BIT | PORT_PDR_B2_BIT | PORT_PDR_B6_BIT);
-	/* PA7を入力ポートにする */
-	sil_wrb_mem(PORTA_PDR_ADDR,
-		sil_reb_mem(PORTA_PDR_ADDR) & ~PORT_PDR_B7_BIT);
-
 	/*
 	 *  シリアルポートの設定
 	 */
 	rx630_uart_init(TARGET_PUTC_PORTID, UART_BAUDRATE, UART_CLKSRC);
-
-	/* ポートP20をTxD0, ポートP21をRxD0に */
-	sil_wrb_mem(PORT2_PMR_ADDR, 0x03);
-
-	/* データディレクションレジスタ(PDR)の設定 P21(RxD0)を入力ポートにする */
-	sil_wrb_mem(PORT2_PDR_ADDR, 
-		sil_reb_mem(PORT2_PDR_ADDR) & ~PORT_PDR_B1_BIT);
-
-	/* データディレクションレジスタ(PDR)の設定 P20(TxD0)を出力ポートにする */
-	sil_wrb_mem(PORT2_PDR_ADDR, 
-		sil_reb_mem(PORT2_PDR_ADDR) | PORT_PDR_B0_BIT);
-
-	/* ポートP40～P47を周辺機器に */
-	sil_wrb_mem(PORT4_PMR_ADDR, 0xFF);
-
-	/* ポートP40～P47を入力ポートにする */
-	sil_wrb_mem(PORT4_PDR_ADDR, 0x00);
-
-	/* 書き込みプロテクトレジスタの設定 PFSWEビットへの書き込みを許可 */
-	sil_wrb_mem(MPC_PWPR_ADDR, 0x00);
-	/* 書き込みプロテクトレジスタの設定 PxxFSレジスタへの書き込みを許可 */
-	sil_wrb_mem(MPC_PWPR_ADDR, 0x40);
-
-	/* P21端子機能制御レジスタ RXD0とする */
-	sil_wrb_mem(MPC_P21PFS_ADDR, 0x0a);
-	/* P20端子機能制御レジスタ TXD0とする */
-	sil_wrb_mem(MPC_P20PFS_ADDR, 0x0a);
-
-	/* P40端子機能制御レジスタ アナログ入力AN000とする */
-	sil_wrb_mem(MPC_P40PFS_ADDR, 0x80);
-	/* P41端子機能制御レジスタ アナログ入力AN001とする */
-	sil_wrb_mem(MPC_P41PFS_ADDR, 0x80);
-	/* P42端子機能制御レジスタ アナログ入力AN002とする */
-	sil_wrb_mem(MPC_P42PFS_ADDR, 0x80);
-	/* P43端子機能制御レジスタ アナログ入力AN003とする */
-	sil_wrb_mem(MPC_P43PFS_ADDR, 0x80);
-	/* P44端子機能制御レジスタ アナログ入力AN004とする */
-	sil_wrb_mem(MPC_P44PFS_ADDR, 0x80);
-	/* P45端子機能制御レジスタ アナログ入力AN005とする */
-	sil_wrb_mem(MPC_P45PFS_ADDR, 0x80);
-	/* P46端子機能制御レジスタ アナログ入力AN006とする */
-	sil_wrb_mem(MPC_P46PFS_ADDR, 0x80);
-	/* P47端子機能制御レジスタ アナログ入力AN007とする */
-	sil_wrb_mem(MPC_P47PFS_ADDR, 0x80);
-
-	/* 書き込みプロテクトレジスタの設定 書き込みを禁止 */
-	sil_wrb_mem(MPC_PWPR_ADDR, 0x80);
 }
 
 

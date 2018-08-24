@@ -964,6 +964,9 @@ void detachInterrupt(uint8_t interruptNum) {
       break;
 #endif
     }
+#else
+    MPC.PWPR.BIT.B0WI = 0;
+    MPC.PWPR.BIT.PFSWE = 1;
 #endif // __RX600__
     // Determine which IRQ is being disabled. Note that the NMI (IO54) cannot
     // be disabled.

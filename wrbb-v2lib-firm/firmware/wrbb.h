@@ -122,8 +122,11 @@
 #endif
 
 //RX600シリーズの設定
+#ifndef GRCITRUS
 #define CPU		CPU_RX63NB
-//#define CPU		CPU_RX631F
+#else
+#define CPU		CPU_RX631F
+#endif
 #if CPU == CPU_RX63NB
 #	define CPURAM	"(128KB)"		//メモリ128KB
 #else
@@ -147,8 +150,11 @@
 	#endif
 #endif
 
+#ifndef GRCITRUS
 #define PIN_LED		61				//LEDのピン番号 GR-SAKURAのV2ファームの場合
-//#define PIN_LED		33				//LEDのピン番号 GR-CITRUSのV2ファームの場合
+#else
+#define PIN_LED		33				//LEDのピン番号 GR-CITRUSのV2ファームの場合
+#endif
 
 #define	FILE_LOAD	PORT3.PIDR.BIT.B5		//PORT 3-5
 

@@ -101,9 +101,9 @@ typedef uint16_t	CLOCK;
  *
  *  コンペアマッチ周期
  *  周辺モジュールクロック（PCLK）48MHzを8分周するので，
- *  6カウント = 1us : max 10922.5us
+ *  6カウント = 1us : max 10922.667us
  */
-#define CMCOR_PERIOD	(0xFFFFU)
+#define CMCOR_PERIOD	(0x10000U)
 
 /*
  * カウント < - > マイクロ秒 変換値
@@ -116,7 +116,7 @@ typedef uint16_t	CLOCK;
  *
  *  2^32 / 6
  */
-#define TCYC_HRTCNT		715827883U	/* (0x100000000 / 6) = 715827882.667usec */
+#define TCYC_HRTCNT		715827882U	/* (0x100000000 / 6) = 715827882.667usec */
 
 /*
  *  高分解能タイマのカウント値の進み幅

@@ -129,7 +129,7 @@ target_timer_initialize(intptr_t exinf)
 	 * コンペアマッチタイマ周期設定
 	 */
 	sil_wrh_mem(CMT0_CMCOR_ADDR, 0); /* lower */
-	sil_wrh_mem(CMT1_CMCOR_ADDR, CMCOR_PERIOD); /* upper */
+	sil_wrh_mem(CMT1_CMCOR_ADDR, CMCOR_PERIOD - 1); /* upper */
 	elapse_upper_timer = 0;
 
 	/*
@@ -498,7 +498,6 @@ target_ovrtimer_start(PRCTIM ovrtim)
 	/*
 	 * 下位タイマ設定
 	 */
-//	if(timer_ovr_upper_set_count == 0 && timer_ovr_lower_set_count > 0) {
 	if(timer_ovr_upper_set_count == 0) {
 		if(timer_ovr_lower_set_count == 0) {
 			target_ovrtimer_raise_event();
@@ -586,18 +585,13 @@ target_ovrtimer_stop(uint_t int_num)
 			sil_reh_mem(CMT_CMSTR1_ADDR) & ~CMT_CMSTR1_STR2_BIT);
 
 	/*
-	 *  タイマ割込み要求をクリア
-	 */
-	target_ovrtimer_int_clear();
-
-	/*
 	 * オーバランタイマ動作中フラグ
 	 */
 	timer_ovr_running_flg = false;
 
-	if (x_probe_int(INTNO_TIMER2)) {
+	if(int_num == INTNO_TIMER2) {
 		/*
-		 *  割込み要求が発生している場合
+		 *  オーバラン割込みの場合
 		 */
 		target_ovrtimer_int_clear();
 		return(0U);
@@ -613,7 +607,7 @@ target_ovrtimer_stop(uint_t int_num)
 			cnt += TCYC_HRTCNT;
 		}
 
-		if(cnt > timer_ovr_ovrtim_backup) { /* 制限時間を過ぎた */
+		if(cnt > timer_ovr_ovrtim_backup) { /* 設定時間を過ぎた */
 			cnt = 0;
 		}
 		return (PRCTIM)cnt;
@@ -635,8 +629,16 @@ target_ovrtimer_get_current(void)
 		return(0U);
 	}
 	else {
-		cnt = sil_reh_mem(CMT1_CMCNT_ADDR);
-		return (PRCTIM)(cnt / USEC_CONVERT_VALUE);
+		HRTCNT timer_ovr_hrt_current = target_hrt_get_current();
+		cnt = timer_ovr_ovrtim_backup - (timer_ovr_hrt_current - timer_ovr_hrt_backup);
+		if(timer_ovr_hrt_current < timer_ovr_hrt_backup) {
+			cnt += TCYC_HRTCNT;
+		}
+
+		if(cnt > timer_ovr_ovrtim_backup) { /* 設定時間を過ぎた */
+			cnt = 0;
+		}
+		return (PRCTIM)cnt;
 	}
 }
 

@@ -1,4 +1,3 @@
-
 #include <mruby.h>
 #include <stdlib.h>
 #include <string.h>
