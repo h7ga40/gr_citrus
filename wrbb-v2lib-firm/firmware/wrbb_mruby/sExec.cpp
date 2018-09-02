@@ -129,8 +129,8 @@ bool HeaderCheck(rite_binary_header *he, unsigned long tsize)
 	unsigned long hsize = 0;
 
 	if (memcmp(he->binary_ident, RITE_BINARY_IDENT, sizeof(he->binary_ident)) == 0) {
-		hsize = (he->binary_size[3] << 24) | (he->binary_size[2] << 16)
-			| (he->binary_size[1] << 8) | he->binary_size[0];
+		hsize = (he->binary_size[0] << 24) | (he->binary_size[1] << 16)
+			| (he->binary_size[2] << 8) | he->binary_size[3];
 	}
 	else if (memcmp(he->binary_ident, RITE_BINARY_IDENT_LIL, sizeof(he->binary_ident)) == 0) {
 		hsize = (he->binary_size[0] << 24) | (he->binary_size[1] << 16)
@@ -247,7 +247,7 @@ bool notFinishFlag = true;
 		unsigned long tsize = EEP.ffilesize(ExeFilename);
 
 		rite_binary_header he;
-		for (int i = 0; i < 8; i++) { ((char *)&he)[i] = EEP.fread(fp); }
+		for (int i = 0; i < sizeof(he); i++) { ((uint8_t *)&he)[i] = (uint8_t)EEP.fread(fp); }
 
 		if (!HeaderCheck(&he, tsize)) {
 			char az[50];
@@ -273,10 +273,13 @@ bool notFinishFlag = true;
 			return false;
 		}
 
+		//先頭にする
+		EEP.fseek(fp, 0, EEP_SEEKTOP);
+
 		RubyCode[0] = 0;
 		unsigned long pos = 0;
 		while (!EEP.fEof(fp)) {
-			RubyCode[pos] = EEP.fread(fp);
+			RubyCode[pos] = (uint8_t)EEP.fread(fp);
 			pos++;
 		}
 
