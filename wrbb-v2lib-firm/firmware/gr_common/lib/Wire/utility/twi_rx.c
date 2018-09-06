@@ -89,7 +89,9 @@ void twi_rx_init(uint8_t channel, int freq){
         int sdaBit = digitalPinToBit(t->sdaPin);
         int sclBit = digitalPinToBit(t->sclPin);
 
+        SYSTEM.PRCR.WORD = 0xA503;	// 保護レジスタ書き込み許可.
         *t->mstpcr &= ~(1UL << t->mstpBit);
+        SYSTEM.PRCR.WORD = 0xA500;	// 保護レジスタ書き込み禁止.
 
         // Configure SCI0's SCL, SDA pins for peripheral functions.
 

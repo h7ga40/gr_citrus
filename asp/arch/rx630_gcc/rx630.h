@@ -135,18 +135,18 @@
 #define INT_TPU0_TGI0B		127
 #define INT_TPU0_TGI0C		128
 #define INT_TPU0_TGI0D		129
-#define INT_TPU1_TGI0A		130
-#define INT_TPU1_TGI0B		131
-#define INT_TPU2_TGI0A		132
-#define INT_TPU2_TGI0B		133
-#define INT_TPU3_TGI0A		134
-#define INT_TPU3_TGI0B		135
-#define INT_TPU3_TGI0C		136
-#define INT_TPU3_TGI0D		137
-#define INT_TPU4_TGI0A		138
-#define INT_TPU4_TGI0B		139
-#define INT_TPU5_TGI0A		140
-#define INT_TPU5_TGI0B		141
+#define INT_TPU1_TGI1A		130
+#define INT_TPU1_TGI1B		131
+#define INT_TPU2_TGI2A		132
+#define INT_TPU2_TGI2B		133
+#define INT_TPU3_TGI3A		134
+#define INT_TPU3_TGI3B		135
+#define INT_TPU3_TGI3C		136
+#define INT_TPU3_TGI3D		137
+#define INT_TPU4_TGI4A		138
+#define INT_TPU4_TGI4B		139
+#define INT_TPU5_TGI5A		140
+#define INT_TPU5_TGI5B		141
 #define INT_MTU0_TGIA0		142
 #define INT_MTU0_TGIB0		143
 #define INT_MTU0_TGIC0		144
@@ -1514,6 +1514,25 @@
 #define PORTF_ODR1_ADDR			( ( volatile uint8_t __evenaccess * )0x0008C09F )
 #define PORTG_ODR1_ADDR			( ( volatile uint8_t __evenaccess * )0x0008C0A1 )
 #define PORTJ_ODR1_ADDR			( ( volatile uint8_t __evenaccess * )0x0008C0A5 )
+#define PORT_ODR_Pm0_OFFSET		( 0U )
+#define PORT_ODR_Pm0_MASK		( 0x3U << PORT_ODR_Pm0_OFFSET )
+#define PORT_ODR_Pm1_OFFSET		( 2U )
+#define PORT_ODR_Pm1_MASK		( 0x3U << PORT_ODR_Pm1_OFFSET )
+#define PORT_ODR_Pm2_OFFSET		( 4U )
+#define PORT_ODR_Pm2_MASK		( 0x3U << PORT_ODR_Pm2_OFFSET )
+#define PORT_ODR_Pm3_OFFSET		( 6U )
+#define PORT_ODR_Pm3_MASK		( 0x3U << PORT_ODR_Pm3_OFFSET )
+#define PORT_ODR_Pm4_OFFSET		( 0U )
+#define PORT_ODR_Pm4_MASK		( 0x3U << PORT_ODR_Pm4_OFFSET )
+#define PORT_ODR_Pm5_OFFSET		( 2U )
+#define PORT_ODR_Pm5_MASK		( 0x3U << PORT_ODR_Pm5_OFFSET )
+#define PORT_ODR_Pm6_OFFSET		( 4U )
+#define PORT_ODR_Pm6_MASK		( 0x3U << PORT_ODR_Pm6_OFFSET )
+#define PORT_ODR_Pm7_OFFSET		( 6U )
+#define PORT_ODR_Pm7_MASK		( 0x3U << PORT_ODR_Pm7_OFFSET )
+#define PORT_ODR_CMOS			( 0U )
+#define PORT_ODR_NCH_OPEN_DRAIN	( 1U )
+#define PORT_ODR_PCH_OPEN_DRAIN	( 2U )
 
 /*
  *  マルチファンクションピンコントローラのレジスタ情報

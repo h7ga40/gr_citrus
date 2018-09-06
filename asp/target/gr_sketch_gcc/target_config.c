@@ -66,6 +66,30 @@ target_initialize( void )
 	 *  シリアルポートの設定
 	 */
 	rx630_uart_init(TARGET_PUTC_PORTID, UART_BAUDRATE, UART_CLKSRC);
+
+	/* ポートP20をTxD0, ポートP21をRxD0に */
+	sil_wrb_mem(PORT2_PMR_ADDR, 0x03);
+
+	/* データディレクションレジスタ(PDR)の設定 P21(RxD0)を入力ポートにする */
+	sil_wrb_mem(PORT2_PDR_ADDR, 
+		sil_reb_mem(PORT2_PDR_ADDR) & ~PORT_PDR_B1_BIT);
+
+	/* データディレクションレジスタ(PDR)の設定 P20(TxD0)を出力ポートにする */
+	sil_wrb_mem(PORT2_PDR_ADDR, 
+		sil_reb_mem(PORT2_PDR_ADDR) | PORT_PDR_B0_BIT);
+
+	/* 書き込みプロテクトレジスタの設定 PFSWEビットへの書き込みを許可 */
+	sil_wrb_mem(MPC_PWPR_ADDR, 0x00);
+	/* 書き込みプロテクトレジスタの設定 PxxFSレジスタへの書き込みを許可 */
+	sil_wrb_mem(MPC_PWPR_ADDR, 0x40);
+
+	/* P21端子機能制御レジスタ RXD0とする */
+	sil_wrb_mem(MPC_P21PFS_ADDR, 0x0a);
+	/* P20端子機能制御レジスタ TXD0とする */
+	sil_wrb_mem(MPC_P20PFS_ADDR, 0x0a);
+
+	/* 書き込みプロテクトレジスタの設定 書き込みを禁止 */
+	sil_wrb_mem(MPC_PWPR_ADDR, 0x80);
 }
 
 
@@ -104,4 +128,31 @@ TOPPERS_assert_abort( void )
 #ifndef _MSC_VER
 	while (1) asm("nop");
 #endif
+}
+
+void init()
+{
+	
+}
+
+unsigned long millis()
+{
+	return fch_hrt() / 1000;
+}
+
+unsigned long micros()
+{
+	return fch_hrt();
+}
+
+void delay(unsigned long ms)
+{
+	if (dly_tsk(ms * 1000) != E_OK)
+		TOPPERS_assert_abort();
+}
+
+void delayMicroseconds(unsigned int us)
+{
+	if (dly_tsk(us) != E_OK)
+		TOPPERS_assert_abort();
 }

@@ -481,7 +481,7 @@ static mrb_value mrb_target_board_nslookup(mrb_state *mrb, mrb_value self)
 	mrb_value rline, rret;
 	char *line;
 	T_RSLV_DNS_MSG	rslv;
-	ER_UINT		length, offset;
+	ER_UINT		length;
 	uint_t		flags;
 	uint8_t		*msg;
 

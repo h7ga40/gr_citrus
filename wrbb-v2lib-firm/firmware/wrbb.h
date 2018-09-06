@@ -115,7 +115,11 @@
 #	elif FIRMWARE == SDWF
 #		define FIRMWARE_TEXT	"SDWF"
 #	elif FIRMWARE == CITRUS
+#	ifndef GRCITRUS
+#		define FIRMWARE_TEXT	"SAKURA"
+#	else
 #		define FIRMWARE_TEXT	"CITRUS"
+#	endif
 #	elif FIRMWARE == WRBB4
 #		define FIRMWARE_TEXT	"WRBB4"
 #	endif
