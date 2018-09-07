@@ -38,6 +38,7 @@
 #include <sExec.h>
 #include "../wrbb.h"
 #include <rx63n/iodefine.h>
+#include "mrb_lcd.h"
 #include "dhcp4_cli.h"
 #include "ntp_cli.h"
 #include "resolver.h"
@@ -537,8 +538,11 @@ extern "C" void mrb_mruby_others_gem_init(mrb_state* mrb)
 	mrb_define_class_method(mrb, _module_target_board, "ntpdate", mrb_target_board_ntpdate, MRB_ARGS_NONE());
 	mrb_define_class_method(mrb, _module_target_board, "ping", mrb_target_board_ping, MRB_ARGS_NONE());
 	mrb_define_class_method(mrb, _module_target_board, "nslookup", mrb_target_board_nslookup, MRB_ARGS_NONE());
+
+	mrb_mruby_lcd_gem_init(mrb);
 }
 
 extern "C" void mrb_mruby_others_gem_final(mrb_state* mrb)
 {
+	mrb_mruby_lcd_gem_final(mrb);
 }

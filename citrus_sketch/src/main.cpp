@@ -27,6 +27,7 @@
 #include <sExec.h>
 #include "../wrbb.h"
 #include <rx63n/iodefine.h>
+#include "mrb_lcd.h"
 
 extern "C" void enableInterrupt(int intno)
 {
@@ -110,8 +111,10 @@ extern "C" void main_task(intptr_t exinf)
 
 extern "C" void mrb_mruby_others_gem_init(mrb_state* mrb)
 {
+	mrb_mruby_lcd_gem_init(mrb);
 }
 
 extern "C" void mrb_mruby_others_gem_final(mrb_state* mrb)
 {
+	mrb_mruby_lcd_gem_final(mrb);
 }

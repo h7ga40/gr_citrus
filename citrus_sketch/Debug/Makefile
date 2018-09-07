@@ -157,20 +157,30 @@ APPLNAME = main
 APPLDIR = ../src
 APPL_CFG = $(APPLNAME).cfg
 
-APPL_DIR = $(APPLDIR) $(SRCDIR)/library ../../mruby-1.4.1/include ../../wrbb-v2lib-firm/firmware/gr_common ../../wrbb-v2lib-firm/firmware/gr_common/lib/SD ../../wrbb-v2lib-firm/firmware/gr_common/core ../../wrbb-v2lib-firm/firmware/wrbb_eepfile ../../wrbb-v2lib-firm/firmware/wrbb_mruby
+APPL_DIR = $(APPLDIR) $(SRCDIR)/library \
+	../../mruby-1.4.1/include \
+	../../wrbb-v2lib-firm/firmware/gr_common \
+	../../wrbb-v2lib-firm/firmware/gr_common/lib/SD \
+	../../wrbb-v2lib-firm/firmware/gr_common/core \
+	../../wrbb-v2lib-firm/firmware/wrbb_eepfile \
+  ../../wrbb-v2lib-firm/firmware/wrbb_mruby \
+  ../../sketch_common/Adafruit_GFX \
+  ../../sketch_common/Adafruit_SSD1306 \
+  ../../sketch_common/fonts \
+  ../../sketch_common
 APPL_ASMOBJS = reset_program.o
 ifdef USE_CXX
-  APPL_CXXOBJS = $(APPLNAME).o preset_symbols.o
+  APPL_CXXOBJS = $(APPLNAME).o preset_symbols.o Adafruit_GFX.o Adafruit_SSD1306.o draw_font.o shnm12_font.o mrb_lcd.o
   APPL_COBJS = 
 else
-  APPL_COBJS = $(APPLNAME).o preset_symbols.o
+  APPL_COBJS = $(APPLNAME).o preset_symbols.o Adafruit_GFX.o Adafruit_SSD1306.o draw_font.o shnm12_font.o mrb_lcd.o
 endif
 APPL_COBJS := $(APPL_COBJS) log_output.o vasyslog.o t_perror.o strerror.o
 #APPL_MRB := $(APPLNAME)_rb.mrb
 APPL_MRB :=
 #APPL_BINOBJS := $(APPLNAME)_rb.o
 APPL_BINOBJS := 
-APPL_CFLAGS = -DGRCITRUS -DARDUINO=100 -DCPPAPP -D__RX_LITTLE_ENDIAN__=1 -D__ATTRIBUTE_INTERRUPT=__attribute__((weak)) -DMRB_GC_STRESS -DMRB_DISABLE_STDIO -DMRB_BYTECODE_DECODE_OPTION -DMRB_USE_PRESET_SYMBOLS -DMRB_USE_ETEXT_EDATA
+APPL_CFLAGS = -DGRCITRUS -DARDUINO=100 -DCPPAPP -D__RX_LITTLE_ENDIAN__=1 -D__ATTRIBUTE_INTERRUPT=__attribute__((weak)) -DMRB_GC_STRESS -DMRB_DISABLE_STDIO -DMRB_BYTECODE_DECODE_OPTION -DMRB_USE_PRESET_SYMBOLS -DMRB_USE_ETEXT_EDATA -DADAFRUIT_SSD1306 -DSHNM12_FONT
 APPL_LIBS =  ../../mruby-1.4.1/build/rx630/lib/libmruby.a ../../wrbb-v2lib-firm/Citrus/libwrbb-v2lib-firm.a
 ifdef APPL_DIR
   INCLUDES := $(INCLUDES) $(foreach dir,$(APPL_DIR),-I$(dir))

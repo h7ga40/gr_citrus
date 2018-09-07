@@ -33,6 +33,7 @@ mrb_value mrb_lv53l0x_setI2C(mrb_state *mrb, mrb_value self)
 	mrb_get_args(mrb, "i", &num);
 
 	//0:Wire, 1:Wire1, 2:Wire2, 3:Wire3 4:Wire4 5:Wire5
+#ifdef GRCITRUS
 	switch (num) {
 	case 0:
 		//ソフトI2Cの場合は18PINと19PINをOUTPUTにする
@@ -69,7 +70,59 @@ mrb_value mrb_lv53l0x_setI2C(mrb_state *mrb, mrb_value self)
 		return  mrb_bool_value(false);
 		break;
 	}
-
+#else
+	switch (num) {
+	case 0:
+		//ソフトI2Cの場合は18PINと19PINをOUTPUTにする
+		pinMode(A4, INPUT_PULLUP);
+		pinMode(A5, OUTPUT);
+		WireVL53L0X = &Wire;
+		break;
+	case 1:
+		pinMode(PIN_IO1, INPUT_PULLUP);
+		pinMode(PIN_IO0, OUTPUT);
+		WireVL53L0X = &Wire1;
+		break;
+	case 2:
+		pinMode(PIN_IO58, INPUT_PULLUP);
+		pinMode(PIN_IO60, OUTPUT);
+		WireVL53L0X = &Wire2;
+		break;
+	case 3:
+		pinMode(PIN_IO24, INPUT_PULLUP);
+		pinMode(PIN_IO26, OUTPUT);
+		WireVL53L0X = &Wire3;
+		break;
+	case 4:
+		pinMode(PIN_IO3, OUTPUT);
+		pinMode(PIN_IO5, INPUT_PULLUP);
+		WireVL53L0X = &Wire4;
+		break;
+	case 5:
+		pinMode(PIN_IO9, OUTPUT);
+		pinMode(PIN_IO8, INPUT_PULLUP);
+		WireVL53L0X = &Wire5;
+		break;
+	case 6:
+		pinMode(PIN_IO6, OUTPUT);
+		pinMode(PIN_IO7, INPUT_PULLUP);
+		WireVL53L0X = &Wire6;
+		break;
+	case 7:
+		pinMode(PIN_IO12, OUTPUT);
+		pinMode(PIN_IO11, INPUT_PULLUP);
+		WireVL53L0X = &Wire7;
+		break;
+	case 8:
+		pinMode(PIN_IO31, OUTPUT);
+		pinMode(PIN_IO30, INPUT_PULLUP);
+		WireVL53L0X = &Wire8;
+		break;
+	default:
+		return  mrb_bool_value(false);
+		break;
+	}
+#endif
 	return mrb_nil_value();			//戻り値は無しですよ。
 }
 
