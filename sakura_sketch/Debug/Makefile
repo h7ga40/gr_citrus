@@ -170,10 +170,10 @@ APPL_DIR = $(APPLDIR) $(SRCDIR)/library \
   ../../sketch_common
 APPL_ASMOBJS = reset_program.o
 ifdef USE_CXX
-  APPL_CXXOBJS = $(APPLNAME).o preset_symbols.o ping.o ping6.o resolver.o dhcp4_cli.o netapp_subr.o ntp_cli.o net_misc.o Adafruit_GFX.o Adafruit_SSD1306.o draw_font.o misaki_font.o mrb_lcd.o
+  APPL_CXXOBJS = $(APPLNAME).o preset_symbols.o mrb_remocon.o ping.o ping6.o resolver.o dhcp4_cli.o netapp_subr.o ntp_cli.o net_misc.o Adafruit_GFX.o Adafruit_SSD1306.o draw_font.o misaki_font.o mrb_lcd.o
   APPL_COBJS = 
 else
-  APPL_COBJS = $(APPLNAME).o preset_symbols.o ping.o ping6.o resolver.o dhcp4_cli.o netapp_subr.o ntp_cli.o net_misc.o Adafruit_GFX.o Adafruit_SSD1306.o draw_font.o misaki_font.o mrb_lcd.o
+  APPL_COBJS = $(APPLNAME).o preset_symbols.o mrb_remocon.o ping.o ping6.o resolver.o dhcp4_cli.o netapp_subr.o ntp_cli.o net_misc.o Adafruit_GFX.o Adafruit_SSD1306.o draw_font.o misaki_font.o mrb_lcd.o
 endif
 APPL_COBJS := $(APPL_COBJS) log_output.o vasyslog.o t_perror.o strerror.o
 APPL_MRB := $(APPLNAME)_rb.mrb
