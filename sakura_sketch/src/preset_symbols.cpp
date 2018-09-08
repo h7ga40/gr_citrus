@@ -1,3 +1,40 @@
+/*
+ *  TOPPERS ECHONET Lite Communication Middleware
+ *
+ *  Copyright (C) 2014-2016 Cores Co., Ltd. Japan
+ *
+ *  上記著作権者は，以下の(1)～(4)の条件を満たす場合に限り，本ソフトウェ
+ *  ア（本ソフトウェアを改変したものを含む．以下同じ）を使用・複製・改
+ *  変・再配布（以下，利用と呼ぶ）することを無償で許諾する．
+ *  (1) 本ソフトウェアをソースコードの形で利用する場合には，上記の著作
+ *      権表示，この利用条件および下記の無保証規定が，そのままの形でソー
+ *      スコード中に含まれていること．
+ *  (2) 本ソフトウェアを，ライブラリ形式など，他のソフトウェア開発に使
+ *      用できる形で再配布する場合には，再配布に伴うドキュメント（利用
+ *      者マニュアルなど）に，上記の著作権表示，この利用条件および下記
+ *      の無保証規定を掲載すること．
+ *  (3) 本ソフトウェアを，機器に組み込むなど，他のソフトウェア開発に使
+ *      用できない形で再配布する場合には，次のいずれかの条件を満たすこ
+ *      と．
+ *    (a) 再配布に伴うドキュメント（利用者マニュアルなど）に，上記の著
+ *        作権表示，この利用条件および下記の無保証規定を掲載すること．
+ *    (b) 再配布の形態を，別に定める方法によって，TOPPERSプロジェクトに
+ *        報告すること．
+ *  (4) 本ソフトウェアの利用により直接的または間接的に生じるいかなる損
+ *      害からも，上記著作権者およびTOPPERSプロジェクトを免責すること．
+ *      また，本ソフトウェアのユーザまたはエンドユーザからのいかなる理
+ *      由に基づく請求からも，上記著作権者およびTOPPERSプロジェクトを
+ *      免責すること．
+ *
+ *  本ソフトウェアは，無保証で提供されているものである．上記著作権者お
+ *  よびTOPPERSプロジェクトは，本ソフトウェアに関して，特定の使用目的
+ *  に対する適合性も含めて，いかなる保証も行わない．また，本ソフトウェ
+ *  アの利用により直接的または間接的に生じたいかなる損害に関しても，そ
+ *  の責任を負わない．
+ *
+ *  @(#) $Id: preset_symbols.cpp 1633 2018-08-31 11:35:36Z coas-nagasima $
+ */
+
 #include <mruby.h>
 #include <stdlib.h>
 #include <string.h>
@@ -386,6 +423,16 @@ extern "C" PRESET_CONST RVALUE mrb_preset_object_320;
 extern "C" PRESET_CONST RVALUE mrb_preset_object_321;
 extern "C" PRESET_CONST RVALUE mrb_preset_object_322;
 extern "C" PRESET_CONST RVALUE mrb_preset_object_323;
+extern "C" PRESET_CONST RVALUE mrb_preset_object_324;
+extern "C" PRESET_CONST RVALUE mrb_preset_object_325;
+extern "C" PRESET_CONST RVALUE mrb_preset_object_326;
+extern "C" PRESET_CONST RVALUE mrb_preset_object_327;
+extern "C" PRESET_CONST RVALUE mrb_preset_object_328;
+extern "C" PRESET_CONST RVALUE mrb_preset_object_329;
+extern "C" PRESET_CONST RVALUE mrb_preset_object_330;
+extern "C" PRESET_CONST RVALUE mrb_preset_object_331;
+extern "C" PRESET_CONST RVALUE mrb_preset_object_332;
+extern "C" PRESET_CONST RVALUE mrb_preset_object_333;
 
 extern "C" PRESET_CONST mrb_irep mrb_preset_irep_0;
 extern "C" PRESET_CONST mrb_irep mrb_preset_irep_1;
@@ -557,7 +604,7 @@ extern "C" mrb_value mrb_sym_to_s(mrb_state *mrb, mrb_value self);
 extern "C" mrb_value sym_cmp(mrb_state *mrb, mrb_value self);
 extern "C" mrb_value sym_equal(mrb_state *mrb, mrb_value self);
 extern "C" mrb_value sym_inspect(mrb_state *mrb, mrb_value self);
-extern "C" mrb_value mrb_mod_dummy_visibility(mrb_state *mrb, mrb_value self);
+extern "C" mrb_value sym_to_sym(mrb_state *mrb, mrb_value self);
 extern "C" mrb_value attr_reader(mrb_state *mrb, mrb_value self);
 extern "C" mrb_value attr_writer(mrb_state *mrb, mrb_value self);
 extern "C" mrb_value inspect_main(mrb_state *mrb, mrb_value self);
@@ -639,10 +686,10 @@ extern "C" mrb_value mrb_mod_module_eval(mrb_state *mrb, mrb_value self);
 extern "C" mrb_value mrb_mod_s_nesting(mrb_state *mrb, mrb_value self);
 extern "C" mrb_value mrb_obj_instance_eval(mrb_state *mrb, mrb_value self);
 extern "C" mrb_value false_and(mrb_state *mrb, mrb_value self);
-extern "C" mrb_value false_or(mrb_state *mrb, mrb_value self);
+extern "C" mrb_value false_xor(mrb_state *mrb, mrb_value self);
 extern "C" mrb_value false_to_s(mrb_state *mrb, mrb_value self);
 extern "C" mrb_value mrb_any_to_s(mrb_state *mrb, mrb_value self);
-extern "C" mrb_value true_or(mrb_state *mrb, mrb_value self);
+extern "C" mrb_value mrb_true(mrb_state *mrb, mrb_value self);
 extern "C" mrb_value nil_inspect(mrb_state *mrb, mrb_value self);
 extern "C" mrb_value nil_to_s(mrb_state *mrb, mrb_value self);
 extern "C" mrb_value true_to_s(mrb_state *mrb, mrb_value self);
@@ -786,6 +833,30 @@ extern "C" mrb_value range_initialize_copy(mrb_state *mrb, mrb_value self);
 extern "C" mrb_value range_inspect(mrb_state *mrb, mrb_value self);
 extern "C" mrb_value range_to_s(mrb_state *mrb, mrb_value self);
 extern "C" mrb_value mrb_exc_backtrace(mrb_state *mrb, mrb_value self);
+extern "C" mrb_value math_acos(mrb_state *mrb, mrb_value self);
+extern "C" mrb_value math_acosh(mrb_state *mrb, mrb_value self);
+extern "C" mrb_value math_asin(mrb_state *mrb, mrb_value self);
+extern "C" mrb_value math_asinh(mrb_state *mrb, mrb_value self);
+extern "C" mrb_value math_atan(mrb_state *mrb, mrb_value self);
+extern "C" mrb_value math_atan2(mrb_state *mrb, mrb_value self);
+extern "C" mrb_value math_atanh(mrb_state *mrb, mrb_value self);
+extern "C" mrb_value math_cbrt(mrb_state *mrb, mrb_value self);
+extern "C" mrb_value math_cos(mrb_state *mrb, mrb_value self);
+extern "C" mrb_value math_cosh(mrb_state *mrb, mrb_value self);
+extern "C" mrb_value math_erf(mrb_state *mrb, mrb_value self);
+extern "C" mrb_value math_erfc(mrb_state *mrb, mrb_value self);
+extern "C" mrb_value math_exp(mrb_state *mrb, mrb_value self);
+extern "C" mrb_value math_frexp(mrb_state *mrb, mrb_value self);
+extern "C" mrb_value math_hypot(mrb_state *mrb, mrb_value self);
+extern "C" mrb_value math_ldexp(mrb_state *mrb, mrb_value self);
+extern "C" mrb_value math_log(mrb_state *mrb, mrb_value self);
+extern "C" mrb_value math_log10(mrb_state *mrb, mrb_value self);
+extern "C" mrb_value math_log2(mrb_state *mrb, mrb_value self);
+extern "C" mrb_value math_sin(mrb_state *mrb, mrb_value self);
+extern "C" mrb_value math_sinh(mrb_state *mrb, mrb_value self);
+extern "C" mrb_value math_sqrt(mrb_state *mrb, mrb_value self);
+extern "C" mrb_value math_tan(mrb_state *mrb, mrb_value self);
+extern "C" mrb_value math_tanh(mrb_state *mrb, mrb_value self);
 extern "C" mrb_value mrb_int_allbits(mrb_state *mrb, mrb_value self);
 extern "C" mrb_value mrb_int_anybits(mrb_state *mrb, mrb_value self);
 extern "C" mrb_value mrb_int_chr(mrb_state *mrb, mrb_value self);
@@ -811,11 +882,18 @@ extern "C" mrb_value mrb_str_succ_bang(mrb_state *mrb, mrb_value self);
 extern "C" mrb_value mrb_str_swapcase(mrb_state *mrb, mrb_value self);
 extern "C" mrb_value mrb_str_swapcase_bang(mrb_state *mrb, mrb_value self);
 extern "C" mrb_value mrb_str_upto(mrb_state *mrb, mrb_value self);
+extern "C" mrb_value fiber_current(mrb_state *mrb, mrb_value self);
+extern "C" mrb_value fiber_eq(mrb_state *mrb, mrb_value self);
+extern "C" mrb_value fiber_init(mrb_state *mrb, mrb_value self);
+extern "C" mrb_value fiber_resume(mrb_state *mrb, mrb_value self);
+extern "C" mrb_value fiber_transfer(mrb_state *mrb, mrb_value self);
+extern "C" mrb_value fiber_yield(mrb_state *mrb, mrb_value self);
+extern "C" mrb_value mrb_fiber_alive_p(mrb_state *mrb, mrb_value self);
 extern "C" mrb_value mrb_f_sprintf(mrb_state *mrb, mrb_value self);
 extern "C" uint8_t mrblib_irep[];
 extern "C" uint8_t gem_mrblib_irep_mruby_numeric_ext[];
-extern "C" uint8_t gem_mrblib_irep_mruby_sprintf[];
 extern "C" uint8_t gem_mrblib_irep_mruby_string_ext[];
+extern "C" uint8_t gem_mrblib_irep_mruby_sprintf[];
 extern "C" uint8_t call_iseq[];
 
 const char *const mrb_preset_symbols[] = {
@@ -1194,6 +1272,35 @@ const char *const mrb_preset_symbols[] = {
 	"name=",
 	"@result",
 	"result=",
+	"Math",
+	"DomainError",
+	"PI",
+	"E",
+	"TOLERANCE",
+	"sin",
+	"cos",
+	"tan",
+	"asin",
+	"acos",
+	"atan",
+	"atan2",
+	"sinh",
+	"cosh",
+	"tanh",
+	"asinh",
+	"acosh",
+	"atanh",
+	"exp",
+	"log",
+	"log2",
+	"log10",
+	"sqrt",
+	"cbrt",
+	"frexp",
+	"ldexp",
+	"hypot",
+	"erf",
+	"erfc",
 	"chr",
 	"allbits?",
 	"anybits?",
@@ -1203,8 +1310,6 @@ const char *const mrb_preset_symbols[] = {
 	"nonzero?",
 	"positive?",
 	"negative?",
-	"sprintf",
-	"format",
 	"dump",
 	"getbyte",
 	"setbyte",
@@ -1254,20 +1359,29 @@ const char *const mrb_preset_symbols[] = {
 	"pad_repetitions",
 	"padding",
 	"arg",
+	"sprintf",
+	"format",
+	"Fiber",
+	"resume",
+	"transfer",
+	"alive?",
+	"yield",
+	"current",
+	"FiberError",
 };
 
 const int mrb_preset_symbols_count = (sizeof(mrb_preset_symbols) / sizeof(mrb_preset_symbols[0]));
 
-const char mrb_preset_strings_0[] = " \x0C\n\r\t";
-const char mrb_preset_strings_1[] = "can't modify frozen Strin";
-const char mrb_preset_strings_2[] = "type mismatch:";
-const char mrb_preset_strings_3[] = " give";
-const char mrb_preset_strings_4[] = "wrong number of arguments (for 1..2";
-const char mrb_preset_strings_5[] = "zero width paddin";
-const char mrb_preset_strings_6[] = "String#match needs Regexp clas";
-const char mrb_preset_strings_7[] = "wrong number of arguments (given";
-const char mrb_preset_strings_8[] = ", expected 2";
-const char mrb_preset_strings_9[] = "scan not available (yet";
+const char mrb_preset_strings_0[] = "can't modify frozen Strin";
+const char mrb_preset_strings_1[] = "String#match needs Regexp clas";
+const char mrb_preset_strings_2[] = " \x0C\n\r\t";
+const char mrb_preset_strings_3[] = "wrong number of arguments (given";
+const char mrb_preset_strings_4[] = ", expected 2";
+const char mrb_preset_strings_5[] = "scan not available (yet";
+const char mrb_preset_strings_6[] = "";
+const char mrb_preset_strings_7[] = "";
+const char mrb_preset_strings_8[] = "";
+const char mrb_preset_strings_9[] = "";
 const char mrb_preset_strings_10[] = "";
 const char mrb_preset_strings_11[] = "";
 const char mrb_preset_strings_12[] = "";
@@ -1279,15 +1393,15 @@ const char mrb_preset_strings_17[] = "";
 const char mrb_preset_strings_18[] = "";
 const char mrb_preset_strings_19[] = "";
 const char mrb_preset_strings_20[] = "";
-const char mrb_preset_strings_21[] = "";
-const char mrb_preset_strings_22[] = "";
-const char mrb_preset_strings_23[] = "";
-const char mrb_preset_strings_24[] = "";
-const char mrb_preset_strings_25[] = "string not matche";
-const char mrb_preset_strings_26[] = "index";
-const char mrb_preset_strings_27[] = " out of strin";
-const char mrb_preset_strings_28[] = "negative length";
-const char mrb_preset_strings_29[] = " for 2..3";
+const char mrb_preset_strings_21[] = "type mismatch:";
+const char mrb_preset_strings_22[] = " give";
+const char mrb_preset_strings_23[] = "wrong number of arguments (for 1..2";
+const char mrb_preset_strings_24[] = "string not matche";
+const char mrb_preset_strings_25[] = "index";
+const char mrb_preset_strings_26[] = " out of strin";
+const char mrb_preset_strings_27[] = "negative length";
+const char mrb_preset_strings_28[] = " for 2..3";
+const char mrb_preset_strings_29[] = "zero width paddin";
 const char mrb_preset_strings_30[] = "type mismatch: String give";
 const char mrb_preset_strings_31[] = "comparison of";
 const char mrb_preset_strings_32[] = " with";
@@ -1307,211 +1421,212 @@ const char mrb_preset_strings_45[] = "step can't be ";
 const char mrb_preset_strings_46[] = "Floa";
 const char mrb_preset_strings_47[] = "can't iterat";
 const char mrb_preset_strings_48[] = "2018-4-2";
-const char mrb_preset_strings_49[] = "1.4.";
-const char mrb_preset_strings_50[] = "fiber required for enumerato";
-const char mrb_preset_strings_51[] = "backquotes not implemente";
-const char mrb_preset_strings_52[] = "1.";
-const char mrb_preset_strings_53[] = "mrub";
-const char mrb_preset_strings_54[] = "mruby 1.4.1 (2018-4-27)";
-const char mrb_preset_strings_55[] = "mruby - Copyright (c) 2010-2018 mruby developer";
-const char mrb_preset_strings_56[] = "Out of memor";
-const char mrb_preset_strings_57[] = "stack level too dee";
-const char mrb_preset_strings_58[] = "arena overflow erro";
+const char mrb_preset_strings_49[] = "Math::DomainErro";
+const char mrb_preset_strings_50[] = "1.4.";
+const char mrb_preset_strings_51[] = "fiber required for enumerato";
+const char mrb_preset_strings_52[] = "backquotes not implemente";
+const char mrb_preset_strings_53[] = "1.";
+const char mrb_preset_strings_54[] = "mrub";
+const char mrb_preset_strings_55[] = "mruby 1.4.1 (2018-4-27)";
+const char mrb_preset_strings_56[] = "mruby - Copyright (c) 2010-2018 mruby developer";
+const char mrb_preset_strings_57[] = "Out of memor";
+const char mrb_preset_strings_58[] = "stack level too dee";
+const char mrb_preset_strings_59[] = "arena overflow erro";
 
 const uint8_t n2s_tbl_ed_flags[] = {
-	0xa2, 0x28, 0xa0, 0x28, 0x82, 0x8a, 0xaa, 0x22, 0x80, 0x80, 0x02, 0x20, 0x80, 0x2a, 0xa8, 0x80,
-	0x88, 0x00, 0x2a, 0x08, 0x88, 0xa8, 0x2a, 0x00, 0x00, 0x00, 0x00, 0x80, 0x00, 0x00, 0x00, 0x00,
-	0x88, 0x08, 0x0a, 0x02, 0x00, 0x28, 0x2a, 0x20, 0xa0, 0xaa, 0x00, 0x82, 0x02, 0xaa, 0xaa, 0x08,
-	0xa0, 0xaa, 0xaa, 0x2a, 0x82, 0x82, 0x28, 0x80, 0xa2, 0x82, 0x8a, 0x82, 0xaa, 0x08, 0x0a, 0xa0,
-	0xa8, 0x02, 0xa2, 0x0a, 0xa8, 0x20, 0x28, 0x02, 0x00, 0xaa, 0x02, 0x80, 0xa8, 0x0a, 0x22, 0x8a,
-	0xa8, 0x8a, 0xa8, 0x2a, 0xaa, 0xaa, 0xa8, 0x80, 0xaa, 0x08, 0xa2, 0xaa, 0x80, 0xa2, 0xa8, 0x2a,
-	0x0a, 0x88, 0x02, 0x80, 0x82, 0xa8, 0xa2, 0x0a, 0x28, 0xaa, 0x2a, 0xaa, 0x28, 0x88, 0xa0, 0xaa,
-	0x20, 0xa2, 0xaa, 0x88, 0xaa, 0xa2, 0xaa, 0xaa, 0xa0, 0x8a, 0xaa, 0xa8, 0xa2, 0x20, 0xaa, 0x2a,
-	0xa2, 0x0a, 0xa0, 0x8a, 0xaa, 0xa0, 0x2a, 0x00, 0x80, 0x8a, 0xa8, 0xa8, 0x22, 0xa0, 0xa2, 0xa0,
-	0x00, 0xa0, 0xaa, 0x80, 0x82, 0x08, 0xaa, 0x0a, 0x28, 0xa2, 0xa0, 0xa2, 0xaa, 0xaa, 0x0a, 0x82,
-	0xa0, 0xa8, 0x0a, 0x28, 0xa8, 0x08, 0xa8, 0x02, 0x22, 0x80, 0x8a, 0xaa, 0x88, 0xa0, 0xa0, 0x82,
-	0xaa, 0x28, 0x28, 0x80, 0x82, 0x88, 0x88, 0x82, 0x82, 0x8a, 0x00, 0xa0, 0x2a, 0xaa, 0x20, 0x0a,
-	0x08, 0x80, 0xa2, 0x2a, 0x08, 0x28, 0x08, 0xa0, 0x80, 0xaa, 0xa8, 0x2a, 0x2a, 0xaa, 0xaa, 0xaa,
-	0x2a, 0x08, 0xa0, 0x2a, 0x2a, 0xaa, 0xa8, 0x2a, 0x8a, 0xaa, 0xaa, 0x28, 0x80, 0x82, 0xaa, 0x8a,
-	0x80, 0x02, 0x20, 0x0a, 0xa0, 0x88, 0xaa, 0x22, 0x80, 0x02, 0xaa, 0x0a, 0x8a, 0xaa, 0xaa, 0x2a,
-	0x80, 0x22, 0xa8, 0xa2, 0x2a, 0x82, 0x2a, 0x80, 0xa0, 0xa2, 0x00, 0xa8, 0xaa, 0x2a, 0xaa, 0xaa,
+	0xa2, 0x28, 0xa0, 0x28, 0x82, 0x8a, 0xaa, 0x22, 0x80, 0x80, 0x02, 0x00, 0x80, 0x2a, 0xa8, 0x80,
+	0x88, 0x00, 0x28, 0x08, 0x88, 0xa8, 0x2a, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+	0x88, 0x08, 0x0a, 0x02, 0x00, 0x20, 0x2a, 0x20, 0x80, 0xaa, 0x00, 0x82, 0x02, 0xaa, 0xaa, 0x08,
+	0xa0, 0xaa, 0xa8, 0x28, 0x82, 0x02, 0x20, 0x80, 0xa2, 0x02, 0x8a, 0x82, 0xaa, 0x08, 0x0a, 0xa0,
+	0xa8, 0x02, 0xa2, 0x0a, 0x88, 0x20, 0x28, 0x02, 0x00, 0x8a, 0x02, 0x80, 0xa8, 0x0a, 0x22, 0x8a,
+	0xa8, 0x8a, 0xa8, 0x2a, 0xaa, 0xaa, 0xa0, 0x80, 0xaa, 0x08, 0xa2, 0x8a, 0x80, 0xa2, 0xa0, 0x2a,
+	0x0a, 0x08, 0x02, 0x00, 0x82, 0xa8, 0xa2, 0x0a, 0x28, 0xa2, 0x2a, 0xaa, 0x28, 0x88, 0xa0, 0xaa,
+	0x20, 0xa2, 0xaa, 0x88, 0xa2, 0xa2, 0xaa, 0xaa, 0xa0, 0x8a, 0xaa, 0xa8, 0xa2, 0x20, 0xa2, 0x2a,
+	0xa2, 0x0a, 0xa0, 0x8a, 0xaa, 0xa0, 0x2a, 0x00, 0x80, 0x82, 0x88, 0xa8, 0x22, 0xa0, 0xa2, 0xa0,
+	0x00, 0xa0, 0xaa, 0x80, 0x82, 0x08, 0xaa, 0x0a, 0x28, 0xa2, 0xa0, 0xa2, 0xa2, 0xaa, 0x0a, 0x82,
+	0xa0, 0xa8, 0x0a, 0x28, 0xa0, 0x08, 0xa8, 0x02, 0x22, 0x80, 0x8a, 0xaa, 0x88, 0xa0, 0xa0, 0x82,
+	0xaa, 0x28, 0x28, 0x80, 0x82, 0x88, 0x88, 0x82, 0x82, 0x88, 0x00, 0xa0, 0x2a, 0xaa, 0x20, 0x0a,
+	0x08, 0x80, 0xa2, 0x2a, 0x08, 0x28, 0x08, 0xa0, 0x80, 0xaa, 0xa0, 0x2a, 0x2a, 0xaa, 0xaa, 0xaa,
+	0x2a, 0x00, 0xa0, 0x2a, 0x2a, 0xaa, 0xa8, 0x2a, 0x8a, 0xaa, 0xaa, 0x28, 0x80, 0x82, 0xaa, 0x8a,
+	0x80, 0x00, 0x20, 0x02, 0xa0, 0x88, 0xaa, 0x22, 0x00, 0x00, 0x88, 0x0a, 0x8a, 0xaa, 0xaa, 0x2a,
+	0x80, 0x20, 0xa8, 0xa2, 0x2a, 0x82, 0x2a, 0x80, 0xa0, 0xa2, 0x00, 0x80, 0xaa, 0x2a, 0xaa, 0xaa,
 };
 const mrb_sym n2s_tbl_keys[] = {
-	0, 127, 0, 0, 21, 0, 0, 138, 327, 411, 0, 0, 198, 0, 0, 145,
-	0, 220, 434, 0, 0, 0, 412, 0, 0, 0, 0, 0, 0, 255, 0, 263,
-	229, 9, 91, 0, 430, 203, 58, 0, 0, 174, 109, 108, 196, 202, 0, 136,
+	0, 127, 0, 0, 21, 0, 0, 138, 327, 438, 0, 0, 198, 0, 0, 145,
+	0, 220, 461, 0, 0, 0, 439, 0, 0, 0, 0, 0, 0, 255, 0, 263,
+	229, 9, 91, 0, 457, 203, 58, 0, 0, 174, 109, 108, 196, 202, 466, 136,
 	187, 106, 342, 0, 0, 0, 0, 257, 286, 0, 0, 0, 11, 189, 191, 0,
-	341, 0, 330, 0, 70, 176, 261, 227, 0, 0, 0, 33, 133, 0, 61, 137,
-	370, 0, 184, 0, 65, 0, 0, 0, 0, 0, 0, 168, 403, 64, 59, 418,
-	291, 349, 217, 287, 1, 344, 404, 374, 343, 323, 62, 135, 345, 316, 324, 0,
-	329, 368, 297, 348, 360, 372, 242, 346, 321, 306, 48, 422, 60, 293, 204, 340,
-	433, 0, 163, 0, 428, 0, 312, 423, 0, 0, 52, 424, 0, 317, 389, 82,
-	272, 380, 119, 354, 364, 0, 0, 25, 0, 0, 0, 425, 426, 55, 0, 429,
-	359, 326, 0, 0, 0, 0, 0, 0, 249, 213, 290, 194, 0, 23, 376, 0,
+	341, 0, 330, 0, 70, 176, 261, 227, 379, 0, 0, 33, 133, 0, 61, 137,
+	370, 0, 184, 0, 65, 0, 0, 0, 0, 0, 0, 168, 430, 64, 59, 445,
+	291, 349, 217, 287, 1, 344, 397, 374, 343, 323, 62, 135, 345, 316, 324, 431,
+	329, 368, 297, 348, 360, 372, 242, 346, 321, 306, 48, 449, 60, 293, 204, 340,
+	460, 0, 163, 0, 455, 0, 312, 450, 0, 0, 52, 451, 0, 317, 416, 82,
+	272, 409, 119, 354, 364, 387, 0, 25, 0, 0, 0, 452, 453, 55, 0, 456,
+	359, 326, 471, 0, 0, 0, 0, 0, 249, 213, 290, 194, 0, 23, 405, 0,
 	0, 230, 47, 367, 0, 0, 0, 0, 0, 0, 0, 0, 28, 0, 139, 169,
-	228, 432, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 415,
-	0, 206, 120, 0, 0, 247, 259, 0, 222, 0, 0, 214, 216, 105, 253, 0,
-	0, 181, 0, 0, 0, 180, 147, 0, 0, 0, 246, 0, 0, 2, 182, 0,
+	228, 459, 0, 0, 0, 0, 0, 0, 393, 0, 0, 0, 465, 0, 0, 442,
+	0, 206, 120, 0, 0, 247, 259, 384, 222, 381, 0, 214, 216, 105, 253, 0,
+	0, 181, 0, 0, 0, 180, 147, 390, 0, 0, 246, 0, 0, 2, 182, 0,
 	0, 0, 0, 0, 31, 0, 90, 320, 0, 0, 100, 210, 38, 282, 0, 0,
 	45, 0, 0, 0, 0, 197, 115, 241, 0, 107, 0, 0, 0, 0, 79, 233,
-	420, 0, 0, 0, 256, 431, 0, 271, 331, 0, 0, 153, 0, 212, 195, 225,
-	254, 140, 183, 396, 0, 0, 0, 0, 0, 314, 158, 141, 234, 269, 170, 0,
-	142, 0, 0, 0, 0, 0, 134, 266, 0, 22, 0, 401, 0, 0, 391, 0,
+	447, 0, 468, 0, 256, 458, 0, 271, 331, 0, 0, 153, 0, 212, 195, 225,
+	254, 140, 183, 398, 0, 0, 423, 0, 0, 314, 158, 141, 234, 269, 170, 0,
+	142, 0, 0, 0, 0, 0, 134, 266, 0, 22, 0, 428, 0, 0, 418, 0,
 	186, 0, 0, 0, 0, 0, 332, 0, 13, 0, 0, 0, 0, 0, 0, 50,
-	0, 0, 0, 0, 0, 0, 0, 0, 5, 0, 0, 0, 262, 72, 388, 0,
-	0, 0, 0, 0, 278, 0, 200, 277, 0, 383, 0, 0, 0, 0, 0, 0,
-	193, 366, 347, 0, 0, 295, 0, 0, 71, 0, 0, 0, 0, 0, 0, 125,
-	0, 0, 103, 34, 218, 0, 49, 0, 0, 164, 390, 175, 385, 378, 199, 0,
+	0, 0, 0, 0, 0, 0, 0, 0, 5, 403, 0, 0, 262, 72, 415, 0,
+	0, 0, 0, 0, 278, 0, 200, 277, 0, 412, 0, 0, 0, 0, 396, 0,
+	193, 366, 347, 0, 0, 295, 0, 0, 71, 470, 0, 0, 0, 0, 0, 125,
+	0, 0, 103, 34, 218, 0, 49, 382, 0, 164, 417, 175, 385, 407, 199, 463,
 	0, 67, 128, 0, 276, 0, 0, 0, 0, 97, 0, 0, 0, 0, 265, 78,
-	15, 0, 0, 68, 0, 0, 0, 0, 0, 0, 0, 260, 0, 0, 0, 0,
+	15, 0, 0, 68, 0, 401, 0, 0, 0, 0, 0, 260, 0, 0, 0, 0,
 	44, 0, 0, 285, 46, 0, 296, 0, 102, 273, 0, 0, 0, 0, 0, 0,
 	178, 289, 0, 166, 0, 313, 0, 0, 0, 0, 0, 0, 211, 0, 24, 0,
-	0, 0, 0, 0, 0, 335, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-	369, 310, 0, 0, 0, 0, 407, 0, 0, 0, 0, 0, 146, 0, 0, 0,
-	0, 248, 0, 0, 114, 179, 0, 387, 0, 0, 0, 0, 0, 0, 0, 73,
-	0, 250, 0, 0, 0, 0, 14, 57, 30, 215, 0, 0, 0, 0, 427, 0,
+	0, 400, 0, 0, 0, 335, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+	369, 310, 0, 0, 0, 0, 434, 0, 0, 0, 0, 0, 146, 0, 0, 0,
+	0, 248, 0, 0, 114, 179, 0, 414, 0, 378, 0, 0, 0, 0, 0, 73,
+	0, 250, 0, 0, 0, 0, 14, 57, 30, 215, 0, 0, 0, 0, 454, 0,
 	0, 0, 0, 0, 43, 319, 0, 0, 0, 0, 0, 12, 89, 87, 240, 172,
-	398, 274, 328, 0, 0, 0, 393, 0, 209, 0, 0, 0, 406, 0, 0, 0,
+	394, 274, 328, 0, 0, 425, 420, 0, 209, 0, 404, 0, 433, 0, 0, 0,
 	0, 363, 0, 177, 371, 63, 0, 0, 0, 151, 0, 0, 207, 99, 0, 0,
 	309, 171, 300, 264, 353, 258, 0, 0, 0, 0, 0, 0, 221, 85, 154, 0,
-	0, 160, 279, 0, 357, 0, 302, 435, 0, 0, 0, 0, 0, 0, 149, 238,
+	0, 160, 279, 0, 357, 0, 302, 462, 0, 0, 0, 0, 0, 0, 149, 238,
 	325, 0, 0, 337, 0, 223, 0, 0, 334, 36, 0, 0, 0, 132, 0, 0,
-	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 94, 19, 0, 83, 37, 0,
+	0, 391, 0, 0, 0, 0, 0, 0, 0, 0, 94, 19, 0, 83, 37, 0,
 	308, 41, 0, 0, 208, 0, 0, 0, 0, 0, 56, 251, 4, 0, 0, 32,
-	351, 0, 0, 0, 173, 0, 159, 77, 381, 0, 0, 0, 0, 298, 81, 231,
-	0, 356, 0, 270, 292, 288, 358, 0, 0, 0, 384, 0, 0, 0, 0, 0,
-	157, 0, 18, 0, 123, 112, 0, 0, 414, 416, 0, 0, 0, 318, 267, 0,
+	351, 388, 0, 0, 173, 0, 159, 77, 410, 0, 0, 0, 0, 298, 81, 231,
+	0, 356, 0, 270, 292, 288, 358, 0, 0, 0, 413, 0, 0, 0, 0, 0,
+	157, 0, 18, 0, 123, 112, 0, 0, 441, 443, 0, 0, 0, 318, 267, 0,
 	0, 0, 0, 0, 80, 0, 0, 338, 307, 0, 0, 188, 252, 303, 239, 0,
-	0, 40, 117, 0, 311, 0, 275, 0, 379, 0, 17, 0, 0, 16, 148, 0,
-	0, 400, 124, 0, 0, 0, 122, 0, 219, 413, 280, 236, 111, 185, 0, 0,
-	0, 0, 0, 299, 0, 0, 0, 0, 377, 244, 0, 410, 0, 0, 224, 74,
-	397, 0, 39, 27, 29, 421, 104, 0, 0, 243, 0, 0, 0, 0, 0, 167,
-	322, 0, 121, 373, 155, 0, 0, 355, 408, 0, 76, 129, 395, 161, 0, 0,
-	162, 284, 333, 0, 0, 0, 0, 0, 245, 0, 0, 0, 0, 0, 0, 405,
+	0, 40, 117, 0, 311, 0, 275, 0, 408, 0, 17, 0, 0, 16, 148, 0,
+	0, 399, 124, 0, 427, 0, 122, 0, 219, 440, 280, 236, 111, 185, 0, 0,
+	0, 0, 0, 299, 0, 0, 0, 0, 406, 244, 0, 437, 0, 0, 224, 74,
+	424, 0, 39, 27, 29, 448, 104, 0, 0, 243, 0, 0, 0, 0, 0, 167,
+	322, 0, 121, 373, 155, 0, 0, 355, 435, 0, 76, 129, 422, 161, 0, 0,
+	162, 284, 333, 0, 0, 0, 0, 0, 245, 376, 0, 0, 0, 0, 0, 432,
 	0, 0, 0, 86, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-	0, 0, 0, 6, 232, 0, 301, 156, 315, 392, 0, 0, 0, 0, 0, 352,
-	0, 0, 0, 226, 0, 0, 0, 0, 417, 0, 0, 0, 0, 0, 0, 3,
+	0, 0, 0, 6, 232, 395, 301, 156, 315, 419, 0, 0, 0, 0, 0, 352,
+	0, 0, 0, 226, 0, 0, 0, 0, 444, 0, 0, 0, 0, 0, 0, 3,
 	0, 0, 110, 0, 0, 0, 0, 0, 0, 0, 0, 0, 339, 0, 0, 235,
-	54, 201, 304, 0, 0, 409, 7, 0, 0, 0, 0, 0, 0, 0, 96, 0,
-	152, 190, 362, 0, 0, 365, 20, 350, 95, 84, 0, 75, 0, 0, 165, 118,
-	8, 336, 0, 0, 399, 0, 98, 0, 0, 0, 0, 0, 0, 283, 0, 281,
-	10, 126, 130, 0, 0, 131, 361, 402, 0, 0, 0, 0, 0, 0, 35, 42,
+	54, 201, 304, 0, 0, 436, 7, 0, 0, 0, 0, 0, 0, 0, 96, 0,
+	152, 190, 362, 0, 377, 365, 20, 350, 95, 84, 0, 75, 0, 469, 165, 118,
+	8, 336, 0, 0, 426, 0, 98, 0, 0, 0, 0, 0, 0, 283, 0, 281,
+	10, 383, 130, 126, 402, 131, 361, 429, 392, 0, 386, 0, 0, 0, 35, 42,
 	0, 0, 88, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 192,
-	205, 375, 26, 0, 0, 144, 0, 150, 237, 0, 0, 0, 0, 113, 0, 0,
-	0, 0, 0, 268, 0, 305, 394, 0, 0, 0, 0, 66, 92, 143, 116, 0,
-	419, 294, 0, 0, 0, 53, 0, 0, 51, 101, 382, 93, 69, 0, 0, 0,
-	0, 0, 0, 0, 0, 0, 0, 386, 0, 0, 0, 0, 0, 0, 0, 0,
+	205, 375, 26, 0, 389, 144, 0, 150, 237, 0, 0, 0, 0, 113, 0, 0,
+	0, 0, 0, 268, 0, 305, 421, 0, 0, 0, 0, 66, 92, 143, 116, 0,
+	446, 294, 0, 0, 0, 53, 0, 0, 51, 101, 411, 93, 69, 380, 467, 0,
+	0, 0, 0, 0, 0, 0, 0, 464, 0, 0, 0, 0, 0, 0, 0, 0,
 };
-const kh_n2sp_t n2s_tbl = { .n_buckets = 1024, .size = 435, .n_occupied = 435, .ed_flags = (uint8_t *)&n2s_tbl_ed_flags, .keys = (mrb_sym *)&n2s_tbl_keys, .vals = NULL };
+const kh_n2sp_t n2s_tbl = { .n_buckets = 1024, .size = 471, .n_occupied = 471, .ed_flags = (uint8_t *)&n2s_tbl_ed_flags, .keys = (mrb_sym *)&n2s_tbl_keys, .vals = NULL };
 
-PRESET_CONST mrb_value mrb_preset_irep_8_pool[] = {
-	{ .value = { .p = (void *)&mrb_preset_object_29 }, .tt = MRB_TT_STRING },
-};
-PRESET_CONST mrb_value mrb_preset_irep_9_pool[] = {
-	{ .value = { .p = (void *)&mrb_preset_object_30 }, .tt = MRB_TT_STRING },
-	{ .value = { .p = (void *)&mrb_preset_object_31 }, .tt = MRB_TT_STRING },
-};
 PRESET_CONST mrb_value mrb_preset_irep_10_pool[] = {
-	{ .value = { .p = (void *)&mrb_preset_object_32 }, .tt = MRB_TT_STRING },
-	{ .value = { .p = (void *)&mrb_preset_object_33 }, .tt = MRB_TT_STRING },
+	{ .value = { .p = (void *)&mrb_preset_object_35 }, .tt = MRB_TT_STRING },
 };
 PRESET_CONST mrb_value mrb_preset_irep_11_pool[] = {
-	{ .value = { .p = (void *)&mrb_preset_object_34 }, .tt = MRB_TT_STRING },
-	{ .value = { .p = (void *)&mrb_preset_object_35 }, .tt = MRB_TT_STRING },
-	{ .value = { .p = (void *)&mrb_preset_object_36 }, .tt = MRB_TT_STRING },
-};
-PRESET_CONST mrb_value mrb_preset_irep_12_pool[] = {
 	{ .value = { .p = (void *)&mrb_preset_object_37 }, .tt = MRB_TT_STRING },
 };
-PRESET_CONST mrb_value mrb_preset_irep_13_pool[] = {
-	{ .value = { .p = (void *)&mrb_preset_object_38 }, .tt = MRB_TT_STRING },
-};
-PRESET_CONST mrb_value mrb_preset_irep_14_pool[] = {
+PRESET_CONST mrb_value mrb_preset_irep_12_pool[] = {
 	{ .value = { .p = (void *)&mrb_preset_object_39 }, .tt = MRB_TT_STRING },
 };
-PRESET_CONST mrb_value mrb_preset_irep_17_pool[] = {
-	{ .value = { .p = (void *)&mrb_preset_object_40 }, .tt = MRB_TT_STRING },
+PRESET_CONST mrb_value mrb_preset_irep_13_pool[] = {
 	{ .value = { .p = (void *)&mrb_preset_object_41 }, .tt = MRB_TT_STRING },
-	{ .value = { .p = (void *)&mrb_preset_object_42 }, .tt = MRB_TT_STRING },
 };
-PRESET_CONST mrb_value mrb_preset_irep_18_pool[] = {
-	{ .value = { .p = (void *)&mrb_preset_object_43 }, .tt = MRB_TT_STRING },
-	{ .value = { .p = (void *)&mrb_preset_object_44 }, .tt = MRB_TT_STRING },
+PRESET_CONST mrb_value mrb_preset_irep_16_pool[] = {
 	{ .value = { .p = (void *)&mrb_preset_object_45 }, .tt = MRB_TT_STRING },
-};
-PRESET_CONST mrb_value mrb_preset_irep_19_pool[] = {
 	{ .value = { .p = (void *)&mrb_preset_object_46 }, .tt = MRB_TT_STRING },
-	{ .value = { .p = (void *)&mrb_preset_object_47 }, .tt = MRB_TT_STRING },
-	{ .value = { .p = (void *)&mrb_preset_object_48 }, .tt = MRB_TT_STRING },
 };
-PRESET_CONST mrb_value mrb_preset_irep_21_pool[] = {
+PRESET_CONST mrb_value mrb_preset_irep_17_pool[] = {
+	{ .value = { .p = (void *)&mrb_preset_object_48 }, .tt = MRB_TT_STRING },
 	{ .value = { .p = (void *)&mrb_preset_object_49 }, .tt = MRB_TT_STRING },
 	{ .value = { .p = (void *)&mrb_preset_object_50 }, .tt = MRB_TT_STRING },
-	{ .value = { .p = (void *)&mrb_preset_object_51 }, .tt = MRB_TT_STRING },
 };
-PRESET_CONST mrb_value mrb_preset_irep_22_pool[] = {
+PRESET_CONST mrb_value mrb_preset_irep_18_pool[] = {
 	{ .value = { .p = (void *)&mrb_preset_object_52 }, .tt = MRB_TT_STRING },
-	{ .value = { .p = (void *)&mrb_preset_object_53 }, .tt = MRB_TT_STRING },
+};
+PRESET_CONST mrb_value mrb_preset_irep_19_pool[] = {
 	{ .value = { .p = (void *)&mrb_preset_object_54 }, .tt = MRB_TT_STRING },
 };
-PRESET_CONST mrb_value mrb_preset_irep_23_pool[] = {
-	{ .value = { .p = (void *)&mrb_preset_object_55 }, .tt = MRB_TT_STRING },
+PRESET_CONST mrb_value mrb_preset_irep_21_pool[] = {
+	{ .value = { .p = (void *)&mrb_preset_object_56 }, .tt = MRB_TT_STRING },
+	{ .value = { .p = (void *)&mrb_preset_object_57 }, .tt = MRB_TT_STRING },
+	{ .value = { .p = (void *)&mrb_preset_object_58 }, .tt = MRB_TT_STRING },
+};
+PRESET_CONST mrb_value mrb_preset_irep_22_pool[] = {
+	{ .value = { .p = (void *)&mrb_preset_object_60 }, .tt = MRB_TT_STRING },
 };
 PRESET_CONST mrb_value mrb_preset_irep_25_pool[] = {
-	{ .value = { .p = (void *)&mrb_preset_object_56 }, .tt = MRB_TT_STRING },
+	{ .value = { .p = (void *)&mrb_preset_object_62 }, .tt = MRB_TT_STRING },
+	{ .value = { .p = (void *)&mrb_preset_object_63 }, .tt = MRB_TT_STRING },
+};
+PRESET_CONST mrb_value mrb_preset_irep_26_pool[] = {
+	{ .value = { .p = (void *)&mrb_preset_object_65 }, .tt = MRB_TT_STRING },
 };
 PRESET_CONST mrb_value mrb_preset_irep_27_pool[] = {
-	{ .value = { .p = (void *)&mrb_preset_object_57 }, .tt = MRB_TT_STRING },
-};
-PRESET_CONST mrb_value mrb_preset_irep_31_pool[] = {
+	{ .value = { .p = (void *)&mrb_preset_object_67 }, .tt = MRB_TT_STRING },
 	{ .value = { .p = (void *)&mrb_preset_object_68 }, .tt = MRB_TT_STRING },
 };
-PRESET_CONST mrb_value mrb_preset_irep_33_pool[] = {
-	{ .value = { .p = (void *)&mrb_preset_object_75 }, .tt = MRB_TT_STRING },
+PRESET_CONST mrb_value mrb_preset_irep_28_pool[] = {
+	{ .value = { .p = (void *)&mrb_preset_object_70 }, .tt = MRB_TT_STRING },
 };
-PRESET_CONST mrb_value mrb_preset_irep_34_pool[] = {
+PRESET_CONST mrb_value mrb_preset_irep_29_pool[] = {
+	{ .value = { .p = (void *)&mrb_preset_object_72 }, .tt = MRB_TT_STRING },
+	{ .value = { .p = (void *)&mrb_preset_object_73 }, .tt = MRB_TT_STRING },
+	{ .value = { .p = (void *)&mrb_preset_object_74 }, .tt = MRB_TT_STRING },
+	{ .value = { .p = (void *)&mrb_preset_object_75 }, .tt = MRB_TT_STRING },
+	{ .value = { .p = (void *)&mrb_preset_object_76 }, .tt = MRB_TT_STRING },
+	{ .value = { .p = (void *)&mrb_preset_object_77 }, .tt = MRB_TT_STRING },
 	{ .value = { .p = (void *)&mrb_preset_object_78 }, .tt = MRB_TT_STRING },
 	{ .value = { .p = (void *)&mrb_preset_object_79 }, .tt = MRB_TT_STRING },
 	{ .value = { .p = (void *)&mrb_preset_object_80 }, .tt = MRB_TT_STRING },
-};
-PRESET_CONST mrb_value mrb_preset_irep_35_pool[] = {
+	{ .value = { .p = (void *)&mrb_preset_object_81 }, .tt = MRB_TT_STRING },
+	{ .value = { .p = (void *)&mrb_preset_object_82 }, .tt = MRB_TT_STRING },
 	{ .value = { .p = (void *)&mrb_preset_object_83 }, .tt = MRB_TT_STRING },
-};
-PRESET_CONST mrb_value mrb_preset_irep_36_pool[] = {
+	{ .value = { .p = (void *)&mrb_preset_object_84 }, .tt = MRB_TT_STRING },
 	{ .value = { .p = (void *)&mrb_preset_object_85 }, .tt = MRB_TT_STRING },
 	{ .value = { .p = (void *)&mrb_preset_object_86 }, .tt = MRB_TT_STRING },
 };
-PRESET_CONST mrb_value mrb_preset_irep_37_pool[] = {
+PRESET_CONST mrb_value mrb_preset_irep_30_pool[] = {
 	{ .value = { .p = (void *)&mrb_preset_object_88 }, .tt = MRB_TT_STRING },
 };
-PRESET_CONST mrb_value mrb_preset_irep_38_pool[] = {
+PRESET_CONST mrb_value mrb_preset_irep_31_pool[] = {
 	{ .value = { .p = (void *)&mrb_preset_object_90 }, .tt = MRB_TT_STRING },
 	{ .value = { .p = (void *)&mrb_preset_object_91 }, .tt = MRB_TT_STRING },
 	{ .value = { .p = (void *)&mrb_preset_object_92 }, .tt = MRB_TT_STRING },
-	{ .value = { .p = (void *)&mrb_preset_object_93 }, .tt = MRB_TT_STRING },
-	{ .value = { .p = (void *)&mrb_preset_object_94 }, .tt = MRB_TT_STRING },
+};
+PRESET_CONST mrb_value mrb_preset_irep_33_pool[] = {
 	{ .value = { .p = (void *)&mrb_preset_object_95 }, .tt = MRB_TT_STRING },
-	{ .value = { .p = (void *)&mrb_preset_object_96 }, .tt = MRB_TT_STRING },
+};
+PRESET_CONST mrb_value mrb_preset_irep_35_pool[] = {
 	{ .value = { .p = (void *)&mrb_preset_object_97 }, .tt = MRB_TT_STRING },
 	{ .value = { .p = (void *)&mrb_preset_object_98 }, .tt = MRB_TT_STRING },
 	{ .value = { .p = (void *)&mrb_preset_object_99 }, .tt = MRB_TT_STRING },
-	{ .value = { .p = (void *)&mrb_preset_object_100 }, .tt = MRB_TT_STRING },
+};
+PRESET_CONST mrb_value mrb_preset_irep_36_pool[] = {
 	{ .value = { .p = (void *)&mrb_preset_object_101 }, .tt = MRB_TT_STRING },
 	{ .value = { .p = (void *)&mrb_preset_object_102 }, .tt = MRB_TT_STRING },
 	{ .value = { .p = (void *)&mrb_preset_object_103 }, .tt = MRB_TT_STRING },
-	{ .value = { .p = (void *)&mrb_preset_object_104 }, .tt = MRB_TT_STRING },
+};
+PRESET_CONST mrb_value mrb_preset_irep_37_pool[] = {
+	{ .value = { .p = (void *)&mrb_preset_object_105 }, .tt = MRB_TT_STRING },
 };
 PRESET_CONST mrb_value mrb_preset_irep_39_pool[] = {
-	{ .value = { .p = (void *)&mrb_preset_object_106 }, .tt = MRB_TT_STRING },
+	{ .value = { .p = (void *)&mrb_preset_object_109 }, .tt = MRB_TT_STRING },
+	{ .value = { .p = (void *)&mrb_preset_object_110 }, .tt = MRB_TT_STRING },
+	{ .value = { .p = (void *)&mrb_preset_object_111 }, .tt = MRB_TT_STRING },
+	{ .value = { .p = (void *)&mrb_preset_object_112 }, .tt = MRB_TT_STRING },
+	{ .value = { .p = (void *)&mrb_preset_object_113 }, .tt = MRB_TT_STRING },
+	{ .value = { .p = (void *)&mrb_preset_object_114 }, .tt = MRB_TT_STRING },
+	{ .value = { .p = (void *)&mrb_preset_object_115 }, .tt = MRB_TT_STRING },
 };
-PRESET_CONST mrb_value mrb_preset_irep_41_pool[] = {
-	{ .value = { .p = (void *)&mrb_preset_object_116 }, .tt = MRB_TT_STRING },
+PRESET_CONST mrb_value mrb_preset_irep_40_pool[] = {
 	{ .value = { .p = (void *)&mrb_preset_object_117 }, .tt = MRB_TT_STRING },
 	{ .value = { .p = (void *)&mrb_preset_object_118 }, .tt = MRB_TT_STRING },
 	{ .value = { .p = (void *)&mrb_preset_object_119 }, .tt = MRB_TT_STRING },
-	{ .value = { .p = (void *)&mrb_preset_object_120 }, .tt = MRB_TT_STRING },
+};
+PRESET_CONST mrb_value mrb_preset_irep_41_pool[] = {
 	{ .value = { .p = (void *)&mrb_preset_object_121 }, .tt = MRB_TT_STRING },
 	{ .value = { .p = (void *)&mrb_preset_object_122 }, .tt = MRB_TT_STRING },
+	{ .value = { .p = (void *)&mrb_preset_object_123 }, .tt = MRB_TT_STRING },
 };
 PRESET_CONST mrb_value mrb_preset_irep_42_pool[] = {
 	{ .value = { .p = (void *)&mrb_preset_object_125 }, .tt = MRB_TT_STRING },
@@ -1573,18 +1688,18 @@ PRESET_CONST mrb_value mrb_preset_irep_105_pool[] = {
 PRESET_CONST mrb_value mrb_preset_irep_109_pool[] = {
 	{ .value = { .p = (void *)&mrb_preset_object_228 }, .tt = MRB_TT_STRING },
 };
-PRESET_CONST mrb_value mrb_preset_irep_140_pool[] = {
-	{ .value = { .p = (void *)&mrb_preset_object_248 }, .tt = MRB_TT_STRING },
+PRESET_CONST mrb_value mrb_preset_irep_141_pool[] = {
 	{ .value = { .p = (void *)&mrb_preset_object_249 }, .tt = MRB_TT_STRING },
+	{ .value = { .p = (void *)&mrb_preset_object_250 }, .tt = MRB_TT_STRING },
 };
 PRESET_CONST mrb_value mrb_preset_irep_145_pool[] = {
 	{ .value = { .p = (void *)&mrb_preset_object_257 }, .tt = MRB_TT_STRING },
 };
 PRESET_CONST mrb_value mrb_preset_irep_151_pool[] = {
-	{ .value = { .p = (void *)&mrb_preset_object_280 }, .tt = MRB_TT_STRING },
+	{ .value = { .p = (void *)&mrb_preset_object_286 }, .tt = MRB_TT_STRING },
 };
 PRESET_CONST mrb_value mrb_preset_irep_152_pool[] = {
-	{ .value = { .p = (void *)&mrb_preset_object_282 }, .tt = MRB_TT_STRING },
+	{ .value = { .p = (void *)&mrb_preset_object_288 }, .tt = MRB_TT_STRING },
 };
 
 PRESET_CONST mrb_sym mrb_preset_irep_0_syms[] = { 124, 250, };
@@ -1593,42 +1708,42 @@ PRESET_CONST mrb_sym mrb_preset_irep_2_syms[] = { 40, 41, };
 PRESET_CONST mrb_sym mrb_preset_irep_3_syms[] = { 124, 250, };
 PRESET_CONST mrb_sym mrb_preset_irep_4_syms[] = { 24, 23, };
 PRESET_CONST mrb_sym mrb_preset_irep_5_syms[] = { 106, };
-PRESET_CONST mrb_sym mrb_preset_irep_6_syms[] = { 405, 154, 406, 407, 408, 409, 410, 411, 412, 413, 280, 414, 415, 416, 417, 418, 419, 311, 420, 421, 44, 165, };
-PRESET_CONST mrb_sym mrb_preset_irep_7_syms[] = { 94, 132, };
-PRESET_CONST mrb_sym mrb_preset_irep_8_syms[] = { 123, };
-PRESET_CONST mrb_sym mrb_preset_irep_9_syms[] = { 127, 202, 108, 190, 25, 110, 192, };
-PRESET_CONST mrb_sym mrb_preset_irep_10_syms[] = { 127, 202, 190, 25, 110, 192, };
-PRESET_CONST mrb_sym mrb_preset_irep_11_syms[] = { 127, 202, 108, 190, 25, 110, 192, };
-PRESET_CONST mrb_sym mrb_preset_irep_12_syms[] = { 78, 69, 245, 406, 10, 123, };
-PRESET_CONST mrb_sym mrb_preset_irep_13_syms[] = { 78, 69, 142, 407, 10, 123, };
-PRESET_CONST mrb_sym mrb_preset_irep_14_syms[] = { 78, 69, 245, 408, 10, 123, };
-PRESET_CONST mrb_sym mrb_preset_irep_15_syms[] = { 117, 105, 132, 241, };
-PRESET_CONST mrb_sym mrb_preset_irep_16_syms[] = { 412, 61, 10, };
-PRESET_CONST mrb_sym mrb_preset_irep_17_syms[] = { 86, 106, 69, 239, 71, 120, 61, 108, 127, 128, 202, };
-PRESET_CONST mrb_sym mrb_preset_irep_18_syms[] = { 86, 106, 69, 239, 71, 126, 61, 108, 127, 128, 202, };
-PRESET_CONST mrb_sym mrb_preset_irep_19_syms[] = { 78, 69, 245, 61, 9, 189, 127, 108, 192, 190, 191, 110, 87, 212, 213, 214, 215, 202, 106, 10, 42, 120, 123, };
-PRESET_CONST mrb_sym mrb_preset_irep_20_syms[] = { 10, 152, 189, 108, 153, };
-PRESET_CONST mrb_sym mrb_preset_irep_21_syms[] = { 10, 69, 234, 190, 127, 187, 122, 197, 109, 110, 202, 108, };
-PRESET_CONST mrb_sym mrb_preset_irep_22_syms[] = { 10, 69, 234, 190, 127, 187, 122, 197, 109, 110, 202, 108, };
-PRESET_CONST mrb_sym mrb_preset_irep_23_syms[] = { 65, 129, 250, };
-PRESET_CONST mrb_sym mrb_preset_irep_24_syms[] = { 149, };
-PRESET_CONST mrb_sym mrb_preset_irep_25_syms[] = { 261, 311, 129, 250, };
-PRESET_CONST mrb_sym mrb_preset_irep_26_syms[] = { 149, };
-PRESET_CONST mrb_sym mrb_preset_irep_27_syms[] = { 127, 65, 129, 250, 262, };
-PRESET_CONST mrb_sym mrb_preset_irep_28_syms[] = { 149, 400, };
-PRESET_CONST mrb_sym mrb_preset_irep_29_syms[] = { 400, };
-PRESET_CONST mrb_sym mrb_preset_irep_30_syms[] = { 153, };
-PRESET_CONST mrb_sym mrb_preset_irep_31_syms[] = { 94, 132, 3, 47, 314, 15, 313, 69, 244, };
-PRESET_CONST mrb_sym mrb_preset_irep_32_syms[] = { 135, 149, 110, 108, 189, 127, };
-PRESET_CONST mrb_sym mrb_preset_irep_33_syms[] = { 78, 69, 245, 309, 10, 123, };
-PRESET_CONST mrb_sym mrb_preset_irep_34_syms[] = { 25, 122, 69, 234, 132, 10, 73, 120, 152, 110, 108, 149, 42, 305, 189, 158, };
-PRESET_CONST mrb_sym mrb_preset_irep_35_syms[] = { 78, 69, 245, 122, 10, 9, 261, 307, 306, 123, };
-PRESET_CONST mrb_sym mrb_preset_irep_36_syms[] = { 122, 10, 9, 261, 306, 25, 69, 234, 61, 132, 152, 110, 202, 108, 149, 42, 305, 120, 189, 158, };
-PRESET_CONST mrb_sym mrb_preset_irep_37_syms[] = { 3, 47, 314, 69, 244, };
-PRESET_CONST mrb_sym mrb_preset_irep_38_syms[] = { 10, 122, 202, 110, 108, 55, 120, };
-PRESET_CONST mrb_sym mrb_preset_irep_39_syms[] = { 261, 304, 61, 149, 132, 122, 73, 110, 108, 202, 120, 127, 191, };
-PRESET_CONST mrb_sym mrb_preset_irep_40_syms[] = { 86, 151, 385, };
-PRESET_CONST mrb_sym mrb_preset_irep_41_syms[] = { 127, 10, 106, 55, 120, 110, 131, 108, 122, 123, 158, 69, 242, 212, 213, 214, 189, 215, 153, 202, 191, 234, };
+PRESET_CONST mrb_sym mrb_preset_irep_6_syms[] = { 203, };
+PRESET_CONST mrb_sym mrb_preset_irep_7_syms[] = { 86, 151, 463, };
+PRESET_CONST mrb_sym mrb_preset_irep_8_syms[] = { 94, 132, };
+PRESET_CONST mrb_sym mrb_preset_irep_9_syms[] = { 117, 105, 132, 241, };
+PRESET_CONST mrb_sym mrb_preset_irep_10_syms[] = { 78, 69, 245, 433, 10, 123, };
+PRESET_CONST mrb_sym mrb_preset_irep_11_syms[] = { 78, 69, 142, 434, 10, 123, };
+PRESET_CONST mrb_sym mrb_preset_irep_12_syms[] = { 78, 69, 245, 435, 10, 123, };
+PRESET_CONST mrb_sym mrb_preset_irep_13_syms[] = { 94, 132, 3, 47, 314, 15, 313, 69, 244, };
+PRESET_CONST mrb_sym mrb_preset_irep_14_syms[] = { 135, 149, 110, 108, 189, 127, };
+PRESET_CONST mrb_sym mrb_preset_irep_15_syms[] = { 153, };
+PRESET_CONST mrb_sym mrb_preset_irep_16_syms[] = { 127, 202, 108, 190, 25, 110, 192, };
+PRESET_CONST mrb_sym mrb_preset_irep_17_syms[] = { 127, 202, 108, 190, 25, 110, 192, };
+PRESET_CONST mrb_sym mrb_preset_irep_18_syms[] = { 78, 69, 245, 309, 10, 123, };
+PRESET_CONST mrb_sym mrb_preset_irep_19_syms[] = { 261, 311, 129, 250, };
+PRESET_CONST mrb_sym mrb_preset_irep_20_syms[] = { 149, };
+PRESET_CONST mrb_sym mrb_preset_irep_21_syms[] = { 25, 122, 69, 234, 132, 10, 73, 120, 152, 110, 108, 149, 42, 305, 189, 158, };
+PRESET_CONST mrb_sym mrb_preset_irep_22_syms[] = { 127, 65, 129, 250, 262, };
+PRESET_CONST mrb_sym mrb_preset_irep_23_syms[] = { 149, 427, };
+PRESET_CONST mrb_sym mrb_preset_irep_24_syms[] = { 427, };
+PRESET_CONST mrb_sym mrb_preset_irep_25_syms[] = { 127, 202, 190, 25, 110, 192, };
+PRESET_CONST mrb_sym mrb_preset_irep_26_syms[] = { 78, 69, 245, 122, 10, 9, 261, 307, 306, 123, };
+PRESET_CONST mrb_sym mrb_preset_irep_27_syms[] = { 122, 10, 9, 261, 306, 25, 69, 234, 61, 132, 152, 110, 202, 108, 149, 42, 305, 120, 189, 158, };
+PRESET_CONST mrb_sym mrb_preset_irep_28_syms[] = { 3, 47, 314, 69, 244, };
+PRESET_CONST mrb_sym mrb_preset_irep_29_syms[] = { 10, 122, 202, 110, 108, 55, 120, };
+PRESET_CONST mrb_sym mrb_preset_irep_30_syms[] = { 261, 304, 61, 149, 132, 122, 73, 110, 108, 202, 120, 127, 191, };
+PRESET_CONST mrb_sym mrb_preset_irep_31_syms[] = { 86, 106, 69, 239, 71, 120, 61, 108, 127, 128, 202, };
+PRESET_CONST mrb_sym mrb_preset_irep_32_syms[] = { 439, 61, 10, };
+PRESET_CONST mrb_sym mrb_preset_irep_33_syms[] = { 65, 129, 250, };
+PRESET_CONST mrb_sym mrb_preset_irep_34_syms[] = { 149, };
+PRESET_CONST mrb_sym mrb_preset_irep_35_syms[] = { 78, 69, 245, 61, 9, 189, 127, 108, 192, 190, 191, 110, 87, 212, 213, 214, 215, 202, 106, 10, 42, 120, 123, };
+PRESET_CONST mrb_sym mrb_preset_irep_36_syms[] = { 86, 106, 69, 239, 71, 126, 61, 108, 127, 128, 202, };
+PRESET_CONST mrb_sym mrb_preset_irep_37_syms[] = { 123, };
+PRESET_CONST mrb_sym mrb_preset_irep_38_syms[] = { 10, 152, 189, 108, 153, };
+PRESET_CONST mrb_sym mrb_preset_irep_39_syms[] = { 127, 10, 106, 55, 120, 110, 131, 108, 122, 123, 158, 69, 242, 212, 213, 214, 189, 215, 153, 202, 191, 234, };
+PRESET_CONST mrb_sym mrb_preset_irep_40_syms[] = { 10, 69, 234, 190, 127, 187, 122, 197, 109, 110, 202, 108, };
+PRESET_CONST mrb_sym mrb_preset_irep_41_syms[] = { 10, 69, 234, 190, 127, 187, 122, 197, 109, 110, 202, 108, };
 PRESET_CONST mrb_sym mrb_preset_irep_42_syms[] = { 94, 132, 69, 239, 294, };
 PRESET_CONST mrb_sym mrb_preset_irep_43_syms[] = { 105, 10, };
 PRESET_CONST mrb_sym mrb_preset_irep_44_syms[] = { 105, 61, 69, 234, 71, 190, };
@@ -1720,15 +1835,15 @@ PRESET_CONST mrb_sym mrb_preset_irep_130_syms[] = { 261, 282, 250, };
 PRESET_CONST mrb_sym mrb_preset_irep_131_syms[] = { 149, 153, };
 PRESET_CONST mrb_sym mrb_preset_irep_132_syms[] = { 261, 281, 250, };
 PRESET_CONST mrb_sym mrb_preset_irep_133_syms[] = { 149, 153, };
-PRESET_CONST mrb_sym mrb_preset_irep_134_syms[] = { 189, };
-PRESET_CONST mrb_sym mrb_preset_irep_135_syms[] = { 261, 298, 131, 149, 202, 192, };
+PRESET_CONST mrb_sym mrb_preset_irep_134_syms[] = { 261, 298, 131, 149, 202, 192, };
+PRESET_CONST mrb_sym mrb_preset_irep_135_syms[] = { 191, };
 PRESET_CONST mrb_sym mrb_preset_irep_136_syms[] = { 108, };
-PRESET_CONST mrb_sym mrb_preset_irep_137_syms[] = { 261, 301, 149, 108, 189, };
-PRESET_CONST mrb_sym mrb_preset_irep_138_syms[] = { 206, 110, };
-PRESET_CONST mrb_sym mrb_preset_irep_139_syms[] = { 10, };
-PRESET_CONST mrb_sym mrb_preset_irep_140_syms[] = { 10, 69, 234, 261, 303, 99, 87, 207, 130, 149, 108, 191, 190, 192, };
-PRESET_CONST mrb_sym mrb_preset_irep_141_syms[] = { 10, };
-PRESET_CONST mrb_sym mrb_preset_irep_142_syms[] = { 191, };
+PRESET_CONST mrb_sym mrb_preset_irep_137_syms[] = { 189, };
+PRESET_CONST mrb_sym mrb_preset_irep_138_syms[] = { 10, };
+PRESET_CONST mrb_sym mrb_preset_irep_139_syms[] = { 261, 301, 149, 108, 189, };
+PRESET_CONST mrb_sym mrb_preset_irep_140_syms[] = { 10, };
+PRESET_CONST mrb_sym mrb_preset_irep_141_syms[] = { 10, 69, 234, 261, 303, 99, 87, 207, 130, 149, 108, 191, 190, 192, };
+PRESET_CONST mrb_sym mrb_preset_irep_142_syms[] = { 206, 110, };
 PRESET_CONST mrb_sym mrb_preset_irep_143_syms[] = { 261, 302, 131, 149, 108, 190, };
 PRESET_CONST mrb_sym mrb_preset_irep_144_syms[] = { 157, 79, 59, 159, 215, 108, };
 PRESET_CONST mrb_sym mrb_preset_irep_145_syms[] = { 261, 250, 157, 159, 87, 201, 215, 108, 149, 189, 106, 94, 302, 300, 69, 239, 105, 191, 127, 9, 10, };
@@ -1743,10 +1858,10 @@ PRESET_CONST mrb_sym mrb_preset_irep_153_syms[] = { 294, 9, };
 PRESET_CONST struct mrb_irep *const mrb_preset_irep_0_reps[] = { &mrb_preset_irep_1, };
 PRESET_CONST struct mrb_irep *const mrb_preset_irep_3_reps[] = { &mrb_preset_irep_4, };
 PRESET_CONST struct mrb_irep *const mrb_preset_irep_5_reps[] = { &mrb_preset_irep_6, };
-PRESET_CONST struct mrb_irep *const mrb_preset_irep_6_reps[] = { &mrb_preset_irep_7, &mrb_preset_irep_8, &mrb_preset_irep_9, &mrb_preset_irep_10, &mrb_preset_irep_11, &mrb_preset_irep_12, &mrb_preset_irep_13, &mrb_preset_irep_14, &mrb_preset_irep_15, &mrb_preset_irep_16, &mrb_preset_irep_17, &mrb_preset_irep_18, &mrb_preset_irep_19, &mrb_preset_irep_20, &mrb_preset_irep_21, &mrb_preset_irep_22, &mrb_preset_irep_23, &mrb_preset_irep_25, &mrb_preset_irep_27, &mrb_preset_irep_30, };
-PRESET_CONST struct mrb_irep *const mrb_preset_irep_23_reps[] = { &mrb_preset_irep_24, };
-PRESET_CONST struct mrb_irep *const mrb_preset_irep_25_reps[] = { &mrb_preset_irep_26, };
-PRESET_CONST struct mrb_irep *const mrb_preset_irep_27_reps[] = { &mrb_preset_irep_28, &mrb_preset_irep_29, };
+PRESET_CONST struct mrb_irep *const mrb_preset_irep_6_reps[] = { &mrb_preset_irep_7, };
+PRESET_CONST struct mrb_irep *const mrb_preset_irep_19_reps[] = { &mrb_preset_irep_20, };
+PRESET_CONST struct mrb_irep *const mrb_preset_irep_22_reps[] = { &mrb_preset_irep_23, &mrb_preset_irep_24, };
+PRESET_CONST struct mrb_irep *const mrb_preset_irep_33_reps[] = { &mrb_preset_irep_34, };
 PRESET_CONST struct mrb_irep *const mrb_preset_irep_52_reps[] = { &mrb_preset_irep_53, };
 PRESET_CONST struct mrb_irep *const mrb_preset_irep_63_reps[] = { &mrb_preset_irep_64, };
 PRESET_CONST struct mrb_irep *const mrb_preset_irep_65_reps[] = { &mrb_preset_irep_66, &mrb_preset_irep_67, };
@@ -1799,137 +1914,66 @@ PRESET_CONST struct mrb_locals mrb_preset_irep_4_lvs[] = {
 	{ .name = (mrb_sym)0, .r = 0 },
 };
 PRESET_CONST struct mrb_locals mrb_preset_irep_7_lvs[] = {
-	{ .name = (mrb_sym)320, .r = 1 },
+	{ .name = (mrb_sym)253, .r = 1 },
 	{ .name = (mrb_sym)0, .r = 0 },
 };
 PRESET_CONST struct mrb_locals mrb_preset_irep_8_lvs[] = {
+	{ .name = (mrb_sym)320, .r = 1 },
 	{ .name = (mrb_sym)0, .r = 0 },
 };
 PRESET_CONST struct mrb_locals mrb_preset_irep_9_lvs[] = {
+	{ .name = (mrb_sym)363, .r = 1 },
 	{ .name = (mrb_sym)0, .r = 0 },
-	{ .name = (mrb_sym)349, .r = 2 },
-	{ .name = (mrb_sym)422, .r = 3 },
 };
 PRESET_CONST struct mrb_locals mrb_preset_irep_10_lvs[] = {
 	{ .name = (mrb_sym)0, .r = 0 },
-	{ .name = (mrb_sym)349, .r = 2 },
-	{ .name = (mrb_sym)422, .r = 3 },
+	{ .name = (mrb_sym)348, .r = 2 },
 };
 PRESET_CONST struct mrb_locals mrb_preset_irep_11_lvs[] = {
 	{ .name = (mrb_sym)0, .r = 0 },
-	{ .name = (mrb_sym)349, .r = 2 },
-	{ .name = (mrb_sym)422, .r = 3 },
+	{ .name = (mrb_sym)348, .r = 2 },
 };
 PRESET_CONST struct mrb_locals mrb_preset_irep_12_lvs[] = {
 	{ .name = (mrb_sym)0, .r = 0 },
 	{ .name = (mrb_sym)348, .r = 2 },
 };
 PRESET_CONST struct mrb_locals mrb_preset_irep_13_lvs[] = {
-	{ .name = (mrb_sym)0, .r = 0 },
-	{ .name = (mrb_sym)348, .r = 2 },
-};
-PRESET_CONST struct mrb_locals mrb_preset_irep_14_lvs[] = {
-	{ .name = (mrb_sym)0, .r = 0 },
-	{ .name = (mrb_sym)348, .r = 2 },
-};
-PRESET_CONST struct mrb_locals mrb_preset_irep_15_lvs[] = {
-	{ .name = (mrb_sym)363, .r = 1 },
-	{ .name = (mrb_sym)0, .r = 0 },
-};
-PRESET_CONST struct mrb_locals mrb_preset_irep_16_lvs[] = {
-	{ .name = (mrb_sym)363, .r = 1 },
-	{ .name = (mrb_sym)0, .r = 0 },
-	{ .name = (mrb_sym)423, .r = 3 },
-};
-PRESET_CONST struct mrb_locals mrb_preset_irep_17_lvs[] = {
-	{ .name = (mrb_sym)424, .r = 1 },
-	{ .name = (mrb_sym)0, .r = 0 },
-	{ .name = (mrb_sym)324, .r = 3 },
-	{ .name = (mrb_sym)316, .r = 4 },
-};
-PRESET_CONST struct mrb_locals mrb_preset_irep_18_lvs[] = {
-	{ .name = (mrb_sym)424, .r = 1 },
-	{ .name = (mrb_sym)0, .r = 0 },
-	{ .name = (mrb_sym)324, .r = 3 },
-	{ .name = (mrb_sym)316, .r = 4 },
-};
-PRESET_CONST struct mrb_locals mrb_preset_irep_19_lvs[] = {
-	{ .name = (mrb_sym)425, .r = 1 },
-	{ .name = (mrb_sym)426, .r = 2 },
-	{ .name = (mrb_sym)0, .r = 0 },
-	{ .name = (mrb_sym)318, .r = 4 },
-	{ .name = (mrb_sym)363, .r = 5 },
-	{ .name = (mrb_sym)427, .r = 6 },
-	{ .name = (mrb_sym)428, .r = 7 },
-	{ .name = (mrb_sym)429, .r = 8 },
-	{ .name = (mrb_sym)430, .r = 9 },
-	{ .name = (mrb_sym)431, .r = 10 },
-};
-PRESET_CONST struct mrb_locals mrb_preset_irep_20_lvs[] = {
-	{ .name = (mrb_sym)318, .r = 1 },
-	{ .name = (mrb_sym)363, .r = 2 },
-	{ .name = (mrb_sym)0, .r = 0 },
-};
-PRESET_CONST struct mrb_locals mrb_preset_irep_21_lvs[] = {
-	{ .name = (mrb_sym)318, .r = 1 },
-	{ .name = (mrb_sym)432, .r = 2 },
-	{ .name = (mrb_sym)0, .r = 0 },
-	{ .name = (mrb_sym)433, .r = 4 },
-	{ .name = (mrb_sym)434, .r = 5 },
-};
-PRESET_CONST struct mrb_locals mrb_preset_irep_22_lvs[] = {
-	{ .name = (mrb_sym)318, .r = 1 },
-	{ .name = (mrb_sym)432, .r = 2 },
-	{ .name = (mrb_sym)0, .r = 0 },
-	{ .name = (mrb_sym)433, .r = 4 },
-	{ .name = (mrb_sym)434, .r = 5 },
-};
-PRESET_CONST struct mrb_locals mrb_preset_irep_23_lvs[] = {
-	{ .name = (mrb_sym)317, .r = 1 },
-};
-PRESET_CONST struct mrb_locals mrb_preset_irep_24_lvs[] = {
-	{ .name = (mrb_sym)323, .r = 1 },
-	{ .name = (mrb_sym)0, .r = 0 },
-};
-PRESET_CONST struct mrb_locals mrb_preset_irep_25_lvs[] = {
-	{ .name = (mrb_sym)317, .r = 1 },
-};
-PRESET_CONST struct mrb_locals mrb_preset_irep_26_lvs[] = {
-	{ .name = (mrb_sym)323, .r = 1 },
-	{ .name = (mrb_sym)0, .r = 0 },
-};
-PRESET_CONST struct mrb_locals mrb_preset_irep_27_lvs[] = {
-	{ .name = (mrb_sym)317, .r = 1 },
-	{ .name = (mrb_sym)319, .r = 2 },
-};
-PRESET_CONST struct mrb_locals mrb_preset_irep_28_lvs[] = {
-	{ .name = (mrb_sym)321, .r = 1 },
-	{ .name = (mrb_sym)0, .r = 0 },
-};
-PRESET_CONST struct mrb_locals mrb_preset_irep_29_lvs[] = {
-	{ .name = (mrb_sym)321, .r = 1 },
-	{ .name = (mrb_sym)0, .r = 0 },
-};
-PRESET_CONST struct mrb_locals mrb_preset_irep_30_lvs[] = {
-	{ .name = (mrb_sym)435, .r = 1 },
-	{ .name = (mrb_sym)0, .r = 0 },
-};
-PRESET_CONST struct mrb_locals mrb_preset_irep_31_lvs[] = {
 	{ .name = (mrb_sym)371, .r = 1 },
 	{ .name = (mrb_sym)317, .r = 2 },
 	{ .name = (mrb_sym)372, .r = 3 },
 };
-PRESET_CONST struct mrb_locals mrb_preset_irep_32_lvs[] = {
+PRESET_CONST struct mrb_locals mrb_preset_irep_14_lvs[] = {
 	{ .name = (mrb_sym)317, .r = 1 },
 	{ .name = (mrb_sym)135, .r = 2 },
 	{ .name = (mrb_sym)357, .r = 3 },
 };
-PRESET_CONST struct mrb_locals mrb_preset_irep_33_lvs[] = {
+PRESET_CONST struct mrb_locals mrb_preset_irep_15_lvs[] = {
+	{ .name = (mrb_sym)462, .r = 1 },
+	{ .name = (mrb_sym)0, .r = 0 },
+};
+PRESET_CONST struct mrb_locals mrb_preset_irep_16_lvs[] = {
+	{ .name = (mrb_sym)0, .r = 0 },
+	{ .name = (mrb_sym)349, .r = 2 },
+	{ .name = (mrb_sym)449, .r = 3 },
+};
+PRESET_CONST struct mrb_locals mrb_preset_irep_17_lvs[] = {
+	{ .name = (mrb_sym)0, .r = 0 },
+	{ .name = (mrb_sym)349, .r = 2 },
+	{ .name = (mrb_sym)449, .r = 3 },
+};
+PRESET_CONST struct mrb_locals mrb_preset_irep_18_lvs[] = {
 	{ .name = (mrb_sym)253, .r = 1 },
 	{ .name = (mrb_sym)317, .r = 2 },
 	{ .name = (mrb_sym)363, .r = 3 },
 };
-PRESET_CONST struct mrb_locals mrb_preset_irep_34_lvs[] = {
+PRESET_CONST struct mrb_locals mrb_preset_irep_19_lvs[] = {
+	{ .name = (mrb_sym)317, .r = 1 },
+};
+PRESET_CONST struct mrb_locals mrb_preset_irep_20_lvs[] = {
+	{ .name = (mrb_sym)323, .r = 1 },
+	{ .name = (mrb_sym)0, .r = 0 },
+};
+PRESET_CONST struct mrb_locals mrb_preset_irep_21_lvs[] = {
 	{ .name = (mrb_sym)253, .r = 1 },
 	{ .name = (mrb_sym)317, .r = 2 },
 	{ .name = (mrb_sym)336, .r = 3 },
@@ -1939,12 +1983,29 @@ PRESET_CONST struct mrb_locals mrb_preset_irep_34_lvs[] = {
 	{ .name = (mrb_sym)362, .r = 7 },
 	{ .name = (mrb_sym)354, .r = 8 },
 };
-PRESET_CONST struct mrb_locals mrb_preset_irep_35_lvs[] = {
+PRESET_CONST struct mrb_locals mrb_preset_irep_22_lvs[] = {
+	{ .name = (mrb_sym)317, .r = 1 },
+	{ .name = (mrb_sym)319, .r = 2 },
+};
+PRESET_CONST struct mrb_locals mrb_preset_irep_23_lvs[] = {
+	{ .name = (mrb_sym)321, .r = 1 },
+	{ .name = (mrb_sym)0, .r = 0 },
+};
+PRESET_CONST struct mrb_locals mrb_preset_irep_24_lvs[] = {
+	{ .name = (mrb_sym)321, .r = 1 },
+	{ .name = (mrb_sym)0, .r = 0 },
+};
+PRESET_CONST struct mrb_locals mrb_preset_irep_25_lvs[] = {
+	{ .name = (mrb_sym)0, .r = 0 },
+	{ .name = (mrb_sym)349, .r = 2 },
+	{ .name = (mrb_sym)449, .r = 3 },
+};
+PRESET_CONST struct mrb_locals mrb_preset_irep_26_lvs[] = {
 	{ .name = (mrb_sym)253, .r = 1 },
 	{ .name = (mrb_sym)317, .r = 2 },
 	{ .name = (mrb_sym)363, .r = 3 },
 };
-PRESET_CONST struct mrb_locals mrb_preset_irep_36_lvs[] = {
+PRESET_CONST struct mrb_locals mrb_preset_irep_27_lvs[] = {
 	{ .name = (mrb_sym)253, .r = 1 },
 	{ .name = (mrb_sym)317, .r = 2 },
 	{ .name = (mrb_sym)336, .r = 3 },
@@ -1954,11 +2015,11 @@ PRESET_CONST struct mrb_locals mrb_preset_irep_36_lvs[] = {
 	{ .name = (mrb_sym)255, .r = 7 },
 	{ .name = (mrb_sym)362, .r = 8 },
 };
-PRESET_CONST struct mrb_locals mrb_preset_irep_37_lvs[] = {
+PRESET_CONST struct mrb_locals mrb_preset_irep_28_lvs[] = {
 	{ .name = (mrb_sym)364, .r = 1 },
 	{ .name = (mrb_sym)317, .r = 2 },
 };
-PRESET_CONST struct mrb_locals mrb_preset_irep_38_lvs[] = {
+PRESET_CONST struct mrb_locals mrb_preset_irep_29_lvs[] = {
 	{ .name = (mrb_sym)358, .r = 1 },
 	{ .name = (mrb_sym)316, .r = 2 },
 	{ .name = (mrb_sym)359, .r = 3 },
@@ -1968,7 +2029,7 @@ PRESET_CONST struct mrb_locals mrb_preset_irep_38_lvs[] = {
 	{ .name = (mrb_sym)329, .r = 7 },
 	{ .name = (mrb_sym)360, .r = 8 },
 };
-PRESET_CONST struct mrb_locals mrb_preset_irep_39_lvs[] = {
+PRESET_CONST struct mrb_locals mrb_preset_irep_30_lvs[] = {
 	{ .name = (mrb_sym)353, .r = 1 },
 	{ .name = (mrb_sym)317, .r = 2 },
 	{ .name = (mrb_sym)354, .r = 3 },
@@ -1976,11 +2037,51 @@ PRESET_CONST struct mrb_locals mrb_preset_irep_39_lvs[] = {
 	{ .name = (mrb_sym)356, .r = 5 },
 	{ .name = (mrb_sym)357, .r = 6 },
 };
-PRESET_CONST struct mrb_locals mrb_preset_irep_40_lvs[] = {
-	{ .name = (mrb_sym)253, .r = 1 },
+PRESET_CONST struct mrb_locals mrb_preset_irep_31_lvs[] = {
+	{ .name = (mrb_sym)451, .r = 1 },
+	{ .name = (mrb_sym)0, .r = 0 },
+	{ .name = (mrb_sym)324, .r = 3 },
+	{ .name = (mrb_sym)316, .r = 4 },
+};
+PRESET_CONST struct mrb_locals mrb_preset_irep_32_lvs[] = {
+	{ .name = (mrb_sym)363, .r = 1 },
+	{ .name = (mrb_sym)0, .r = 0 },
+	{ .name = (mrb_sym)450, .r = 3 },
+};
+PRESET_CONST struct mrb_locals mrb_preset_irep_33_lvs[] = {
+	{ .name = (mrb_sym)317, .r = 1 },
+};
+PRESET_CONST struct mrb_locals mrb_preset_irep_34_lvs[] = {
+	{ .name = (mrb_sym)323, .r = 1 },
 	{ .name = (mrb_sym)0, .r = 0 },
 };
-PRESET_CONST struct mrb_locals mrb_preset_irep_41_lvs[] = {
+PRESET_CONST struct mrb_locals mrb_preset_irep_35_lvs[] = {
+	{ .name = (mrb_sym)452, .r = 1 },
+	{ .name = (mrb_sym)453, .r = 2 },
+	{ .name = (mrb_sym)0, .r = 0 },
+	{ .name = (mrb_sym)318, .r = 4 },
+	{ .name = (mrb_sym)363, .r = 5 },
+	{ .name = (mrb_sym)454, .r = 6 },
+	{ .name = (mrb_sym)455, .r = 7 },
+	{ .name = (mrb_sym)456, .r = 8 },
+	{ .name = (mrb_sym)457, .r = 9 },
+	{ .name = (mrb_sym)458, .r = 10 },
+};
+PRESET_CONST struct mrb_locals mrb_preset_irep_36_lvs[] = {
+	{ .name = (mrb_sym)451, .r = 1 },
+	{ .name = (mrb_sym)0, .r = 0 },
+	{ .name = (mrb_sym)324, .r = 3 },
+	{ .name = (mrb_sym)316, .r = 4 },
+};
+PRESET_CONST struct mrb_locals mrb_preset_irep_37_lvs[] = {
+	{ .name = (mrb_sym)0, .r = 0 },
+};
+PRESET_CONST struct mrb_locals mrb_preset_irep_38_lvs[] = {
+	{ .name = (mrb_sym)318, .r = 1 },
+	{ .name = (mrb_sym)363, .r = 2 },
+	{ .name = (mrb_sym)0, .r = 0 },
+};
+PRESET_CONST struct mrb_locals mrb_preset_irep_39_lvs[] = {
 	{ .name = (mrb_sym)253, .r = 1 },
 	{ .name = (mrb_sym)0, .r = 0 },
 	{ .name = (mrb_sym)365, .r = 3 },
@@ -1992,6 +2093,20 @@ PRESET_CONST struct mrb_locals mrb_preset_irep_41_lvs[] = {
 	{ .name = (mrb_sym)369, .r = 9 },
 	{ .name = (mrb_sym)370, .r = 10 },
 	{ .name = (mrb_sym)319, .r = 11 },
+};
+PRESET_CONST struct mrb_locals mrb_preset_irep_40_lvs[] = {
+	{ .name = (mrb_sym)318, .r = 1 },
+	{ .name = (mrb_sym)459, .r = 2 },
+	{ .name = (mrb_sym)0, .r = 0 },
+	{ .name = (mrb_sym)460, .r = 4 },
+	{ .name = (mrb_sym)461, .r = 5 },
+};
+PRESET_CONST struct mrb_locals mrb_preset_irep_41_lvs[] = {
+	{ .name = (mrb_sym)318, .r = 1 },
+	{ .name = (mrb_sym)459, .r = 2 },
+	{ .name = (mrb_sym)0, .r = 0 },
+	{ .name = (mrb_sym)460, .r = 4 },
+	{ .name = (mrb_sym)461, .r = 5 },
 };
 PRESET_CONST struct mrb_locals mrb_preset_irep_42_lvs[] = {
 	{ .name = (mrb_sym)371, .r = 1 },
@@ -2398,37 +2513,37 @@ PRESET_CONST struct mrb_locals mrb_preset_irep_133_lvs[] = {
 	{ .name = (mrb_sym)0, .r = 0 },
 };
 PRESET_CONST struct mrb_locals mrb_preset_irep_134_lvs[] = {
-	{ .name = (mrb_sym)0, .r = 0 },
-};
-PRESET_CONST struct mrb_locals mrb_preset_irep_135_lvs[] = {
 	{ .name = (mrb_sym)350, .r = 1 },
 	{ .name = (mrb_sym)317, .r = 2 },
 	{ .name = (mrb_sym)323, .r = 3 },
+};
+PRESET_CONST struct mrb_locals mrb_preset_irep_135_lvs[] = {
+	{ .name = (mrb_sym)0, .r = 0 },
 };
 PRESET_CONST struct mrb_locals mrb_preset_irep_136_lvs[] = {
 	{ .name = (mrb_sym)0, .r = 0 },
 };
 PRESET_CONST struct mrb_locals mrb_preset_irep_137_lvs[] = {
-	{ .name = (mrb_sym)317, .r = 1 },
-	{ .name = (mrb_sym)323, .r = 2 },
+	{ .name = (mrb_sym)0, .r = 0 },
 };
 PRESET_CONST struct mrb_locals mrb_preset_irep_138_lvs[] = {
-	{ .name = (mrb_sym)322, .r = 1 },
 	{ .name = (mrb_sym)0, .r = 0 },
 };
 PRESET_CONST struct mrb_locals mrb_preset_irep_139_lvs[] = {
-	{ .name = (mrb_sym)0, .r = 0 },
+	{ .name = (mrb_sym)317, .r = 1 },
+	{ .name = (mrb_sym)323, .r = 2 },
 };
 PRESET_CONST struct mrb_locals mrb_preset_irep_140_lvs[] = {
+	{ .name = (mrb_sym)0, .r = 0 },
+};
+PRESET_CONST struct mrb_locals mrb_preset_irep_141_lvs[] = {
 	{ .name = (mrb_sym)350, .r = 1 },
 	{ .name = (mrb_sym)303, .r = 2 },
 	{ .name = (mrb_sym)317, .r = 3 },
 	{ .name = (mrb_sym)323, .r = 4 },
 };
-PRESET_CONST struct mrb_locals mrb_preset_irep_141_lvs[] = {
-	{ .name = (mrb_sym)0, .r = 0 },
-};
 PRESET_CONST struct mrb_locals mrb_preset_irep_142_lvs[] = {
+	{ .name = (mrb_sym)322, .r = 1 },
 	{ .name = (mrb_sym)0, .r = 0 },
 };
 PRESET_CONST struct mrb_locals mrb_preset_irep_143_lvs[] = {
@@ -2565,7 +2680,7 @@ PRESET_CONST mrb_irep mrb_preset_irep_5 = {
 	.nlocals = 1,
 	.nregs = 3,
 	.flags = 0x1,
-	.iseq = (mrb_code *)&((uint8_t *)gem_mrblib_irep_mruby_string_ext)[48],
+	.iseq = (mrb_code *)&((uint8_t *)gem_mrblib_irep_mruby_sprintf)[48],
 	.pool = NULL,
 	.syms = (mrb_sym *)&mrb_preset_irep_5_syms,
 	.reps = (struct mrb_irep **)&mrb_preset_irep_5_reps,
@@ -2578,9 +2693,9 @@ PRESET_CONST mrb_irep mrb_preset_irep_5 = {
 };
 PRESET_CONST mrb_irep mrb_preset_irep_6 = {
 	.nlocals = 1,
-	.nregs = 5,
+	.nregs = 3,
 	.flags = 0x1,
-	.iseq = (mrb_code *)&((uint8_t *)gem_mrblib_irep_mruby_string_ext)[100],
+	.iseq = (mrb_code *)&((uint8_t *)gem_mrblib_irep_mruby_sprintf)[100],
 	.pool = NULL,
 	.syms = (mrb_sym *)&mrb_preset_irep_6_syms,
 	.reps = (struct mrb_irep **)&mrb_preset_irep_6_reps,
@@ -2589,13 +2704,13 @@ PRESET_CONST mrb_irep mrb_preset_irep_6 = {
 	.filename = NULL,
 	.lines = NULL,
 	.debug_info = NULL,
-	.ilen = 68, .plen = 0, .slen = 22, .rlen = 20, .refcnt = 2
+	.ilen = 5, .plen = 0, .slen = 1, .rlen = 1, .refcnt = 2
 };
 PRESET_CONST mrb_irep mrb_preset_irep_7 = {
 	.nlocals = 3,
-	.nregs = 6,
+	.nregs = 7,
 	.flags = 0x1,
-	.iseq = (mrb_code *)&((uint8_t *)gem_mrblib_irep_mruby_string_ext)[628],
+	.iseq = (mrb_code *)&((uint8_t *)gem_mrblib_irep_mruby_sprintf)[148],
 	.pool = NULL,
 	.syms = (mrb_sym *)&mrb_preset_irep_7_syms,
 	.reps = NULL,
@@ -2604,14 +2719,14 @@ PRESET_CONST mrb_irep mrb_preset_irep_7 = {
 	.filename = NULL,
 	.lines = NULL,
 	.debug_info = NULL,
-	.ilen = 10, .plen = 0, .slen = 2, .rlen = 0, .refcnt = 2
+	.ilen = 16, .plen = 0, .slen = 3, .rlen = 0, .refcnt = 2
 };
 PRESET_CONST mrb_irep mrb_preset_irep_8 = {
-	.nlocals = 2,
-	.nregs = 5,
+	.nlocals = 3,
+	.nregs = 6,
 	.flags = 0x1,
-	.iseq = (mrb_code *)&((uint8_t *)gem_mrblib_irep_mruby_string_ext)[716],
-	.pool = (mrb_value *)&mrb_preset_irep_8_pool,
+	.iseq = (mrb_code *)&((uint8_t *)gem_mrblib_irep_mruby_string_ext)[628],
+	.pool = NULL,
 	.syms = (mrb_sym *)&mrb_preset_irep_8_syms,
 	.reps = NULL,
 	.lv = (struct mrb_locals *)&mrb_preset_irep_8_lvs,
@@ -2619,14 +2734,14 @@ PRESET_CONST mrb_irep mrb_preset_irep_8 = {
 	.filename = NULL,
 	.lines = NULL,
 	.debug_info = NULL,
-	.ilen = 5, .plen = 1, .slen = 1, .rlen = 0, .refcnt = 2
+	.ilen = 10, .plen = 0, .slen = 2, .rlen = 0, .refcnt = 2
 };
 PRESET_CONST mrb_irep mrb_preset_irep_9 = {
-	.nlocals = 4,
-	.nregs = 8,
+	.nlocals = 3,
+	.nregs = 6,
 	.flags = 0x1,
-	.iseq = (mrb_code *)&((uint8_t *)gem_mrblib_irep_mruby_string_ext)[772],
-	.pool = (mrb_value *)&mrb_preset_irep_9_pool,
+	.iseq = (mrb_code *)&((uint8_t *)gem_mrblib_irep_mruby_string_ext)[2012],
+	.pool = NULL,
 	.syms = (mrb_sym *)&mrb_preset_irep_9_syms,
 	.reps = NULL,
 	.lv = (struct mrb_locals *)&mrb_preset_irep_9_lvs,
@@ -2634,13 +2749,13 @@ PRESET_CONST mrb_irep mrb_preset_irep_9 = {
 	.filename = NULL,
 	.lines = NULL,
 	.debug_info = NULL,
-	.ilen = 32, .plen = 2, .slen = 7, .rlen = 0, .refcnt = 2
+	.ilen = 19, .plen = 0, .slen = 4, .rlen = 0, .refcnt = 2
 };
 PRESET_CONST mrb_irep mrb_preset_irep_10 = {
-	.nlocals = 4,
-	.nregs = 8,
+	.nlocals = 3,
+	.nregs = 7,
 	.flags = 0x1,
-	.iseq = (mrb_code *)&((uint8_t *)gem_mrblib_irep_mruby_string_ext)[976],
+	.iseq = (mrb_code *)&((uint8_t *)gem_mrblib_irep_mruby_string_ext)[1448],
 	.pool = (mrb_value *)&mrb_preset_irep_10_pool,
 	.syms = (mrb_sym *)&mrb_preset_irep_10_syms,
 	.reps = NULL,
@@ -2649,13 +2764,13 @@ PRESET_CONST mrb_irep mrb_preset_irep_10 = {
 	.filename = NULL,
 	.lines = NULL,
 	.debug_info = NULL,
-	.ilen = 32, .plen = 2, .slen = 6, .rlen = 0, .refcnt = 2
+	.ilen = 20, .plen = 1, .slen = 6, .rlen = 0, .refcnt = 2
 };
 PRESET_CONST mrb_irep mrb_preset_irep_11 = {
-	.nlocals = 4,
-	.nregs = 8,
+	.nlocals = 3,
+	.nregs = 7,
 	.flags = 0x1,
-	.iseq = (mrb_code *)&((uint8_t *)gem_mrblib_irep_mruby_string_ext)[1176],
+	.iseq = (mrb_code *)&((uint8_t *)gem_mrblib_irep_mruby_string_ext)[1636],
 	.pool = (mrb_value *)&mrb_preset_irep_11_pool,
 	.syms = (mrb_sym *)&mrb_preset_irep_11_syms,
 	.reps = NULL,
@@ -2664,13 +2779,13 @@ PRESET_CONST mrb_irep mrb_preset_irep_11 = {
 	.filename = NULL,
 	.lines = NULL,
 	.debug_info = NULL,
-	.ilen = 46, .plen = 3, .slen = 7, .rlen = 0, .refcnt = 2
+	.ilen = 20, .plen = 1, .slen = 6, .rlen = 0, .refcnt = 2
 };
 PRESET_CONST mrb_irep mrb_preset_irep_12 = {
 	.nlocals = 3,
 	.nregs = 7,
 	.flags = 0x1,
-	.iseq = (mrb_code *)&((uint8_t *)gem_mrblib_irep_mruby_string_ext)[1448],
+	.iseq = (mrb_code *)&((uint8_t *)gem_mrblib_irep_mruby_string_ext)[1824],
 	.pool = (mrb_value *)&mrb_preset_irep_12_pool,
 	.syms = (mrb_sym *)&mrb_preset_irep_12_syms,
 	.reps = NULL,
@@ -2682,10 +2797,10 @@ PRESET_CONST mrb_irep mrb_preset_irep_12 = {
 	.ilen = 20, .plen = 1, .slen = 6, .rlen = 0, .refcnt = 2
 };
 PRESET_CONST mrb_irep mrb_preset_irep_13 = {
-	.nlocals = 3,
-	.nregs = 7,
+	.nlocals = 4,
+	.nregs = 8,
 	.flags = 0x1,
-	.iseq = (mrb_code *)&((uint8_t *)gem_mrblib_irep_mruby_string_ext)[1636],
+	.iseq = (mrb_code *)&((uint8_t *)mrblib_irep)[22968],
 	.pool = (mrb_value *)&mrb_preset_irep_13_pool,
 	.syms = (mrb_sym *)&mrb_preset_irep_13_syms,
 	.reps = NULL,
@@ -2694,14 +2809,14 @@ PRESET_CONST mrb_irep mrb_preset_irep_13 = {
 	.filename = NULL,
 	.lines = NULL,
 	.debug_info = NULL,
-	.ilen = 20, .plen = 1, .slen = 6, .rlen = 0, .refcnt = 2
+	.ilen = 27, .plen = 1, .slen = 9, .rlen = 0, .refcnt = 2
 };
 PRESET_CONST mrb_irep mrb_preset_irep_14 = {
-	.nlocals = 3,
-	.nregs = 7,
+	.nlocals = 4,
+	.nregs = 8,
 	.flags = 0x1,
-	.iseq = (mrb_code *)&((uint8_t *)gem_mrblib_irep_mruby_string_ext)[1824],
-	.pool = (mrb_value *)&mrb_preset_irep_14_pool,
+	.iseq = (mrb_code *)&((uint8_t *)mrblib_irep)[21500],
+	.pool = NULL,
 	.syms = (mrb_sym *)&mrb_preset_irep_14_syms,
 	.reps = NULL,
 	.lv = (struct mrb_locals *)&mrb_preset_irep_14_lvs,
@@ -2709,13 +2824,13 @@ PRESET_CONST mrb_irep mrb_preset_irep_14 = {
 	.filename = NULL,
 	.lines = NULL,
 	.debug_info = NULL,
-	.ilen = 20, .plen = 1, .slen = 6, .rlen = 0, .refcnt = 2
+	.ilen = 21, .plen = 0, .slen = 6, .rlen = 0, .refcnt = 2
 };
 PRESET_CONST mrb_irep mrb_preset_irep_15 = {
 	.nlocals = 3,
-	.nregs = 6,
+	.nregs = 9,
 	.flags = 0x1,
-	.iseq = (mrb_code *)&((uint8_t *)gem_mrblib_irep_mruby_string_ext)[2012],
+	.iseq = (mrb_code *)&((uint8_t *)gem_mrblib_irep_mruby_string_ext)[5556],
 	.pool = NULL,
 	.syms = (mrb_sym *)&mrb_preset_irep_15_syms,
 	.reps = NULL,
@@ -2724,14 +2839,14 @@ PRESET_CONST mrb_irep mrb_preset_irep_15 = {
 	.filename = NULL,
 	.lines = NULL,
 	.debug_info = NULL,
-	.ilen = 19, .plen = 0, .slen = 4, .rlen = 0, .refcnt = 2
+	.ilen = 9, .plen = 0, .slen = 1, .rlen = 0, .refcnt = 2
 };
 PRESET_CONST mrb_irep mrb_preset_irep_16 = {
 	.nlocals = 4,
-	.nregs = 7,
+	.nregs = 8,
 	.flags = 0x1,
-	.iseq = (mrb_code *)&((uint8_t *)gem_mrblib_irep_mruby_string_ext)[2152],
-	.pool = NULL,
+	.iseq = (mrb_code *)&((uint8_t *)gem_mrblib_irep_mruby_string_ext)[772],
+	.pool = (mrb_value *)&mrb_preset_irep_16_pool,
 	.syms = (mrb_sym *)&mrb_preset_irep_16_syms,
 	.reps = NULL,
 	.lv = (struct mrb_locals *)&mrb_preset_irep_16_lvs,
@@ -2739,13 +2854,13 @@ PRESET_CONST mrb_irep mrb_preset_irep_16 = {
 	.filename = NULL,
 	.lines = NULL,
 	.debug_info = NULL,
-	.ilen = 13, .plen = 0, .slen = 3, .rlen = 0, .refcnt = 2
+	.ilen = 32, .plen = 2, .slen = 7, .rlen = 0, .refcnt = 2
 };
 PRESET_CONST mrb_irep mrb_preset_irep_17 = {
-	.nlocals = 5,
-	.nregs = 12,
+	.nlocals = 4,
+	.nregs = 8,
 	.flags = 0x1,
-	.iseq = (mrb_code *)&((uint8_t *)gem_mrblib_irep_mruby_string_ext)[2248],
+	.iseq = (mrb_code *)&((uint8_t *)gem_mrblib_irep_mruby_string_ext)[1176],
 	.pool = (mrb_value *)&mrb_preset_irep_17_pool,
 	.syms = (mrb_sym *)&mrb_preset_irep_17_syms,
 	.reps = NULL,
@@ -2754,13 +2869,13 @@ PRESET_CONST mrb_irep mrb_preset_irep_17 = {
 	.filename = NULL,
 	.lines = NULL,
 	.debug_info = NULL,
-	.ilen = 45, .plen = 3, .slen = 11, .rlen = 0, .refcnt = 2
+	.ilen = 46, .plen = 3, .slen = 7, .rlen = 0, .refcnt = 2
 };
 PRESET_CONST mrb_irep mrb_preset_irep_18 = {
-	.nlocals = 5,
-	.nregs = 12,
+	.nlocals = 4,
+	.nregs = 8,
 	.flags = 0x1,
-	.iseq = (mrb_code *)&((uint8_t *)gem_mrblib_irep_mruby_string_ext)[2564],
+	.iseq = (mrb_code *)&((uint8_t *)mrblib_irep)[21180],
 	.pool = (mrb_value *)&mrb_preset_irep_18_pool,
 	.syms = (mrb_sym *)&mrb_preset_irep_18_syms,
 	.reps = NULL,
@@ -2769,28 +2884,28 @@ PRESET_CONST mrb_irep mrb_preset_irep_18 = {
 	.filename = NULL,
 	.lines = NULL,
 	.debug_info = NULL,
-	.ilen = 45, .plen = 3, .slen = 11, .rlen = 0, .refcnt = 2
+	.ilen = 23, .plen = 1, .slen = 6, .rlen = 0, .refcnt = 2
 };
 PRESET_CONST mrb_irep mrb_preset_irep_19 = {
-	.nlocals = 11,
-	.nregs = 16,
+	.nlocals = 2,
+	.nregs = 5,
 	.flags = 0x1,
-	.iseq = (mrb_code *)&((uint8_t *)gem_mrblib_irep_mruby_string_ext)[2880],
+	.iseq = (mrb_code *)&((uint8_t *)gem_mrblib_irep_mruby_string_ext)[5132],
 	.pool = (mrb_value *)&mrb_preset_irep_19_pool,
 	.syms = (mrb_sym *)&mrb_preset_irep_19_syms,
-	.reps = NULL,
+	.reps = (struct mrb_irep **)&mrb_preset_irep_19_reps,
 	.lv = (struct mrb_locals *)&mrb_preset_irep_19_lvs,
 	.own_filename = (mrb_bool)0,
 	.filename = NULL,
 	.lines = NULL,
 	.debug_info = NULL,
-	.ilen = 275, .plen = 3, .slen = 23, .rlen = 0, .refcnt = 2
+	.ilen = 14, .plen = 1, .slen = 4, .rlen = 1, .refcnt = 2
 };
 PRESET_CONST mrb_irep mrb_preset_irep_20 = {
-	.nlocals = 4,
-	.nregs = 10,
+	.nlocals = 3,
+	.nregs = 6,
 	.flags = 0x1,
-	.iseq = (mrb_code *)&((uint8_t *)gem_mrblib_irep_mruby_string_ext)[4244],
+	.iseq = (mrb_code *)&((uint8_t *)gem_mrblib_irep_mruby_string_ext)[5252],
 	.pool = NULL,
 	.syms = (mrb_sym *)&mrb_preset_irep_20_syms,
 	.reps = NULL,
@@ -2799,13 +2914,13 @@ PRESET_CONST mrb_irep mrb_preset_irep_20 = {
 	.filename = NULL,
 	.lines = NULL,
 	.debug_info = NULL,
-	.ilen = 25, .plen = 0, .slen = 5, .rlen = 0, .refcnt = 2
+	.ilen = 5, .plen = 0, .slen = 1, .rlen = 0, .refcnt = 1
 };
 PRESET_CONST mrb_irep mrb_preset_irep_21 = {
-	.nlocals = 6,
-	.nregs = 11,
+	.nlocals = 9,
+	.nregs = 16,
 	.flags = 0x1,
-	.iseq = (mrb_code *)&((uint8_t *)gem_mrblib_irep_mruby_string_ext)[4392],
+	.iseq = (mrb_code *)&((uint8_t *)mrblib_irep)[20588],
 	.pool = (mrb_value *)&mrb_preset_irep_21_pool,
 	.syms = (mrb_sym *)&mrb_preset_irep_21_syms,
 	.reps = NULL,
@@ -2814,43 +2929,43 @@ PRESET_CONST mrb_irep mrb_preset_irep_21 = {
 	.filename = NULL,
 	.lines = NULL,
 	.debug_info = NULL,
-	.ilen = 40, .plen = 3, .slen = 12, .rlen = 0, .refcnt = 2
+	.ilen = 97, .plen = 3, .slen = 16, .rlen = 0, .refcnt = 2
 };
 PRESET_CONST mrb_irep mrb_preset_irep_22 = {
-	.nlocals = 6,
-	.nregs = 11,
+	.nlocals = 3,
+	.nregs = 6,
 	.flags = 0x1,
-	.iseq = (mrb_code *)&((uint8_t *)gem_mrblib_irep_mruby_string_ext)[4680],
+	.iseq = (mrb_code *)&((uint8_t *)gem_mrblib_irep_mruby_string_ext)[5304],
 	.pool = (mrb_value *)&mrb_preset_irep_22_pool,
 	.syms = (mrb_sym *)&mrb_preset_irep_22_syms,
-	.reps = NULL,
+	.reps = (struct mrb_irep **)&mrb_preset_irep_22_reps,
 	.lv = (struct mrb_locals *)&mrb_preset_irep_22_lvs,
 	.own_filename = (mrb_bool)0,
 	.filename = NULL,
 	.lines = NULL,
 	.debug_info = NULL,
-	.ilen = 39, .plen = 3, .slen = 12, .rlen = 0, .refcnt = 2
+	.ilen = 20, .plen = 1, .slen = 5, .rlen = 2, .refcnt = 2
 };
 PRESET_CONST mrb_irep mrb_preset_irep_23 = {
-	.nlocals = 2,
-	.nregs = 5,
+	.nlocals = 3,
+	.nregs = 6,
 	.flags = 0x1,
-	.iseq = (mrb_code *)&((uint8_t *)gem_mrblib_irep_mruby_string_ext)[4964],
-	.pool = (mrb_value *)&mrb_preset_irep_23_pool,
+	.iseq = (mrb_code *)&((uint8_t *)gem_mrblib_irep_mruby_string_ext)[5452],
+	.pool = NULL,
 	.syms = (mrb_sym *)&mrb_preset_irep_23_syms,
-	.reps = (struct mrb_irep **)&mrb_preset_irep_23_reps,
+	.reps = NULL,
 	.lv = (struct mrb_locals *)&mrb_preset_irep_23_lvs,
 	.own_filename = (mrb_bool)0,
 	.filename = NULL,
 	.lines = NULL,
 	.debug_info = NULL,
-	.ilen = 15, .plen = 1, .slen = 3, .rlen = 1, .refcnt = 2
+	.ilen = 6, .plen = 0, .slen = 2, .rlen = 0, .refcnt = 1
 };
 PRESET_CONST mrb_irep mrb_preset_irep_24 = {
 	.nlocals = 3,
-	.nregs = 6,
+	.nregs = 5,
 	.flags = 0x1,
-	.iseq = (mrb_code *)&((uint8_t *)gem_mrblib_irep_mruby_string_ext)[5080],
+	.iseq = (mrb_code *)&((uint8_t *)gem_mrblib_irep_mruby_string_ext)[5512],
 	.pool = NULL,
 	.syms = (mrb_sym *)&mrb_preset_irep_24_syms,
 	.reps = NULL,
@@ -2859,29 +2974,29 @@ PRESET_CONST mrb_irep mrb_preset_irep_24 = {
 	.filename = NULL,
 	.lines = NULL,
 	.debug_info = NULL,
-	.ilen = 5, .plen = 0, .slen = 1, .rlen = 0, .refcnt = 1
+	.ilen = 4, .plen = 0, .slen = 1, .rlen = 0, .refcnt = 1
 };
 PRESET_CONST mrb_irep mrb_preset_irep_25 = {
-	.nlocals = 2,
-	.nregs = 5,
+	.nlocals = 4,
+	.nregs = 8,
 	.flags = 0x1,
-	.iseq = (mrb_code *)&((uint8_t *)gem_mrblib_irep_mruby_string_ext)[5132],
+	.iseq = (mrb_code *)&((uint8_t *)gem_mrblib_irep_mruby_string_ext)[976],
 	.pool = (mrb_value *)&mrb_preset_irep_25_pool,
 	.syms = (mrb_sym *)&mrb_preset_irep_25_syms,
-	.reps = (struct mrb_irep **)&mrb_preset_irep_25_reps,
+	.reps = NULL,
 	.lv = (struct mrb_locals *)&mrb_preset_irep_25_lvs,
 	.own_filename = (mrb_bool)0,
 	.filename = NULL,
 	.lines = NULL,
 	.debug_info = NULL,
-	.ilen = 14, .plen = 1, .slen = 4, .rlen = 1, .refcnt = 2
+	.ilen = 32, .plen = 2, .slen = 6, .rlen = 0, .refcnt = 2
 };
 PRESET_CONST mrb_irep mrb_preset_irep_26 = {
-	.nlocals = 3,
-	.nregs = 6,
+	.nlocals = 4,
+	.nregs = 8,
 	.flags = 0x1,
-	.iseq = (mrb_code *)&((uint8_t *)gem_mrblib_irep_mruby_string_ext)[5252],
-	.pool = NULL,
+	.iseq = (mrb_code *)&((uint8_t *)mrblib_irep)[20140],
+	.pool = (mrb_value *)&mrb_preset_irep_26_pool,
 	.syms = (mrb_sym *)&mrb_preset_irep_26_syms,
 	.reps = NULL,
 	.lv = (struct mrb_locals *)&mrb_preset_irep_26_lvs,
@@ -2889,29 +3004,29 @@ PRESET_CONST mrb_irep mrb_preset_irep_26 = {
 	.filename = NULL,
 	.lines = NULL,
 	.debug_info = NULL,
-	.ilen = 5, .plen = 0, .slen = 1, .rlen = 0, .refcnt = 1
+	.ilen = 37, .plen = 1, .slen = 10, .rlen = 0, .refcnt = 2
 };
 PRESET_CONST mrb_irep mrb_preset_irep_27 = {
-	.nlocals = 3,
-	.nregs = 6,
+	.nlocals = 9,
+	.nregs = 16,
 	.flags = 0x1,
-	.iseq = (mrb_code *)&((uint8_t *)gem_mrblib_irep_mruby_string_ext)[5304],
+	.iseq = (mrb_code *)&((uint8_t *)mrblib_irep)[19440],
 	.pool = (mrb_value *)&mrb_preset_irep_27_pool,
 	.syms = (mrb_sym *)&mrb_preset_irep_27_syms,
-	.reps = (struct mrb_irep **)&mrb_preset_irep_27_reps,
+	.reps = NULL,
 	.lv = (struct mrb_locals *)&mrb_preset_irep_27_lvs,
 	.own_filename = (mrb_bool)0,
 	.filename = NULL,
 	.lines = NULL,
 	.debug_info = NULL,
-	.ilen = 20, .plen = 1, .slen = 5, .rlen = 2, .refcnt = 2
+	.ilen = 123, .plen = 2, .slen = 20, .rlen = 0, .refcnt = 2
 };
 PRESET_CONST mrb_irep mrb_preset_irep_28 = {
 	.nlocals = 3,
-	.nregs = 6,
+	.nregs = 7,
 	.flags = 0x1,
-	.iseq = (mrb_code *)&((uint8_t *)gem_mrblib_irep_mruby_string_ext)[5452],
-	.pool = NULL,
+	.iseq = (mrb_code *)&((uint8_t *)mrblib_irep)[20424],
+	.pool = (mrb_value *)&mrb_preset_irep_28_pool,
 	.syms = (mrb_sym *)&mrb_preset_irep_28_syms,
 	.reps = NULL,
 	.lv = (struct mrb_locals *)&mrb_preset_irep_28_lvs,
@@ -2919,14 +3034,14 @@ PRESET_CONST mrb_irep mrb_preset_irep_28 = {
 	.filename = NULL,
 	.lines = NULL,
 	.debug_info = NULL,
-	.ilen = 6, .plen = 0, .slen = 2, .rlen = 0, .refcnt = 1
+	.ilen = 12, .plen = 1, .slen = 5, .rlen = 0, .refcnt = 2
 };
 PRESET_CONST mrb_irep mrb_preset_irep_29 = {
-	.nlocals = 3,
-	.nregs = 5,
+	.nlocals = 9,
+	.nregs = 15,
 	.flags = 0x1,
-	.iseq = (mrb_code *)&((uint8_t *)gem_mrblib_irep_mruby_string_ext)[5512],
-	.pool = NULL,
+	.iseq = (mrb_code *)&((uint8_t *)mrblib_irep)[18824],
+	.pool = (mrb_value *)&mrb_preset_irep_29_pool,
 	.syms = (mrb_sym *)&mrb_preset_irep_29_syms,
 	.reps = NULL,
 	.lv = (struct mrb_locals *)&mrb_preset_irep_29_lvs,
@@ -2934,14 +3049,14 @@ PRESET_CONST mrb_irep mrb_preset_irep_29 = {
 	.filename = NULL,
 	.lines = NULL,
 	.debug_info = NULL,
-	.ilen = 4, .plen = 0, .slen = 1, .rlen = 0, .refcnt = 1
+	.ilen = 123, .plen = 15, .slen = 7, .rlen = 0, .refcnt = 2
 };
 PRESET_CONST mrb_irep mrb_preset_irep_30 = {
-	.nlocals = 3,
-	.nregs = 9,
+	.nlocals = 7,
+	.nregs = 13,
 	.flags = 0x1,
-	.iseq = (mrb_code *)&((uint8_t *)gem_mrblib_irep_mruby_string_ext)[5556],
-	.pool = NULL,
+	.iseq = (mrb_code *)&((uint8_t *)mrblib_irep)[18440],
+	.pool = (mrb_value *)&mrb_preset_irep_30_pool,
 	.syms = (mrb_sym *)&mrb_preset_irep_30_syms,
 	.reps = NULL,
 	.lv = (struct mrb_locals *)&mrb_preset_irep_30_lvs,
@@ -2949,13 +3064,13 @@ PRESET_CONST mrb_irep mrb_preset_irep_30 = {
 	.filename = NULL,
 	.lines = NULL,
 	.debug_info = NULL,
-	.ilen = 9, .plen = 0, .slen = 1, .rlen = 0, .refcnt = 2
+	.ilen = 66, .plen = 1, .slen = 13, .rlen = 0, .refcnt = 2
 };
 PRESET_CONST mrb_irep mrb_preset_irep_31 = {
-	.nlocals = 4,
-	.nregs = 8,
+	.nlocals = 5,
+	.nregs = 12,
 	.flags = 0x1,
-	.iseq = (mrb_code *)&((uint8_t *)mrblib_irep)[22968],
+	.iseq = (mrb_code *)&((uint8_t *)gem_mrblib_irep_mruby_string_ext)[2248],
 	.pool = (mrb_value *)&mrb_preset_irep_31_pool,
 	.syms = (mrb_sym *)&mrb_preset_irep_31_syms,
 	.reps = NULL,
@@ -2964,13 +3079,13 @@ PRESET_CONST mrb_irep mrb_preset_irep_31 = {
 	.filename = NULL,
 	.lines = NULL,
 	.debug_info = NULL,
-	.ilen = 27, .plen = 1, .slen = 9, .rlen = 0, .refcnt = 2
+	.ilen = 45, .plen = 3, .slen = 11, .rlen = 0, .refcnt = 2
 };
 PRESET_CONST mrb_irep mrb_preset_irep_32 = {
 	.nlocals = 4,
-	.nregs = 8,
+	.nregs = 7,
 	.flags = 0x1,
-	.iseq = (mrb_code *)&((uint8_t *)mrblib_irep)[21500],
+	.iseq = (mrb_code *)&((uint8_t *)gem_mrblib_irep_mruby_string_ext)[2152],
 	.pool = NULL,
 	.syms = (mrb_sym *)&mrb_preset_irep_32_syms,
 	.reps = NULL,
@@ -2979,29 +3094,29 @@ PRESET_CONST mrb_irep mrb_preset_irep_32 = {
 	.filename = NULL,
 	.lines = NULL,
 	.debug_info = NULL,
-	.ilen = 21, .plen = 0, .slen = 6, .rlen = 0, .refcnt = 2
+	.ilen = 13, .plen = 0, .slen = 3, .rlen = 0, .refcnt = 2
 };
 PRESET_CONST mrb_irep mrb_preset_irep_33 = {
-	.nlocals = 4,
-	.nregs = 8,
+	.nlocals = 2,
+	.nregs = 5,
 	.flags = 0x1,
-	.iseq = (mrb_code *)&((uint8_t *)mrblib_irep)[21180],
+	.iseq = (mrb_code *)&((uint8_t *)gem_mrblib_irep_mruby_string_ext)[4964],
 	.pool = (mrb_value *)&mrb_preset_irep_33_pool,
 	.syms = (mrb_sym *)&mrb_preset_irep_33_syms,
-	.reps = NULL,
+	.reps = (struct mrb_irep **)&mrb_preset_irep_33_reps,
 	.lv = (struct mrb_locals *)&mrb_preset_irep_33_lvs,
 	.own_filename = (mrb_bool)0,
 	.filename = NULL,
 	.lines = NULL,
 	.debug_info = NULL,
-	.ilen = 23, .plen = 1, .slen = 6, .rlen = 0, .refcnt = 2
+	.ilen = 15, .plen = 1, .slen = 3, .rlen = 1, .refcnt = 2
 };
 PRESET_CONST mrb_irep mrb_preset_irep_34 = {
-	.nlocals = 9,
-	.nregs = 16,
+	.nlocals = 3,
+	.nregs = 6,
 	.flags = 0x1,
-	.iseq = (mrb_code *)&((uint8_t *)mrblib_irep)[20588],
-	.pool = (mrb_value *)&mrb_preset_irep_34_pool,
+	.iseq = (mrb_code *)&((uint8_t *)gem_mrblib_irep_mruby_string_ext)[5080],
+	.pool = NULL,
 	.syms = (mrb_sym *)&mrb_preset_irep_34_syms,
 	.reps = NULL,
 	.lv = (struct mrb_locals *)&mrb_preset_irep_34_lvs,
@@ -3009,13 +3124,13 @@ PRESET_CONST mrb_irep mrb_preset_irep_34 = {
 	.filename = NULL,
 	.lines = NULL,
 	.debug_info = NULL,
-	.ilen = 97, .plen = 3, .slen = 16, .rlen = 0, .refcnt = 2
+	.ilen = 5, .plen = 0, .slen = 1, .rlen = 0, .refcnt = 1
 };
 PRESET_CONST mrb_irep mrb_preset_irep_35 = {
-	.nlocals = 4,
-	.nregs = 8,
+	.nlocals = 11,
+	.nregs = 16,
 	.flags = 0x1,
-	.iseq = (mrb_code *)&((uint8_t *)mrblib_irep)[20140],
+	.iseq = (mrb_code *)&((uint8_t *)gem_mrblib_irep_mruby_string_ext)[2880],
 	.pool = (mrb_value *)&mrb_preset_irep_35_pool,
 	.syms = (mrb_sym *)&mrb_preset_irep_35_syms,
 	.reps = NULL,
@@ -3024,13 +3139,13 @@ PRESET_CONST mrb_irep mrb_preset_irep_35 = {
 	.filename = NULL,
 	.lines = NULL,
 	.debug_info = NULL,
-	.ilen = 37, .plen = 1, .slen = 10, .rlen = 0, .refcnt = 2
+	.ilen = 275, .plen = 3, .slen = 23, .rlen = 0, .refcnt = 2
 };
 PRESET_CONST mrb_irep mrb_preset_irep_36 = {
-	.nlocals = 9,
-	.nregs = 16,
+	.nlocals = 5,
+	.nregs = 12,
 	.flags = 0x1,
-	.iseq = (mrb_code *)&((uint8_t *)mrblib_irep)[19440],
+	.iseq = (mrb_code *)&((uint8_t *)gem_mrblib_irep_mruby_string_ext)[2564],
 	.pool = (mrb_value *)&mrb_preset_irep_36_pool,
 	.syms = (mrb_sym *)&mrb_preset_irep_36_syms,
 	.reps = NULL,
@@ -3039,13 +3154,13 @@ PRESET_CONST mrb_irep mrb_preset_irep_36 = {
 	.filename = NULL,
 	.lines = NULL,
 	.debug_info = NULL,
-	.ilen = 123, .plen = 2, .slen = 20, .rlen = 0, .refcnt = 2
+	.ilen = 45, .plen = 3, .slen = 11, .rlen = 0, .refcnt = 2
 };
 PRESET_CONST mrb_irep mrb_preset_irep_37 = {
-	.nlocals = 3,
-	.nregs = 7,
+	.nlocals = 2,
+	.nregs = 5,
 	.flags = 0x1,
-	.iseq = (mrb_code *)&((uint8_t *)mrblib_irep)[20424],
+	.iseq = (mrb_code *)&((uint8_t *)gem_mrblib_irep_mruby_string_ext)[716],
 	.pool = (mrb_value *)&mrb_preset_irep_37_pool,
 	.syms = (mrb_sym *)&mrb_preset_irep_37_syms,
 	.reps = NULL,
@@ -3054,14 +3169,14 @@ PRESET_CONST mrb_irep mrb_preset_irep_37 = {
 	.filename = NULL,
 	.lines = NULL,
 	.debug_info = NULL,
-	.ilen = 12, .plen = 1, .slen = 5, .rlen = 0, .refcnt = 2
+	.ilen = 5, .plen = 1, .slen = 1, .rlen = 0, .refcnt = 2
 };
 PRESET_CONST mrb_irep mrb_preset_irep_38 = {
-	.nlocals = 9,
-	.nregs = 15,
+	.nlocals = 4,
+	.nregs = 10,
 	.flags = 0x1,
-	.iseq = (mrb_code *)&((uint8_t *)mrblib_irep)[18824],
-	.pool = (mrb_value *)&mrb_preset_irep_38_pool,
+	.iseq = (mrb_code *)&((uint8_t *)gem_mrblib_irep_mruby_string_ext)[4244],
+	.pool = NULL,
 	.syms = (mrb_sym *)&mrb_preset_irep_38_syms,
 	.reps = NULL,
 	.lv = (struct mrb_locals *)&mrb_preset_irep_38_lvs,
@@ -3069,13 +3184,13 @@ PRESET_CONST mrb_irep mrb_preset_irep_38 = {
 	.filename = NULL,
 	.lines = NULL,
 	.debug_info = NULL,
-	.ilen = 123, .plen = 15, .slen = 7, .rlen = 0, .refcnt = 2
+	.ilen = 25, .plen = 0, .slen = 5, .rlen = 0, .refcnt = 2
 };
 PRESET_CONST mrb_irep mrb_preset_irep_39 = {
-	.nlocals = 7,
-	.nregs = 13,
+	.nlocals = 12,
+	.nregs = 19,
 	.flags = 0x1,
-	.iseq = (mrb_code *)&((uint8_t *)mrblib_irep)[18440],
+	.iseq = (mrb_code *)&((uint8_t *)mrblib_irep)[21644],
 	.pool = (mrb_value *)&mrb_preset_irep_39_pool,
 	.syms = (mrb_sym *)&mrb_preset_irep_39_syms,
 	.reps = NULL,
@@ -3084,14 +3199,14 @@ PRESET_CONST mrb_irep mrb_preset_irep_39 = {
 	.filename = NULL,
 	.lines = NULL,
 	.debug_info = NULL,
-	.ilen = 66, .plen = 1, .slen = 13, .rlen = 0, .refcnt = 2
+	.ilen = 217, .plen = 7, .slen = 22, .rlen = 0, .refcnt = 2
 };
 PRESET_CONST mrb_irep mrb_preset_irep_40 = {
-	.nlocals = 3,
-	.nregs = 7,
+	.nlocals = 6,
+	.nregs = 11,
 	.flags = 0x1,
-	.iseq = (mrb_code *)&((uint8_t *)gem_mrblib_irep_mruby_sprintf)[148],
-	.pool = NULL,
+	.iseq = (mrb_code *)&((uint8_t *)gem_mrblib_irep_mruby_string_ext)[4392],
+	.pool = (mrb_value *)&mrb_preset_irep_40_pool,
 	.syms = (mrb_sym *)&mrb_preset_irep_40_syms,
 	.reps = NULL,
 	.lv = (struct mrb_locals *)&mrb_preset_irep_40_lvs,
@@ -3099,13 +3214,13 @@ PRESET_CONST mrb_irep mrb_preset_irep_40 = {
 	.filename = NULL,
 	.lines = NULL,
 	.debug_info = NULL,
-	.ilen = 16, .plen = 0, .slen = 3, .rlen = 0, .refcnt = 2
+	.ilen = 40, .plen = 3, .slen = 12, .rlen = 0, .refcnt = 2
 };
 PRESET_CONST mrb_irep mrb_preset_irep_41 = {
-	.nlocals = 12,
-	.nregs = 19,
+	.nlocals = 6,
+	.nregs = 11,
 	.flags = 0x1,
-	.iseq = (mrb_code *)&((uint8_t *)mrblib_irep)[21644],
+	.iseq = (mrb_code *)&((uint8_t *)gem_mrblib_irep_mruby_string_ext)[4680],
 	.pool = (mrb_value *)&mrb_preset_irep_41_pool,
 	.syms = (mrb_sym *)&mrb_preset_irep_41_syms,
 	.reps = NULL,
@@ -3114,7 +3229,7 @@ PRESET_CONST mrb_irep mrb_preset_irep_41 = {
 	.filename = NULL,
 	.lines = NULL,
 	.debug_info = NULL,
-	.ilen = 217, .plen = 7, .slen = 22, .rlen = 0, .refcnt = 2
+	.ilen = 39, .plen = 3, .slen = 12, .rlen = 0, .refcnt = 2
 };
 PRESET_CONST mrb_irep mrb_preset_irep_42 = {
 	.nlocals = 3,
@@ -4497,10 +4612,10 @@ PRESET_CONST mrb_irep mrb_preset_irep_133 = {
 	.ilen = 15, .plen = 0, .slen = 2, .rlen = 0, .refcnt = 1
 };
 PRESET_CONST mrb_irep mrb_preset_irep_134 = {
-	.nlocals = 2,
-	.nregs = 5,
+	.nlocals = 4,
+	.nregs = 8,
 	.flags = 0x1,
-	.iseq = (mrb_code *)&((uint8_t *)gem_mrblib_irep_mruby_numeric_ext)[464],
+	.iseq = (mrb_code *)&((uint8_t *)mrblib_irep)[15948],
 	.pool = NULL,
 	.syms = (mrb_sym *)&mrb_preset_irep_134_syms,
 	.reps = NULL,
@@ -4509,13 +4624,13 @@ PRESET_CONST mrb_irep mrb_preset_irep_134 = {
 	.filename = NULL,
 	.lines = NULL,
 	.debug_info = NULL,
-	.ilen = 5, .plen = 0, .slen = 1, .rlen = 0, .refcnt = 2
+	.ilen = 24, .plen = 0, .slen = 6, .rlen = 0, .refcnt = 2
 };
 PRESET_CONST mrb_irep mrb_preset_irep_135 = {
-	.nlocals = 4,
-	.nregs = 8,
+	.nlocals = 2,
+	.nregs = 5,
 	.flags = 0x1,
-	.iseq = (mrb_code *)&((uint8_t *)mrblib_irep)[15948],
+	.iseq = (mrb_code *)&((uint8_t *)gem_mrblib_irep_mruby_numeric_ext)[416],
 	.pool = NULL,
 	.syms = (mrb_sym *)&mrb_preset_irep_135_syms,
 	.reps = NULL,
@@ -4524,7 +4639,7 @@ PRESET_CONST mrb_irep mrb_preset_irep_135 = {
 	.filename = NULL,
 	.lines = NULL,
 	.debug_info = NULL,
-	.ilen = 24, .plen = 0, .slen = 6, .rlen = 0, .refcnt = 2
+	.ilen = 5, .plen = 0, .slen = 1, .rlen = 0, .refcnt = 2
 };
 PRESET_CONST mrb_irep mrb_preset_irep_136 = {
 	.nlocals = 2,
@@ -4542,10 +4657,10 @@ PRESET_CONST mrb_irep mrb_preset_irep_136 = {
 	.ilen = 4, .plen = 0, .slen = 1, .rlen = 0, .refcnt = 2
 };
 PRESET_CONST mrb_irep mrb_preset_irep_137 = {
-	.nlocals = 3,
-	.nregs = 6,
+	.nlocals = 2,
+	.nregs = 5,
 	.flags = 0x1,
-	.iseq = (mrb_code *)&((uint8_t *)mrblib_irep)[16152],
+	.iseq = (mrb_code *)&((uint8_t *)gem_mrblib_irep_mruby_numeric_ext)[464],
 	.pool = NULL,
 	.syms = (mrb_sym *)&mrb_preset_irep_137_syms,
 	.reps = NULL,
@@ -4554,13 +4669,13 @@ PRESET_CONST mrb_irep mrb_preset_irep_137 = {
 	.filename = NULL,
 	.lines = NULL,
 	.debug_info = NULL,
-	.ilen = 21, .plen = 0, .slen = 5, .rlen = 0, .refcnt = 2
+	.ilen = 5, .plen = 0, .slen = 1, .rlen = 0, .refcnt = 2
 };
 PRESET_CONST mrb_irep mrb_preset_irep_138 = {
-	.nlocals = 3,
-	.nregs = 6,
+	.nlocals = 2,
+	.nregs = 5,
 	.flags = 0x1,
-	.iseq = (mrb_code *)&((uint8_t *)gem_mrblib_irep_mruby_numeric_ext)[240],
+	.iseq = (mrb_code *)&((uint8_t *)gem_mrblib_irep_mruby_numeric_ext)[352],
 	.pool = NULL,
 	.syms = (mrb_sym *)&mrb_preset_irep_138_syms,
 	.reps = NULL,
@@ -4569,13 +4684,13 @@ PRESET_CONST mrb_irep mrb_preset_irep_138 = {
 	.filename = NULL,
 	.lines = NULL,
 	.debug_info = NULL,
-	.ilen = 7, .plen = 0, .slen = 2, .rlen = 0, .refcnt = 2
+	.ilen = 9, .plen = 0, .slen = 1, .rlen = 0, .refcnt = 2
 };
 PRESET_CONST mrb_irep mrb_preset_irep_139 = {
-	.nlocals = 2,
-	.nregs = 5,
+	.nlocals = 3,
+	.nregs = 6,
 	.flags = 0x1,
-	.iseq = (mrb_code *)&((uint8_t *)gem_mrblib_irep_mruby_numeric_ext)[304],
+	.iseq = (mrb_code *)&((uint8_t *)mrblib_irep)[16152],
 	.pool = NULL,
 	.syms = (mrb_sym *)&mrb_preset_irep_139_syms,
 	.reps = NULL,
@@ -4584,14 +4699,14 @@ PRESET_CONST mrb_irep mrb_preset_irep_139 = {
 	.filename = NULL,
 	.lines = NULL,
 	.debug_info = NULL,
-	.ilen = 5, .plen = 0, .slen = 1, .rlen = 0, .refcnt = 2
+	.ilen = 21, .plen = 0, .slen = 5, .rlen = 0, .refcnt = 2
 };
 PRESET_CONST mrb_irep mrb_preset_irep_140 = {
-	.nlocals = 5,
-	.nregs = 10,
+	.nlocals = 2,
+	.nregs = 5,
 	.flags = 0x1,
-	.iseq = (mrb_code *)&((uint8_t *)mrblib_irep)[16452],
-	.pool = (mrb_value *)&mrb_preset_irep_140_pool,
+	.iseq = (mrb_code *)&((uint8_t *)gem_mrblib_irep_mruby_numeric_ext)[304],
+	.pool = NULL,
 	.syms = (mrb_sym *)&mrb_preset_irep_140_syms,
 	.reps = NULL,
 	.lv = (struct mrb_locals *)&mrb_preset_irep_140_lvs,
@@ -4599,14 +4714,14 @@ PRESET_CONST mrb_irep mrb_preset_irep_140 = {
 	.filename = NULL,
 	.lines = NULL,
 	.debug_info = NULL,
-	.ilen = 82, .plen = 2, .slen = 14, .rlen = 0, .refcnt = 2
+	.ilen = 5, .plen = 0, .slen = 1, .rlen = 0, .refcnt = 2
 };
 PRESET_CONST mrb_irep mrb_preset_irep_141 = {
-	.nlocals = 2,
-	.nregs = 5,
+	.nlocals = 5,
+	.nregs = 10,
 	.flags = 0x1,
-	.iseq = (mrb_code *)&((uint8_t *)gem_mrblib_irep_mruby_numeric_ext)[352],
-	.pool = NULL,
+	.iseq = (mrb_code *)&((uint8_t *)mrblib_irep)[16452],
+	.pool = (mrb_value *)&mrb_preset_irep_141_pool,
 	.syms = (mrb_sym *)&mrb_preset_irep_141_syms,
 	.reps = NULL,
 	.lv = (struct mrb_locals *)&mrb_preset_irep_141_lvs,
@@ -4614,13 +4729,13 @@ PRESET_CONST mrb_irep mrb_preset_irep_141 = {
 	.filename = NULL,
 	.lines = NULL,
 	.debug_info = NULL,
-	.ilen = 9, .plen = 0, .slen = 1, .rlen = 0, .refcnt = 2
+	.ilen = 82, .plen = 2, .slen = 14, .rlen = 0, .refcnt = 2
 };
 PRESET_CONST mrb_irep mrb_preset_irep_142 = {
-	.nlocals = 2,
-	.nregs = 5,
+	.nlocals = 3,
+	.nregs = 6,
 	.flags = 0x1,
-	.iseq = (mrb_code *)&((uint8_t *)gem_mrblib_irep_mruby_numeric_ext)[416],
+	.iseq = (mrb_code *)&((uint8_t *)gem_mrblib_irep_mruby_numeric_ext)[240],
 	.pool = NULL,
 	.syms = (mrb_sym *)&mrb_preset_irep_142_syms,
 	.reps = NULL,
@@ -4629,7 +4744,7 @@ PRESET_CONST mrb_irep mrb_preset_irep_142 = {
 	.filename = NULL,
 	.lines = NULL,
 	.debug_info = NULL,
-	.ilen = 5, .plen = 0, .slen = 1, .rlen = 0, .refcnt = 2
+	.ilen = 7, .plen = 0, .slen = 2, .rlen = 0, .refcnt = 2
 };
 PRESET_CONST mrb_irep mrb_preset_irep_143 = {
 	.nlocals = 4,
@@ -4845,17 +4960,17 @@ PRESET_CONST mrb_value mrb_preset_env_stacks_203[] = {
 
 PRESET_DATA uint8_t mrb_preset_iv_tbl_0_ed_flags[] = {
 	0x2a, 0x8a, 0x02, 0x08, 0x20, 0x82, 0x02, 0x28, 0xaa, 0xaa, 0x28, 0xaa, 0xa2, 0xaa, 0xaa, 0xaa,
-	0x88, 0x2a, 0xa0, 0xa0, 0x08, 0x2a, 0xa8, 0x2a, 0x8a, 0x2a, 0x80, 0x82, 0x00, 0x28, 0x28, 0x22,
+	0x88, 0x0a, 0xa0, 0xa0, 0x08, 0x2a, 0xa8, 0x2a, 0x82, 0x2a, 0x80, 0x82, 0x00, 0x28, 0x28, 0x02,
 };
 PRESET_DATA mrb_sym mrb_preset_iv_tbl_0_keys[] = {
 	0, 0, 0, 243, 0, 0, 242, 0, 0, 241, 2, 136, 240, 0, 216, 3,
 	143, 5, 0, 246, 0, 4, 142, 0, 0, 244, 7, 141, 245, 0, 0, 6,
 	0, 0, 0, 0, 0, 0, 0, 0, 170, 0, 0, 211, 0, 0, 0, 0,
 	0, 212, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-	207, 0, 231, 0, 0, 0, 0, 230, 229, 62, 0, 0, 63, 228, 0, 0,
+	207, 0, 231, 0, 0, 0, 376, 230, 229, 62, 0, 0, 63, 228, 0, 0,
 	64, 0, 226, 57, 0, 0, 0, 227, 106, 0, 0, 0, 0, 0, 0, 201,
-	0, 0, 237, 0, 0, 0, 0, 102, 239, 101, 236, 0, 0, 100, 151, 0,
-	238, 145, 232, 185, 144, 0, 0, 233, 234, 0, 0, 147, 0, 235, 0, 195,
+	0, 465, 237, 0, 0, 0, 0, 102, 239, 101, 236, 0, 0, 100, 151, 0,
+	238, 145, 232, 185, 144, 0, 0, 233, 234, 0, 0, 147, 0, 235, 471, 195,
 };
 PRESET_DATA mrb_value mrb_preset_iv_tbl_0_vals[] = {
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
@@ -4928,66 +5043,66 @@ PRESET_DATA mrb_value mrb_preset_iv_tbl_0_vals[] = {
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
-	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
+	{ .value = { .p = (void *)&mrb_preset_object_269 }, .tt = MRB_TT_MODULE },
 	{ .value = { .i = 10401 }, .tt = MRB_TT_FIXNUM },
-	{ .value = { .p = (void *)&mrb_preset_object_269 }, .tt = MRB_TT_STRING },
-	{ .value = { .p = (void *)&mrb_preset_object_270 }, .tt = MRB_TT_CLASS },
+	{ .value = { .p = (void *)&mrb_preset_object_275 }, .tt = MRB_TT_STRING },
+	{ .value = { .p = (void *)&mrb_preset_object_276 }, .tt = MRB_TT_CLASS },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
-	{ .value = { .p = (void *)&mrb_preset_object_272 }, .tt = MRB_TT_CLASS },
-	{ .value = { .p = (void *)&mrb_preset_object_269 }, .tt = MRB_TT_STRING },
+	{ .value = { .p = (void *)&mrb_preset_object_278 }, .tt = MRB_TT_CLASS },
+	{ .value = { .p = (void *)&mrb_preset_object_275 }, .tt = MRB_TT_STRING },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
-	{ .value = { .p = (void *)&mrb_preset_object_274 }, .tt = MRB_TT_MODULE },
+	{ .value = { .p = (void *)&mrb_preset_object_280 }, .tt = MRB_TT_MODULE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
-	{ .value = { .p = (void *)&mrb_preset_object_284 }, .tt = MRB_TT_STRING },
-	{ .value = { .p = (void *)&mrb_preset_object_285 }, .tt = MRB_TT_CLASS },
-	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
-	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
-	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
-	{ .value = { .p = (void *)&mrb_preset_object_287 }, .tt = MRB_TT_STRING },
-	{ .value = { .p = (void *)&mrb_preset_object_59 }, .tt = MRB_TT_CLASS },
+	{ .value = { .p = (void *)&mrb_preset_object_290 }, .tt = MRB_TT_STRING },
+	{ .value = { .p = (void *)&mrb_preset_object_291 }, .tt = MRB_TT_CLASS },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
-	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
-	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
-	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
-	{ .value = { .p = (void *)&mrb_preset_object_288 }, .tt = MRB_TT_CLASS },
-	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
-	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
-	{ .value = { .p = (void *)&mrb_preset_object_295 }, .tt = MRB_TT_CLASS },
+	{ .value = { .p = (void *)&mrb_preset_object_293 }, .tt = MRB_TT_STRING },
+	{ .value = { .p = (void *)&mrb_preset_object_30 }, .tt = MRB_TT_CLASS },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
-	{ .value = { .p = (void *)&mrb_preset_object_299 }, .tt = MRB_TT_CLASS },
+	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
+	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
+	{ .value = { .p = (void *)&mrb_preset_object_294 }, .tt = MRB_TT_CLASS },
+	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .p = (void *)&mrb_preset_object_301 }, .tt = MRB_TT_CLASS },
+	{ .value = { .p = (void *)&mrb_preset_object_303 }, .tt = MRB_TT_CLASS },
+	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
+	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
+	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
+	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
+	{ .value = { .p = (void *)&mrb_preset_object_307 }, .tt = MRB_TT_CLASS },
+	{ .value = { .p = (void *)&mrb_preset_object_309 }, .tt = MRB_TT_CLASS },
 	{ .value = { .p = (void *)&mrb_preset_object_169 }, .tt = MRB_TT_MODULE },
-	{ .value = { .p = (void *)&mrb_preset_object_298 }, .tt = MRB_TT_CLASS },
+	{ .value = { .p = (void *)&mrb_preset_object_306 }, .tt = MRB_TT_CLASS },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .p = (void *)&mrb_preset_object_127 }, .tt = MRB_TT_MODULE },
 	{ .value = { .p = (void *)&mrb_preset_object_147 }, .tt = MRB_TT_CLASS },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
-	{ .value = { .p = (void *)&mrb_preset_object_303 }, .tt = MRB_TT_CLASS },
-	{ .value = { .p = (void *)&mrb_preset_object_305 }, .tt = MRB_TT_CLASS },
-	{ .value = { .p = (void *)&mrb_preset_object_307 }, .tt = MRB_TT_STRING },
-	{ .value = { .p = (void *)&mrb_preset_object_262 }, .tt = MRB_TT_CLASS },
-	{ .value = { .p = (void *)&mrb_preset_object_308 }, .tt = MRB_TT_CLASS },
-	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
-	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
-	{ .value = { .p = (void *)&mrb_preset_object_310 }, .tt = MRB_TT_STRING },
 	{ .value = { .p = (void *)&mrb_preset_object_311 }, .tt = MRB_TT_CLASS },
-	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
-	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .p = (void *)&mrb_preset_object_313 }, .tt = MRB_TT_CLASS },
+	{ .value = { .p = (void *)&mrb_preset_object_315 }, .tt = MRB_TT_STRING },
+	{ .value = { .p = (void *)&mrb_preset_object_262 }, .tt = MRB_TT_CLASS },
+	{ .value = { .p = (void *)&mrb_preset_object_316 }, .tt = MRB_TT_CLASS },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
-	{ .value = { .p = (void *)&mrb_preset_object_315 }, .tt = MRB_TT_CLASS },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
-	{ .value = { .p = (void *)&mrb_preset_object_291 }, .tt = MRB_TT_CLASS },
+	{ .value = { .p = (void *)&mrb_preset_object_318 }, .tt = MRB_TT_STRING },
+	{ .value = { .p = (void *)&mrb_preset_object_319 }, .tt = MRB_TT_CLASS },
+	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
+	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
+	{ .value = { .p = (void *)&mrb_preset_object_321 }, .tt = MRB_TT_CLASS },
+	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
+	{ .value = { .p = (void *)&mrb_preset_object_323 }, .tt = MRB_TT_CLASS },
+	{ .value = { .p = (void *)&mrb_preset_object_325 }, .tt = MRB_TT_CLASS },
+	{ .value = { .p = (void *)&mrb_preset_object_297 }, .tt = MRB_TT_CLASS },
 };
-PRESET_DATA kh_iv_t mrb_preset_iv_tbl_0 = { .n_buckets = 128, .size = 51, .n_occupied = 51, .ed_flags = (uint8_t *)&mrb_preset_iv_tbl_0_ed_flags, .keys = (mrb_sym *)&mrb_preset_iv_tbl_0_keys, .vals = (mrb_value *)&mrb_preset_iv_tbl_0_vals };
+PRESET_DATA kh_iv_t mrb_preset_iv_tbl_0 = { .n_buckets = 128, .size = 54, .n_occupied = 54, .ed_flags = (uint8_t *)&mrb_preset_iv_tbl_0_ed_flags, .keys = (mrb_sym *)&mrb_preset_iv_tbl_0_keys, .vals = (mrb_value *)&mrb_preset_iv_tbl_0_vals };
 
 PRESET_DATA uint8_t mrb_preset_iv_tbl_1_ed_flags[] = {
 	0xaa, 0x2a,
@@ -5415,7 +5530,7 @@ PRESET_DATA mrb_value mrb_preset_iv_tbl_24_vals[] = {
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
-	{ .value = { .p = (void *)&mrb_preset_object_59 }, .tt = MRB_TT_CLASS },
+	{ .value = { .p = (void *)&mrb_preset_object_30 }, .tt = MRB_TT_CLASS },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 };
@@ -5926,30 +6041,48 @@ PRESET_DATA mrb_value mrb_preset_iv_tbl_52_vals[] = {
 PRESET_DATA kh_iv_t mrb_preset_iv_tbl_52 = { .n_buckets = 8, .size = 1, .n_occupied = 1, .ed_flags = (uint8_t *)&mrb_preset_iv_tbl_52_ed_flags, .keys = (mrb_sym *)&mrb_preset_iv_tbl_52_keys, .vals = (mrb_value *)&mrb_preset_iv_tbl_52_vals };
 
 PRESET_DATA uint8_t mrb_preset_iv_tbl_53_ed_flags[] = {
-	0xaa, 0x2a,
+	0x22, 0x08,
 };
 PRESET_DATA mrb_sym mrb_preset_iv_tbl_53_keys[] = {
-	0, 0, 0, 0, 0, 0, 0, 6,
+	0, 379, 0, 377, 378, 0, 380, 6,
 };
 PRESET_DATA mrb_value mrb_preset_iv_tbl_53_vals[] = {
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
+	{ .value = { .f = 2.71828 }, .tt = MRB_TT_FLOAT },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
+	{ .value = { .p = (void *)&mrb_preset_object_270 }, .tt = MRB_TT_CLASS },
+	{ .value = { .f = 3.14159 }, .tt = MRB_TT_FLOAT },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
-	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
-	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
-	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
-	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
-	{ .value = { .sym = (mrb_sym)62 }, .tt = MRB_TT_SYMBOL },
+	{ .value = { .f = 1E-12 }, .tt = MRB_TT_FLOAT },
+	{ .value = { .sym = (mrb_sym)376 }, .tt = MRB_TT_SYMBOL },
 };
-PRESET_DATA kh_iv_t mrb_preset_iv_tbl_53 = { .n_buckets = 8, .size = 1, .n_occupied = 1, .ed_flags = (uint8_t *)&mrb_preset_iv_tbl_53_ed_flags, .keys = (mrb_sym *)&mrb_preset_iv_tbl_53_keys, .vals = (mrb_value *)&mrb_preset_iv_tbl_53_vals };
+PRESET_DATA kh_iv_t mrb_preset_iv_tbl_53 = { .n_buckets = 8, .size = 5, .n_occupied = 5, .ed_flags = (uint8_t *)&mrb_preset_iv_tbl_53_ed_flags, .keys = (mrb_sym *)&mrb_preset_iv_tbl_53_keys, .vals = (mrb_value *)&mrb_preset_iv_tbl_53_vals };
 
 PRESET_DATA uint8_t mrb_preset_iv_tbl_54_ed_flags[] = {
-	0xaa, 0xa2,
+	0xaa, 0x2a,
 };
 PRESET_DATA mrb_sym mrb_preset_iv_tbl_54_keys[] = {
-	0, 0, 0, 0, 0, 1, 0, 0,
+	0, 0, 0, 0, 0, 0, 0, 6,
 };
 PRESET_DATA mrb_value mrb_preset_iv_tbl_54_vals[] = {
+	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
+	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
+	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
+	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
+	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
+	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
+	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
+	{ .value = { .p = (void *)&mrb_preset_object_271 }, .tt = MRB_TT_STRING },
+};
+PRESET_DATA kh_iv_t mrb_preset_iv_tbl_54 = { .n_buckets = 8, .size = 1, .n_occupied = 1, .ed_flags = (uint8_t *)&mrb_preset_iv_tbl_54_ed_flags, .keys = (mrb_sym *)&mrb_preset_iv_tbl_54_keys, .vals = (mrb_value *)&mrb_preset_iv_tbl_54_vals };
+
+PRESET_DATA uint8_t mrb_preset_iv_tbl_55_ed_flags[] = {
+	0xaa, 0xa2,
+};
+PRESET_DATA mrb_sym mrb_preset_iv_tbl_55_keys[] = {
+	0, 0, 0, 0, 0, 1, 0, 0,
+};
+PRESET_DATA mrb_value mrb_preset_iv_tbl_55_vals[] = {
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
@@ -5958,24 +6091,6 @@ PRESET_DATA mrb_value mrb_preset_iv_tbl_54_vals[] = {
 	{ .value = { .p = (void *)&mrb_preset_object_270 }, .tt = MRB_TT_CLASS },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
-};
-PRESET_DATA kh_iv_t mrb_preset_iv_tbl_54 = { .n_buckets = 8, .size = 1, .n_occupied = 1, .ed_flags = (uint8_t *)&mrb_preset_iv_tbl_54_ed_flags, .keys = (mrb_sym *)&mrb_preset_iv_tbl_54_keys, .vals = (mrb_value *)&mrb_preset_iv_tbl_54_vals };
-
-PRESET_DATA uint8_t mrb_preset_iv_tbl_55_ed_flags[] = {
-	0xaa, 0x2a,
-};
-PRESET_DATA mrb_sym mrb_preset_iv_tbl_55_keys[] = {
-	0, 0, 0, 0, 0, 0, 0, 6,
-};
-PRESET_DATA mrb_value mrb_preset_iv_tbl_55_vals[] = {
-	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
-	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
-	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
-	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
-	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
-	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
-	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
-	{ .value = { .sym = (mrb_sym)63 }, .tt = MRB_TT_SYMBOL },
 };
 PRESET_DATA kh_iv_t mrb_preset_iv_tbl_55 = { .n_buckets = 8, .size = 1, .n_occupied = 1, .ed_flags = (uint8_t *)&mrb_preset_iv_tbl_55_ed_flags, .keys = (mrb_sym *)&mrb_preset_iv_tbl_55_keys, .vals = (mrb_value *)&mrb_preset_iv_tbl_55_vals };
 
@@ -5991,17 +6106,17 @@ PRESET_DATA mrb_value mrb_preset_iv_tbl_56_vals[] = {
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
-	{ .value = { .p = (void *)&mrb_preset_object_272 }, .tt = MRB_TT_CLASS },
+	{ .value = { .p = (void *)&mrb_preset_object_269 }, .tt = MRB_TT_MODULE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 };
 PRESET_DATA kh_iv_t mrb_preset_iv_tbl_56 = { .n_buckets = 8, .size = 1, .n_occupied = 1, .ed_flags = (uint8_t *)&mrb_preset_iv_tbl_56_ed_flags, .keys = (mrb_sym *)&mrb_preset_iv_tbl_56_keys, .vals = (mrb_value *)&mrb_preset_iv_tbl_56_vals };
 
 PRESET_DATA uint8_t mrb_preset_iv_tbl_57_ed_flags[] = {
-	0xaa, 0x2a,
+	0xaa, 0xa2,
 };
 PRESET_DATA mrb_sym mrb_preset_iv_tbl_57_keys[] = {
-	0, 0, 0, 0, 0, 0, 0, 6,
+	0, 0, 0, 0, 0, 1, 0, 0,
 };
 PRESET_DATA mrb_value mrb_preset_iv_tbl_57_vals[] = {
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
@@ -6009,17 +6124,17 @@ PRESET_DATA mrb_value mrb_preset_iv_tbl_57_vals[] = {
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
+	{ .value = { .p = (void *)&mrb_preset_object_273 }, .tt = MRB_TT_SCLASS },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
-	{ .value = { .sym = (mrb_sym)64 }, .tt = MRB_TT_SYMBOL },
 };
 PRESET_DATA kh_iv_t mrb_preset_iv_tbl_57 = { .n_buckets = 8, .size = 1, .n_occupied = 1, .ed_flags = (uint8_t *)&mrb_preset_iv_tbl_57_ed_flags, .keys = (mrb_sym *)&mrb_preset_iv_tbl_57_keys, .vals = (mrb_value *)&mrb_preset_iv_tbl_57_vals };
 
 PRESET_DATA uint8_t mrb_preset_iv_tbl_58_ed_flags[] = {
-	0xaa, 0xa2,
+	0xaa, 0x2a,
 };
 PRESET_DATA mrb_sym mrb_preset_iv_tbl_58_keys[] = {
-	0, 0, 0, 0, 0, 1, 0, 0,
+	0, 0, 0, 0, 0, 0, 0, 6,
 };
 PRESET_DATA mrb_value mrb_preset_iv_tbl_58_vals[] = {
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
@@ -6027,9 +6142,9 @@ PRESET_DATA mrb_value mrb_preset_iv_tbl_58_vals[] = {
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
-	{ .value = { .p = (void *)&mrb_preset_object_274 }, .tt = MRB_TT_MODULE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
+	{ .value = { .sym = (mrb_sym)62 }, .tt = MRB_TT_SYMBOL },
 };
 PRESET_DATA kh_iv_t mrb_preset_iv_tbl_58 = { .n_buckets = 8, .size = 1, .n_occupied = 1, .ed_flags = (uint8_t *)&mrb_preset_iv_tbl_58_ed_flags, .keys = (mrb_sym *)&mrb_preset_iv_tbl_58_keys, .vals = (mrb_value *)&mrb_preset_iv_tbl_58_vals };
 
@@ -6045,7 +6160,7 @@ PRESET_DATA mrb_value mrb_preset_iv_tbl_59_vals[] = {
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
-	{ .value = { .p = (void *)&mrb_preset_object_275 }, .tt = MRB_TT_SCLASS },
+	{ .value = { .p = (void *)&mrb_preset_object_276 }, .tt = MRB_TT_CLASS },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 };
@@ -6065,7 +6180,7 @@ PRESET_DATA mrb_value mrb_preset_iv_tbl_60_vals[] = {
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
-	{ .value = { .sym = (mrb_sym)57 }, .tt = MRB_TT_SYMBOL },
+	{ .value = { .sym = (mrb_sym)63 }, .tt = MRB_TT_SYMBOL },
 };
 PRESET_DATA kh_iv_t mrb_preset_iv_tbl_60 = { .n_buckets = 8, .size = 1, .n_occupied = 1, .ed_flags = (uint8_t *)&mrb_preset_iv_tbl_60_ed_flags, .keys = (mrb_sym *)&mrb_preset_iv_tbl_60_keys, .vals = (mrb_value *)&mrb_preset_iv_tbl_60_vals };
 
@@ -6081,7 +6196,7 @@ PRESET_DATA mrb_value mrb_preset_iv_tbl_61_vals[] = {
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
-	{ .value = { .p = (void *)&mrb_preset_object_285 }, .tt = MRB_TT_CLASS },
+	{ .value = { .p = (void *)&mrb_preset_object_278 }, .tt = MRB_TT_CLASS },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 };
@@ -6101,7 +6216,7 @@ PRESET_DATA mrb_value mrb_preset_iv_tbl_62_vals[] = {
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
-	{ .value = { .sym = (mrb_sym)201 }, .tt = MRB_TT_SYMBOL },
+	{ .value = { .sym = (mrb_sym)64 }, .tt = MRB_TT_SYMBOL },
 };
 PRESET_DATA kh_iv_t mrb_preset_iv_tbl_62 = { .n_buckets = 8, .size = 1, .n_occupied = 1, .ed_flags = (uint8_t *)&mrb_preset_iv_tbl_62_ed_flags, .keys = (mrb_sym *)&mrb_preset_iv_tbl_62_keys, .vals = (mrb_value *)&mrb_preset_iv_tbl_62_vals };
 
@@ -6117,7 +6232,7 @@ PRESET_DATA mrb_value mrb_preset_iv_tbl_63_vals[] = {
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
-	{ .value = { .p = (void *)&mrb_preset_object_288 }, .tt = MRB_TT_CLASS },
+	{ .value = { .p = (void *)&mrb_preset_object_280 }, .tt = MRB_TT_MODULE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 };
@@ -6135,7 +6250,7 @@ PRESET_DATA mrb_value mrb_preset_iv_tbl_64_vals[] = {
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
-	{ .value = { .p = (void *)&mrb_preset_object_291 }, .tt = MRB_TT_CLASS },
+	{ .value = { .p = (void *)&mrb_preset_object_281 }, .tt = MRB_TT_SCLASS },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 };
@@ -6155,15 +6270,15 @@ PRESET_DATA mrb_value mrb_preset_iv_tbl_65_vals[] = {
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
-	{ .value = { .sym = (mrb_sym)195 }, .tt = MRB_TT_SYMBOL },
+	{ .value = { .sym = (mrb_sym)57 }, .tt = MRB_TT_SYMBOL },
 };
 PRESET_DATA kh_iv_t mrb_preset_iv_tbl_65 = { .n_buckets = 8, .size = 1, .n_occupied = 1, .ed_flags = (uint8_t *)&mrb_preset_iv_tbl_65_ed_flags, .keys = (mrb_sym *)&mrb_preset_iv_tbl_65_keys, .vals = (mrb_value *)&mrb_preset_iv_tbl_65_vals };
 
 PRESET_DATA uint8_t mrb_preset_iv_tbl_66_ed_flags[] = {
-	0xaa, 0x2a,
+	0xaa, 0xa2,
 };
 PRESET_DATA mrb_sym mrb_preset_iv_tbl_66_keys[] = {
-	0, 0, 0, 0, 0, 0, 0, 6,
+	0, 0, 0, 0, 0, 1, 0, 0,
 };
 PRESET_DATA mrb_value mrb_preset_iv_tbl_66_vals[] = {
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
@@ -6171,17 +6286,17 @@ PRESET_DATA mrb_value mrb_preset_iv_tbl_66_vals[] = {
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
+	{ .value = { .p = (void *)&mrb_preset_object_291 }, .tt = MRB_TT_CLASS },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
-	{ .value = { .sym = (mrb_sym)237 }, .tt = MRB_TT_SYMBOL },
 };
 PRESET_DATA kh_iv_t mrb_preset_iv_tbl_66 = { .n_buckets = 8, .size = 1, .n_occupied = 1, .ed_flags = (uint8_t *)&mrb_preset_iv_tbl_66_ed_flags, .keys = (mrb_sym *)&mrb_preset_iv_tbl_66_keys, .vals = (mrb_value *)&mrb_preset_iv_tbl_66_vals };
 
 PRESET_DATA uint8_t mrb_preset_iv_tbl_67_ed_flags[] = {
-	0xaa, 0xa2,
+	0xaa, 0x2a,
 };
 PRESET_DATA mrb_sym mrb_preset_iv_tbl_67_keys[] = {
-	0, 0, 0, 0, 0, 1, 0, 0,
+	0, 0, 0, 0, 0, 0, 0, 6,
 };
 PRESET_DATA mrb_value mrb_preset_iv_tbl_67_vals[] = {
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
@@ -6189,9 +6304,9 @@ PRESET_DATA mrb_value mrb_preset_iv_tbl_67_vals[] = {
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
-	{ .value = { .p = (void *)&mrb_preset_object_295 }, .tt = MRB_TT_CLASS },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
+	{ .value = { .sym = (mrb_sym)201 }, .tt = MRB_TT_SYMBOL },
 };
 PRESET_DATA kh_iv_t mrb_preset_iv_tbl_67 = { .n_buckets = 8, .size = 1, .n_occupied = 1, .ed_flags = (uint8_t *)&mrb_preset_iv_tbl_67_ed_flags, .keys = (mrb_sym *)&mrb_preset_iv_tbl_67_keys, .vals = (mrb_value *)&mrb_preset_iv_tbl_67_vals };
 
@@ -6207,17 +6322,17 @@ PRESET_DATA mrb_value mrb_preset_iv_tbl_68_vals[] = {
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
-	{ .value = { .p = (void *)&mrb_preset_object_298 }, .tt = MRB_TT_CLASS },
+	{ .value = { .p = (void *)&mrb_preset_object_294 }, .tt = MRB_TT_CLASS },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 };
 PRESET_DATA kh_iv_t mrb_preset_iv_tbl_68 = { .n_buckets = 8, .size = 1, .n_occupied = 1, .ed_flags = (uint8_t *)&mrb_preset_iv_tbl_68_ed_flags, .keys = (mrb_sym *)&mrb_preset_iv_tbl_68_keys, .vals = (mrb_value *)&mrb_preset_iv_tbl_68_vals };
 
 PRESET_DATA uint8_t mrb_preset_iv_tbl_69_ed_flags[] = {
-	0xaa, 0x2a,
+	0xaa, 0xa2,
 };
 PRESET_DATA mrb_sym mrb_preset_iv_tbl_69_keys[] = {
-	0, 0, 0, 0, 0, 0, 0, 6,
+	0, 0, 0, 0, 0, 1, 0, 0,
 };
 PRESET_DATA mrb_value mrb_preset_iv_tbl_69_vals[] = {
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
@@ -6225,9 +6340,9 @@ PRESET_DATA mrb_value mrb_preset_iv_tbl_69_vals[] = {
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
+	{ .value = { .p = (void *)&mrb_preset_object_297 }, .tt = MRB_TT_CLASS },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
-	{ .value = { .sym = (mrb_sym)236 }, .tt = MRB_TT_SYMBOL },
 };
 PRESET_DATA kh_iv_t mrb_preset_iv_tbl_69 = { .n_buckets = 8, .size = 1, .n_occupied = 1, .ed_flags = (uint8_t *)&mrb_preset_iv_tbl_69_ed_flags, .keys = (mrb_sym *)&mrb_preset_iv_tbl_69_keys, .vals = (mrb_value *)&mrb_preset_iv_tbl_69_vals };
 
@@ -6245,15 +6360,15 @@ PRESET_DATA mrb_value mrb_preset_iv_tbl_70_vals[] = {
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
-	{ .value = { .sym = (mrb_sym)102 }, .tt = MRB_TT_SYMBOL },
+	{ .value = { .sym = (mrb_sym)195 }, .tt = MRB_TT_SYMBOL },
 };
 PRESET_DATA kh_iv_t mrb_preset_iv_tbl_70 = { .n_buckets = 8, .size = 1, .n_occupied = 1, .ed_flags = (uint8_t *)&mrb_preset_iv_tbl_70_ed_flags, .keys = (mrb_sym *)&mrb_preset_iv_tbl_70_keys, .vals = (mrb_value *)&mrb_preset_iv_tbl_70_vals };
 
 PRESET_DATA uint8_t mrb_preset_iv_tbl_71_ed_flags[] = {
-	0xaa, 0xa2,
+	0xaa, 0x2a,
 };
 PRESET_DATA mrb_sym mrb_preset_iv_tbl_71_keys[] = {
-	0, 0, 0, 0, 0, 1, 0, 0,
+	0, 0, 0, 0, 0, 0, 0, 6,
 };
 PRESET_DATA mrb_value mrb_preset_iv_tbl_71_vals[] = {
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
@@ -6261,37 +6376,19 @@ PRESET_DATA mrb_value mrb_preset_iv_tbl_71_vals[] = {
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
-	{ .value = { .p = (void *)&mrb_preset_object_299 }, .tt = MRB_TT_CLASS },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
+	{ .value = { .sym = (mrb_sym)465 }, .tt = MRB_TT_SYMBOL },
 };
 PRESET_DATA kh_iv_t mrb_preset_iv_tbl_71 = { .n_buckets = 8, .size = 1, .n_occupied = 1, .ed_flags = (uint8_t *)&mrb_preset_iv_tbl_71_ed_flags, .keys = (mrb_sym *)&mrb_preset_iv_tbl_71_keys, .vals = (mrb_value *)&mrb_preset_iv_tbl_71_vals };
 
 PRESET_DATA uint8_t mrb_preset_iv_tbl_72_ed_flags[] = {
-	0xaa, 0x2a,
-};
-PRESET_DATA mrb_sym mrb_preset_iv_tbl_72_keys[] = {
-	0, 0, 0, 0, 0, 0, 0, 6,
-};
-PRESET_DATA mrb_value mrb_preset_iv_tbl_72_vals[] = {
-	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
-	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
-	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
-	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
-	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
-	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
-	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
-	{ .value = { .sym = (mrb_sym)239 }, .tt = MRB_TT_SYMBOL },
-};
-PRESET_DATA kh_iv_t mrb_preset_iv_tbl_72 = { .n_buckets = 8, .size = 1, .n_occupied = 1, .ed_flags = (uint8_t *)&mrb_preset_iv_tbl_72_ed_flags, .keys = (mrb_sym *)&mrb_preset_iv_tbl_72_keys, .vals = (mrb_value *)&mrb_preset_iv_tbl_72_vals };
-
-PRESET_DATA uint8_t mrb_preset_iv_tbl_73_ed_flags[] = {
 	0xaa, 0xa2,
 };
-PRESET_DATA mrb_sym mrb_preset_iv_tbl_73_keys[] = {
+PRESET_DATA mrb_sym mrb_preset_iv_tbl_72_keys[] = {
 	0, 0, 0, 0, 0, 1, 0, 0,
 };
-PRESET_DATA mrb_value mrb_preset_iv_tbl_73_vals[] = {
+PRESET_DATA mrb_value mrb_preset_iv_tbl_72_vals[] = {
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
@@ -6301,13 +6398,31 @@ PRESET_DATA mrb_value mrb_preset_iv_tbl_73_vals[] = {
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 };
+PRESET_DATA kh_iv_t mrb_preset_iv_tbl_72 = { .n_buckets = 8, .size = 1, .n_occupied = 1, .ed_flags = (uint8_t *)&mrb_preset_iv_tbl_72_ed_flags, .keys = (mrb_sym *)&mrb_preset_iv_tbl_72_keys, .vals = (mrb_value *)&mrb_preset_iv_tbl_72_vals };
+
+PRESET_DATA uint8_t mrb_preset_iv_tbl_73_ed_flags[] = {
+	0xaa, 0x2a,
+};
+PRESET_DATA mrb_sym mrb_preset_iv_tbl_73_keys[] = {
+	0, 0, 0, 0, 0, 0, 0, 6,
+};
+PRESET_DATA mrb_value mrb_preset_iv_tbl_73_vals[] = {
+	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
+	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
+	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
+	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
+	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
+	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
+	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
+	{ .value = { .sym = (mrb_sym)237 }, .tt = MRB_TT_SYMBOL },
+};
 PRESET_DATA kh_iv_t mrb_preset_iv_tbl_73 = { .n_buckets = 8, .size = 1, .n_occupied = 1, .ed_flags = (uint8_t *)&mrb_preset_iv_tbl_73_ed_flags, .keys = (mrb_sym *)&mrb_preset_iv_tbl_73_keys, .vals = (mrb_value *)&mrb_preset_iv_tbl_73_vals };
 
 PRESET_DATA uint8_t mrb_preset_iv_tbl_74_ed_flags[] = {
-	0xaa, 0x2a,
+	0xaa, 0xa2,
 };
 PRESET_DATA mrb_sym mrb_preset_iv_tbl_74_keys[] = {
-	0, 0, 0, 0, 0, 0, 0, 6,
+	0, 0, 0, 0, 0, 1, 0, 0,
 };
 PRESET_DATA mrb_value mrb_preset_iv_tbl_74_vals[] = {
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
@@ -6315,9 +6430,9 @@ PRESET_DATA mrb_value mrb_preset_iv_tbl_74_vals[] = {
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
+	{ .value = { .p = (void *)&mrb_preset_object_303 }, .tt = MRB_TT_CLASS },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
-	{ .value = { .sym = (mrb_sym)238 }, .tt = MRB_TT_SYMBOL },
 };
 PRESET_DATA kh_iv_t mrb_preset_iv_tbl_74 = { .n_buckets = 8, .size = 1, .n_occupied = 1, .ed_flags = (uint8_t *)&mrb_preset_iv_tbl_74_ed_flags, .keys = (mrb_sym *)&mrb_preset_iv_tbl_74_keys, .vals = (mrb_value *)&mrb_preset_iv_tbl_74_vals };
 
@@ -6333,7 +6448,7 @@ PRESET_DATA mrb_value mrb_preset_iv_tbl_75_vals[] = {
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
-	{ .value = { .p = (void *)&mrb_preset_object_303 }, .tt = MRB_TT_CLASS },
+	{ .value = { .p = (void *)&mrb_preset_object_306 }, .tt = MRB_TT_CLASS },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 };
@@ -6353,15 +6468,15 @@ PRESET_DATA mrb_value mrb_preset_iv_tbl_76_vals[] = {
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
-	{ .value = { .sym = (mrb_sym)145 }, .tt = MRB_TT_SYMBOL },
+	{ .value = { .sym = (mrb_sym)236 }, .tt = MRB_TT_SYMBOL },
 };
 PRESET_DATA kh_iv_t mrb_preset_iv_tbl_76 = { .n_buckets = 8, .size = 1, .n_occupied = 1, .ed_flags = (uint8_t *)&mrb_preset_iv_tbl_76_ed_flags, .keys = (mrb_sym *)&mrb_preset_iv_tbl_76_keys, .vals = (mrb_value *)&mrb_preset_iv_tbl_76_vals };
 
 PRESET_DATA uint8_t mrb_preset_iv_tbl_77_ed_flags[] = {
-	0xaa, 0xa2,
+	0xaa, 0x2a,
 };
 PRESET_DATA mrb_sym mrb_preset_iv_tbl_77_keys[] = {
-	0, 0, 0, 0, 0, 1, 0, 0,
+	0, 0, 0, 0, 0, 0, 0, 6,
 };
 PRESET_DATA mrb_value mrb_preset_iv_tbl_77_vals[] = {
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
@@ -6369,17 +6484,17 @@ PRESET_DATA mrb_value mrb_preset_iv_tbl_77_vals[] = {
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
-	{ .value = { .p = (void *)&mrb_preset_object_305 }, .tt = MRB_TT_CLASS },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
+	{ .value = { .sym = (mrb_sym)102 }, .tt = MRB_TT_SYMBOL },
 };
 PRESET_DATA kh_iv_t mrb_preset_iv_tbl_77 = { .n_buckets = 8, .size = 1, .n_occupied = 1, .ed_flags = (uint8_t *)&mrb_preset_iv_tbl_77_ed_flags, .keys = (mrb_sym *)&mrb_preset_iv_tbl_77_keys, .vals = (mrb_value *)&mrb_preset_iv_tbl_77_vals };
 
 PRESET_DATA uint8_t mrb_preset_iv_tbl_78_ed_flags[] = {
-	0xaa, 0x2a,
+	0xaa, 0xa2,
 };
 PRESET_DATA mrb_sym mrb_preset_iv_tbl_78_keys[] = {
-	0, 0, 0, 0, 0, 0, 0, 6,
+	0, 0, 0, 0, 0, 1, 0, 0,
 };
 PRESET_DATA mrb_value mrb_preset_iv_tbl_78_vals[] = {
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
@@ -6387,17 +6502,17 @@ PRESET_DATA mrb_value mrb_preset_iv_tbl_78_vals[] = {
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
+	{ .value = { .p = (void *)&mrb_preset_object_307 }, .tt = MRB_TT_CLASS },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
-	{ .value = { .sym = (mrb_sym)144 }, .tt = MRB_TT_SYMBOL },
 };
 PRESET_DATA kh_iv_t mrb_preset_iv_tbl_78 = { .n_buckets = 8, .size = 1, .n_occupied = 1, .ed_flags = (uint8_t *)&mrb_preset_iv_tbl_78_ed_flags, .keys = (mrb_sym *)&mrb_preset_iv_tbl_78_keys, .vals = (mrb_value *)&mrb_preset_iv_tbl_78_vals };
 
 PRESET_DATA uint8_t mrb_preset_iv_tbl_79_ed_flags[] = {
-	0xaa, 0xa2,
+	0xaa, 0x2a,
 };
 PRESET_DATA mrb_sym mrb_preset_iv_tbl_79_keys[] = {
-	0, 0, 0, 0, 0, 1, 0, 0,
+	0, 0, 0, 0, 0, 0, 0, 6,
 };
 PRESET_DATA mrb_value mrb_preset_iv_tbl_79_vals[] = {
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
@@ -6405,17 +6520,17 @@ PRESET_DATA mrb_value mrb_preset_iv_tbl_79_vals[] = {
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
-	{ .value = { .p = (void *)&mrb_preset_object_308 }, .tt = MRB_TT_CLASS },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
+	{ .value = { .sym = (mrb_sym)239 }, .tt = MRB_TT_SYMBOL },
 };
 PRESET_DATA kh_iv_t mrb_preset_iv_tbl_79 = { .n_buckets = 8, .size = 1, .n_occupied = 1, .ed_flags = (uint8_t *)&mrb_preset_iv_tbl_79_ed_flags, .keys = (mrb_sym *)&mrb_preset_iv_tbl_79_keys, .vals = (mrb_value *)&mrb_preset_iv_tbl_79_vals };
 
 PRESET_DATA uint8_t mrb_preset_iv_tbl_80_ed_flags[] = {
-	0xaa, 0x2a,
+	0xaa, 0xa2,
 };
 PRESET_DATA mrb_sym mrb_preset_iv_tbl_80_keys[] = {
-	0, 0, 0, 0, 0, 0, 0, 6,
+	0, 0, 0, 0, 0, 1, 0, 0,
 };
 PRESET_DATA mrb_value mrb_preset_iv_tbl_80_vals[] = {
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
@@ -6423,19 +6538,37 @@ PRESET_DATA mrb_value mrb_preset_iv_tbl_80_vals[] = {
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
+	{ .value = { .p = (void *)&mrb_preset_object_309 }, .tt = MRB_TT_CLASS },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
-	{ .value = { .sym = (mrb_sym)234 }, .tt = MRB_TT_SYMBOL },
 };
 PRESET_DATA kh_iv_t mrb_preset_iv_tbl_80 = { .n_buckets = 8, .size = 1, .n_occupied = 1, .ed_flags = (uint8_t *)&mrb_preset_iv_tbl_80_ed_flags, .keys = (mrb_sym *)&mrb_preset_iv_tbl_80_keys, .vals = (mrb_value *)&mrb_preset_iv_tbl_80_vals };
 
 PRESET_DATA uint8_t mrb_preset_iv_tbl_81_ed_flags[] = {
-	0xaa, 0xa2,
+	0xaa, 0x2a,
 };
 PRESET_DATA mrb_sym mrb_preset_iv_tbl_81_keys[] = {
-	0, 0, 0, 0, 0, 1, 0, 0,
+	0, 0, 0, 0, 0, 0, 0, 6,
 };
 PRESET_DATA mrb_value mrb_preset_iv_tbl_81_vals[] = {
+	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
+	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
+	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
+	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
+	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
+	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
+	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
+	{ .value = { .sym = (mrb_sym)238 }, .tt = MRB_TT_SYMBOL },
+};
+PRESET_DATA kh_iv_t mrb_preset_iv_tbl_81 = { .n_buckets = 8, .size = 1, .n_occupied = 1, .ed_flags = (uint8_t *)&mrb_preset_iv_tbl_81_ed_flags, .keys = (mrb_sym *)&mrb_preset_iv_tbl_81_keys, .vals = (mrb_value *)&mrb_preset_iv_tbl_81_vals };
+
+PRESET_DATA uint8_t mrb_preset_iv_tbl_82_ed_flags[] = {
+	0xaa, 0xa2,
+};
+PRESET_DATA mrb_sym mrb_preset_iv_tbl_82_keys[] = {
+	0, 0, 0, 0, 0, 1, 0, 0,
+};
+PRESET_DATA mrb_value mrb_preset_iv_tbl_82_vals[] = {
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
@@ -6445,33 +6578,33 @@ PRESET_DATA mrb_value mrb_preset_iv_tbl_81_vals[] = {
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 };
-PRESET_DATA kh_iv_t mrb_preset_iv_tbl_81 = { .n_buckets = 8, .size = 1, .n_occupied = 1, .ed_flags = (uint8_t *)&mrb_preset_iv_tbl_81_ed_flags, .keys = (mrb_sym *)&mrb_preset_iv_tbl_81_keys, .vals = (mrb_value *)&mrb_preset_iv_tbl_81_vals };
-
-PRESET_DATA uint8_t mrb_preset_iv_tbl_82_ed_flags[] = {
-	0xaa, 0x2a,
-};
-PRESET_DATA mrb_sym mrb_preset_iv_tbl_82_keys[] = {
-	0, 0, 0, 0, 0, 0, 0, 6,
-};
-PRESET_DATA mrb_value mrb_preset_iv_tbl_82_vals[] = {
-	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
-	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
-	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
-	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
-	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
-	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
-	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
-	{ .value = { .sym = (mrb_sym)147 }, .tt = MRB_TT_SYMBOL },
-};
 PRESET_DATA kh_iv_t mrb_preset_iv_tbl_82 = { .n_buckets = 8, .size = 1, .n_occupied = 1, .ed_flags = (uint8_t *)&mrb_preset_iv_tbl_82_ed_flags, .keys = (mrb_sym *)&mrb_preset_iv_tbl_82_keys, .vals = (mrb_value *)&mrb_preset_iv_tbl_82_vals };
 
 PRESET_DATA uint8_t mrb_preset_iv_tbl_83_ed_flags[] = {
-	0xaa, 0xa2,
+	0xaa, 0x2a,
 };
 PRESET_DATA mrb_sym mrb_preset_iv_tbl_83_keys[] = {
-	0, 0, 0, 0, 0, 1, 0, 0,
+	0, 0, 0, 0, 0, 0, 0, 6,
 };
 PRESET_DATA mrb_value mrb_preset_iv_tbl_83_vals[] = {
+	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
+	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
+	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
+	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
+	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
+	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
+	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
+	{ .value = { .sym = (mrb_sym)145 }, .tt = MRB_TT_SYMBOL },
+};
+PRESET_DATA kh_iv_t mrb_preset_iv_tbl_83 = { .n_buckets = 8, .size = 1, .n_occupied = 1, .ed_flags = (uint8_t *)&mrb_preset_iv_tbl_83_ed_flags, .keys = (mrb_sym *)&mrb_preset_iv_tbl_83_keys, .vals = (mrb_value *)&mrb_preset_iv_tbl_83_vals };
+
+PRESET_DATA uint8_t mrb_preset_iv_tbl_84_ed_flags[] = {
+	0xaa, 0xa2,
+};
+PRESET_DATA mrb_sym mrb_preset_iv_tbl_84_keys[] = {
+	0, 0, 0, 0, 0, 1, 0, 0,
+};
+PRESET_DATA mrb_value mrb_preset_iv_tbl_84_vals[] = {
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
@@ -6481,15 +6614,123 @@ PRESET_DATA mrb_value mrb_preset_iv_tbl_83_vals[] = {
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 };
-PRESET_DATA kh_iv_t mrb_preset_iv_tbl_83 = { .n_buckets = 8, .size = 1, .n_occupied = 1, .ed_flags = (uint8_t *)&mrb_preset_iv_tbl_83_ed_flags, .keys = (mrb_sym *)&mrb_preset_iv_tbl_83_keys, .vals = (mrb_value *)&mrb_preset_iv_tbl_83_vals };
+PRESET_DATA kh_iv_t mrb_preset_iv_tbl_84 = { .n_buckets = 8, .size = 1, .n_occupied = 1, .ed_flags = (uint8_t *)&mrb_preset_iv_tbl_84_ed_flags, .keys = (mrb_sym *)&mrb_preset_iv_tbl_84_keys, .vals = (mrb_value *)&mrb_preset_iv_tbl_84_vals };
 
-PRESET_DATA uint8_t mrb_preset_iv_tbl_84_ed_flags[] = {
+PRESET_DATA uint8_t mrb_preset_iv_tbl_85_ed_flags[] = {
 	0xaa, 0x2a,
 };
-PRESET_DATA mrb_sym mrb_preset_iv_tbl_84_keys[] = {
+PRESET_DATA mrb_sym mrb_preset_iv_tbl_85_keys[] = {
 	0, 0, 0, 0, 0, 0, 0, 6,
 };
-PRESET_DATA mrb_value mrb_preset_iv_tbl_84_vals[] = {
+PRESET_DATA mrb_value mrb_preset_iv_tbl_85_vals[] = {
+	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
+	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
+	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
+	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
+	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
+	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
+	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
+	{ .value = { .sym = (mrb_sym)144 }, .tt = MRB_TT_SYMBOL },
+};
+PRESET_DATA kh_iv_t mrb_preset_iv_tbl_85 = { .n_buckets = 8, .size = 1, .n_occupied = 1, .ed_flags = (uint8_t *)&mrb_preset_iv_tbl_85_ed_flags, .keys = (mrb_sym *)&mrb_preset_iv_tbl_85_keys, .vals = (mrb_value *)&mrb_preset_iv_tbl_85_vals };
+
+PRESET_DATA uint8_t mrb_preset_iv_tbl_86_ed_flags[] = {
+	0xaa, 0xa2,
+};
+PRESET_DATA mrb_sym mrb_preset_iv_tbl_86_keys[] = {
+	0, 0, 0, 0, 0, 1, 0, 0,
+};
+PRESET_DATA mrb_value mrb_preset_iv_tbl_86_vals[] = {
+	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
+	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
+	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
+	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
+	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
+	{ .value = { .p = (void *)&mrb_preset_object_316 }, .tt = MRB_TT_CLASS },
+	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
+	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
+};
+PRESET_DATA kh_iv_t mrb_preset_iv_tbl_86 = { .n_buckets = 8, .size = 1, .n_occupied = 1, .ed_flags = (uint8_t *)&mrb_preset_iv_tbl_86_ed_flags, .keys = (mrb_sym *)&mrb_preset_iv_tbl_86_keys, .vals = (mrb_value *)&mrb_preset_iv_tbl_86_vals };
+
+PRESET_DATA uint8_t mrb_preset_iv_tbl_87_ed_flags[] = {
+	0xaa, 0x2a,
+};
+PRESET_DATA mrb_sym mrb_preset_iv_tbl_87_keys[] = {
+	0, 0, 0, 0, 0, 0, 0, 6,
+};
+PRESET_DATA mrb_value mrb_preset_iv_tbl_87_vals[] = {
+	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
+	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
+	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
+	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
+	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
+	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
+	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
+	{ .value = { .sym = (mrb_sym)234 }, .tt = MRB_TT_SYMBOL },
+};
+PRESET_DATA kh_iv_t mrb_preset_iv_tbl_87 = { .n_buckets = 8, .size = 1, .n_occupied = 1, .ed_flags = (uint8_t *)&mrb_preset_iv_tbl_87_ed_flags, .keys = (mrb_sym *)&mrb_preset_iv_tbl_87_keys, .vals = (mrb_value *)&mrb_preset_iv_tbl_87_vals };
+
+PRESET_DATA uint8_t mrb_preset_iv_tbl_88_ed_flags[] = {
+	0xaa, 0xa2,
+};
+PRESET_DATA mrb_sym mrb_preset_iv_tbl_88_keys[] = {
+	0, 0, 0, 0, 0, 1, 0, 0,
+};
+PRESET_DATA mrb_value mrb_preset_iv_tbl_88_vals[] = {
+	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
+	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
+	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
+	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
+	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
+	{ .value = { .p = (void *)&mrb_preset_object_319 }, .tt = MRB_TT_CLASS },
+	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
+	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
+};
+PRESET_DATA kh_iv_t mrb_preset_iv_tbl_88 = { .n_buckets = 8, .size = 1, .n_occupied = 1, .ed_flags = (uint8_t *)&mrb_preset_iv_tbl_88_ed_flags, .keys = (mrb_sym *)&mrb_preset_iv_tbl_88_keys, .vals = (mrb_value *)&mrb_preset_iv_tbl_88_vals };
+
+PRESET_DATA uint8_t mrb_preset_iv_tbl_89_ed_flags[] = {
+	0xaa, 0x2a,
+};
+PRESET_DATA mrb_sym mrb_preset_iv_tbl_89_keys[] = {
+	0, 0, 0, 0, 0, 0, 0, 6,
+};
+PRESET_DATA mrb_value mrb_preset_iv_tbl_89_vals[] = {
+	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
+	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
+	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
+	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
+	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
+	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
+	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
+	{ .value = { .sym = (mrb_sym)147 }, .tt = MRB_TT_SYMBOL },
+};
+PRESET_DATA kh_iv_t mrb_preset_iv_tbl_89 = { .n_buckets = 8, .size = 1, .n_occupied = 1, .ed_flags = (uint8_t *)&mrb_preset_iv_tbl_89_ed_flags, .keys = (mrb_sym *)&mrb_preset_iv_tbl_89_keys, .vals = (mrb_value *)&mrb_preset_iv_tbl_89_vals };
+
+PRESET_DATA uint8_t mrb_preset_iv_tbl_90_ed_flags[] = {
+	0xaa, 0xa2,
+};
+PRESET_DATA mrb_sym mrb_preset_iv_tbl_90_keys[] = {
+	0, 0, 0, 0, 0, 1, 0, 0,
+};
+PRESET_DATA mrb_value mrb_preset_iv_tbl_90_vals[] = {
+	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
+	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
+	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
+	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
+	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
+	{ .value = { .p = (void *)&mrb_preset_object_321 }, .tt = MRB_TT_CLASS },
+	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
+	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
+};
+PRESET_DATA kh_iv_t mrb_preset_iv_tbl_90 = { .n_buckets = 8, .size = 1, .n_occupied = 1, .ed_flags = (uint8_t *)&mrb_preset_iv_tbl_90_ed_flags, .keys = (mrb_sym *)&mrb_preset_iv_tbl_90_keys, .vals = (mrb_value *)&mrb_preset_iv_tbl_90_vals };
+
+PRESET_DATA uint8_t mrb_preset_iv_tbl_91_ed_flags[] = {
+	0xaa, 0x2a,
+};
+PRESET_DATA mrb_sym mrb_preset_iv_tbl_91_keys[] = {
+	0, 0, 0, 0, 0, 0, 0, 6,
+};
+PRESET_DATA mrb_value mrb_preset_iv_tbl_91_vals[] = {
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
@@ -6499,79 +6740,115 @@ PRESET_DATA mrb_value mrb_preset_iv_tbl_84_vals[] = {
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .sym = (mrb_sym)235 }, .tt = MRB_TT_SYMBOL },
 };
-PRESET_DATA kh_iv_t mrb_preset_iv_tbl_84 = { .n_buckets = 8, .size = 1, .n_occupied = 1, .ed_flags = (uint8_t *)&mrb_preset_iv_tbl_84_ed_flags, .keys = (mrb_sym *)&mrb_preset_iv_tbl_84_keys, .vals = (mrb_value *)&mrb_preset_iv_tbl_84_vals };
+PRESET_DATA kh_iv_t mrb_preset_iv_tbl_91 = { .n_buckets = 8, .size = 1, .n_occupied = 1, .ed_flags = (uint8_t *)&mrb_preset_iv_tbl_91_ed_flags, .keys = (mrb_sym *)&mrb_preset_iv_tbl_91_keys, .vals = (mrb_value *)&mrb_preset_iv_tbl_91_vals };
 
-PRESET_DATA uint8_t mrb_preset_iv_tbl_85_ed_flags[] = {
+PRESET_DATA uint8_t mrb_preset_iv_tbl_92_ed_flags[] = {
 	0xaa, 0xa2,
 };
-PRESET_DATA mrb_sym mrb_preset_iv_tbl_85_keys[] = {
+PRESET_DATA mrb_sym mrb_preset_iv_tbl_92_keys[] = {
 	0, 0, 0, 0, 0, 1, 0, 0,
 };
-PRESET_DATA mrb_value mrb_preset_iv_tbl_85_vals[] = {
+PRESET_DATA mrb_value mrb_preset_iv_tbl_92_vals[] = {
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
-	{ .value = { .p = (void *)&mrb_preset_object_315 }, .tt = MRB_TT_CLASS },
+	{ .value = { .p = (void *)&mrb_preset_object_323 }, .tt = MRB_TT_CLASS },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 };
-PRESET_DATA kh_iv_t mrb_preset_iv_tbl_85 = { .n_buckets = 8, .size = 1, .n_occupied = 1, .ed_flags = (uint8_t *)&mrb_preset_iv_tbl_85_ed_flags, .keys = (mrb_sym *)&mrb_preset_iv_tbl_85_keys, .vals = (mrb_value *)&mrb_preset_iv_tbl_85_vals };
+PRESET_DATA kh_iv_t mrb_preset_iv_tbl_92 = { .n_buckets = 8, .size = 1, .n_occupied = 1, .ed_flags = (uint8_t *)&mrb_preset_iv_tbl_92_ed_flags, .keys = (mrb_sym *)&mrb_preset_iv_tbl_92_keys, .vals = (mrb_value *)&mrb_preset_iv_tbl_92_vals };
 
-PRESET_DATA uint8_t mrb_preset_iv_tbl_86_ed_flags[] = {
+PRESET_DATA uint8_t mrb_preset_iv_tbl_93_ed_flags[] = {
+	0xaa, 0x2a,
+};
+PRESET_DATA mrb_sym mrb_preset_iv_tbl_93_keys[] = {
+	0, 0, 0, 0, 0, 0, 0, 6,
+};
+PRESET_DATA mrb_value mrb_preset_iv_tbl_93_vals[] = {
+	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
+	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
+	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
+	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
+	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
+	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
+	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
+	{ .value = { .sym = (mrb_sym)471 }, .tt = MRB_TT_SYMBOL },
+};
+PRESET_DATA kh_iv_t mrb_preset_iv_tbl_93 = { .n_buckets = 8, .size = 1, .n_occupied = 1, .ed_flags = (uint8_t *)&mrb_preset_iv_tbl_93_ed_flags, .keys = (mrb_sym *)&mrb_preset_iv_tbl_93_keys, .vals = (mrb_value *)&mrb_preset_iv_tbl_93_vals };
+
+PRESET_DATA uint8_t mrb_preset_iv_tbl_94_ed_flags[] = {
+	0xaa, 0xa2,
+};
+PRESET_DATA mrb_sym mrb_preset_iv_tbl_94_keys[] = {
+	0, 0, 0, 0, 0, 1, 0, 0,
+};
+PRESET_DATA mrb_value mrb_preset_iv_tbl_94_vals[] = {
+	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
+	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
+	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
+	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
+	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
+	{ .value = { .p = (void *)&mrb_preset_object_325 }, .tt = MRB_TT_CLASS },
+	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
+	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
+};
+PRESET_DATA kh_iv_t mrb_preset_iv_tbl_94 = { .n_buckets = 8, .size = 1, .n_occupied = 1, .ed_flags = (uint8_t *)&mrb_preset_iv_tbl_94_ed_flags, .keys = (mrb_sym *)&mrb_preset_iv_tbl_94_keys, .vals = (mrb_value *)&mrb_preset_iv_tbl_94_vals };
+
+PRESET_DATA uint8_t mrb_preset_iv_tbl_95_ed_flags[] = {
 	0xaa, 0x8a,
 };
-PRESET_DATA mrb_sym mrb_preset_iv_tbl_86_keys[] = {
+PRESET_DATA mrb_sym mrb_preset_iv_tbl_95_keys[] = {
 	0, 0, 0, 0, 0, 0, 146, 0,
 };
-PRESET_DATA mrb_value mrb_preset_iv_tbl_86_vals[] = {
+PRESET_DATA mrb_value mrb_preset_iv_tbl_95_vals[] = {
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
-	{ .value = { .p = (void *)&mrb_preset_object_319 }, .tt = MRB_TT_STRING },
+	{ .value = { .p = (void *)&mrb_preset_object_329 }, .tt = MRB_TT_STRING },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 };
-PRESET_DATA kh_iv_t mrb_preset_iv_tbl_86 = { .n_buckets = 8, .size = 1, .n_occupied = 1, .ed_flags = (uint8_t *)&mrb_preset_iv_tbl_86_ed_flags, .keys = (mrb_sym *)&mrb_preset_iv_tbl_86_keys, .vals = (mrb_value *)&mrb_preset_iv_tbl_86_vals };
+PRESET_DATA kh_iv_t mrb_preset_iv_tbl_95 = { .n_buckets = 8, .size = 1, .n_occupied = 1, .ed_flags = (uint8_t *)&mrb_preset_iv_tbl_95_ed_flags, .keys = (mrb_sym *)&mrb_preset_iv_tbl_95_keys, .vals = (mrb_value *)&mrb_preset_iv_tbl_95_vals };
 
-PRESET_DATA uint8_t mrb_preset_iv_tbl_87_ed_flags[] = {
+PRESET_DATA uint8_t mrb_preset_iv_tbl_96_ed_flags[] = {
 	0xaa, 0x8a,
 };
-PRESET_DATA mrb_sym mrb_preset_iv_tbl_87_keys[] = {
+PRESET_DATA mrb_sym mrb_preset_iv_tbl_96_keys[] = {
 	0, 0, 0, 0, 0, 0, 146, 0,
 };
-PRESET_DATA mrb_value mrb_preset_iv_tbl_87_vals[] = {
+PRESET_DATA mrb_value mrb_preset_iv_tbl_96_vals[] = {
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
-	{ .value = { .p = (void *)&mrb_preset_object_321 }, .tt = MRB_TT_STRING },
+	{ .value = { .p = (void *)&mrb_preset_object_331 }, .tt = MRB_TT_STRING },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 };
-PRESET_DATA kh_iv_t mrb_preset_iv_tbl_87 = { .n_buckets = 8, .size = 1, .n_occupied = 1, .ed_flags = (uint8_t *)&mrb_preset_iv_tbl_87_ed_flags, .keys = (mrb_sym *)&mrb_preset_iv_tbl_87_keys, .vals = (mrb_value *)&mrb_preset_iv_tbl_87_vals };
+PRESET_DATA kh_iv_t mrb_preset_iv_tbl_96 = { .n_buckets = 8, .size = 1, .n_occupied = 1, .ed_flags = (uint8_t *)&mrb_preset_iv_tbl_96_ed_flags, .keys = (mrb_sym *)&mrb_preset_iv_tbl_96_keys, .vals = (mrb_value *)&mrb_preset_iv_tbl_96_vals };
 
-PRESET_DATA uint8_t mrb_preset_iv_tbl_88_ed_flags[] = {
+PRESET_DATA uint8_t mrb_preset_iv_tbl_97_ed_flags[] = {
 	0xaa, 0x8a,
 };
-PRESET_DATA mrb_sym mrb_preset_iv_tbl_88_keys[] = {
+PRESET_DATA mrb_sym mrb_preset_iv_tbl_97_keys[] = {
 	0, 0, 0, 0, 0, 0, 146, 0,
 };
-PRESET_DATA mrb_value mrb_preset_iv_tbl_88_vals[] = {
+PRESET_DATA mrb_value mrb_preset_iv_tbl_97_vals[] = {
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
-	{ .value = { .p = (void *)&mrb_preset_object_323 }, .tt = MRB_TT_STRING },
+	{ .value = { .p = (void *)&mrb_preset_object_333 }, .tt = MRB_TT_STRING },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 };
-PRESET_DATA kh_iv_t mrb_preset_iv_tbl_88 = { .n_buckets = 8, .size = 1, .n_occupied = 1, .ed_flags = (uint8_t *)&mrb_preset_iv_tbl_88_ed_flags, .keys = (mrb_sym *)&mrb_preset_iv_tbl_88_keys, .vals = (mrb_value *)&mrb_preset_iv_tbl_88_vals };
+PRESET_DATA kh_iv_t mrb_preset_iv_tbl_97 = { .n_buckets = 8, .size = 1, .n_occupied = 1, .ed_flags = (uint8_t *)&mrb_preset_iv_tbl_97_ed_flags, .keys = (mrb_sym *)&mrb_preset_iv_tbl_97_keys, .vals = (mrb_value *)&mrb_preset_iv_tbl_97_vals };
 
 
 PRESET_DATA uint8_t mrb_preset_kh_mt_0_ed_flags[] = {
@@ -6595,7 +6872,7 @@ PRESET_DATA mrb_sym mrb_preset_kh_mt_1_keys[] = {
 	248, 27, 39, 51, 26, 0, 50, 38, 37, 49, 0, 25, 48, 36, 24, 73,
 };
 PRESET_DATA mrb_method_t mrb_preset_kh_mt_1_vals[] = {
-	{ .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_mod_cvar_set } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_mod_attr_reader } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_mod_extend_object } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_mod_attr_writer } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_mod_to_s } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_bob_init } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_mod_to_s } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_bob_init } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_7.proc } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_mod_ancestors } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_8.proc } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_mod_alias } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_mod_const_defined } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_9.proc } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_mod_cvar_get } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_mod_undef } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_mod_cvar_defined } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_mod_instance_methods } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_mod_dummy_visibility } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_mod_class_variables } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_mod_method_defined } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_mod_eqq } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_mod_dummy_visibility } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_mod_module_eval } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_mod_const_missing } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_mod_initialize } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_bob_init } }, { .func_p = 1, { .func = (mrb_func_t)&mod_define_method } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_mod_module_function } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_mod_included_modules } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_mod_attr_reader } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_mod_module_eval } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_bob_init } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_mod_remove_const } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_mod_append_features } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_mod_constants } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_mod_remove_method } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_mod_remove_cvar } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_mod_const_set } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_mod_include_p } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_mod_const_get } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_mod_dummy_visibility } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_mod_prepend_features } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_obj_clone } }, 
+	{ .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_mod_cvar_set } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_mod_attr_reader } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_mod_extend_object } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_mod_attr_writer } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_mod_to_s } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_bob_init } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_mod_to_s } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_bob_init } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_7.proc } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_mod_ancestors } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_8.proc } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_mod_alias } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_mod_const_defined } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_9.proc } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_mod_cvar_get } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_mod_undef } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_mod_cvar_defined } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_mod_instance_methods } }, { .func_p = 1, { .func = (mrb_func_t)&sym_to_sym } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_mod_class_variables } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_mod_method_defined } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_mod_eqq } }, { .func_p = 1, { .func = (mrb_func_t)&sym_to_sym } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_mod_module_eval } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_mod_const_missing } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_mod_initialize } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_bob_init } }, { .func_p = 1, { .func = (mrb_func_t)&mod_define_method } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_mod_module_function } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_mod_included_modules } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_mod_attr_reader } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_mod_module_eval } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_bob_init } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_mod_remove_const } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_mod_append_features } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_mod_constants } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_mod_remove_method } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_mod_remove_cvar } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_mod_const_set } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_mod_include_p } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_mod_const_get } }, { .func_p = 1, { .func = (mrb_func_t)&sym_to_sym } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_mod_prepend_features } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_obj_clone } }, 
 };
 PRESET_DATA kh_mt_t mrb_preset_kh_mt_1 = { .n_buckets = 64, .size = 44, .n_occupied = 44, .ed_flags = (uint8_t *)&mrb_preset_kh_mt_1_ed_flags, .keys = (mrb_sym *)&mrb_preset_kh_mt_1_keys, .vals = (mrb_method_t *)&mrb_preset_kh_mt_1_vals };
 
@@ -6790,29 +7067,29 @@ PRESET_DATA uint8_t mrb_preset_kh_mt_19_ed_flags[] = {
 	0xaa, 0xa8,
 };
 PRESET_DATA mrb_sym mrb_preset_kh_mt_19_keys[] = {
-	0, 0, 0, 0, 405, 0, 0, 0,
+	0, 0, 0, 0, 432, 0, 0, 0,
 };
 PRESET_DATA mrb_method_t mrb_preset_kh_mt_19_vals[] = {
-	{ .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_61.proc } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, 
+	{ .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_32.proc } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, 
 };
 PRESET_DATA kh_mt_t mrb_preset_kh_mt_19 = { .n_buckets = 8, .size = 1, .n_occupied = 1, .ed_flags = (uint8_t *)&mrb_preset_kh_mt_19_ed_flags, .keys = (mrb_sym *)&mrb_preset_kh_mt_19_keys, .vals = (mrb_method_t *)&mrb_preset_kh_mt_19_vals };
 
 PRESET_DATA uint8_t mrb_preset_kh_mt_20_ed_flags[] = {
-	0x22, 0x80, 0x20, 0x80, 0x22, 0x00, 0x20, 0x88, 0x00, 0x00, 0x02, 0x00, 0x20, 0x00, 0x00, 0x00,
-	0x00, 0x00, 0x80, 0x00, 0x00, 0x00, 0x00, 0x00, 0x28, 0x2a, 0xa8, 0x2a, 0xa0, 0x22, 0x0a, 0x2a,
+	0x22, 0x00, 0x80, 0x20, 0x0a, 0x08, 0x80, 0xa0, 0x20, 0x00, 0x02, 0x00, 0x00, 0x00, 0x00, 0x00,
+	0x00, 0x02, 0x80, 0x02, 0x00, 0x00, 0x08, 0x82, 0x00, 0x22, 0xa8, 0xa0, 0x88, 0x28, 0x20, 0xa2,
 };
 PRESET_DATA mrb_sym mrb_preset_kh_mt_20_keys[] = {
-	0, 414, 0, 121, 80, 415, 120, 0, 42, 123, 0, 412, 122, 43, 413, 0,
-	0, 411, 0, 124, 313, 410, 125, 312, 165, 126, 0, 409, 127, 0, 408, 0,
-	10, 128, 404, 115, 310, 129, 114, 311, 0, 113, 8, 130, 112, 309, 406, 131,
-	133, 401, 0, 118, 307, 132, 119, 306, 308, 305, 116, 135, 117, 304, 400, 134,
-	394, 402, 109, 407, 280, 395, 376, 108, 111, 416, 392, 0, 418, 110, 299, 393,
-	399, 155, 104, 417, 154, 203, 398, 105, 300, 421, 397, 153, 419, 107, 152, 396,
-	79, 0, 0, 302, 0, 0, 0, 420, 403, 0, 0, 0, 0, 0, 0, 387,
-	74, 389, 0, 0, 0, 388, 0, 294, 0, 0, 391, 25, 0, 0, 0, 390,
+	0, 414, 0, 121, 80, 415, 120, 439, 42, 123, 436, 0, 122, 43, 0, 437,
+	0, 0, 438, 124, 313, 0, 125, 312, 165, 126, 433, 0, 127, 435, 0, 0,
+	10, 128, 0, 115, 310, 129, 114, 311, 0, 113, 8, 130, 112, 309, 405, 131,
+	133, 448, 434, 118, 307, 132, 119, 306, 308, 305, 116, 135, 117, 304, 280, 134,
+	440, 447, 109, 418, 0, 446, 442, 108, 111, 416, 419, 0, 0, 110, 417, 441,
+	299, 155, 104, 423, 154, 443, 203, 105, 421, 0, 422, 153, 0, 107, 152, 0,
+	79, 300, 424, 420, 0, 444, 0, 425, 426, 0, 0, 0, 302, 427, 0, 0,
+	74, 0, 429, 0, 445, 0, 0, 294, 428, 431, 0, 25, 0, 430, 0, 0,
 };
 PRESET_DATA mrb_method_t mrb_preset_kh_mt_20_vals[] = {
-	{ .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_62.proc } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_str_intern } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_str_replace } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_63.proc } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_str_index_m } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_str_to_s } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_str_replace } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_64.proc } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_str_size } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_str_inspect } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_65.proc } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_66.proc } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_str_reverse } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_67.proc } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_69.proc } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_str_reverse_bang } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_70.proc } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_71.proc } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_str_rindex } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_72.proc } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_str_size } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_73.proc } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_str_equal_m } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_str_aref_m } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_str_del_suffix } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_str_chop } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_74.proc } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_str_split_m } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_str_chomp_bang } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_76.proc } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_str_chomp } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_str_init } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_str_to_f } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_str_capitalize_bang } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_77.proc } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_81.proc } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_str_to_i } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_str_upcase } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_str_del_prefix_bang } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_str_downcase_bang } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_82.proc } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_str_to_s } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_str_empty_p } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_84.proc } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_87.proc } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_89.proc } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_str_chop_bang } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_str_bytes } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_str_downcase } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_105.proc } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_str_ord } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_str_upcase_bang } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_str_end_with } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_str_del_prefix } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_str_times } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_107.proc } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_108.proc } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_str_hex } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_str_chr } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_str_plus_m } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_str_capitalize } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_109.proc } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_str_swapcase } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_110.proc } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_str_aref_m } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_str_succ } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_str_start_with } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_str_succ_bang } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_str_concat_m } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_str_intern } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_111.proc } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_112.proc } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_113.proc } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_str_succ_bang } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_str_cmp_m } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_str_succ } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_114.proc } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_str_lines } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_115.proc } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_123.proc } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_str_bytesize } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_str_concat_m } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_str_oct } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_str_hash_m } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_str_upto } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_114.proc } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_str_del_suffix_bang } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_str_dump } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_str_eql } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_str_setbyte } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_str_getbyte } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_124.proc } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_str_swapcase_bang } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_str_include } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_str_byteslice } }, 
+	{ .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_str_dump } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_str_intern } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_str_replace } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_str_getbyte } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_str_index_m } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_33.proc } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_str_to_s } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_str_replace } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_34.proc } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_str_size } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_str_inspect } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_36.proc } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_38.proc } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_str_reverse } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_40.proc } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_str_reverse_bang } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_42.proc } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_43.proc } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_str_rindex } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_44.proc } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_str_size } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_47.proc } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_str_equal_m } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_str_aref_m } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_str_chop } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_51.proc } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_str_split_m } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_str_chomp_bang } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_53.proc } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_str_chomp } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_str_init } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_str_to_f } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_str_capitalize_bang } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_55.proc } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_str_chr } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_str_to_i } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_str_upcase } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_59.proc } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_61.proc } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_str_downcase_bang } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_64.proc } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_str_to_s } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_str_empty_p } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_66.proc } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_69.proc } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_71.proc } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_str_chop_bang } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_str_bytes } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_str_downcase } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_87.proc } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_89.proc } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_str_upcase_bang } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_93.proc } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_59.proc } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_str_times } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_str_swapcase_bang } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_94.proc } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_96.proc } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_str_plus_m } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_str_capitalize } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_str_setbyte } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_str_swapcase } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_str_aref_m } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_str_byteslice } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_100.proc } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_str_succ } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_str_concat_m } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_str_intern } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_str_oct } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_104.proc } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_106.proc } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_107.proc } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_str_cmp_m } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_str_end_with } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_str_hex } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_108.proc } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_str_bytesize } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_str_concat_m } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_str_hash_m } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_str_succ } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_str_lines } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_str_start_with } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_116.proc } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_str_succ_bang } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_str_succ_bang } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_str_upto } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_str_ord } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_str_eql } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_str_del_prefix } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_120.proc } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_124.proc } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_str_del_prefix_bang } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_str_del_suffix } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_str_include } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_str_del_suffix_bang } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, 
 };
 PRESET_DATA kh_mt_t mrb_preset_kh_mt_20 = { .n_buckets = 128, .size = 95, .n_occupied = 95, .ed_flags = (uint8_t *)&mrb_preset_kh_mt_20_ed_flags, .keys = (mrb_sym *)&mrb_preset_kh_mt_20_keys, .vals = (mrb_method_t *)&mrb_preset_kh_mt_20_vals };
 
@@ -7072,19 +7349,19 @@ PRESET_DATA mrb_sym mrb_preset_kh_mt_43_keys[] = {
 	74, 0, 173, 289, 282, 0, 184, 119, 172, 175, 0, 25, 281, 174, 0, 73,
 };
 PRESET_DATA mrb_method_t mrb_preset_kh_mt_43_vals[] = {
-	{ .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_hash_has_value } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_215.proc } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_hash_values } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_hash_shift } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_217.proc } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_hash_has_key } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_215.proc } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_hash_size_m } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_hash_aget } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_217.proc } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_hash_aset } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_219.proc } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_hash_keys } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_hash_clear } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_225.proc } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_hash_has_key } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_hash_has_value } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_hash_aset } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_hash_size_m } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_hash_has_key } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_226.proc } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_227.proc } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_229.proc } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_230.proc } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_231.proc } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_hash_init } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_232.proc } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_233.proc } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_hash_default } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_234.proc } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_235.proc } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_hash_default_proc } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_236.proc } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_237.proc } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_mod_dummy_visibility } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_hash_empty_p } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_hash_set_default } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_hash_delete } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_hash_has_key } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_238.proc } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_hash_set_default_proc } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_hash_dup } }, 
+	{ .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_hash_has_value } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_215.proc } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_hash_values } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_hash_shift } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_217.proc } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_hash_has_key } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_215.proc } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_hash_size_m } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_hash_aget } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_217.proc } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_hash_aset } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_219.proc } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_hash_keys } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_hash_clear } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_225.proc } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_hash_has_key } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_hash_has_value } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_hash_aset } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_hash_size_m } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_hash_has_key } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_226.proc } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_227.proc } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_229.proc } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_230.proc } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_231.proc } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_hash_init } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_232.proc } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_233.proc } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_hash_default } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_234.proc } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_235.proc } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_hash_default_proc } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_236.proc } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_237.proc } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&sym_to_sym } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_hash_empty_p } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_hash_set_default } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_hash_delete } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_hash_has_key } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_238.proc } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_hash_set_default_proc } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_hash_dup } }, 
 };
 PRESET_DATA kh_mt_t mrb_preset_kh_mt_43 = { .n_buckets = 64, .size = 42, .n_occupied = 42, .ed_flags = (uint8_t *)&mrb_preset_kh_mt_43_ed_flags, .keys = (mrb_sym *)&mrb_preset_kh_mt_43_keys, .vals = (mrb_method_t *)&mrb_preset_kh_mt_43_vals };
 
 PRESET_DATA uint8_t mrb_preset_kh_mt_44_ed_flags[] = {
-	0x28, 0x8a, 0xa0, 0xa0, 0x0a, 0x0a, 0xa0, 0xa0,
+	0xaa, 0xa8, 0x28, 0x00, 0x82, 0x28, 0x28, 0x82,
 };
 PRESET_DATA mrb_sym mrb_preset_kh_mt_44_keys[] = {
-	384, 0, 0, 377, 0, 0, 376, 0, 298, 379, 0, 0, 378, 299, 0, 0,
-	0, 0, 301, 380, 0, 0, 381, 300, 303, 382, 0, 0, 383, 302, 0, 0,
+	0, 0, 0, 0, 405, 0, 0, 0, 298, 0, 0, 406, 412, 299, 407, 413,
+	0, 411, 301, 0, 410, 0, 0, 300, 303, 0, 0, 409, 0, 302, 408, 0,
 };
 PRESET_DATA mrb_method_t mrb_preset_kh_mt_44_vals[] = {
-	{ .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_241.proc } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_int_allbits } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_int_chr } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_242.proc } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_int_nobits } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_int_anybits } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_243.proc } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_244.proc } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_245.proc } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_246.proc } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_243.proc } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_247.proc } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_250.proc } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_251.proc } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_252.proc } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, 
+	{ .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_int_chr } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_241.proc } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_int_allbits } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_242.proc } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_243.proc } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_int_anybits } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_244.proc } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_245.proc } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_246.proc } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_247.proc } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_243.proc } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_248.proc } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_251.proc } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_252.proc } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_int_nobits } }, { .func_p = 0, { .proc = NULL } }, 
 };
 PRESET_DATA kh_mt_t mrb_preset_kh_mt_44 = { .n_buckets = 32, .size = 15, .n_occupied = 15, .ed_flags = (uint8_t *)&mrb_preset_kh_mt_44_ed_flags, .keys = (mrb_sym *)&mrb_preset_kh_mt_44_keys, .vals = (mrb_method_t *)&mrb_preset_kh_mt_44_vals };
 
@@ -7155,89 +7432,88 @@ PRESET_DATA mrb_sym mrb_preset_kh_mt_50_keys[] = {
 	74, 0, 198, 0, 0, 193, 0, 0, 0, 0, 194, 0, 0, 0, 0, 0,
 };
 PRESET_DATA mrb_method_t mrb_preset_kh_mt_50_vals[] = {
-	{ .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&flo_mul } }, { .func_p = 1, { .func = (mrb_func_t)&flo_or } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&flo_divmod } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&flo_plus } }, { .func_p = 1, { .func = (mrb_func_t)&flo_to_s } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&flo_lshift } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&flo_to_s } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&flo_rev } }, { .func_p = 1, { .func = (mrb_func_t)&flo_minus } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&flo_mod } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&flo_xor } }, { .func_p = 1, { .func = (mrb_func_t)&flo_truncate } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&flo_and } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&flo_rshift } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&flo_eq } }, { .func_p = 1, { .func = (mrb_func_t)&flo_ceil } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&flo_nan_p } }, { .func_p = 1, { .func = (mrb_func_t)&flo_truncate } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&flo_round } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_mod_dummy_visibility } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&flo_truncate } }, { .func_p = 1, { .func = (mrb_func_t)&flo_eql } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&flo_floor } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&flo_finite_p } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&flo_infinite_p } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, 
+	{ .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&flo_mul } }, { .func_p = 1, { .func = (mrb_func_t)&flo_or } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&flo_divmod } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&flo_plus } }, { .func_p = 1, { .func = (mrb_func_t)&flo_to_s } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&flo_lshift } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&flo_to_s } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&flo_rev } }, { .func_p = 1, { .func = (mrb_func_t)&flo_minus } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&flo_mod } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&flo_xor } }, { .func_p = 1, { .func = (mrb_func_t)&flo_truncate } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&flo_and } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&flo_rshift } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&flo_eq } }, { .func_p = 1, { .func = (mrb_func_t)&flo_ceil } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&flo_nan_p } }, { .func_p = 1, { .func = (mrb_func_t)&flo_truncate } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&flo_round } }, { .func_p = 1, { .func = (mrb_func_t)&sym_to_sym } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&flo_truncate } }, { .func_p = 1, { .func = (mrb_func_t)&flo_eql } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&flo_floor } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&flo_finite_p } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&flo_infinite_p } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, 
 };
 PRESET_DATA kh_mt_t mrb_preset_kh_mt_50 = { .n_buckets = 64, .size = 25, .n_occupied = 25, .ed_flags = (uint8_t *)&mrb_preset_kh_mt_50_ed_flags, .keys = (mrb_sym *)&mrb_preset_kh_mt_50_keys, .vals = (mrb_method_t *)&mrb_preset_kh_mt_50_vals };
 
 PRESET_DATA uint8_t mrb_preset_kh_mt_51_ed_flags[] = {
-	0xa8, 0xaa,
+	0xaa, 0xaa,
 };
 PRESET_DATA mrb_sym mrb_preset_kh_mt_51_keys[] = {
-	15, 0, 0, 0, 0, 0, 0, 0,
+	0, 0, 0, 0, 0, 0, 0, 0,
 };
 PRESET_DATA mrb_method_t mrb_preset_kh_mt_51_vals[] = {
 	{ .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, 
 };
-PRESET_DATA kh_mt_t mrb_preset_kh_mt_51 = { .n_buckets = 8, .size = 1, .n_occupied = 1, .ed_flags = (uint8_t *)&mrb_preset_kh_mt_51_ed_flags, .keys = (mrb_sym *)&mrb_preset_kh_mt_51_keys, .vals = (mrb_method_t *)&mrb_preset_kh_mt_51_vals };
+PRESET_DATA kh_mt_t mrb_preset_kh_mt_51 = { .n_buckets = 8, .size = 0, .n_occupied = 0, .ed_flags = (uint8_t *)&mrb_preset_kh_mt_51_ed_flags, .keys = (mrb_sym *)&mrb_preset_kh_mt_51_keys, .vals = (mrb_method_t *)&mrb_preset_kh_mt_51_vals };
 
 PRESET_DATA uint8_t mrb_preset_kh_mt_52_ed_flags[] = {
-	0x20, 0xa0,
+	0xaa, 0xaa,
 };
 PRESET_DATA mrb_sym mrb_preset_kh_mt_52_keys[] = {
-	42, 59, 0, 60, 58, 43, 0, 0,
+	0, 0, 0, 0, 0, 0, 0, 0,
 };
 PRESET_DATA mrb_method_t mrb_preset_kh_mt_52_vals[] = {
-	{ .func_p = 1, { .func = (mrb_func_t)&true_to_s } }, { .func_p = 1, { .func = (mrb_func_t)&true_xor } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&true_or } }, { .func_p = 1, { .func = (mrb_func_t)&false_or } }, { .func_p = 1, { .func = (mrb_func_t)&true_to_s } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, 
+	{ .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, 
 };
-PRESET_DATA kh_mt_t mrb_preset_kh_mt_52 = { .n_buckets = 8, .size = 5, .n_occupied = 5, .ed_flags = (uint8_t *)&mrb_preset_kh_mt_52_ed_flags, .keys = (mrb_sym *)&mrb_preset_kh_mt_52_keys, .vals = (mrb_method_t *)&mrb_preset_kh_mt_52_vals };
+PRESET_DATA kh_mt_t mrb_preset_kh_mt_52 = { .n_buckets = 8, .size = 0, .n_occupied = 0, .ed_flags = (uint8_t *)&mrb_preset_kh_mt_52_ed_flags, .keys = (mrb_sym *)&mrb_preset_kh_mt_52_keys, .vals = (mrb_method_t *)&mrb_preset_kh_mt_52_vals };
 
 PRESET_DATA uint8_t mrb_preset_kh_mt_53_ed_flags[] = {
-	0xa8, 0xaa,
+	0xaa, 0xaa,
 };
 PRESET_DATA mrb_sym mrb_preset_kh_mt_53_keys[] = {
-	15, 0, 0, 0, 0, 0, 0, 0,
+	0, 0, 0, 0, 0, 0, 0, 0,
 };
 PRESET_DATA mrb_method_t mrb_preset_kh_mt_53_vals[] = {
 	{ .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, 
 };
-PRESET_DATA kh_mt_t mrb_preset_kh_mt_53 = { .n_buckets = 8, .size = 1, .n_occupied = 1, .ed_flags = (uint8_t *)&mrb_preset_kh_mt_53_ed_flags, .keys = (mrb_sym *)&mrb_preset_kh_mt_53_keys, .vals = (mrb_method_t *)&mrb_preset_kh_mt_53_vals };
+PRESET_DATA kh_mt_t mrb_preset_kh_mt_53 = { .n_buckets = 8, .size = 0, .n_occupied = 0, .ed_flags = (uint8_t *)&mrb_preset_kh_mt_53_ed_flags, .keys = (mrb_sym *)&mrb_preset_kh_mt_53_keys, .vals = (mrb_method_t *)&mrb_preset_kh_mt_53_vals };
 
 PRESET_DATA uint8_t mrb_preset_kh_mt_54_ed_flags[] = {
-	0x20, 0xa0,
+	0x80, 0x80, 0x08, 0x2a, 0x80, 0x00, 0x00, 0x08,
 };
 PRESET_DATA mrb_sym mrb_preset_kh_mt_54_keys[] = {
-	42, 59, 0, 60, 58, 43, 0, 0,
+	384, 394, 396, 0, 404, 385, 395, 0, 403, 0, 386, 392, 0, 0, 0, 387,
+	389, 399, 393, 0, 400, 388, 381, 401, 398, 382, 391, 397, 383, 0, 402, 390,
 };
 PRESET_DATA mrb_method_t mrb_preset_kh_mt_54_vals[] = {
-	{ .func_p = 1, { .func = (mrb_func_t)&false_to_s } }, { .func_p = 1, { .func = (mrb_func_t)&false_or } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&false_or } }, { .func_p = 1, { .func = (mrb_func_t)&false_and } }, { .func_p = 1, { .func = (mrb_func_t)&false_to_s } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, 
+	{ .func_p = 1, { .func = (mrb_func_t)&math_asin } }, { .func_p = 1, { .func = (mrb_func_t)&math_exp } }, { .func_p = 1, { .func = (mrb_func_t)&math_log2 } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&math_erfc } }, { .func_p = 1, { .func = (mrb_func_t)&math_acos } }, { .func_p = 1, { .func = (mrb_func_t)&math_log } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&math_erf } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&math_atan } }, { .func_p = 1, { .func = (mrb_func_t)&math_acosh } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&math_atan2 } }, { .func_p = 1, { .func = (mrb_func_t)&math_cosh } }, { .func_p = 1, { .func = (mrb_func_t)&math_cbrt } }, { .func_p = 1, { .func = (mrb_func_t)&math_atanh } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&math_frexp } }, { .func_p = 1, { .func = (mrb_func_t)&math_sinh } }, { .func_p = 1, { .func = (mrb_func_t)&math_sin } }, { .func_p = 1, { .func = (mrb_func_t)&math_ldexp } }, { .func_p = 1, { .func = (mrb_func_t)&math_sqrt } }, { .func_p = 1, { .func = (mrb_func_t)&math_cos } }, { .func_p = 1, { .func = (mrb_func_t)&math_asinh } }, { .func_p = 1, { .func = (mrb_func_t)&math_log10 } }, { .func_p = 1, { .func = (mrb_func_t)&math_tan } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&math_hypot } }, { .func_p = 1, { .func = (mrb_func_t)&math_tanh } }, 
 };
-PRESET_DATA kh_mt_t mrb_preset_kh_mt_54 = { .n_buckets = 8, .size = 5, .n_occupied = 5, .ed_flags = (uint8_t *)&mrb_preset_kh_mt_54_ed_flags, .keys = (mrb_sym *)&mrb_preset_kh_mt_54_keys, .vals = (mrb_method_t *)&mrb_preset_kh_mt_54_vals };
+PRESET_DATA kh_mt_t mrb_preset_kh_mt_54 = { .n_buckets = 32, .size = 24, .n_occupied = 24, .ed_flags = (uint8_t *)&mrb_preset_kh_mt_54_ed_flags, .keys = (mrb_sym *)&mrb_preset_kh_mt_54_keys, .vals = (mrb_method_t *)&mrb_preset_kh_mt_54_vals };
 
 PRESET_DATA uint8_t mrb_preset_kh_mt_55_ed_flags[] = {
-	0xaa, 0xaa,
+	0x80, 0x80, 0x08, 0x2a, 0x80, 0x00, 0x00, 0x08,
 };
 PRESET_DATA mrb_sym mrb_preset_kh_mt_55_keys[] = {
-	0, 0, 0, 0, 0, 0, 0, 0,
+	384, 394, 396, 0, 404, 385, 395, 0, 403, 0, 386, 392, 0, 0, 0, 387,
+	389, 399, 393, 0, 400, 388, 381, 401, 398, 382, 391, 397, 383, 0, 402, 390,
 };
 PRESET_DATA mrb_method_t mrb_preset_kh_mt_55_vals[] = {
-	{ .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, 
+	{ .func_p = 1, { .func = (mrb_func_t)&math_asin } }, { .func_p = 1, { .func = (mrb_func_t)&math_exp } }, { .func_p = 1, { .func = (mrb_func_t)&math_log2 } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&math_erfc } }, { .func_p = 1, { .func = (mrb_func_t)&math_acos } }, { .func_p = 1, { .func = (mrb_func_t)&math_log } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&math_erf } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&math_atan } }, { .func_p = 1, { .func = (mrb_func_t)&math_acosh } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&math_atan2 } }, { .func_p = 1, { .func = (mrb_func_t)&math_cosh } }, { .func_p = 1, { .func = (mrb_func_t)&math_cbrt } }, { .func_p = 1, { .func = (mrb_func_t)&math_atanh } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&math_frexp } }, { .func_p = 1, { .func = (mrb_func_t)&math_sinh } }, { .func_p = 1, { .func = (mrb_func_t)&math_sin } }, { .func_p = 1, { .func = (mrb_func_t)&math_ldexp } }, { .func_p = 1, { .func = (mrb_func_t)&math_sqrt } }, { .func_p = 1, { .func = (mrb_func_t)&math_cos } }, { .func_p = 1, { .func = (mrb_func_t)&math_asinh } }, { .func_p = 1, { .func = (mrb_func_t)&math_log10 } }, { .func_p = 1, { .func = (mrb_func_t)&math_tan } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&math_hypot } }, { .func_p = 1, { .func = (mrb_func_t)&math_tanh } }, 
 };
-PRESET_DATA kh_mt_t mrb_preset_kh_mt_55 = { .n_buckets = 8, .size = 0, .n_occupied = 0, .ed_flags = (uint8_t *)&mrb_preset_kh_mt_55_ed_flags, .keys = (mrb_sym *)&mrb_preset_kh_mt_55_keys, .vals = (mrb_method_t *)&mrb_preset_kh_mt_55_vals };
+PRESET_DATA kh_mt_t mrb_preset_kh_mt_55 = { .n_buckets = 32, .size = 24, .n_occupied = 24, .ed_flags = (uint8_t *)&mrb_preset_kh_mt_55_ed_flags, .keys = (mrb_sym *)&mrb_preset_kh_mt_55_keys, .vals = (mrb_method_t *)&mrb_preset_kh_mt_55_vals };
 
 PRESET_DATA uint8_t mrb_preset_kh_mt_56_ed_flags[] = {
-	0x08, 0x02,
+	0xa8, 0xaa,
 };
 PRESET_DATA mrb_sym mrb_preset_kh_mt_56_keys[] = {
-	69, 0, 66, 150, 0, 65, 68, 67,
+	15, 0, 0, 0, 0, 0, 0, 0,
 };
 PRESET_DATA mrb_method_t mrb_preset_kh_mt_56_vals[] = {
-	{ .func_p = 1, { .func = (mrb_func_t)&mrb_f_raise } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_f_global_variables } }, { .func_p = 1, { .func = (mrb_func_t)&proc_lambda } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_f_block_given_p_m } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_local_variables } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_f_block_given_p_m } }, 
+	{ .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, 
 };
-PRESET_DATA kh_mt_t mrb_preset_kh_mt_56 = { .n_buckets = 8, .size = 6, .n_occupied = 6, .ed_flags = (uint8_t *)&mrb_preset_kh_mt_56_ed_flags, .keys = (mrb_sym *)&mrb_preset_kh_mt_56_keys, .vals = (mrb_method_t *)&mrb_preset_kh_mt_56_vals };
+PRESET_DATA kh_mt_t mrb_preset_kh_mt_56 = { .n_buckets = 8, .size = 1, .n_occupied = 1, .ed_flags = (uint8_t *)&mrb_preset_kh_mt_56_ed_flags, .keys = (mrb_sym *)&mrb_preset_kh_mt_56_keys, .vals = (mrb_method_t *)&mrb_preset_kh_mt_56_vals };
 
 PRESET_DATA uint8_t mrb_preset_kh_mt_57_ed_flags[] = {
-	0x20, 0x80, 0x08, 0x02, 0x20, 0xa0, 0x0a, 0x0a, 0xa0, 0x00, 0x08, 0x00, 0x80, 0x20, 0x00, 0x02,
+	0x20, 0xa0,
 };
 PRESET_DATA mrb_sym mrb_preset_kh_mt_57_keys[] = {
-	69, 81, 0, 292, 80, 68, 61, 0, 42, 0, 71, 83, 0, 43, 82, 70,
-	259, 84, 0, 261, 85, 65, 0, 0, 0, 0, 66, 86, 0, 0, 87, 67,
-	79, 91, 0, 0, 90, 78, 55, 291, 385, 0, 77, 89, 150, 386, 88, 76,
-	74, 94, 98, 0, 95, 75, 0, 99, 96, 293, 72, 92, 0, 97, 93, 73,
+	42, 59, 0, 60, 58, 43, 0, 0,
 };
 PRESET_DATA mrb_method_t mrb_preset_kh_mt_57_vals[] = {
-	{ .func_p = 1, { .func = (mrb_func_t)&mrb_f_raise } }, { .func_p = 1, { .func = (mrb_func_t)&obj_is_instance_of } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_277.proc } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_obj_init_copy } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_local_variables } }, { .func_p = 1, { .func = (mrb_func_t)&false_and } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_any_to_s } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_obj_class_m } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_obj_ivar_get } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_obj_inspect } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_obj_ivar_defined } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_singleton_class } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_278.proc } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_obj_ivar_set } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_279.proc } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_obj_instance_variables } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_f_block_given_p_m } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_f_global_variables } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_obj_is_kind_of_m } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_obj_is_kind_of_m } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_f_block_given_p_m } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_obj_hash } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_obj_protected_methods } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_obj_private_methods } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_obj_frozen } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_equal_m } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_281.proc } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_f_sprintf } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_obj_freeze } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_obj_hash } }, { .func_p = 1, { .func = (mrb_func_t)&proc_lambda } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_f_sprintf } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_obj_public_methods } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_obj_extend_m } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_obj_equal_m } }, { .func_p = 1, { .func = (mrb_func_t)&obj_respond_to } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_obj_ceqq } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_f_send } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_obj_equal_m } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_krn_class_defined } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_obj_singleton_methods_m } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_283.proc } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_obj_clone } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_obj_public_methods } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&mod_define_singleton_method } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_obj_remove_instance_variable } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_obj_dup } }, 
+	{ .func_p = 1, { .func = (mrb_func_t)&true_to_s } }, { .func_p = 1, { .func = (mrb_func_t)&true_xor } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_true } }, { .func_p = 1, { .func = (mrb_func_t)&false_xor } }, { .func_p = 1, { .func = (mrb_func_t)&true_to_s } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, 
 };
-PRESET_DATA kh_mt_t mrb_preset_kh_mt_57 = { .n_buckets = 64, .size = 47, .n_occupied = 47, .ed_flags = (uint8_t *)&mrb_preset_kh_mt_57_ed_flags, .keys = (mrb_sym *)&mrb_preset_kh_mt_57_keys, .vals = (mrb_method_t *)&mrb_preset_kh_mt_57_vals };
+PRESET_DATA kh_mt_t mrb_preset_kh_mt_57 = { .n_buckets = 8, .size = 5, .n_occupied = 5, .ed_flags = (uint8_t *)&mrb_preset_kh_mt_57_ed_flags, .keys = (mrb_sym *)&mrb_preset_kh_mt_57_keys, .vals = (mrb_method_t *)&mrb_preset_kh_mt_57_vals };
 
 PRESET_DATA uint8_t mrb_preset_kh_mt_58_ed_flags[] = {
 	0xa8, 0xaa,
@@ -7251,15 +7527,15 @@ PRESET_DATA mrb_method_t mrb_preset_kh_mt_58_vals[] = {
 PRESET_DATA kh_mt_t mrb_preset_kh_mt_58 = { .n_buckets = 8, .size = 1, .n_occupied = 1, .ed_flags = (uint8_t *)&mrb_preset_kh_mt_58_ed_flags, .keys = (mrb_sym *)&mrb_preset_kh_mt_58_keys, .vals = (mrb_method_t *)&mrb_preset_kh_mt_58_vals };
 
 PRESET_DATA uint8_t mrb_preset_kh_mt_59_ed_flags[] = {
-	0x20, 0x80,
+	0x20, 0xa0,
 };
 PRESET_DATA mrb_sym mrb_preset_kh_mt_59_keys[] = {
-	42, 59, 0, 60, 58, 43, 61, 0,
+	42, 59, 0, 60, 58, 43, 0, 0,
 };
 PRESET_DATA mrb_method_t mrb_preset_kh_mt_59_vals[] = {
-	{ .func_p = 1, { .func = (mrb_func_t)&nil_to_s } }, { .func_p = 1, { .func = (mrb_func_t)&false_or } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&false_or } }, { .func_p = 1, { .func = (mrb_func_t)&false_and } }, { .func_p = 1, { .func = (mrb_func_t)&nil_inspect } }, { .func_p = 1, { .func = (mrb_func_t)&true_or } }, { .func_p = 0, { .proc = NULL } }, 
+	{ .func_p = 1, { .func = (mrb_func_t)&false_to_s } }, { .func_p = 1, { .func = (mrb_func_t)&false_xor } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&false_xor } }, { .func_p = 1, { .func = (mrb_func_t)&false_and } }, { .func_p = 1, { .func = (mrb_func_t)&false_to_s } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, 
 };
-PRESET_DATA kh_mt_t mrb_preset_kh_mt_59 = { .n_buckets = 8, .size = 6, .n_occupied = 6, .ed_flags = (uint8_t *)&mrb_preset_kh_mt_59_ed_flags, .keys = (mrb_sym *)&mrb_preset_kh_mt_59_keys, .vals = (mrb_method_t *)&mrb_preset_kh_mt_59_vals };
+PRESET_DATA kh_mt_t mrb_preset_kh_mt_59 = { .n_buckets = 8, .size = 5, .n_occupied = 5, .ed_flags = (uint8_t *)&mrb_preset_kh_mt_59_ed_flags, .keys = (mrb_sym *)&mrb_preset_kh_mt_59_keys, .vals = (mrb_method_t *)&mrb_preset_kh_mt_59_vals };
 
 PRESET_DATA uint8_t mrb_preset_kh_mt_60_ed_flags[] = {
 	0xaa, 0xaa,
@@ -7273,49 +7549,51 @@ PRESET_DATA mrb_method_t mrb_preset_kh_mt_60_vals[] = {
 PRESET_DATA kh_mt_t mrb_preset_kh_mt_60 = { .n_buckets = 8, .size = 0, .n_occupied = 0, .ed_flags = (uint8_t *)&mrb_preset_kh_mt_60_ed_flags, .keys = (mrb_sym *)&mrb_preset_kh_mt_60_keys, .vals = (mrb_method_t *)&mrb_preset_kh_mt_60_vals };
 
 PRESET_DATA uint8_t mrb_preset_kh_mt_61_ed_flags[] = {
-	0x88, 0xa2, 0x0a, 0x2a,
+	0x08, 0x02,
 };
 PRESET_DATA mrb_sym mrb_preset_kh_mt_61_keys[] = {
-	197, 0, 131, 0, 0, 196, 0, 0, 0, 0, 199, 200, 0, 0, 0, 198,
+	69, 0, 66, 150, 0, 65, 68, 67,
 };
 PRESET_DATA mrb_method_t mrb_preset_kh_mt_61_vals[] = {
-	{ .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_292.proc } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_mod_dummy_visibility } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_mod_dummy_visibility } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_293.proc } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_293.proc } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_293.proc } }, 
+	{ .func_p = 1, { .func = (mrb_func_t)&mrb_f_raise } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_f_global_variables } }, { .func_p = 1, { .func = (mrb_func_t)&proc_lambda } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_f_block_given_p_m } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_local_variables } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_f_block_given_p_m } }, 
 };
-PRESET_DATA kh_mt_t mrb_preset_kh_mt_61 = { .n_buckets = 16, .size = 6, .n_occupied = 6, .ed_flags = (uint8_t *)&mrb_preset_kh_mt_61_ed_flags, .keys = (mrb_sym *)&mrb_preset_kh_mt_61_keys, .vals = (mrb_method_t *)&mrb_preset_kh_mt_61_vals };
+PRESET_DATA kh_mt_t mrb_preset_kh_mt_61 = { .n_buckets = 8, .size = 6, .n_occupied = 6, .ed_flags = (uint8_t *)&mrb_preset_kh_mt_61_ed_flags, .keys = (mrb_sym *)&mrb_preset_kh_mt_61_keys, .vals = (mrb_method_t *)&mrb_preset_kh_mt_61_vals };
 
 PRESET_DATA uint8_t mrb_preset_kh_mt_62_ed_flags[] = {
-	0xa8, 0xaa,
+	0x20, 0x80, 0x08, 0x02, 0x20, 0xa0, 0x0a, 0x08, 0xa0, 0x00, 0x0a, 0x08, 0x00, 0x20, 0x00, 0x02,
 };
 PRESET_DATA mrb_sym mrb_preset_kh_mt_62_keys[] = {
-	15, 0, 0, 0, 0, 0, 0, 0,
+	69, 81, 0, 292, 80, 68, 61, 0, 42, 0, 71, 83, 0, 43, 82, 70,
+	259, 84, 0, 261, 85, 65, 0, 0, 0, 0, 66, 86, 463, 0, 87, 67,
+	79, 91, 0, 0, 90, 78, 55, 291, 0, 0, 77, 89, 150, 0, 88, 76,
+	74, 94, 98, 464, 95, 75, 0, 99, 96, 293, 72, 92, 0, 97, 93, 73,
 };
 PRESET_DATA mrb_method_t mrb_preset_kh_mt_62_vals[] = {
-	{ .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, 
+	{ .func_p = 1, { .func = (mrb_func_t)&mrb_f_raise } }, { .func_p = 1, { .func = (mrb_func_t)&obj_is_instance_of } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_283.proc } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_obj_init_copy } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_local_variables } }, { .func_p = 1, { .func = (mrb_func_t)&false_and } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_any_to_s } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_obj_class_m } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_obj_ivar_get } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_obj_inspect } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_obj_ivar_defined } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_singleton_class } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_284.proc } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_obj_ivar_set } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_285.proc } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_obj_instance_variables } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_f_block_given_p_m } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_f_global_variables } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_obj_is_kind_of_m } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_f_sprintf } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_obj_is_kind_of_m } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_f_block_given_p_m } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_obj_hash } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_obj_protected_methods } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_obj_private_methods } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_obj_frozen } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_equal_m } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_287.proc } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_obj_freeze } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_obj_hash } }, { .func_p = 1, { .func = (mrb_func_t)&proc_lambda } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_obj_public_methods } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_obj_extend_m } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_obj_equal_m } }, { .func_p = 1, { .func = (mrb_func_t)&obj_respond_to } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_obj_ceqq } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_f_sprintf } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_f_send } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_obj_equal_m } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_krn_class_defined } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_obj_singleton_methods_m } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_289.proc } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_obj_clone } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_obj_public_methods } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&mod_define_singleton_method } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_obj_remove_instance_variable } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_obj_dup } }, 
 };
-PRESET_DATA kh_mt_t mrb_preset_kh_mt_62 = { .n_buckets = 8, .size = 1, .n_occupied = 1, .ed_flags = (uint8_t *)&mrb_preset_kh_mt_62_ed_flags, .keys = (mrb_sym *)&mrb_preset_kh_mt_62_keys, .vals = (mrb_method_t *)&mrb_preset_kh_mt_62_vals };
+PRESET_DATA kh_mt_t mrb_preset_kh_mt_62 = { .n_buckets = 64, .size = 47, .n_occupied = 47, .ed_flags = (uint8_t *)&mrb_preset_kh_mt_62_ed_flags, .keys = (mrb_sym *)&mrb_preset_kh_mt_62_keys, .vals = (mrb_method_t *)&mrb_preset_kh_mt_62_vals };
 
 PRESET_DATA uint8_t mrb_preset_kh_mt_63_ed_flags[] = {
-	0x08, 0x02, 0x08, 0x22, 0xa0, 0xa2, 0xa2, 0x88,
+	0xa8, 0xaa,
 };
 PRESET_DATA mrb_sym mrb_preset_kh_mt_63_keys[] = {
-	10, 0, 109, 60, 0, 206, 376, 108, 42, 0, 205, 130, 0, 43, 0, 204,
-	202, 74, 0, 0, 0, 203, 0, 0, 0, 59, 0, 0, 58, 0, 152, 0,
+	15, 0, 0, 0, 0, 0, 0, 0,
 };
 PRESET_DATA mrb_method_t mrb_preset_kh_mt_63_vals[] = {
-	{ .func_p = 1, { .func = (mrb_func_t)&fix_equal } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&fix_mul } }, { .func_p = 1, { .func = (mrb_func_t)&fix_or } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&fix_divmod } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_fixnum_chr } }, { .func_p = 1, { .func = (mrb_func_t)&fix_plus } }, { .func_p = 1, { .func = (mrb_func_t)&fix_to_s } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&fix_rshift } }, { .func_p = 1, { .func = (mrb_func_t)&fix_to_f } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&fix_to_s } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&fix_rev } }, { .func_p = 1, { .func = (mrb_func_t)&fix_minus } }, { .func_p = 1, { .func = (mrb_func_t)&fix_eql } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&fix_mod } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&fix_xor } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&fix_and } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&fix_lshift } }, { .func_p = 0, { .proc = NULL } }, 
-};
-PRESET_DATA kh_mt_t mrb_preset_kh_mt_63 = { .n_buckets = 32, .size = 17, .n_occupied = 17, .ed_flags = (uint8_t *)&mrb_preset_kh_mt_63_ed_flags, .keys = (mrb_sym *)&mrb_preset_kh_mt_63_keys, .vals = (mrb_method_t *)&mrb_preset_kh_mt_63_vals };
-
-PRESET_DATA uint8_t mrb_preset_kh_mt_64_ed_flags[] = {
-	0xaa, 0xaa,
-};
-PRESET_DATA mrb_sym mrb_preset_kh_mt_64_keys[] = {
-	0, 0, 0, 0, 0, 0, 0, 0,
-};
-PRESET_DATA mrb_method_t mrb_preset_kh_mt_64_vals[] = {
 	{ .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, 
 };
-PRESET_DATA kh_mt_t mrb_preset_kh_mt_64 = { .n_buckets = 8, .size = 0, .n_occupied = 0, .ed_flags = (uint8_t *)&mrb_preset_kh_mt_64_ed_flags, .keys = (mrb_sym *)&mrb_preset_kh_mt_64_keys, .vals = (mrb_method_t *)&mrb_preset_kh_mt_64_vals };
+PRESET_DATA kh_mt_t mrb_preset_kh_mt_63 = { .n_buckets = 8, .size = 1, .n_occupied = 1, .ed_flags = (uint8_t *)&mrb_preset_kh_mt_63_ed_flags, .keys = (mrb_sym *)&mrb_preset_kh_mt_63_keys, .vals = (mrb_method_t *)&mrb_preset_kh_mt_63_vals };
+
+PRESET_DATA uint8_t mrb_preset_kh_mt_64_ed_flags[] = {
+	0x20, 0x80,
+};
+PRESET_DATA mrb_sym mrb_preset_kh_mt_64_keys[] = {
+	42, 59, 0, 60, 58, 43, 61, 0,
+};
+PRESET_DATA mrb_method_t mrb_preset_kh_mt_64_vals[] = {
+	{ .func_p = 1, { .func = (mrb_func_t)&nil_to_s } }, { .func_p = 1, { .func = (mrb_func_t)&false_xor } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&false_xor } }, { .func_p = 1, { .func = (mrb_func_t)&false_and } }, { .func_p = 1, { .func = (mrb_func_t)&nil_inspect } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_true } }, { .func_p = 0, { .proc = NULL } }, 
+};
+PRESET_DATA kh_mt_t mrb_preset_kh_mt_64 = { .n_buckets = 8, .size = 6, .n_occupied = 6, .ed_flags = (uint8_t *)&mrb_preset_kh_mt_64_ed_flags, .keys = (mrb_sym *)&mrb_preset_kh_mt_64_keys, .vals = (mrb_method_t *)&mrb_preset_kh_mt_64_vals };
 
 PRESET_DATA uint8_t mrb_preset_kh_mt_65_ed_flags[] = {
 	0xaa, 0xaa,
@@ -7329,59 +7607,60 @@ PRESET_DATA mrb_method_t mrb_preset_kh_mt_65_vals[] = {
 PRESET_DATA kh_mt_t mrb_preset_kh_mt_65 = { .n_buckets = 8, .size = 0, .n_occupied = 0, .ed_flags = (uint8_t *)&mrb_preset_kh_mt_65_ed_flags, .keys = (mrb_sym *)&mrb_preset_kh_mt_65_keys, .vals = (mrb_method_t *)&mrb_preset_kh_mt_65_vals };
 
 PRESET_DATA uint8_t mrb_preset_kh_mt_66_ed_flags[] = {
-	0xaa, 0xaa,
+	0x88, 0xa2, 0x0a, 0x2a,
 };
 PRESET_DATA mrb_sym mrb_preset_kh_mt_66_keys[] = {
-	0, 0, 0, 0, 0, 0, 0, 0,
+	197, 0, 131, 0, 0, 196, 0, 0, 0, 0, 199, 200, 0, 0, 0, 198,
 };
 PRESET_DATA mrb_method_t mrb_preset_kh_mt_66_vals[] = {
-	{ .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, 
+	{ .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_298.proc } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&sym_to_sym } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&sym_to_sym } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_299.proc } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_299.proc } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_299.proc } }, 
 };
-PRESET_DATA kh_mt_t mrb_preset_kh_mt_66 = { .n_buckets = 8, .size = 0, .n_occupied = 0, .ed_flags = (uint8_t *)&mrb_preset_kh_mt_66_ed_flags, .keys = (mrb_sym *)&mrb_preset_kh_mt_66_keys, .vals = (mrb_method_t *)&mrb_preset_kh_mt_66_vals };
+PRESET_DATA kh_mt_t mrb_preset_kh_mt_66 = { .n_buckets = 16, .size = 6, .n_occupied = 6, .ed_flags = (uint8_t *)&mrb_preset_kh_mt_66_ed_flags, .keys = (mrb_sym *)&mrb_preset_kh_mt_66_keys, .vals = (mrb_method_t *)&mrb_preset_kh_mt_66_vals };
 
 PRESET_DATA uint8_t mrb_preset_kh_mt_67_ed_flags[] = {
-	0xaa, 0xaa,
+	0xa8, 0xaa,
 };
 PRESET_DATA mrb_sym mrb_preset_kh_mt_67_keys[] = {
-	0, 0, 0, 0, 0, 0, 0, 0,
+	15, 0, 0, 0, 0, 0, 0, 0,
 };
 PRESET_DATA mrb_method_t mrb_preset_kh_mt_67_vals[] = {
 	{ .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, 
 };
-PRESET_DATA kh_mt_t mrb_preset_kh_mt_67 = { .n_buckets = 8, .size = 0, .n_occupied = 0, .ed_flags = (uint8_t *)&mrb_preset_kh_mt_67_ed_flags, .keys = (mrb_sym *)&mrb_preset_kh_mt_67_keys, .vals = (mrb_method_t *)&mrb_preset_kh_mt_67_vals };
+PRESET_DATA kh_mt_t mrb_preset_kh_mt_67 = { .n_buckets = 8, .size = 1, .n_occupied = 1, .ed_flags = (uint8_t *)&mrb_preset_kh_mt_67_ed_flags, .keys = (mrb_sym *)&mrb_preset_kh_mt_67_keys, .vals = (mrb_method_t *)&mrb_preset_kh_mt_67_vals };
 
 PRESET_DATA uint8_t mrb_preset_kh_mt_68_ed_flags[] = {
-	0xa8, 0xaa,
+	0x08, 0x20, 0x08, 0x22, 0xa0, 0xa2, 0xa2, 0x88,
 };
 PRESET_DATA mrb_sym mrb_preset_kh_mt_68_keys[] = {
-	15, 0, 0, 0, 0, 0, 0, 0,
+	10, 0, 109, 60, 405, 206, 0, 108, 42, 0, 205, 130, 0, 43, 0, 204,
+	202, 74, 0, 0, 0, 203, 0, 0, 0, 59, 0, 0, 58, 0, 152, 0,
 };
 PRESET_DATA mrb_method_t mrb_preset_kh_mt_68_vals[] = {
-	{ .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, 
+	{ .func_p = 1, { .func = (mrb_func_t)&fix_equal } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&fix_mul } }, { .func_p = 1, { .func = (mrb_func_t)&fix_or } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_fixnum_chr } }, { .func_p = 1, { .func = (mrb_func_t)&fix_divmod } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&fix_plus } }, { .func_p = 1, { .func = (mrb_func_t)&fix_to_s } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&fix_rshift } }, { .func_p = 1, { .func = (mrb_func_t)&fix_to_f } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&fix_to_s } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&fix_rev } }, { .func_p = 1, { .func = (mrb_func_t)&fix_minus } }, { .func_p = 1, { .func = (mrb_func_t)&fix_eql } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&fix_mod } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&fix_xor } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&fix_and } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&fix_lshift } }, { .func_p = 0, { .proc = NULL } }, 
 };
-PRESET_DATA kh_mt_t mrb_preset_kh_mt_68 = { .n_buckets = 8, .size = 1, .n_occupied = 1, .ed_flags = (uint8_t *)&mrb_preset_kh_mt_68_ed_flags, .keys = (mrb_sym *)&mrb_preset_kh_mt_68_keys, .vals = (mrb_method_t *)&mrb_preset_kh_mt_68_vals };
+PRESET_DATA kh_mt_t mrb_preset_kh_mt_68 = { .n_buckets = 32, .size = 17, .n_occupied = 17, .ed_flags = (uint8_t *)&mrb_preset_kh_mt_68_ed_flags, .keys = (mrb_sym *)&mrb_preset_kh_mt_68_keys, .vals = (mrb_method_t *)&mrb_preset_kh_mt_68_vals };
 
 PRESET_DATA uint8_t mrb_preset_kh_mt_69_ed_flags[] = {
-	0x08, 0x02,
+	0x2a, 0xa8,
 };
 PRESET_DATA mrb_sym mrb_preset_kh_mt_69_keys[] = {
-	42, 0, 103, 104, 0, 43, 55, 105,
+	0, 0, 0, 470, 469, 0, 0, 0,
 };
 PRESET_DATA mrb_method_t mrb_preset_kh_mt_69_vals[] = {
-	{ .func_p = 1, { .func = (mrb_func_t)&mrb_sym_to_s } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_sym_to_s } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_mod_dummy_visibility } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&sym_inspect } }, { .func_p = 1, { .func = (mrb_func_t)&sym_equal } }, { .func_p = 1, { .func = (mrb_func_t)&sym_cmp } }, 
+	{ .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&fiber_current } }, { .func_p = 1, { .func = (mrb_func_t)&fiber_yield } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, 
 };
-PRESET_DATA kh_mt_t mrb_preset_kh_mt_69 = { .n_buckets = 8, .size = 6, .n_occupied = 6, .ed_flags = (uint8_t *)&mrb_preset_kh_mt_69_ed_flags, .keys = (mrb_sym *)&mrb_preset_kh_mt_69_keys, .vals = (mrb_method_t *)&mrb_preset_kh_mt_69_vals };
+PRESET_DATA kh_mt_t mrb_preset_kh_mt_69 = { .n_buckets = 8, .size = 2, .n_occupied = 2, .ed_flags = (uint8_t *)&mrb_preset_kh_mt_69_ed_flags, .keys = (mrb_sym *)&mrb_preset_kh_mt_69_keys, .vals = (mrb_method_t *)&mrb_preset_kh_mt_69_vals };
 
 PRESET_DATA uint8_t mrb_preset_kh_mt_70_ed_flags[] = {
-	0xaa, 0xaa,
+	0x00, 0x8a,
 };
 PRESET_DATA mrb_sym mrb_preset_kh_mt_70_keys[] = {
-	0, 0, 0, 0, 0, 0, 0, 0,
+	10, 468, 8, 467, 0, 0, 466, 0,
 };
 PRESET_DATA mrb_method_t mrb_preset_kh_mt_70_vals[] = {
-	{ .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, 
+	{ .func_p = 1, { .func = (mrb_func_t)&fiber_eq } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_fiber_alive_p } }, { .func_p = 1, { .func = (mrb_func_t)&fiber_init } }, { .func_p = 1, { .func = (mrb_func_t)&fiber_transfer } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&fiber_resume } }, { .func_p = 0, { .proc = NULL } }, 
 };
-PRESET_DATA kh_mt_t mrb_preset_kh_mt_70 = { .n_buckets = 8, .size = 0, .n_occupied = 0, .ed_flags = (uint8_t *)&mrb_preset_kh_mt_70_ed_flags, .keys = (mrb_sym *)&mrb_preset_kh_mt_70_keys, .vals = (mrb_method_t *)&mrb_preset_kh_mt_70_vals };
+PRESET_DATA kh_mt_t mrb_preset_kh_mt_70 = { .n_buckets = 8, .size = 5, .n_occupied = 5, .ed_flags = (uint8_t *)&mrb_preset_kh_mt_70_ed_flags, .keys = (mrb_sym *)&mrb_preset_kh_mt_70_keys, .vals = (mrb_method_t *)&mrb_preset_kh_mt_70_vals };
 
 PRESET_DATA uint8_t mrb_preset_kh_mt_71_ed_flags[] = {
 	0xaa, 0xaa,
@@ -7428,26 +7707,26 @@ PRESET_DATA mrb_method_t mrb_preset_kh_mt_74_vals[] = {
 PRESET_DATA kh_mt_t mrb_preset_kh_mt_74 = { .n_buckets = 8, .size = 0, .n_occupied = 0, .ed_flags = (uint8_t *)&mrb_preset_kh_mt_74_ed_flags, .keys = (mrb_sym *)&mrb_preset_kh_mt_74_keys, .vals = (mrb_method_t *)&mrb_preset_kh_mt_74_vals };
 
 PRESET_DATA uint8_t mrb_preset_kh_mt_75_ed_flags[] = {
-	0xaa, 0xaa,
+	0xa8, 0xaa,
 };
 PRESET_DATA mrb_sym mrb_preset_kh_mt_75_keys[] = {
-	0, 0, 0, 0, 0, 0, 0, 0,
+	15, 0, 0, 0, 0, 0, 0, 0,
 };
 PRESET_DATA mrb_method_t mrb_preset_kh_mt_75_vals[] = {
 	{ .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, 
 };
-PRESET_DATA kh_mt_t mrb_preset_kh_mt_75 = { .n_buckets = 8, .size = 0, .n_occupied = 0, .ed_flags = (uint8_t *)&mrb_preset_kh_mt_75_ed_flags, .keys = (mrb_sym *)&mrb_preset_kh_mt_75_keys, .vals = (mrb_method_t *)&mrb_preset_kh_mt_75_vals };
+PRESET_DATA kh_mt_t mrb_preset_kh_mt_75 = { .n_buckets = 8, .size = 1, .n_occupied = 1, .ed_flags = (uint8_t *)&mrb_preset_kh_mt_75_ed_flags, .keys = (mrb_sym *)&mrb_preset_kh_mt_75_keys, .vals = (mrb_method_t *)&mrb_preset_kh_mt_75_vals };
 
 PRESET_DATA uint8_t mrb_preset_kh_mt_76_ed_flags[] = {
-	0xaa, 0xaa,
+	0x08, 0x02,
 };
 PRESET_DATA mrb_sym mrb_preset_kh_mt_76_keys[] = {
-	0, 0, 0, 0, 0, 0, 0, 0,
+	42, 0, 103, 104, 0, 43, 55, 105,
 };
 PRESET_DATA mrb_method_t mrb_preset_kh_mt_76_vals[] = {
-	{ .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, 
+	{ .func_p = 1, { .func = (mrb_func_t)&mrb_sym_to_s } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_sym_to_s } }, { .func_p = 1, { .func = (mrb_func_t)&sym_to_sym } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&sym_inspect } }, { .func_p = 1, { .func = (mrb_func_t)&sym_equal } }, { .func_p = 1, { .func = (mrb_func_t)&sym_cmp } }, 
 };
-PRESET_DATA kh_mt_t mrb_preset_kh_mt_76 = { .n_buckets = 8, .size = 0, .n_occupied = 0, .ed_flags = (uint8_t *)&mrb_preset_kh_mt_76_ed_flags, .keys = (mrb_sym *)&mrb_preset_kh_mt_76_keys, .vals = (mrb_method_t *)&mrb_preset_kh_mt_76_vals };
+PRESET_DATA kh_mt_t mrb_preset_kh_mt_76 = { .n_buckets = 8, .size = 6, .n_occupied = 6, .ed_flags = (uint8_t *)&mrb_preset_kh_mt_76_ed_flags, .keys = (mrb_sym *)&mrb_preset_kh_mt_76_keys, .vals = (mrb_method_t *)&mrb_preset_kh_mt_76_vals };
 
 PRESET_DATA uint8_t mrb_preset_kh_mt_77_ed_flags[] = {
 	0xaa, 0xaa,
@@ -7537,10 +7816,109 @@ PRESET_DATA mrb_method_t mrb_preset_kh_mt_84_vals[] = {
 };
 PRESET_DATA kh_mt_t mrb_preset_kh_mt_84 = { .n_buckets = 8, .size = 0, .n_occupied = 0, .ed_flags = (uint8_t *)&mrb_preset_kh_mt_84_ed_flags, .keys = (mrb_sym *)&mrb_preset_kh_mt_84_keys, .vals = (mrb_method_t *)&mrb_preset_kh_mt_84_vals };
 
+PRESET_DATA uint8_t mrb_preset_kh_mt_85_ed_flags[] = {
+	0xaa, 0xaa,
+};
+PRESET_DATA mrb_sym mrb_preset_kh_mt_85_keys[] = {
+	0, 0, 0, 0, 0, 0, 0, 0,
+};
+PRESET_DATA mrb_method_t mrb_preset_kh_mt_85_vals[] = {
+	{ .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, 
+};
+PRESET_DATA kh_mt_t mrb_preset_kh_mt_85 = { .n_buckets = 8, .size = 0, .n_occupied = 0, .ed_flags = (uint8_t *)&mrb_preset_kh_mt_85_ed_flags, .keys = (mrb_sym *)&mrb_preset_kh_mt_85_keys, .vals = (mrb_method_t *)&mrb_preset_kh_mt_85_vals };
+
+PRESET_DATA uint8_t mrb_preset_kh_mt_86_ed_flags[] = {
+	0xaa, 0xaa,
+};
+PRESET_DATA mrb_sym mrb_preset_kh_mt_86_keys[] = {
+	0, 0, 0, 0, 0, 0, 0, 0,
+};
+PRESET_DATA mrb_method_t mrb_preset_kh_mt_86_vals[] = {
+	{ .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, 
+};
+PRESET_DATA kh_mt_t mrb_preset_kh_mt_86 = { .n_buckets = 8, .size = 0, .n_occupied = 0, .ed_flags = (uint8_t *)&mrb_preset_kh_mt_86_ed_flags, .keys = (mrb_sym *)&mrb_preset_kh_mt_86_keys, .vals = (mrb_method_t *)&mrb_preset_kh_mt_86_vals };
+
+PRESET_DATA uint8_t mrb_preset_kh_mt_87_ed_flags[] = {
+	0xaa, 0xaa,
+};
+PRESET_DATA mrb_sym mrb_preset_kh_mt_87_keys[] = {
+	0, 0, 0, 0, 0, 0, 0, 0,
+};
+PRESET_DATA mrb_method_t mrb_preset_kh_mt_87_vals[] = {
+	{ .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, 
+};
+PRESET_DATA kh_mt_t mrb_preset_kh_mt_87 = { .n_buckets = 8, .size = 0, .n_occupied = 0, .ed_flags = (uint8_t *)&mrb_preset_kh_mt_87_ed_flags, .keys = (mrb_sym *)&mrb_preset_kh_mt_87_keys, .vals = (mrb_method_t *)&mrb_preset_kh_mt_87_vals };
+
+PRESET_DATA uint8_t mrb_preset_kh_mt_88_ed_flags[] = {
+	0xaa, 0xaa,
+};
+PRESET_DATA mrb_sym mrb_preset_kh_mt_88_keys[] = {
+	0, 0, 0, 0, 0, 0, 0, 0,
+};
+PRESET_DATA mrb_method_t mrb_preset_kh_mt_88_vals[] = {
+	{ .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, 
+};
+PRESET_DATA kh_mt_t mrb_preset_kh_mt_88 = { .n_buckets = 8, .size = 0, .n_occupied = 0, .ed_flags = (uint8_t *)&mrb_preset_kh_mt_88_ed_flags, .keys = (mrb_sym *)&mrb_preset_kh_mt_88_keys, .vals = (mrb_method_t *)&mrb_preset_kh_mt_88_vals };
+
+PRESET_DATA uint8_t mrb_preset_kh_mt_89_ed_flags[] = {
+	0xaa, 0xaa,
+};
+PRESET_DATA mrb_sym mrb_preset_kh_mt_89_keys[] = {
+	0, 0, 0, 0, 0, 0, 0, 0,
+};
+PRESET_DATA mrb_method_t mrb_preset_kh_mt_89_vals[] = {
+	{ .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, 
+};
+PRESET_DATA kh_mt_t mrb_preset_kh_mt_89 = { .n_buckets = 8, .size = 0, .n_occupied = 0, .ed_flags = (uint8_t *)&mrb_preset_kh_mt_89_ed_flags, .keys = (mrb_sym *)&mrb_preset_kh_mt_89_keys, .vals = (mrb_method_t *)&mrb_preset_kh_mt_89_vals };
+
+PRESET_DATA uint8_t mrb_preset_kh_mt_90_ed_flags[] = {
+	0xaa, 0xaa,
+};
+PRESET_DATA mrb_sym mrb_preset_kh_mt_90_keys[] = {
+	0, 0, 0, 0, 0, 0, 0, 0,
+};
+PRESET_DATA mrb_method_t mrb_preset_kh_mt_90_vals[] = {
+	{ .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, 
+};
+PRESET_DATA kh_mt_t mrb_preset_kh_mt_90 = { .n_buckets = 8, .size = 0, .n_occupied = 0, .ed_flags = (uint8_t *)&mrb_preset_kh_mt_90_ed_flags, .keys = (mrb_sym *)&mrb_preset_kh_mt_90_keys, .vals = (mrb_method_t *)&mrb_preset_kh_mt_90_vals };
+
+PRESET_DATA uint8_t mrb_preset_kh_mt_91_ed_flags[] = {
+	0xaa, 0xaa,
+};
+PRESET_DATA mrb_sym mrb_preset_kh_mt_91_keys[] = {
+	0, 0, 0, 0, 0, 0, 0, 0,
+};
+PRESET_DATA mrb_method_t mrb_preset_kh_mt_91_vals[] = {
+	{ .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, 
+};
+PRESET_DATA kh_mt_t mrb_preset_kh_mt_91 = { .n_buckets = 8, .size = 0, .n_occupied = 0, .ed_flags = (uint8_t *)&mrb_preset_kh_mt_91_ed_flags, .keys = (mrb_sym *)&mrb_preset_kh_mt_91_keys, .vals = (mrb_method_t *)&mrb_preset_kh_mt_91_vals };
+
+PRESET_DATA uint8_t mrb_preset_kh_mt_92_ed_flags[] = {
+	0xaa, 0xaa,
+};
+PRESET_DATA mrb_sym mrb_preset_kh_mt_92_keys[] = {
+	0, 0, 0, 0, 0, 0, 0, 0,
+};
+PRESET_DATA mrb_method_t mrb_preset_kh_mt_92_vals[] = {
+	{ .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, 
+};
+PRESET_DATA kh_mt_t mrb_preset_kh_mt_92 = { .n_buckets = 8, .size = 0, .n_occupied = 0, .ed_flags = (uint8_t *)&mrb_preset_kh_mt_92_ed_flags, .keys = (mrb_sym *)&mrb_preset_kh_mt_92_keys, .vals = (mrb_method_t *)&mrb_preset_kh_mt_92_vals };
+
+PRESET_DATA uint8_t mrb_preset_kh_mt_93_ed_flags[] = {
+	0xaa, 0xaa,
+};
+PRESET_DATA mrb_sym mrb_preset_kh_mt_93_keys[] = {
+	0, 0, 0, 0, 0, 0, 0, 0,
+};
+PRESET_DATA mrb_method_t mrb_preset_kh_mt_93_vals[] = {
+	{ .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, 
+};
+PRESET_DATA kh_mt_t mrb_preset_kh_mt_93 = { .n_buckets = 8, .size = 0, .n_occupied = 0, .ed_flags = (uint8_t *)&mrb_preset_kh_mt_93_ed_flags, .keys = (mrb_sym *)&mrb_preset_kh_mt_93_keys, .vals = (mrb_method_t *)&mrb_preset_kh_mt_93_vals };
+
 
 PRESET_DATA mrb_value mrb_preset_stack_0[] = { 	{ .value = { .p = (void *)&mrb_preset_object_25 }, .tt = MRB_TT_OBJECT },
-	{ .value = { .sym = (mrb_sym)165 }, .tt = MRB_TT_SYMBOL },
-	{ .value = { .sym = (mrb_sym)165 }, .tt = MRB_TT_SYMBOL },
+	{ .value = { .sym = (mrb_sym)203 }, .tt = MRB_TT_SYMBOL },
+	{ .value = { .sym = (mrb_sym)203 }, .tt = MRB_TT_SYMBOL },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
@@ -7670,7 +8048,7 @@ PRESET_DATA mrb_value mrb_preset_stack_0[] = { 	{ .value = { .p = (void *)&mrb_p
 
 PRESET_DATA mrb_callinfo mrb_preset_callinfo_0[] = {
 	{ .mid = (mrb_sym)0, .proc = (struct RProc *)&mrb_preset_object_28.proc, .stackent = (mrb_value *)&mrb_preset_stack_0[0], .nregs = 3, .ridx = 0, .epos = 0, .env = NULL, .pc = NULL, .err = NULL, .argc = 0, .acc = 0, .target_class = (struct RClass *)&mrb_preset_object_0.klass },
-	{ .mid = (mrb_sym)0, .proc = (struct RProc *)&mrb_preset_object_58.proc, .stackent = (mrb_value *)&mrb_preset_stack_0[0], .nregs = 5, .ridx = 0, .epos = 0, .env = NULL, .pc = (mrb_code *)&((uint8_t *)gem_mrblib_irep_mruby_string_ext)[64], .err = NULL, .argc = 0, .acc = 1, .target_class = (struct RClass *)&mrb_preset_object_59.klass },
+	{ .mid = (mrb_sym)0, .proc = (struct RProc *)&mrb_preset_object_29.proc, .stackent = (mrb_value *)&mrb_preset_stack_0[0], .nregs = 3, .ridx = 0, .epos = 0, .env = NULL, .pc = (mrb_code *)&((uint8_t *)gem_mrblib_irep_mruby_sprintf)[64], .err = NULL, .argc = 0, .acc = 1, .target_class = (struct RClass *)&mrb_preset_object_30.klass },
 	{ .mid = (mrb_sym)44, .proc = NULL, .stackent = (mrb_value *)&mrb_preset_stack_0[1], .nregs = 4, .ridx = 0, .epos = 0, .env = NULL, .pc = (mrb_code *)&((uint8_t *)gem_mrblib_irep_mruby_string_ext)[352], .err = NULL, .argc = 2, .acc = 1, .target_class = (struct RClass *)&mrb_preset_object_6.klass },
 	{ .mid = (mrb_sym)250, .proc = (struct RProc *)&mrb_preset_object_146.proc, .stackent = (mrb_value *)&mrb_preset_stack_0[2], .nregs = 7, .ridx = 0, .epos = 0, .env = NULL, .pc = (mrb_code *)&((uint8_t *)mrblib_irep)[1204], .err = NULL, .argc = 0, .acc = 3, .target_class = (struct RClass *)&mrb_preset_object_147.klass },
 	{ .mid = (mrb_sym)122, .proc = NULL, .stackent = (mrb_value *)&mrb_preset_stack_0[5], .nregs = 2, .ridx = 0, .epos = 0, .env = NULL, .pc = (mrb_code *)&((uint8_t *)mrblib_irep)[2620], .err = NULL, .argc = 0, .acc = 4, .target_class = (struct RClass *)&mrb_preset_object_147.klass },
@@ -7720,7 +8098,7 @@ PRESET_DATA struct mrb_context mrb_preset_context_0 = {
 	.fib = NULL,
 };
 
-PRESET_CONST RVALUE mrb_preset_object_0 = { .klass = { .tt = MRB_TT_CLASS, .color = 4, .flags = 0x0, .c = (struct RClass *)&mrb_preset_object_10.klass, .gcnext = (struct RBasic *)&mrb_preset_object_317.basic, .iv = (struct iv_tbl *)&mrb_preset_iv_tbl_0, .mt = (struct kh_mt *)&mrb_preset_kh_mt_84, .super = (struct RClass *)&mrb_preset_object_317.klass, } };
+PRESET_CONST RVALUE mrb_preset_object_0 = { .klass = { .tt = MRB_TT_CLASS, .color = 4, .flags = 0x0, .c = (struct RClass *)&mrb_preset_object_10.klass, .gcnext = (struct RBasic *)&mrb_preset_object_327.basic, .iv = (struct iv_tbl *)&mrb_preset_iv_tbl_0, .mt = (struct kh_mt *)&mrb_preset_kh_mt_93, .super = (struct RClass *)&mrb_preset_object_327.klass, } };
 PRESET_CONST RVALUE mrb_preset_object_1 = { .klass = { .tt = MRB_TT_CLASS, .color = 4, .flags = 0x12, .c = (struct RClass *)&mrb_preset_object_2.klass, .gcnext = (struct RBasic *)&mrb_preset_object_20.basic, .iv = (struct iv_tbl *)&mrb_preset_iv_tbl_1, .mt = (struct kh_mt *)&mrb_preset_kh_mt_14, .super = (struct RClass *)&mrb_preset_object_14.klass, } };
 PRESET_CONST RVALUE mrb_preset_object_2 = { .klass = { .tt = MRB_TT_SCLASS, .color = 4, .flags = 0x0, .c = (struct RClass *)&mrb_preset_object_3.klass, .gcnext = (struct RBasic *)&mrb_preset_object_14.basic, .iv = (struct iv_tbl *)&mrb_preset_iv_tbl_2, .mt = (struct kh_mt *)&mrb_preset_kh_mt_7, .super = (struct RClass *)&mrb_preset_object_13.klass, } };
 PRESET_CONST RVALUE mrb_preset_object_3 = { .klass = { .tt = MRB_TT_CLASS, .color = 4, .flags = 0x9, .c = (struct RClass *)&mrb_preset_object_4.klass, .gcnext = (struct RBasic *)&mrb_preset_object_2.basic, .iv = (struct iv_tbl *)&mrb_preset_iv_tbl_3, .mt = (struct kh_mt *)&mrb_preset_kh_mt_6, .super = (struct RClass *)&mrb_preset_object_6.klass, } };
@@ -7745,144 +8123,144 @@ PRESET_CONST RVALUE mrb_preset_object_21 = { .klass = { .tt = MRB_TT_SCLASS, .co
 PRESET_CONST RVALUE mrb_preset_object_22 = { .klass = { .tt = MRB_TT_CLASS, .color = 4, .flags = 0x12, .c = (struct RClass *)&mrb_preset_object_21.klass, .gcnext = (struct RBasic *)&mrb_preset_object_27.basic, .iv = (struct iv_tbl *)&mrb_preset_iv_tbl_19, .mt = (struct kh_mt *)&mrb_preset_kh_mt_16, .super = (struct RClass *)&mrb_preset_object_15.klass, } };
 PRESET_CONST RVALUE mrb_preset_object_23 = { .proc = { .tt = MRB_TT_PROC, .color = 4, .flags = 0xc80, .c = NULL, .gcnext = NULL, .body = { .func = (mrb_func_t)attr_reader }, .upper = NULL, .e = { .env = (struct REnv *)&mrb_preset_object_24.env }, } };
 PRESET_DATA RVALUE mrb_preset_object_24 = { .env = { .tt = MRB_TT_ENV, .color = 4, .flags = 0x100801, .c = NULL, .gcnext = NULL, .stack = (mrb_value *)&mrb_preset_env_stacks_24, .cxt = (struct mrb_context *)&mrb_preset_context_0, .mid = (mrb_sym)40, } };
-PRESET_CONST RVALUE mrb_preset_object_25 = { .object = { .tt = MRB_TT_OBJECT, .color = 4, .flags = 0x0, .c = (struct RClass *)&mrb_preset_object_26.klass, .gcnext = (struct RBasic *)&mrb_preset_object_60.basic, .iv = (struct iv_tbl *)&mrb_preset_iv_tbl_20, } };
+PRESET_CONST RVALUE mrb_preset_object_25 = { .object = { .tt = MRB_TT_OBJECT, .color = 4, .flags = 0x0, .c = (struct RClass *)&mrb_preset_object_26.klass, .gcnext = (struct RBasic *)&mrb_preset_object_31.basic, .iv = (struct iv_tbl *)&mrb_preset_iv_tbl_20, } };
 PRESET_CONST RVALUE mrb_preset_object_26 = { .klass = { .tt = MRB_TT_SCLASS, .color = 4, .flags = 0x0, .c = (struct RClass *)&mrb_preset_object_27.klass, .gcnext = (struct RBasic *)&mrb_preset_object_25.basic, .iv = (struct iv_tbl *)&mrb_preset_iv_tbl_21, .mt = (struct kh_mt *)&mrb_preset_kh_mt_18, .super = (struct RClass *)&mrb_preset_object_0.klass, } };
 PRESET_CONST RVALUE mrb_preset_object_27 = { .klass = { .tt = MRB_TT_SCLASS, .color = 4, .flags = 0x0, .c = (struct RClass *)&mrb_preset_object_3.klass, .gcnext = (struct RBasic *)&mrb_preset_object_26.basic, .iv = (struct iv_tbl *)&mrb_preset_iv_tbl_22, .mt = (struct kh_mt *)&mrb_preset_kh_mt_17, .super = (struct RClass *)&mrb_preset_object_10.klass, } };
 PRESET_CONST RVALUE mrb_preset_object_28 = { .proc = { .tt = MRB_TT_PROC, .color = 4, .flags = 0x0, .c = NULL, .gcnext = NULL, .body = { .irep = (mrb_irep *)&mrb_preset_irep_5 }, .upper = (struct RProc *)&mrb_preset_object_0.proc, .e = { .target_class = (struct RClass *)&mrb_preset_object_0.klass }, } };
-PRESET_CONST RVALUE mrb_preset_object_29 = { .string = { .tt = MRB_TT_STRING, .color = 4, .flags = 0x4000c, .c = (struct RClass *)&mrb_preset_object_59.klass, .gcnext = NULL, .as = { .heap = { .len = 0,.aux = { .capa = 0 }, .ptr = NULL } }, } };
-PRESET_CONST RVALUE mrb_preset_object_30 = { .string = { .tt = MRB_TT_STRING, .color = 4, .flags = 0x4000c, .c = (struct RClass *)&mrb_preset_object_59.klass, .gcnext = NULL, .as = { .heap = { .len = 6,.aux = { .capa = 0 }, .ptr = (char *)&mrb_preset_strings_0 } }, } };
-PRESET_CONST RVALUE mrb_preset_object_31 = { .string = { .tt = MRB_TT_STRING, .color = 4, .flags = 0x4000c, .c = (struct RClass *)&mrb_preset_object_59.klass, .gcnext = NULL, .as = { .heap = { .len = 0,.aux = { .capa = 0 }, .ptr = NULL } }, } };
-PRESET_CONST RVALUE mrb_preset_object_32 = { .string = { .tt = MRB_TT_STRING, .color = 4, .flags = 0x4000c, .c = (struct RClass *)&mrb_preset_object_59.klass, .gcnext = NULL, .as = { .heap = { .len = 7,.aux = { .capa = 0 }, .ptr = (char *)&mrb_preset_strings_0 } }, } };
-PRESET_CONST RVALUE mrb_preset_object_33 = { .string = { .tt = MRB_TT_STRING, .color = 4, .flags = 0x4000c, .c = (struct RClass *)&mrb_preset_object_59.klass, .gcnext = NULL, .as = { .heap = { .len = 0,.aux = { .capa = 0 }, .ptr = NULL } }, } };
-PRESET_CONST RVALUE mrb_preset_object_34 = { .string = { .tt = MRB_TT_STRING, .color = 4, .flags = 0x4000c, .c = (struct RClass *)&mrb_preset_object_59.klass, .gcnext = NULL, .as = { .heap = { .len = 6,.aux = { .capa = 0 }, .ptr = (char *)&mrb_preset_strings_0 } }, } };
-PRESET_CONST RVALUE mrb_preset_object_35 = { .string = { .tt = MRB_TT_STRING, .color = 4, .flags = 0x4000c, .c = (struct RClass *)&mrb_preset_object_59.klass, .gcnext = NULL, .as = { .heap = { .len = 7,.aux = { .capa = 0 }, .ptr = (char *)&mrb_preset_strings_0 } }, } };
-PRESET_CONST RVALUE mrb_preset_object_36 = { .string = { .tt = MRB_TT_STRING, .color = 4, .flags = 0x4000c, .c = (struct RClass *)&mrb_preset_object_59.klass, .gcnext = NULL, .as = { .heap = { .len = 0,.aux = { .capa = 0 }, .ptr = NULL } }, } };
-PRESET_CONST RVALUE mrb_preset_object_37 = { .string = { .tt = MRB_TT_STRING, .color = 4, .flags = 0x4000c, .c = (struct RClass *)&mrb_preset_object_59.klass, .gcnext = NULL, .as = { .heap = { .len = 26,.aux = { .capa = 0 }, .ptr = (char *)&mrb_preset_strings_1 } }, } };
-PRESET_CONST RVALUE mrb_preset_object_38 = { .string = { .tt = MRB_TT_STRING, .color = 4, .flags = 0x4000c, .c = (struct RClass *)&mrb_preset_object_59.klass, .gcnext = NULL, .as = { .heap = { .len = 26,.aux = { .capa = 0 }, .ptr = (char *)&mrb_preset_strings_1 } }, } };
-PRESET_CONST RVALUE mrb_preset_object_39 = { .string = { .tt = MRB_TT_STRING, .color = 4, .flags = 0x4000c, .c = (struct RClass *)&mrb_preset_object_59.klass, .gcnext = NULL, .as = { .heap = { .len = 26,.aux = { .capa = 0 }, .ptr = (char *)&mrb_preset_strings_1 } }, } };
-PRESET_CONST RVALUE mrb_preset_object_40 = { .string = { .tt = MRB_TT_STRING, .color = 4, .flags = 0x4000c, .c = (struct RClass *)&mrb_preset_object_59.klass, .gcnext = NULL, .as = { .heap = { .len = 15,.aux = { .capa = 0 }, .ptr = (char *)&mrb_preset_strings_2 } }, } };
-PRESET_CONST RVALUE mrb_preset_object_41 = { .string = { .tt = MRB_TT_STRING, .color = 4, .flags = 0x4000c, .c = (struct RClass *)&mrb_preset_object_59.klass, .gcnext = NULL, .as = { .heap = { .len = 6,.aux = { .capa = 0 }, .ptr = (char *)&mrb_preset_strings_3 } }, } };
-PRESET_CONST RVALUE mrb_preset_object_42 = { .string = { .tt = MRB_TT_STRING, .color = 4, .flags = 0x4000c, .c = (struct RClass *)&mrb_preset_object_59.klass, .gcnext = NULL, .as = { .heap = { .len = 0,.aux = { .capa = 0 }, .ptr = NULL } }, } };
-PRESET_CONST RVALUE mrb_preset_object_43 = { .string = { .tt = MRB_TT_STRING, .color = 4, .flags = 0x4000c, .c = (struct RClass *)&mrb_preset_object_59.klass, .gcnext = NULL, .as = { .heap = { .len = 15,.aux = { .capa = 0 }, .ptr = (char *)&mrb_preset_strings_2 } }, } };
-PRESET_CONST RVALUE mrb_preset_object_44 = { .string = { .tt = MRB_TT_STRING, .color = 4, .flags = 0x4000c, .c = (struct RClass *)&mrb_preset_object_59.klass, .gcnext = NULL, .as = { .heap = { .len = 6,.aux = { .capa = 0 }, .ptr = (char *)&mrb_preset_strings_3 } }, } };
-PRESET_CONST RVALUE mrb_preset_object_45 = { .string = { .tt = MRB_TT_STRING, .color = 4, .flags = 0x4000c, .c = (struct RClass *)&mrb_preset_object_59.klass, .gcnext = NULL, .as = { .heap = { .len = 0,.aux = { .capa = 0 }, .ptr = NULL } }, } };
-PRESET_CONST RVALUE mrb_preset_object_46 = { .string = { .tt = MRB_TT_STRING, .color = 4, .flags = 0x4000c, .c = (struct RClass *)&mrb_preset_object_59.klass, .gcnext = NULL, .as = { .heap = { .len = 26,.aux = { .capa = 0 }, .ptr = (char *)&mrb_preset_strings_1 } }, } };
-PRESET_CONST RVALUE mrb_preset_object_47 = { .string = { .tt = MRB_TT_STRING, .color = 4, .flags = 0x4000c, .c = (struct RClass *)&mrb_preset_object_59.klass, .gcnext = NULL, .as = { .heap = { .len = 36,.aux = { .capa = 0 }, .ptr = (char *)&mrb_preset_strings_4 } }, } };
-PRESET_CONST RVALUE mrb_preset_object_48 = { .string = { .tt = MRB_TT_STRING, .color = 4, .flags = 0x4000c, .c = (struct RClass *)&mrb_preset_object_59.klass, .gcnext = NULL, .as = { .heap = { .len = 0,.aux = { .capa = 0 }, .ptr = NULL } }, } };
-PRESET_CONST RVALUE mrb_preset_object_49 = { .string = { .tt = MRB_TT_STRING, .color = 4, .flags = 0x4000c, .c = (struct RClass *)&mrb_preset_object_59.klass, .gcnext = NULL, .as = { .heap = { .len = 1,.aux = { .capa = 0 }, .ptr = (char *)&mrb_preset_strings_0 } }, } };
-PRESET_CONST RVALUE mrb_preset_object_50 = { .string = { .tt = MRB_TT_STRING, .color = 4, .flags = 0x4000c, .c = (struct RClass *)&mrb_preset_object_59.klass, .gcnext = NULL, .as = { .heap = { .len = 0,.aux = { .capa = 0 }, .ptr = NULL } }, } };
-PRESET_CONST RVALUE mrb_preset_object_51 = { .string = { .tt = MRB_TT_STRING, .color = 4, .flags = 0x4000c, .c = (struct RClass *)&mrb_preset_object_59.klass, .gcnext = NULL, .as = { .heap = { .len = 18,.aux = { .capa = 0 }, .ptr = (char *)&mrb_preset_strings_5 } }, } };
-PRESET_CONST RVALUE mrb_preset_object_52 = { .string = { .tt = MRB_TT_STRING, .color = 4, .flags = 0x4000c, .c = (struct RClass *)&mrb_preset_object_59.klass, .gcnext = NULL, .as = { .heap = { .len = 1,.aux = { .capa = 0 }, .ptr = (char *)&mrb_preset_strings_0 } }, } };
-PRESET_CONST RVALUE mrb_preset_object_53 = { .string = { .tt = MRB_TT_STRING, .color = 4, .flags = 0x4000c, .c = (struct RClass *)&mrb_preset_object_59.klass, .gcnext = NULL, .as = { .heap = { .len = 0,.aux = { .capa = 0 }, .ptr = NULL } }, } };
-PRESET_CONST RVALUE mrb_preset_object_54 = { .string = { .tt = MRB_TT_STRING, .color = 4, .flags = 0x4000c, .c = (struct RClass *)&mrb_preset_object_59.klass, .gcnext = NULL, .as = { .heap = { .len = 18,.aux = { .capa = 0 }, .ptr = (char *)&mrb_preset_strings_5 } }, } };
-PRESET_CONST RVALUE mrb_preset_object_55 = { .string = { .tt = MRB_TT_STRING, .color = 4, .flags = 0x4000c, .c = (struct RClass *)&mrb_preset_object_59.klass, .gcnext = NULL, .as = { .heap = { .len = 0,.aux = { .capa = 0 }, .ptr = NULL } }, } };
-PRESET_CONST RVALUE mrb_preset_object_56 = { .string = { .tt = MRB_TT_STRING, .color = 4, .flags = 0x4000c, .c = (struct RClass *)&mrb_preset_object_59.klass, .gcnext = NULL, .as = { .heap = { .len = 0,.aux = { .capa = 0 }, .ptr = NULL } }, } };
-PRESET_CONST RVALUE mrb_preset_object_57 = { .string = { .tt = MRB_TT_STRING, .color = 4, .flags = 0x4000c, .c = (struct RClass *)&mrb_preset_object_59.klass, .gcnext = NULL, .as = { .heap = { .len = 0,.aux = { .capa = 0 }, .ptr = NULL } }, } };
-PRESET_CONST RVALUE mrb_preset_object_58 = { .proc = { .tt = MRB_TT_PROC, .color = 4, .flags = 0x800, .c = NULL, .gcnext = NULL, .body = { .irep = (mrb_irep *)&mrb_preset_irep_6 }, .upper = (struct RProc *)&mrb_preset_object_59.proc, .e = { .target_class = (struct RClass *)&mrb_preset_object_59.klass }, } };
-PRESET_CONST RVALUE mrb_preset_object_59 = { .klass = { .tt = MRB_TT_CLASS, .color = 4, .flags = 0x10, .c = (struct RClass *)&mrb_preset_object_60.klass, .gcnext = (struct RBasic *)&mrb_preset_object_127.basic, .iv = (struct iv_tbl *)&mrb_preset_iv_tbl_23, .mt = (struct kh_mt *)&mrb_preset_kh_mt_20, .super = (struct RClass *)&mrb_preset_object_126.klass, } };
-PRESET_CONST RVALUE mrb_preset_object_60 = { .klass = { .tt = MRB_TT_SCLASS, .color = 4, .flags = 0x0, .c = (struct RClass *)&mrb_preset_object_3.klass, .gcnext = (struct RBasic *)&mrb_preset_object_59.basic, .iv = (struct iv_tbl *)&mrb_preset_iv_tbl_24, .mt = (struct kh_mt *)&mrb_preset_kh_mt_19, .super = (struct RClass *)&mrb_preset_object_10.klass, } };
-PRESET_CONST RVALUE mrb_preset_object_61 = { .proc = { .tt = MRB_TT_PROC, .color = 4, .flags = 0x900, .c = NULL, .gcnext = NULL, .body = { .irep = (mrb_irep *)&mrb_preset_irep_7 }, .upper = (struct RProc *)&mrb_preset_object_60.proc, .e = { .target_class = (struct RClass *)&mrb_preset_object_60.klass }, } };
-PRESET_CONST RVALUE mrb_preset_object_62 = { .proc = { .tt = MRB_TT_PROC, .color = 4, .flags = 0x900, .c = NULL, .gcnext = NULL, .body = { .irep = (mrb_irep *)&mrb_preset_irep_18 }, .upper = (struct RProc *)&mrb_preset_object_59.proc, .e = { .target_class = (struct RClass *)&mrb_preset_object_59.klass }, } };
-PRESET_CONST RVALUE mrb_preset_object_63 = { .proc = { .tt = MRB_TT_PROC, .color = 4, .flags = 0x900, .c = NULL, .gcnext = NULL, .body = { .irep = (mrb_irep *)&mrb_preset_irep_19 }, .upper = (struct RProc *)&mrb_preset_object_59.proc, .e = { .target_class = (struct RClass *)&mrb_preset_object_59.klass }, } };
-PRESET_CONST RVALUE mrb_preset_object_64 = { .proc = { .tt = MRB_TT_PROC, .color = 4, .flags = 0x900, .c = NULL, .gcnext = NULL, .body = { .irep = (mrb_irep *)&mrb_preset_irep_15 }, .upper = (struct RProc *)&mrb_preset_object_59.proc, .e = { .target_class = (struct RClass *)&mrb_preset_object_59.klass }, } };
-PRESET_CONST RVALUE mrb_preset_object_65 = { .proc = { .tt = MRB_TT_PROC, .color = 4, .flags = 0x900, .c = NULL, .gcnext = NULL, .body = { .irep = (mrb_irep *)&mrb_preset_irep_16 }, .upper = (struct RProc *)&mrb_preset_object_59.proc, .e = { .target_class = (struct RClass *)&mrb_preset_object_59.klass }, } };
-PRESET_CONST RVALUE mrb_preset_object_66 = { .proc = { .tt = MRB_TT_PROC, .color = 4, .flags = 0x900, .c = NULL, .gcnext = NULL, .body = { .irep = (mrb_irep *)&mrb_preset_irep_14 }, .upper = (struct RProc *)&mrb_preset_object_59.proc, .e = { .target_class = (struct RClass *)&mrb_preset_object_59.klass }, } };
-PRESET_CONST RVALUE mrb_preset_object_67 = { .proc = { .tt = MRB_TT_PROC, .color = 4, .flags = 0x900, .c = NULL, .gcnext = NULL, .body = { .irep = (mrb_irep *)&mrb_preset_irep_31 }, .upper = (struct RProc *)&mrb_preset_object_59.proc, .e = { .target_class = (struct RClass *)&mrb_preset_object_59.klass }, } };
-PRESET_CONST RVALUE mrb_preset_object_68 = { .string = { .tt = MRB_TT_STRING, .color = 4, .flags = 0x4000c, .c = (struct RClass *)&mrb_preset_object_59.klass, .gcnext = NULL, .as = { .heap = { .len = 31,.aux = { .capa = 0 }, .ptr = (char *)&mrb_preset_strings_6 } }, } };
-PRESET_CONST RVALUE mrb_preset_object_69 = { .proc = { .tt = MRB_TT_PROC, .color = 4, .flags = 0x900, .c = NULL, .gcnext = NULL, .body = { .irep = (mrb_irep *)&mrb_preset_irep_13 }, .upper = (struct RProc *)&mrb_preset_object_59.proc, .e = { .target_class = (struct RClass *)&mrb_preset_object_59.klass }, } };
-PRESET_CONST RVALUE mrb_preset_object_70 = { .proc = { .tt = MRB_TT_PROC, .color = 4, .flags = 0x900, .c = NULL, .gcnext = NULL, .body = { .irep = (mrb_irep *)&mrb_preset_irep_32 }, .upper = (struct RProc *)&mrb_preset_object_59.proc, .e = { .target_class = (struct RClass *)&mrb_preset_object_59.klass }, } };
-PRESET_CONST RVALUE mrb_preset_object_71 = { .proc = { .tt = MRB_TT_PROC, .color = 4, .flags = 0x900, .c = NULL, .gcnext = NULL, .body = { .irep = (mrb_irep *)&mrb_preset_irep_30 }, .upper = (struct RProc *)&mrb_preset_object_59.proc, .e = { .target_class = (struct RClass *)&mrb_preset_object_59.klass }, } };
-PRESET_CONST RVALUE mrb_preset_object_72 = { .proc = { .tt = MRB_TT_PROC, .color = 4, .flags = 0x900, .c = NULL, .gcnext = NULL, .body = { .irep = (mrb_irep *)&mrb_preset_irep_12 }, .upper = (struct RProc *)&mrb_preset_object_59.proc, .e = { .target_class = (struct RClass *)&mrb_preset_object_59.klass }, } };
-PRESET_CONST RVALUE mrb_preset_object_73 = { .proc = { .tt = MRB_TT_PROC, .color = 4, .flags = 0x900, .c = NULL, .gcnext = NULL, .body = { .irep = (mrb_irep *)&mrb_preset_irep_11 }, .upper = (struct RProc *)&mrb_preset_object_59.proc, .e = { .target_class = (struct RClass *)&mrb_preset_object_59.klass }, } };
-PRESET_CONST RVALUE mrb_preset_object_74 = { .proc = { .tt = MRB_TT_PROC, .color = 4, .flags = 0x900, .c = NULL, .gcnext = NULL, .body = { .irep = (mrb_irep *)&mrb_preset_irep_33 }, .upper = (struct RProc *)&mrb_preset_object_59.proc, .e = { .target_class = (struct RClass *)&mrb_preset_object_59.klass }, } };
-PRESET_CONST RVALUE mrb_preset_object_75 = { .string = { .tt = MRB_TT_STRING, .color = 4, .flags = 0x4000c, .c = (struct RClass *)&mrb_preset_object_59.klass, .gcnext = NULL, .as = { .heap = { .len = 26,.aux = { .capa = 0 }, .ptr = (char *)&mrb_preset_strings_1 } }, } };
-PRESET_CONST RVALUE mrb_preset_object_76 = { .proc = { .tt = MRB_TT_PROC, .color = 4, .flags = 0x900, .c = NULL, .gcnext = NULL, .body = { .irep = (mrb_irep *)&mrb_preset_irep_25 }, .upper = (struct RProc *)&mrb_preset_object_59.proc, .e = { .target_class = (struct RClass *)&mrb_preset_object_59.klass }, } };
-PRESET_CONST RVALUE mrb_preset_object_77 = { .proc = { .tt = MRB_TT_PROC, .color = 4, .flags = 0x900, .c = NULL, .gcnext = NULL, .body = { .irep = (mrb_irep *)&mrb_preset_irep_34 }, .upper = (struct RProc *)&mrb_preset_object_59.proc, .e = { .target_class = (struct RClass *)&mrb_preset_object_59.klass }, } };
-PRESET_CONST RVALUE mrb_preset_object_78 = { .string = { .tt = MRB_TT_STRING, .color = 4, .flags = 0x4000c, .c = (struct RClass *)&mrb_preset_object_59.klass, .gcnext = NULL, .as = { .heap = { .len = 33,.aux = { .capa = 0 }, .ptr = (char *)&mrb_preset_strings_7 } }, } };
-PRESET_CONST RVALUE mrb_preset_object_79 = { .string = { .tt = MRB_TT_STRING, .color = 4, .flags = 0x4000c, .c = (struct RClass *)&mrb_preset_object_59.klass, .gcnext = NULL, .as = { .heap = { .len = 13,.aux = { .capa = 0 }, .ptr = (char *)&mrb_preset_strings_8 } }, } };
-PRESET_CONST RVALUE mrb_preset_object_80 = { .string = { .tt = MRB_TT_STRING, .color = 4, .flags = 0x4000c, .c = (struct RClass *)&mrb_preset_object_59.klass, .gcnext = NULL, .as = { .heap = { .len = 0,.aux = { .capa = 0 }, .ptr = NULL } }, } };
-PRESET_CONST RVALUE mrb_preset_object_81 = { .proc = { .tt = MRB_TT_PROC, .color = 4, .flags = 0x900, .c = NULL, .gcnext = NULL, .body = { .irep = (mrb_irep *)&mrb_preset_irep_9 }, .upper = (struct RProc *)&mrb_preset_object_59.proc, .e = { .target_class = (struct RClass *)&mrb_preset_object_59.klass }, } };
-PRESET_CONST RVALUE mrb_preset_object_82 = { .proc = { .tt = MRB_TT_PROC, .color = 4, .flags = 0x900, .c = NULL, .gcnext = NULL, .body = { .irep = (mrb_irep *)&mrb_preset_irep_35 }, .upper = (struct RProc *)&mrb_preset_object_59.proc, .e = { .target_class = (struct RClass *)&mrb_preset_object_59.klass }, } };
-PRESET_CONST RVALUE mrb_preset_object_83 = { .string = { .tt = MRB_TT_STRING, .color = 4, .flags = 0x4000c, .c = (struct RClass *)&mrb_preset_object_59.klass, .gcnext = NULL, .as = { .heap = { .len = 26,.aux = { .capa = 0 }, .ptr = (char *)&mrb_preset_strings_1 } }, } };
-PRESET_CONST RVALUE mrb_preset_object_84 = { .proc = { .tt = MRB_TT_PROC, .color = 4, .flags = 0x900, .c = NULL, .gcnext = NULL, .body = { .irep = (mrb_irep *)&mrb_preset_irep_36 }, .upper = (struct RProc *)&mrb_preset_object_59.proc, .e = { .target_class = (struct RClass *)&mrb_preset_object_59.klass }, } };
-PRESET_CONST RVALUE mrb_preset_object_85 = { .string = { .tt = MRB_TT_STRING, .color = 4, .flags = 0x4000c, .c = (struct RClass *)&mrb_preset_object_59.klass, .gcnext = NULL, .as = { .heap = { .len = 25,.aux = { .capa = 0 }, .ptr = (char *)&mrb_preset_strings_4 } }, } };
-PRESET_CONST RVALUE mrb_preset_object_86 = { .string = { .tt = MRB_TT_STRING, .color = 4, .flags = 0x4000c, .c = (struct RClass *)&mrb_preset_object_59.klass, .gcnext = NULL, .as = { .heap = { .len = 0,.aux = { .capa = 0 }, .ptr = NULL } }, } };
-PRESET_CONST RVALUE mrb_preset_object_87 = { .proc = { .tt = MRB_TT_PROC, .color = 4, .flags = 0x900, .c = NULL, .gcnext = NULL, .body = { .irep = (mrb_irep *)&mrb_preset_irep_37 }, .upper = (struct RProc *)&mrb_preset_object_59.proc, .e = { .target_class = (struct RClass *)&mrb_preset_object_59.klass }, } };
-PRESET_CONST RVALUE mrb_preset_object_88 = { .string = { .tt = MRB_TT_STRING, .color = 4, .flags = 0x4000c, .c = (struct RClass *)&mrb_preset_object_59.klass, .gcnext = NULL, .as = { .heap = { .len = 24,.aux = { .capa = 0 }, .ptr = (char *)&mrb_preset_strings_9 } }, } };
-PRESET_CONST RVALUE mrb_preset_object_89 = { .proc = { .tt = MRB_TT_PROC, .color = 4, .flags = 0x900, .c = NULL, .gcnext = NULL, .body = { .irep = (mrb_irep *)&mrb_preset_irep_38 }, .upper = (struct RProc *)&mrb_preset_object_59.proc, .e = { .target_class = (struct RClass *)&mrb_preset_object_59.klass }, } };
-PRESET_CONST RVALUE mrb_preset_object_90 = { .string = { .tt = MRB_TT_STRING, .color = 4, .flags = 0x4000c, .c = (struct RClass *)&mrb_preset_object_59.klass, .gcnext = NULL, .as = { .heap = { .len = 0,.aux = { .capa = 0 }, .ptr = NULL } }, } };
-PRESET_CONST RVALUE mrb_preset_object_91 = { .string = { .tt = MRB_TT_STRING, .color = 4, .flags = 0x4000c, .c = (struct RClass *)&mrb_preset_object_59.klass, .gcnext = NULL, .as = { .heap = { .len = 1,.aux = { .capa = 0 }, .ptr = (char *)&mrb_preset_strings_10 } }, } };
-PRESET_CONST RVALUE mrb_preset_object_92 = { .string = { .tt = MRB_TT_STRING, .color = 4, .flags = 0x4000c, .c = (struct RClass *)&mrb_preset_object_59.klass, .gcnext = NULL, .as = { .heap = { .len = 1,.aux = { .capa = 0 }, .ptr = (char *)&mrb_preset_strings_11 } }, } };
-PRESET_CONST RVALUE mrb_preset_object_93 = { .string = { .tt = MRB_TT_STRING, .color = 4, .flags = 0x4000c, .c = (struct RClass *)&mrb_preset_object_59.klass, .gcnext = NULL, .as = { .heap = { .len = 1,.aux = { .capa = 0 }, .ptr = (char *)&mrb_preset_strings_12 } }, } };
-PRESET_CONST RVALUE mrb_preset_object_94 = { .string = { .tt = MRB_TT_STRING, .color = 4, .flags = 0x4000c, .c = (struct RClass *)&mrb_preset_object_59.klass, .gcnext = NULL, .as = { .heap = { .len = 1,.aux = { .capa = 0 }, .ptr = (char *)&mrb_preset_strings_13 } }, } };
-PRESET_CONST RVALUE mrb_preset_object_95 = { .string = { .tt = MRB_TT_STRING, .color = 4, .flags = 0x4000c, .c = (struct RClass *)&mrb_preset_object_59.klass, .gcnext = NULL, .as = { .heap = { .len = 1,.aux = { .capa = 0 }, .ptr = (char *)&mrb_preset_strings_14 } }, } };
-PRESET_CONST RVALUE mrb_preset_object_96 = { .string = { .tt = MRB_TT_STRING, .color = 4, .flags = 0x4000c, .c = (struct RClass *)&mrb_preset_object_59.klass, .gcnext = NULL, .as = { .heap = { .len = 1,.aux = { .capa = 0 }, .ptr = (char *)&mrb_preset_strings_15 } }, } };
-PRESET_CONST RVALUE mrb_preset_object_97 = { .string = { .tt = MRB_TT_STRING, .color = 4, .flags = 0x4000c, .c = (struct RClass *)&mrb_preset_object_59.klass, .gcnext = NULL, .as = { .heap = { .len = 1,.aux = { .capa = 0 }, .ptr = (char *)&mrb_preset_strings_16 } }, } };
-PRESET_CONST RVALUE mrb_preset_object_98 = { .string = { .tt = MRB_TT_STRING, .color = 4, .flags = 0x4000c, .c = (struct RClass *)&mrb_preset_object_59.klass, .gcnext = NULL, .as = { .heap = { .len = 1,.aux = { .capa = 0 }, .ptr = (char *)&mrb_preset_strings_17 } }, } };
-PRESET_CONST RVALUE mrb_preset_object_99 = { .string = { .tt = MRB_TT_STRING, .color = 4, .flags = 0x4000c, .c = (struct RClass *)&mrb_preset_object_59.klass, .gcnext = NULL, .as = { .heap = { .len = 1,.aux = { .capa = 0 }, .ptr = (char *)&mrb_preset_strings_18 } }, } };
-PRESET_CONST RVALUE mrb_preset_object_100 = { .string = { .tt = MRB_TT_STRING, .color = 4, .flags = 0x4000c, .c = (struct RClass *)&mrb_preset_object_59.klass, .gcnext = NULL, .as = { .heap = { .len = 1,.aux = { .capa = 0 }, .ptr = (char *)&mrb_preset_strings_19 } }, } };
-PRESET_CONST RVALUE mrb_preset_object_101 = { .string = { .tt = MRB_TT_STRING, .color = 4, .flags = 0x4000c, .c = (struct RClass *)&mrb_preset_object_59.klass, .gcnext = NULL, .as = { .heap = { .len = 1,.aux = { .capa = 0 }, .ptr = (char *)&mrb_preset_strings_20 } }, } };
-PRESET_CONST RVALUE mrb_preset_object_102 = { .string = { .tt = MRB_TT_STRING, .color = 4, .flags = 0x4000c, .c = (struct RClass *)&mrb_preset_object_59.klass, .gcnext = NULL, .as = { .heap = { .len = 1,.aux = { .capa = 0 }, .ptr = (char *)&mrb_preset_strings_21 } }, } };
-PRESET_CONST RVALUE mrb_preset_object_103 = { .string = { .tt = MRB_TT_STRING, .color = 4, .flags = 0x4000c, .c = (struct RClass *)&mrb_preset_object_59.klass, .gcnext = NULL, .as = { .heap = { .len = 1,.aux = { .capa = 0 }, .ptr = (char *)&mrb_preset_strings_22 } }, } };
-PRESET_CONST RVALUE mrb_preset_object_104 = { .string = { .tt = MRB_TT_STRING, .color = 4, .flags = 0x4000c, .c = (struct RClass *)&mrb_preset_object_59.klass, .gcnext = NULL, .as = { .heap = { .len = 1,.aux = { .capa = 0 }, .ptr = (char *)&mrb_preset_strings_23 } }, } };
-PRESET_CONST RVALUE mrb_preset_object_105 = { .proc = { .tt = MRB_TT_PROC, .color = 4, .flags = 0x900, .c = NULL, .gcnext = NULL, .body = { .irep = (mrb_irep *)&mrb_preset_irep_39 }, .upper = (struct RProc *)&mrb_preset_object_59.proc, .e = { .target_class = (struct RClass *)&mrb_preset_object_59.klass }, } };
-PRESET_CONST RVALUE mrb_preset_object_106 = { .string = { .tt = MRB_TT_STRING, .color = 4, .flags = 0x4000c, .c = (struct RClass *)&mrb_preset_object_59.klass, .gcnext = NULL, .as = { .heap = { .len = 1,.aux = { .capa = 0 }, .ptr = (char *)&mrb_preset_strings_24 } }, } };
-PRESET_CONST RVALUE mrb_preset_object_107 = { .proc = { .tt = MRB_TT_PROC, .color = 4, .flags = 0x900, .c = NULL, .gcnext = NULL, .body = { .irep = (mrb_irep *)&mrb_preset_irep_10 }, .upper = (struct RProc *)&mrb_preset_object_59.proc, .e = { .target_class = (struct RClass *)&mrb_preset_object_59.klass }, } };
-PRESET_CONST RVALUE mrb_preset_object_108 = { .proc = { .tt = MRB_TT_PROC, .color = 4, .flags = 0x900, .c = NULL, .gcnext = NULL, .body = { .irep = (mrb_irep *)&mrb_preset_irep_17 }, .upper = (struct RProc *)&mrb_preset_object_59.proc, .e = { .target_class = (struct RClass *)&mrb_preset_object_59.klass }, } };
-PRESET_CONST RVALUE mrb_preset_object_109 = { .proc = { .tt = MRB_TT_PROC, .color = 4, .flags = 0x900, .c = NULL, .gcnext = NULL, .body = { .irep = (mrb_irep *)&mrb_preset_irep_20 }, .upper = (struct RProc *)&mrb_preset_object_59.proc, .e = { .target_class = (struct RClass *)&mrb_preset_object_59.klass }, } };
-PRESET_CONST RVALUE mrb_preset_object_110 = { .proc = { .tt = MRB_TT_PROC, .color = 4, .flags = 0x900, .c = NULL, .gcnext = NULL, .body = { .irep = (mrb_irep *)&mrb_preset_irep_22 }, .upper = (struct RProc *)&mrb_preset_object_59.proc, .e = { .target_class = (struct RClass *)&mrb_preset_object_59.klass }, } };
-PRESET_CONST RVALUE mrb_preset_object_111 = { .proc = { .tt = MRB_TT_PROC, .color = 4, .flags = 0x900, .c = NULL, .gcnext = NULL, .body = { .irep = (mrb_irep *)&mrb_preset_irep_21 }, .upper = (struct RProc *)&mrb_preset_object_59.proc, .e = { .target_class = (struct RClass *)&mrb_preset_object_59.klass }, } };
-PRESET_CONST RVALUE mrb_preset_object_112 = { .proc = { .tt = MRB_TT_PROC, .color = 4, .flags = 0x900, .c = NULL, .gcnext = NULL, .body = { .irep = (mrb_irep *)&mrb_preset_irep_8 }, .upper = (struct RProc *)&mrb_preset_object_59.proc, .e = { .target_class = (struct RClass *)&mrb_preset_object_59.klass }, } };
-PRESET_CONST RVALUE mrb_preset_object_113 = { .proc = { .tt = MRB_TT_PROC, .color = 4, .flags = 0x900, .c = NULL, .gcnext = NULL, .body = { .irep = (mrb_irep *)&mrb_preset_irep_40 }, .upper = (struct RProc *)&mrb_preset_object_59.proc, .e = { .target_class = (struct RClass *)&mrb_preset_object_59.klass }, } };
-PRESET_CONST RVALUE mrb_preset_object_114 = { .proc = { .tt = MRB_TT_PROC, .color = 4, .flags = 0x900, .c = NULL, .gcnext = NULL, .body = { .irep = (mrb_irep *)&mrb_preset_irep_27 }, .upper = (struct RProc *)&mrb_preset_object_59.proc, .e = { .target_class = (struct RClass *)&mrb_preset_object_59.klass }, } };
-PRESET_CONST RVALUE mrb_preset_object_115 = { .proc = { .tt = MRB_TT_PROC, .color = 4, .flags = 0x900, .c = NULL, .gcnext = NULL, .body = { .irep = (mrb_irep *)&mrb_preset_irep_41 }, .upper = (struct RProc *)&mrb_preset_object_59.proc, .e = { .target_class = (struct RClass *)&mrb_preset_object_59.klass }, } };
-PRESET_CONST RVALUE mrb_preset_object_116 = { .string = { .tt = MRB_TT_STRING, .color = 4, .flags = 0x4000c, .c = (struct RClass *)&mrb_preset_object_59.klass, .gcnext = NULL, .as = { .heap = { .len = 0,.aux = { .capa = 0 }, .ptr = NULL } }, } };
-PRESET_CONST RVALUE mrb_preset_object_117 = { .string = { .tt = MRB_TT_STRING, .color = 4, .flags = 0x4000c, .c = (struct RClass *)&mrb_preset_object_59.klass, .gcnext = NULL, .as = { .heap = { .len = 18,.aux = { .capa = 0 }, .ptr = (char *)&mrb_preset_strings_25 } }, } };
-PRESET_CONST RVALUE mrb_preset_object_118 = { .string = { .tt = MRB_TT_STRING, .color = 4, .flags = 0x4000c, .c = (struct RClass *)&mrb_preset_object_59.klass, .gcnext = NULL, .as = { .heap = { .len = 6,.aux = { .capa = 0 }, .ptr = (char *)&mrb_preset_strings_26 } }, } };
-PRESET_CONST RVALUE mrb_preset_object_119 = { .string = { .tt = MRB_TT_STRING, .color = 4, .flags = 0x4000c, .c = (struct RClass *)&mrb_preset_object_59.klass, .gcnext = NULL, .as = { .heap = { .len = 14,.aux = { .capa = 0 }, .ptr = (char *)&mrb_preset_strings_27 } }, } };
-PRESET_CONST RVALUE mrb_preset_object_120 = { .string = { .tt = MRB_TT_STRING, .color = 4, .flags = 0x4000c, .c = (struct RClass *)&mrb_preset_object_59.klass, .gcnext = NULL, .as = { .heap = { .len = 16,.aux = { .capa = 0 }, .ptr = (char *)&mrb_preset_strings_28 } }, } };
-PRESET_CONST RVALUE mrb_preset_object_121 = { .string = { .tt = MRB_TT_STRING, .color = 4, .flags = 0x4000c, .c = (struct RClass *)&mrb_preset_object_59.klass, .gcnext = NULL, .as = { .heap = { .len = 27,.aux = { .capa = 0 }, .ptr = (char *)&mrb_preset_strings_4 } }, } };
-PRESET_CONST RVALUE mrb_preset_object_122 = { .string = { .tt = MRB_TT_STRING, .color = 4, .flags = 0x4000c, .c = (struct RClass *)&mrb_preset_object_59.klass, .gcnext = NULL, .as = { .heap = { .len = 10,.aux = { .capa = 0 }, .ptr = (char *)&mrb_preset_strings_29 } }, } };
-PRESET_CONST RVALUE mrb_preset_object_123 = { .proc = { .tt = MRB_TT_PROC, .color = 4, .flags = 0x900, .c = NULL, .gcnext = NULL, .body = { .irep = (mrb_irep *)&mrb_preset_irep_23 }, .upper = (struct RProc *)&mrb_preset_object_59.proc, .e = { .target_class = (struct RClass *)&mrb_preset_object_59.klass }, } };
-PRESET_CONST RVALUE mrb_preset_object_124 = { .proc = { .tt = MRB_TT_PROC, .color = 4, .flags = 0x900, .c = NULL, .gcnext = NULL, .body = { .irep = (mrb_irep *)&mrb_preset_irep_42 }, .upper = (struct RProc *)&mrb_preset_object_59.proc, .e = { .target_class = (struct RClass *)&mrb_preset_object_59.klass }, } };
-PRESET_CONST RVALUE mrb_preset_object_125 = { .string = { .tt = MRB_TT_STRING, .color = 4, .flags = 0x4000c, .c = (struct RClass *)&mrb_preset_object_59.klass, .gcnext = NULL, .as = { .heap = { .len = 27,.aux = { .capa = 0 }, .ptr = (char *)&mrb_preset_strings_30 } }, } };
+PRESET_CONST RVALUE mrb_preset_object_29 = { .proc = { .tt = MRB_TT_PROC, .color = 4, .flags = 0x800, .c = NULL, .gcnext = NULL, .body = { .irep = (mrb_irep *)&mrb_preset_irep_6 }, .upper = (struct RProc *)&mrb_preset_object_30.proc, .e = { .target_class = (struct RClass *)&mrb_preset_object_30.klass }, } };
+PRESET_CONST RVALUE mrb_preset_object_30 = { .klass = { .tt = MRB_TT_CLASS, .color = 4, .flags = 0x10, .c = (struct RClass *)&mrb_preset_object_31.klass, .gcnext = (struct RBasic *)&mrb_preset_object_127.basic, .iv = (struct iv_tbl *)&mrb_preset_iv_tbl_23, .mt = (struct kh_mt *)&mrb_preset_kh_mt_20, .super = (struct RClass *)&mrb_preset_object_126.klass, } };
+PRESET_CONST RVALUE mrb_preset_object_31 = { .klass = { .tt = MRB_TT_SCLASS, .color = 4, .flags = 0x0, .c = (struct RClass *)&mrb_preset_object_3.klass, .gcnext = (struct RBasic *)&mrb_preset_object_30.basic, .iv = (struct iv_tbl *)&mrb_preset_iv_tbl_24, .mt = (struct kh_mt *)&mrb_preset_kh_mt_19, .super = (struct RClass *)&mrb_preset_object_10.klass, } };
+PRESET_CONST RVALUE mrb_preset_object_32 = { .proc = { .tt = MRB_TT_PROC, .color = 4, .flags = 0x900, .c = NULL, .gcnext = NULL, .body = { .irep = (mrb_irep *)&mrb_preset_irep_8 }, .upper = (struct RProc *)&mrb_preset_object_31.proc, .e = { .target_class = (struct RClass *)&mrb_preset_object_31.klass }, } };
+PRESET_CONST RVALUE mrb_preset_object_33 = { .proc = { .tt = MRB_TT_PROC, .color = 4, .flags = 0x900, .c = NULL, .gcnext = NULL, .body = { .irep = (mrb_irep *)&mrb_preset_irep_9 }, .upper = (struct RProc *)&mrb_preset_object_30.proc, .e = { .target_class = (struct RClass *)&mrb_preset_object_30.klass }, } };
+PRESET_CONST RVALUE mrb_preset_object_34 = { .proc = { .tt = MRB_TT_PROC, .color = 4, .flags = 0x900, .c = NULL, .gcnext = NULL, .body = { .irep = (mrb_irep *)&mrb_preset_irep_10 }, .upper = (struct RProc *)&mrb_preset_object_30.proc, .e = { .target_class = (struct RClass *)&mrb_preset_object_30.klass }, } };
+PRESET_CONST RVALUE mrb_preset_object_35 = { .string = { .tt = MRB_TT_STRING, .color = 4, .flags = 0x4000c, .c = (struct RClass *)&mrb_preset_object_30.klass, .gcnext = NULL, .as = { .heap = { .len = 26,.aux = { .capa = 0 }, .ptr = (char *)&mrb_preset_strings_0 } }, } };
+PRESET_CONST RVALUE mrb_preset_object_36 = { .proc = { .tt = MRB_TT_PROC, .color = 4, .flags = 0x900, .c = NULL, .gcnext = NULL, .body = { .irep = (mrb_irep *)&mrb_preset_irep_11 }, .upper = (struct RProc *)&mrb_preset_object_30.proc, .e = { .target_class = (struct RClass *)&mrb_preset_object_30.klass }, } };
+PRESET_CONST RVALUE mrb_preset_object_37 = { .string = { .tt = MRB_TT_STRING, .color = 4, .flags = 0x4000c, .c = (struct RClass *)&mrb_preset_object_30.klass, .gcnext = NULL, .as = { .heap = { .len = 26,.aux = { .capa = 0 }, .ptr = (char *)&mrb_preset_strings_0 } }, } };
+PRESET_CONST RVALUE mrb_preset_object_38 = { .proc = { .tt = MRB_TT_PROC, .color = 4, .flags = 0x900, .c = NULL, .gcnext = NULL, .body = { .irep = (mrb_irep *)&mrb_preset_irep_12 }, .upper = (struct RProc *)&mrb_preset_object_30.proc, .e = { .target_class = (struct RClass *)&mrb_preset_object_30.klass }, } };
+PRESET_CONST RVALUE mrb_preset_object_39 = { .string = { .tt = MRB_TT_STRING, .color = 4, .flags = 0x4000c, .c = (struct RClass *)&mrb_preset_object_30.klass, .gcnext = NULL, .as = { .heap = { .len = 26,.aux = { .capa = 0 }, .ptr = (char *)&mrb_preset_strings_0 } }, } };
+PRESET_CONST RVALUE mrb_preset_object_40 = { .proc = { .tt = MRB_TT_PROC, .color = 4, .flags = 0x900, .c = NULL, .gcnext = NULL, .body = { .irep = (mrb_irep *)&mrb_preset_irep_13 }, .upper = (struct RProc *)&mrb_preset_object_30.proc, .e = { .target_class = (struct RClass *)&mrb_preset_object_30.klass }, } };
+PRESET_CONST RVALUE mrb_preset_object_41 = { .string = { .tt = MRB_TT_STRING, .color = 4, .flags = 0x4000c, .c = (struct RClass *)&mrb_preset_object_30.klass, .gcnext = NULL, .as = { .heap = { .len = 31,.aux = { .capa = 0 }, .ptr = (char *)&mrb_preset_strings_1 } }, } };
+PRESET_CONST RVALUE mrb_preset_object_42 = { .proc = { .tt = MRB_TT_PROC, .color = 4, .flags = 0x900, .c = NULL, .gcnext = NULL, .body = { .irep = (mrb_irep *)&mrb_preset_irep_14 }, .upper = (struct RProc *)&mrb_preset_object_30.proc, .e = { .target_class = (struct RClass *)&mrb_preset_object_30.klass }, } };
+PRESET_CONST RVALUE mrb_preset_object_43 = { .proc = { .tt = MRB_TT_PROC, .color = 4, .flags = 0x900, .c = NULL, .gcnext = NULL, .body = { .irep = (mrb_irep *)&mrb_preset_irep_15 }, .upper = (struct RProc *)&mrb_preset_object_30.proc, .e = { .target_class = (struct RClass *)&mrb_preset_object_30.klass }, } };
+PRESET_CONST RVALUE mrb_preset_object_44 = { .proc = { .tt = MRB_TT_PROC, .color = 4, .flags = 0x900, .c = NULL, .gcnext = NULL, .body = { .irep = (mrb_irep *)&mrb_preset_irep_16 }, .upper = (struct RProc *)&mrb_preset_object_30.proc, .e = { .target_class = (struct RClass *)&mrb_preset_object_30.klass }, } };
+PRESET_CONST RVALUE mrb_preset_object_45 = { .string = { .tt = MRB_TT_STRING, .color = 4, .flags = 0x4000c, .c = (struct RClass *)&mrb_preset_object_30.klass, .gcnext = NULL, .as = { .heap = { .len = 6,.aux = { .capa = 0 }, .ptr = (char *)&mrb_preset_strings_2 } }, } };
+PRESET_CONST RVALUE mrb_preset_object_46 = { .string = { .tt = MRB_TT_STRING, .color = 4, .flags = 0x4000c, .c = (struct RClass *)&mrb_preset_object_30.klass, .gcnext = NULL, .as = { .heap = { .len = 0,.aux = { .capa = 0 }, .ptr = NULL } }, } };
+PRESET_CONST RVALUE mrb_preset_object_47 = { .proc = { .tt = MRB_TT_PROC, .color = 4, .flags = 0x900, .c = NULL, .gcnext = NULL, .body = { .irep = (mrb_irep *)&mrb_preset_irep_17 }, .upper = (struct RProc *)&mrb_preset_object_30.proc, .e = { .target_class = (struct RClass *)&mrb_preset_object_30.klass }, } };
+PRESET_CONST RVALUE mrb_preset_object_48 = { .string = { .tt = MRB_TT_STRING, .color = 4, .flags = 0x4000c, .c = (struct RClass *)&mrb_preset_object_30.klass, .gcnext = NULL, .as = { .heap = { .len = 6,.aux = { .capa = 0 }, .ptr = (char *)&mrb_preset_strings_2 } }, } };
+PRESET_CONST RVALUE mrb_preset_object_49 = { .string = { .tt = MRB_TT_STRING, .color = 4, .flags = 0x4000c, .c = (struct RClass *)&mrb_preset_object_30.klass, .gcnext = NULL, .as = { .heap = { .len = 7,.aux = { .capa = 0 }, .ptr = (char *)&mrb_preset_strings_2 } }, } };
+PRESET_CONST RVALUE mrb_preset_object_50 = { .string = { .tt = MRB_TT_STRING, .color = 4, .flags = 0x4000c, .c = (struct RClass *)&mrb_preset_object_30.klass, .gcnext = NULL, .as = { .heap = { .len = 0,.aux = { .capa = 0 }, .ptr = NULL } }, } };
+PRESET_CONST RVALUE mrb_preset_object_51 = { .proc = { .tt = MRB_TT_PROC, .color = 4, .flags = 0x900, .c = NULL, .gcnext = NULL, .body = { .irep = (mrb_irep *)&mrb_preset_irep_18 }, .upper = (struct RProc *)&mrb_preset_object_30.proc, .e = { .target_class = (struct RClass *)&mrb_preset_object_30.klass }, } };
+PRESET_CONST RVALUE mrb_preset_object_52 = { .string = { .tt = MRB_TT_STRING, .color = 4, .flags = 0x4000c, .c = (struct RClass *)&mrb_preset_object_30.klass, .gcnext = NULL, .as = { .heap = { .len = 26,.aux = { .capa = 0 }, .ptr = (char *)&mrb_preset_strings_0 } }, } };
+PRESET_CONST RVALUE mrb_preset_object_53 = { .proc = { .tt = MRB_TT_PROC, .color = 4, .flags = 0x900, .c = NULL, .gcnext = NULL, .body = { .irep = (mrb_irep *)&mrb_preset_irep_19 }, .upper = (struct RProc *)&mrb_preset_object_30.proc, .e = { .target_class = (struct RClass *)&mrb_preset_object_30.klass }, } };
+PRESET_CONST RVALUE mrb_preset_object_54 = { .string = { .tt = MRB_TT_STRING, .color = 4, .flags = 0x4000c, .c = (struct RClass *)&mrb_preset_object_30.klass, .gcnext = NULL, .as = { .heap = { .len = 0,.aux = { .capa = 0 }, .ptr = NULL } }, } };
+PRESET_CONST RVALUE mrb_preset_object_55 = { .proc = { .tt = MRB_TT_PROC, .color = 4, .flags = 0x900, .c = NULL, .gcnext = NULL, .body = { .irep = (mrb_irep *)&mrb_preset_irep_21 }, .upper = (struct RProc *)&mrb_preset_object_30.proc, .e = { .target_class = (struct RClass *)&mrb_preset_object_30.klass }, } };
+PRESET_CONST RVALUE mrb_preset_object_56 = { .string = { .tt = MRB_TT_STRING, .color = 4, .flags = 0x4000c, .c = (struct RClass *)&mrb_preset_object_30.klass, .gcnext = NULL, .as = { .heap = { .len = 33,.aux = { .capa = 0 }, .ptr = (char *)&mrb_preset_strings_3 } }, } };
+PRESET_CONST RVALUE mrb_preset_object_57 = { .string = { .tt = MRB_TT_STRING, .color = 4, .flags = 0x4000c, .c = (struct RClass *)&mrb_preset_object_30.klass, .gcnext = NULL, .as = { .heap = { .len = 13,.aux = { .capa = 0 }, .ptr = (char *)&mrb_preset_strings_4 } }, } };
+PRESET_CONST RVALUE mrb_preset_object_58 = { .string = { .tt = MRB_TT_STRING, .color = 4, .flags = 0x4000c, .c = (struct RClass *)&mrb_preset_object_30.klass, .gcnext = NULL, .as = { .heap = { .len = 0,.aux = { .capa = 0 }, .ptr = NULL } }, } };
+PRESET_CONST RVALUE mrb_preset_object_59 = { .proc = { .tt = MRB_TT_PROC, .color = 4, .flags = 0x900, .c = NULL, .gcnext = NULL, .body = { .irep = (mrb_irep *)&mrb_preset_irep_22 }, .upper = (struct RProc *)&mrb_preset_object_30.proc, .e = { .target_class = (struct RClass *)&mrb_preset_object_30.klass }, } };
+PRESET_CONST RVALUE mrb_preset_object_60 = { .string = { .tt = MRB_TT_STRING, .color = 4, .flags = 0x4000c, .c = (struct RClass *)&mrb_preset_object_30.klass, .gcnext = NULL, .as = { .heap = { .len = 0,.aux = { .capa = 0 }, .ptr = NULL } }, } };
+PRESET_CONST RVALUE mrb_preset_object_61 = { .proc = { .tt = MRB_TT_PROC, .color = 4, .flags = 0x900, .c = NULL, .gcnext = NULL, .body = { .irep = (mrb_irep *)&mrb_preset_irep_25 }, .upper = (struct RProc *)&mrb_preset_object_30.proc, .e = { .target_class = (struct RClass *)&mrb_preset_object_30.klass }, } };
+PRESET_CONST RVALUE mrb_preset_object_62 = { .string = { .tt = MRB_TT_STRING, .color = 4, .flags = 0x4000c, .c = (struct RClass *)&mrb_preset_object_30.klass, .gcnext = NULL, .as = { .heap = { .len = 7,.aux = { .capa = 0 }, .ptr = (char *)&mrb_preset_strings_2 } }, } };
+PRESET_CONST RVALUE mrb_preset_object_63 = { .string = { .tt = MRB_TT_STRING, .color = 4, .flags = 0x4000c, .c = (struct RClass *)&mrb_preset_object_30.klass, .gcnext = NULL, .as = { .heap = { .len = 0,.aux = { .capa = 0 }, .ptr = NULL } }, } };
+PRESET_CONST RVALUE mrb_preset_object_64 = { .proc = { .tt = MRB_TT_PROC, .color = 4, .flags = 0x900, .c = NULL, .gcnext = NULL, .body = { .irep = (mrb_irep *)&mrb_preset_irep_26 }, .upper = (struct RProc *)&mrb_preset_object_30.proc, .e = { .target_class = (struct RClass *)&mrb_preset_object_30.klass }, } };
+PRESET_CONST RVALUE mrb_preset_object_65 = { .string = { .tt = MRB_TT_STRING, .color = 4, .flags = 0x4000c, .c = (struct RClass *)&mrb_preset_object_30.klass, .gcnext = NULL, .as = { .heap = { .len = 26,.aux = { .capa = 0 }, .ptr = (char *)&mrb_preset_strings_0 } }, } };
+PRESET_CONST RVALUE mrb_preset_object_66 = { .proc = { .tt = MRB_TT_PROC, .color = 4, .flags = 0x900, .c = NULL, .gcnext = NULL, .body = { .irep = (mrb_irep *)&mrb_preset_irep_27 }, .upper = (struct RProc *)&mrb_preset_object_30.proc, .e = { .target_class = (struct RClass *)&mrb_preset_object_30.klass }, } };
+PRESET_CONST RVALUE mrb_preset_object_67 = { .string = { .tt = MRB_TT_STRING, .color = 4, .flags = 0x4000c, .c = (struct RClass *)&mrb_preset_object_30.klass, .gcnext = NULL, .as = { .heap = { .len = 25,.aux = { .capa = 0 }, .ptr = (char *)&mrb_preset_strings_3 } }, } };
+PRESET_CONST RVALUE mrb_preset_object_68 = { .string = { .tt = MRB_TT_STRING, .color = 4, .flags = 0x4000c, .c = (struct RClass *)&mrb_preset_object_30.klass, .gcnext = NULL, .as = { .heap = { .len = 0,.aux = { .capa = 0 }, .ptr = NULL } }, } };
+PRESET_CONST RVALUE mrb_preset_object_69 = { .proc = { .tt = MRB_TT_PROC, .color = 4, .flags = 0x900, .c = NULL, .gcnext = NULL, .body = { .irep = (mrb_irep *)&mrb_preset_irep_28 }, .upper = (struct RProc *)&mrb_preset_object_30.proc, .e = { .target_class = (struct RClass *)&mrb_preset_object_30.klass }, } };
+PRESET_CONST RVALUE mrb_preset_object_70 = { .string = { .tt = MRB_TT_STRING, .color = 4, .flags = 0x4000c, .c = (struct RClass *)&mrb_preset_object_30.klass, .gcnext = NULL, .as = { .heap = { .len = 24,.aux = { .capa = 0 }, .ptr = (char *)&mrb_preset_strings_5 } }, } };
+PRESET_CONST RVALUE mrb_preset_object_71 = { .proc = { .tt = MRB_TT_PROC, .color = 4, .flags = 0x900, .c = NULL, .gcnext = NULL, .body = { .irep = (mrb_irep *)&mrb_preset_irep_29 }, .upper = (struct RProc *)&mrb_preset_object_30.proc, .e = { .target_class = (struct RClass *)&mrb_preset_object_30.klass }, } };
+PRESET_CONST RVALUE mrb_preset_object_72 = { .string = { .tt = MRB_TT_STRING, .color = 4, .flags = 0x4000c, .c = (struct RClass *)&mrb_preset_object_30.klass, .gcnext = NULL, .as = { .heap = { .len = 0,.aux = { .capa = 0 }, .ptr = NULL } }, } };
+PRESET_CONST RVALUE mrb_preset_object_73 = { .string = { .tt = MRB_TT_STRING, .color = 4, .flags = 0x4000c, .c = (struct RClass *)&mrb_preset_object_30.klass, .gcnext = NULL, .as = { .heap = { .len = 1,.aux = { .capa = 0 }, .ptr = (char *)&mrb_preset_strings_6 } }, } };
+PRESET_CONST RVALUE mrb_preset_object_74 = { .string = { .tt = MRB_TT_STRING, .color = 4, .flags = 0x4000c, .c = (struct RClass *)&mrb_preset_object_30.klass, .gcnext = NULL, .as = { .heap = { .len = 1,.aux = { .capa = 0 }, .ptr = (char *)&mrb_preset_strings_7 } }, } };
+PRESET_CONST RVALUE mrb_preset_object_75 = { .string = { .tt = MRB_TT_STRING, .color = 4, .flags = 0x4000c, .c = (struct RClass *)&mrb_preset_object_30.klass, .gcnext = NULL, .as = { .heap = { .len = 1,.aux = { .capa = 0 }, .ptr = (char *)&mrb_preset_strings_8 } }, } };
+PRESET_CONST RVALUE mrb_preset_object_76 = { .string = { .tt = MRB_TT_STRING, .color = 4, .flags = 0x4000c, .c = (struct RClass *)&mrb_preset_object_30.klass, .gcnext = NULL, .as = { .heap = { .len = 1,.aux = { .capa = 0 }, .ptr = (char *)&mrb_preset_strings_9 } }, } };
+PRESET_CONST RVALUE mrb_preset_object_77 = { .string = { .tt = MRB_TT_STRING, .color = 4, .flags = 0x4000c, .c = (struct RClass *)&mrb_preset_object_30.klass, .gcnext = NULL, .as = { .heap = { .len = 1,.aux = { .capa = 0 }, .ptr = (char *)&mrb_preset_strings_10 } }, } };
+PRESET_CONST RVALUE mrb_preset_object_78 = { .string = { .tt = MRB_TT_STRING, .color = 4, .flags = 0x4000c, .c = (struct RClass *)&mrb_preset_object_30.klass, .gcnext = NULL, .as = { .heap = { .len = 1,.aux = { .capa = 0 }, .ptr = (char *)&mrb_preset_strings_11 } }, } };
+PRESET_CONST RVALUE mrb_preset_object_79 = { .string = { .tt = MRB_TT_STRING, .color = 4, .flags = 0x4000c, .c = (struct RClass *)&mrb_preset_object_30.klass, .gcnext = NULL, .as = { .heap = { .len = 1,.aux = { .capa = 0 }, .ptr = (char *)&mrb_preset_strings_12 } }, } };
+PRESET_CONST RVALUE mrb_preset_object_80 = { .string = { .tt = MRB_TT_STRING, .color = 4, .flags = 0x4000c, .c = (struct RClass *)&mrb_preset_object_30.klass, .gcnext = NULL, .as = { .heap = { .len = 1,.aux = { .capa = 0 }, .ptr = (char *)&mrb_preset_strings_13 } }, } };
+PRESET_CONST RVALUE mrb_preset_object_81 = { .string = { .tt = MRB_TT_STRING, .color = 4, .flags = 0x4000c, .c = (struct RClass *)&mrb_preset_object_30.klass, .gcnext = NULL, .as = { .heap = { .len = 1,.aux = { .capa = 0 }, .ptr = (char *)&mrb_preset_strings_14 } }, } };
+PRESET_CONST RVALUE mrb_preset_object_82 = { .string = { .tt = MRB_TT_STRING, .color = 4, .flags = 0x4000c, .c = (struct RClass *)&mrb_preset_object_30.klass, .gcnext = NULL, .as = { .heap = { .len = 1,.aux = { .capa = 0 }, .ptr = (char *)&mrb_preset_strings_15 } }, } };
+PRESET_CONST RVALUE mrb_preset_object_83 = { .string = { .tt = MRB_TT_STRING, .color = 4, .flags = 0x4000c, .c = (struct RClass *)&mrb_preset_object_30.klass, .gcnext = NULL, .as = { .heap = { .len = 1,.aux = { .capa = 0 }, .ptr = (char *)&mrb_preset_strings_16 } }, } };
+PRESET_CONST RVALUE mrb_preset_object_84 = { .string = { .tt = MRB_TT_STRING, .color = 4, .flags = 0x4000c, .c = (struct RClass *)&mrb_preset_object_30.klass, .gcnext = NULL, .as = { .heap = { .len = 1,.aux = { .capa = 0 }, .ptr = (char *)&mrb_preset_strings_17 } }, } };
+PRESET_CONST RVALUE mrb_preset_object_85 = { .string = { .tt = MRB_TT_STRING, .color = 4, .flags = 0x4000c, .c = (struct RClass *)&mrb_preset_object_30.klass, .gcnext = NULL, .as = { .heap = { .len = 1,.aux = { .capa = 0 }, .ptr = (char *)&mrb_preset_strings_18 } }, } };
+PRESET_CONST RVALUE mrb_preset_object_86 = { .string = { .tt = MRB_TT_STRING, .color = 4, .flags = 0x4000c, .c = (struct RClass *)&mrb_preset_object_30.klass, .gcnext = NULL, .as = { .heap = { .len = 1,.aux = { .capa = 0 }, .ptr = (char *)&mrb_preset_strings_19 } }, } };
+PRESET_CONST RVALUE mrb_preset_object_87 = { .proc = { .tt = MRB_TT_PROC, .color = 4, .flags = 0x900, .c = NULL, .gcnext = NULL, .body = { .irep = (mrb_irep *)&mrb_preset_irep_30 }, .upper = (struct RProc *)&mrb_preset_object_30.proc, .e = { .target_class = (struct RClass *)&mrb_preset_object_30.klass }, } };
+PRESET_CONST RVALUE mrb_preset_object_88 = { .string = { .tt = MRB_TT_STRING, .color = 4, .flags = 0x4000c, .c = (struct RClass *)&mrb_preset_object_30.klass, .gcnext = NULL, .as = { .heap = { .len = 1,.aux = { .capa = 0 }, .ptr = (char *)&mrb_preset_strings_20 } }, } };
+PRESET_CONST RVALUE mrb_preset_object_89 = { .proc = { .tt = MRB_TT_PROC, .color = 4, .flags = 0x900, .c = NULL, .gcnext = NULL, .body = { .irep = (mrb_irep *)&mrb_preset_irep_31 }, .upper = (struct RProc *)&mrb_preset_object_30.proc, .e = { .target_class = (struct RClass *)&mrb_preset_object_30.klass }, } };
+PRESET_CONST RVALUE mrb_preset_object_90 = { .string = { .tt = MRB_TT_STRING, .color = 4, .flags = 0x4000c, .c = (struct RClass *)&mrb_preset_object_30.klass, .gcnext = NULL, .as = { .heap = { .len = 15,.aux = { .capa = 0 }, .ptr = (char *)&mrb_preset_strings_21 } }, } };
+PRESET_CONST RVALUE mrb_preset_object_91 = { .string = { .tt = MRB_TT_STRING, .color = 4, .flags = 0x4000c, .c = (struct RClass *)&mrb_preset_object_30.klass, .gcnext = NULL, .as = { .heap = { .len = 6,.aux = { .capa = 0 }, .ptr = (char *)&mrb_preset_strings_22 } }, } };
+PRESET_CONST RVALUE mrb_preset_object_92 = { .string = { .tt = MRB_TT_STRING, .color = 4, .flags = 0x4000c, .c = (struct RClass *)&mrb_preset_object_30.klass, .gcnext = NULL, .as = { .heap = { .len = 0,.aux = { .capa = 0 }, .ptr = NULL } }, } };
+PRESET_CONST RVALUE mrb_preset_object_93 = { .proc = { .tt = MRB_TT_PROC, .color = 4, .flags = 0x900, .c = NULL, .gcnext = NULL, .body = { .irep = (mrb_irep *)&mrb_preset_irep_32 }, .upper = (struct RProc *)&mrb_preset_object_30.proc, .e = { .target_class = (struct RClass *)&mrb_preset_object_30.klass }, } };
+PRESET_CONST RVALUE mrb_preset_object_94 = { .proc = { .tt = MRB_TT_PROC, .color = 4, .flags = 0x900, .c = NULL, .gcnext = NULL, .body = { .irep = (mrb_irep *)&mrb_preset_irep_33 }, .upper = (struct RProc *)&mrb_preset_object_30.proc, .e = { .target_class = (struct RClass *)&mrb_preset_object_30.klass }, } };
+PRESET_CONST RVALUE mrb_preset_object_95 = { .string = { .tt = MRB_TT_STRING, .color = 4, .flags = 0x4000c, .c = (struct RClass *)&mrb_preset_object_30.klass, .gcnext = NULL, .as = { .heap = { .len = 0,.aux = { .capa = 0 }, .ptr = NULL } }, } };
+PRESET_CONST RVALUE mrb_preset_object_96 = { .proc = { .tt = MRB_TT_PROC, .color = 4, .flags = 0x900, .c = NULL, .gcnext = NULL, .body = { .irep = (mrb_irep *)&mrb_preset_irep_35 }, .upper = (struct RProc *)&mrb_preset_object_30.proc, .e = { .target_class = (struct RClass *)&mrb_preset_object_30.klass }, } };
+PRESET_CONST RVALUE mrb_preset_object_97 = { .string = { .tt = MRB_TT_STRING, .color = 4, .flags = 0x4000c, .c = (struct RClass *)&mrb_preset_object_30.klass, .gcnext = NULL, .as = { .heap = { .len = 26,.aux = { .capa = 0 }, .ptr = (char *)&mrb_preset_strings_0 } }, } };
+PRESET_CONST RVALUE mrb_preset_object_98 = { .string = { .tt = MRB_TT_STRING, .color = 4, .flags = 0x4000c, .c = (struct RClass *)&mrb_preset_object_30.klass, .gcnext = NULL, .as = { .heap = { .len = 36,.aux = { .capa = 0 }, .ptr = (char *)&mrb_preset_strings_23 } }, } };
+PRESET_CONST RVALUE mrb_preset_object_99 = { .string = { .tt = MRB_TT_STRING, .color = 4, .flags = 0x4000c, .c = (struct RClass *)&mrb_preset_object_30.klass, .gcnext = NULL, .as = { .heap = { .len = 0,.aux = { .capa = 0 }, .ptr = NULL } }, } };
+PRESET_CONST RVALUE mrb_preset_object_100 = { .proc = { .tt = MRB_TT_PROC, .color = 4, .flags = 0x900, .c = NULL, .gcnext = NULL, .body = { .irep = (mrb_irep *)&mrb_preset_irep_36 }, .upper = (struct RProc *)&mrb_preset_object_30.proc, .e = { .target_class = (struct RClass *)&mrb_preset_object_30.klass }, } };
+PRESET_CONST RVALUE mrb_preset_object_101 = { .string = { .tt = MRB_TT_STRING, .color = 4, .flags = 0x4000c, .c = (struct RClass *)&mrb_preset_object_30.klass, .gcnext = NULL, .as = { .heap = { .len = 15,.aux = { .capa = 0 }, .ptr = (char *)&mrb_preset_strings_21 } }, } };
+PRESET_CONST RVALUE mrb_preset_object_102 = { .string = { .tt = MRB_TT_STRING, .color = 4, .flags = 0x4000c, .c = (struct RClass *)&mrb_preset_object_30.klass, .gcnext = NULL, .as = { .heap = { .len = 6,.aux = { .capa = 0 }, .ptr = (char *)&mrb_preset_strings_22 } }, } };
+PRESET_CONST RVALUE mrb_preset_object_103 = { .string = { .tt = MRB_TT_STRING, .color = 4, .flags = 0x4000c, .c = (struct RClass *)&mrb_preset_object_30.klass, .gcnext = NULL, .as = { .heap = { .len = 0,.aux = { .capa = 0 }, .ptr = NULL } }, } };
+PRESET_CONST RVALUE mrb_preset_object_104 = { .proc = { .tt = MRB_TT_PROC, .color = 4, .flags = 0x900, .c = NULL, .gcnext = NULL, .body = { .irep = (mrb_irep *)&mrb_preset_irep_37 }, .upper = (struct RProc *)&mrb_preset_object_30.proc, .e = { .target_class = (struct RClass *)&mrb_preset_object_30.klass }, } };
+PRESET_CONST RVALUE mrb_preset_object_105 = { .string = { .tt = MRB_TT_STRING, .color = 4, .flags = 0x4000c, .c = (struct RClass *)&mrb_preset_object_30.klass, .gcnext = NULL, .as = { .heap = { .len = 0,.aux = { .capa = 0 }, .ptr = NULL } }, } };
+PRESET_CONST RVALUE mrb_preset_object_106 = { .proc = { .tt = MRB_TT_PROC, .color = 4, .flags = 0x900, .c = NULL, .gcnext = NULL, .body = { .irep = (mrb_irep *)&mrb_preset_irep_38 }, .upper = (struct RProc *)&mrb_preset_object_30.proc, .e = { .target_class = (struct RClass *)&mrb_preset_object_30.klass }, } };
+PRESET_CONST RVALUE mrb_preset_object_107 = { .proc = { .tt = MRB_TT_PROC, .color = 4, .flags = 0x900, .c = NULL, .gcnext = NULL, .body = { .irep = (mrb_irep *)&mrb_preset_irep_7 }, .upper = (struct RProc *)&mrb_preset_object_30.proc, .e = { .target_class = (struct RClass *)&mrb_preset_object_30.klass }, } };
+PRESET_CONST RVALUE mrb_preset_object_108 = { .proc = { .tt = MRB_TT_PROC, .color = 4, .flags = 0x900, .c = NULL, .gcnext = NULL, .body = { .irep = (mrb_irep *)&mrb_preset_irep_39 }, .upper = (struct RProc *)&mrb_preset_object_30.proc, .e = { .target_class = (struct RClass *)&mrb_preset_object_30.klass }, } };
+PRESET_CONST RVALUE mrb_preset_object_109 = { .string = { .tt = MRB_TT_STRING, .color = 4, .flags = 0x4000c, .c = (struct RClass *)&mrb_preset_object_30.klass, .gcnext = NULL, .as = { .heap = { .len = 0,.aux = { .capa = 0 }, .ptr = NULL } }, } };
+PRESET_CONST RVALUE mrb_preset_object_110 = { .string = { .tt = MRB_TT_STRING, .color = 4, .flags = 0x4000c, .c = (struct RClass *)&mrb_preset_object_30.klass, .gcnext = NULL, .as = { .heap = { .len = 18,.aux = { .capa = 0 }, .ptr = (char *)&mrb_preset_strings_24 } }, } };
+PRESET_CONST RVALUE mrb_preset_object_111 = { .string = { .tt = MRB_TT_STRING, .color = 4, .flags = 0x4000c, .c = (struct RClass *)&mrb_preset_object_30.klass, .gcnext = NULL, .as = { .heap = { .len = 6,.aux = { .capa = 0 }, .ptr = (char *)&mrb_preset_strings_25 } }, } };
+PRESET_CONST RVALUE mrb_preset_object_112 = { .string = { .tt = MRB_TT_STRING, .color = 4, .flags = 0x4000c, .c = (struct RClass *)&mrb_preset_object_30.klass, .gcnext = NULL, .as = { .heap = { .len = 14,.aux = { .capa = 0 }, .ptr = (char *)&mrb_preset_strings_26 } }, } };
+PRESET_CONST RVALUE mrb_preset_object_113 = { .string = { .tt = MRB_TT_STRING, .color = 4, .flags = 0x4000c, .c = (struct RClass *)&mrb_preset_object_30.klass, .gcnext = NULL, .as = { .heap = { .len = 16,.aux = { .capa = 0 }, .ptr = (char *)&mrb_preset_strings_27 } }, } };
+PRESET_CONST RVALUE mrb_preset_object_114 = { .string = { .tt = MRB_TT_STRING, .color = 4, .flags = 0x4000c, .c = (struct RClass *)&mrb_preset_object_30.klass, .gcnext = NULL, .as = { .heap = { .len = 27,.aux = { .capa = 0 }, .ptr = (char *)&mrb_preset_strings_3 } }, } };
+PRESET_CONST RVALUE mrb_preset_object_115 = { .string = { .tt = MRB_TT_STRING, .color = 4, .flags = 0x4000c, .c = (struct RClass *)&mrb_preset_object_30.klass, .gcnext = NULL, .as = { .heap = { .len = 10,.aux = { .capa = 0 }, .ptr = (char *)&mrb_preset_strings_28 } }, } };
+PRESET_CONST RVALUE mrb_preset_object_116 = { .proc = { .tt = MRB_TT_PROC, .color = 4, .flags = 0x900, .c = NULL, .gcnext = NULL, .body = { .irep = (mrb_irep *)&mrb_preset_irep_40 }, .upper = (struct RProc *)&mrb_preset_object_30.proc, .e = { .target_class = (struct RClass *)&mrb_preset_object_30.klass }, } };
+PRESET_CONST RVALUE mrb_preset_object_117 = { .string = { .tt = MRB_TT_STRING, .color = 4, .flags = 0x4000c, .c = (struct RClass *)&mrb_preset_object_30.klass, .gcnext = NULL, .as = { .heap = { .len = 1,.aux = { .capa = 0 }, .ptr = (char *)&mrb_preset_strings_2 } }, } };
+PRESET_CONST RVALUE mrb_preset_object_118 = { .string = { .tt = MRB_TT_STRING, .color = 4, .flags = 0x4000c, .c = (struct RClass *)&mrb_preset_object_30.klass, .gcnext = NULL, .as = { .heap = { .len = 0,.aux = { .capa = 0 }, .ptr = NULL } }, } };
+PRESET_CONST RVALUE mrb_preset_object_119 = { .string = { .tt = MRB_TT_STRING, .color = 4, .flags = 0x4000c, .c = (struct RClass *)&mrb_preset_object_30.klass, .gcnext = NULL, .as = { .heap = { .len = 18,.aux = { .capa = 0 }, .ptr = (char *)&mrb_preset_strings_29 } }, } };
+PRESET_CONST RVALUE mrb_preset_object_120 = { .proc = { .tt = MRB_TT_PROC, .color = 4, .flags = 0x900, .c = NULL, .gcnext = NULL, .body = { .irep = (mrb_irep *)&mrb_preset_irep_41 }, .upper = (struct RProc *)&mrb_preset_object_30.proc, .e = { .target_class = (struct RClass *)&mrb_preset_object_30.klass }, } };
+PRESET_CONST RVALUE mrb_preset_object_121 = { .string = { .tt = MRB_TT_STRING, .color = 4, .flags = 0x4000c, .c = (struct RClass *)&mrb_preset_object_30.klass, .gcnext = NULL, .as = { .heap = { .len = 1,.aux = { .capa = 0 }, .ptr = (char *)&mrb_preset_strings_2 } }, } };
+PRESET_CONST RVALUE mrb_preset_object_122 = { .string = { .tt = MRB_TT_STRING, .color = 4, .flags = 0x4000c, .c = (struct RClass *)&mrb_preset_object_30.klass, .gcnext = NULL, .as = { .heap = { .len = 0,.aux = { .capa = 0 }, .ptr = NULL } }, } };
+PRESET_CONST RVALUE mrb_preset_object_123 = { .string = { .tt = MRB_TT_STRING, .color = 4, .flags = 0x4000c, .c = (struct RClass *)&mrb_preset_object_30.klass, .gcnext = NULL, .as = { .heap = { .len = 18,.aux = { .capa = 0 }, .ptr = (char *)&mrb_preset_strings_29 } }, } };
+PRESET_CONST RVALUE mrb_preset_object_124 = { .proc = { .tt = MRB_TT_PROC, .color = 4, .flags = 0x900, .c = NULL, .gcnext = NULL, .body = { .irep = (mrb_irep *)&mrb_preset_irep_42 }, .upper = (struct RProc *)&mrb_preset_object_30.proc, .e = { .target_class = (struct RClass *)&mrb_preset_object_30.klass }, } };
+PRESET_CONST RVALUE mrb_preset_object_125 = { .string = { .tt = MRB_TT_STRING, .color = 4, .flags = 0x4000c, .c = (struct RClass *)&mrb_preset_object_30.klass, .gcnext = NULL, .as = { .heap = { .len = 27,.aux = { .capa = 0 }, .ptr = (char *)&mrb_preset_strings_30 } }, } };
 PRESET_CONST RVALUE mrb_preset_object_126 = { .klass = { .tt = MRB_TT_ICLASS, .color = 4, .flags = 0x0, .c = (struct RClass *)&mrb_preset_object_127.klass, .gcnext = (struct RBasic *)&mrb_preset_object_148.basic, .iv = (struct iv_tbl *)&mrb_preset_iv_tbl_25, .mt = (struct kh_mt *)&mrb_preset_kh_mt_21, .super = (struct RClass *)&mrb_preset_object_0.klass, } };
 PRESET_CONST RVALUE mrb_preset_object_127 = { .klass = { .tt = MRB_TT_MODULE, .color = 4, .flags = 0x0, .c = (struct RClass *)&mrb_preset_object_6.klass, .gcnext = (struct RBasic *)&mrb_preset_object_126.basic, .iv = (struct iv_tbl *)&mrb_preset_iv_tbl_25, .mt = (struct kh_mt *)&mrb_preset_kh_mt_21, .super = NULL, } };
 PRESET_CONST RVALUE mrb_preset_object_128 = { .proc = { .tt = MRB_TT_PROC, .color = 4, .flags = 0x900, .c = NULL, .gcnext = NULL, .body = { .irep = (mrb_irep *)&mrb_preset_irep_43 }, .upper = (struct RProc *)&mrb_preset_object_127.proc, .e = { .target_class = (struct RClass *)&mrb_preset_object_127.klass }, } };
 PRESET_CONST RVALUE mrb_preset_object_129 = { .proc = { .tt = MRB_TT_PROC, .color = 4, .flags = 0x900, .c = NULL, .gcnext = NULL, .body = { .irep = (mrb_irep *)&mrb_preset_irep_44 }, .upper = (struct RProc *)&mrb_preset_object_127.proc, .e = { .target_class = (struct RClass *)&mrb_preset_object_127.klass }, } };
-PRESET_CONST RVALUE mrb_preset_object_130 = { .string = { .tt = MRB_TT_STRING, .color = 4, .flags = 0x4000c, .c = (struct RClass *)&mrb_preset_object_59.klass, .gcnext = NULL, .as = { .heap = { .len = 14,.aux = { .capa = 0 }, .ptr = (char *)&mrb_preset_strings_31 } }, } };
-PRESET_CONST RVALUE mrb_preset_object_131 = { .string = { .tt = MRB_TT_STRING, .color = 4, .flags = 0x4000c, .c = (struct RClass *)&mrb_preset_object_59.klass, .gcnext = NULL, .as = { .heap = { .len = 6,.aux = { .capa = 0 }, .ptr = (char *)&mrb_preset_strings_32 } }, } };
-PRESET_CONST RVALUE mrb_preset_object_132 = { .string = { .tt = MRB_TT_STRING, .color = 4, .flags = 0x4000c, .c = (struct RClass *)&mrb_preset_object_59.klass, .gcnext = NULL, .as = { .heap = { .len = 7,.aux = { .capa = 0 }, .ptr = (char *)&mrb_preset_strings_33 } }, } };
+PRESET_CONST RVALUE mrb_preset_object_130 = { .string = { .tt = MRB_TT_STRING, .color = 4, .flags = 0x4000c, .c = (struct RClass *)&mrb_preset_object_30.klass, .gcnext = NULL, .as = { .heap = { .len = 14,.aux = { .capa = 0 }, .ptr = (char *)&mrb_preset_strings_31 } }, } };
+PRESET_CONST RVALUE mrb_preset_object_131 = { .string = { .tt = MRB_TT_STRING, .color = 4, .flags = 0x4000c, .c = (struct RClass *)&mrb_preset_object_30.klass, .gcnext = NULL, .as = { .heap = { .len = 6,.aux = { .capa = 0 }, .ptr = (char *)&mrb_preset_strings_32 } }, } };
+PRESET_CONST RVALUE mrb_preset_object_132 = { .string = { .tt = MRB_TT_STRING, .color = 4, .flags = 0x4000c, .c = (struct RClass *)&mrb_preset_object_30.klass, .gcnext = NULL, .as = { .heap = { .len = 7,.aux = { .capa = 0 }, .ptr = (char *)&mrb_preset_strings_33 } }, } };
 PRESET_CONST RVALUE mrb_preset_object_133 = { .proc = { .tt = MRB_TT_PROC, .color = 4, .flags = 0x900, .c = NULL, .gcnext = NULL, .body = { .irep = (mrb_irep *)&mrb_preset_irep_45 }, .upper = (struct RProc *)&mrb_preset_object_127.proc, .e = { .target_class = (struct RClass *)&mrb_preset_object_127.klass }, } };
 PRESET_CONST RVALUE mrb_preset_object_134 = { .proc = { .tt = MRB_TT_PROC, .color = 4, .flags = 0x900, .c = NULL, .gcnext = NULL, .body = { .irep = (mrb_irep *)&mrb_preset_irep_46 }, .upper = (struct RProc *)&mrb_preset_object_127.proc, .e = { .target_class = (struct RClass *)&mrb_preset_object_127.klass }, } };
-PRESET_CONST RVALUE mrb_preset_object_135 = { .string = { .tt = MRB_TT_STRING, .color = 4, .flags = 0x4000c, .c = (struct RClass *)&mrb_preset_object_59.klass, .gcnext = NULL, .as = { .heap = { .len = 14,.aux = { .capa = 0 }, .ptr = (char *)&mrb_preset_strings_31 } }, } };
-PRESET_CONST RVALUE mrb_preset_object_136 = { .string = { .tt = MRB_TT_STRING, .color = 4, .flags = 0x4000c, .c = (struct RClass *)&mrb_preset_object_59.klass, .gcnext = NULL, .as = { .heap = { .len = 6,.aux = { .capa = 0 }, .ptr = (char *)&mrb_preset_strings_32 } }, } };
-PRESET_CONST RVALUE mrb_preset_object_137 = { .string = { .tt = MRB_TT_STRING, .color = 4, .flags = 0x4000c, .c = (struct RClass *)&mrb_preset_object_59.klass, .gcnext = NULL, .as = { .heap = { .len = 7,.aux = { .capa = 0 }, .ptr = (char *)&mrb_preset_strings_33 } }, } };
+PRESET_CONST RVALUE mrb_preset_object_135 = { .string = { .tt = MRB_TT_STRING, .color = 4, .flags = 0x4000c, .c = (struct RClass *)&mrb_preset_object_30.klass, .gcnext = NULL, .as = { .heap = { .len = 14,.aux = { .capa = 0 }, .ptr = (char *)&mrb_preset_strings_31 } }, } };
+PRESET_CONST RVALUE mrb_preset_object_136 = { .string = { .tt = MRB_TT_STRING, .color = 4, .flags = 0x4000c, .c = (struct RClass *)&mrb_preset_object_30.klass, .gcnext = NULL, .as = { .heap = { .len = 6,.aux = { .capa = 0 }, .ptr = (char *)&mrb_preset_strings_32 } }, } };
+PRESET_CONST RVALUE mrb_preset_object_137 = { .string = { .tt = MRB_TT_STRING, .color = 4, .flags = 0x4000c, .c = (struct RClass *)&mrb_preset_object_30.klass, .gcnext = NULL, .as = { .heap = { .len = 7,.aux = { .capa = 0 }, .ptr = (char *)&mrb_preset_strings_33 } }, } };
 PRESET_CONST RVALUE mrb_preset_object_138 = { .proc = { .tt = MRB_TT_PROC, .color = 4, .flags = 0x900, .c = NULL, .gcnext = NULL, .body = { .irep = (mrb_irep *)&mrb_preset_irep_47 }, .upper = (struct RProc *)&mrb_preset_object_127.proc, .e = { .target_class = (struct RClass *)&mrb_preset_object_127.klass }, } };
-PRESET_CONST RVALUE mrb_preset_object_139 = { .string = { .tt = MRB_TT_STRING, .color = 4, .flags = 0x4000c, .c = (struct RClass *)&mrb_preset_object_59.klass, .gcnext = NULL, .as = { .heap = { .len = 14,.aux = { .capa = 0 }, .ptr = (char *)&mrb_preset_strings_31 } }, } };
-PRESET_CONST RVALUE mrb_preset_object_140 = { .string = { .tt = MRB_TT_STRING, .color = 4, .flags = 0x4000c, .c = (struct RClass *)&mrb_preset_object_59.klass, .gcnext = NULL, .as = { .heap = { .len = 6,.aux = { .capa = 0 }, .ptr = (char *)&mrb_preset_strings_32 } }, } };
-PRESET_CONST RVALUE mrb_preset_object_141 = { .string = { .tt = MRB_TT_STRING, .color = 4, .flags = 0x4000c, .c = (struct RClass *)&mrb_preset_object_59.klass, .gcnext = NULL, .as = { .heap = { .len = 7,.aux = { .capa = 0 }, .ptr = (char *)&mrb_preset_strings_33 } }, } };
+PRESET_CONST RVALUE mrb_preset_object_139 = { .string = { .tt = MRB_TT_STRING, .color = 4, .flags = 0x4000c, .c = (struct RClass *)&mrb_preset_object_30.klass, .gcnext = NULL, .as = { .heap = { .len = 14,.aux = { .capa = 0 }, .ptr = (char *)&mrb_preset_strings_31 } }, } };
+PRESET_CONST RVALUE mrb_preset_object_140 = { .string = { .tt = MRB_TT_STRING, .color = 4, .flags = 0x4000c, .c = (struct RClass *)&mrb_preset_object_30.klass, .gcnext = NULL, .as = { .heap = { .len = 6,.aux = { .capa = 0 }, .ptr = (char *)&mrb_preset_strings_32 } }, } };
+PRESET_CONST RVALUE mrb_preset_object_141 = { .string = { .tt = MRB_TT_STRING, .color = 4, .flags = 0x4000c, .c = (struct RClass *)&mrb_preset_object_30.klass, .gcnext = NULL, .as = { .heap = { .len = 7,.aux = { .capa = 0 }, .ptr = (char *)&mrb_preset_strings_33 } }, } };
 PRESET_CONST RVALUE mrb_preset_object_142 = { .proc = { .tt = MRB_TT_PROC, .color = 4, .flags = 0x900, .c = NULL, .gcnext = NULL, .body = { .irep = (mrb_irep *)&mrb_preset_irep_48 }, .upper = (struct RProc *)&mrb_preset_object_127.proc, .e = { .target_class = (struct RClass *)&mrb_preset_object_127.klass }, } };
-PRESET_CONST RVALUE mrb_preset_object_143 = { .string = { .tt = MRB_TT_STRING, .color = 4, .flags = 0x4000c, .c = (struct RClass *)&mrb_preset_object_59.klass, .gcnext = NULL, .as = { .heap = { .len = 14,.aux = { .capa = 0 }, .ptr = (char *)&mrb_preset_strings_31 } }, } };
-PRESET_CONST RVALUE mrb_preset_object_144 = { .string = { .tt = MRB_TT_STRING, .color = 4, .flags = 0x4000c, .c = (struct RClass *)&mrb_preset_object_59.klass, .gcnext = NULL, .as = { .heap = { .len = 6,.aux = { .capa = 0 }, .ptr = (char *)&mrb_preset_strings_32 } }, } };
-PRESET_CONST RVALUE mrb_preset_object_145 = { .string = { .tt = MRB_TT_STRING, .color = 4, .flags = 0x4000c, .c = (struct RClass *)&mrb_preset_object_59.klass, .gcnext = NULL, .as = { .heap = { .len = 7,.aux = { .capa = 0 }, .ptr = (char *)&mrb_preset_strings_33 } }, } };
+PRESET_CONST RVALUE mrb_preset_object_143 = { .string = { .tt = MRB_TT_STRING, .color = 4, .flags = 0x4000c, .c = (struct RClass *)&mrb_preset_object_30.klass, .gcnext = NULL, .as = { .heap = { .len = 14,.aux = { .capa = 0 }, .ptr = (char *)&mrb_preset_strings_31 } }, } };
+PRESET_CONST RVALUE mrb_preset_object_144 = { .string = { .tt = MRB_TT_STRING, .color = 4, .flags = 0x4000c, .c = (struct RClass *)&mrb_preset_object_30.klass, .gcnext = NULL, .as = { .heap = { .len = 6,.aux = { .capa = 0 }, .ptr = (char *)&mrb_preset_strings_32 } }, } };
+PRESET_CONST RVALUE mrb_preset_object_145 = { .string = { .tt = MRB_TT_STRING, .color = 4, .flags = 0x4000c, .c = (struct RClass *)&mrb_preset_object_30.klass, .gcnext = NULL, .as = { .heap = { .len = 7,.aux = { .capa = 0 }, .ptr = (char *)&mrb_preset_strings_33 } }, } };
 PRESET_CONST RVALUE mrb_preset_object_146 = { .proc = { .tt = MRB_TT_PROC, .color = 4, .flags = 0x900, .c = NULL, .gcnext = NULL, .body = { .irep = (mrb_irep *)&mrb_preset_irep_49 }, .upper = (struct RProc *)&mrb_preset_object_147.proc, .e = { .target_class = (struct RClass *)&mrb_preset_object_147.klass }, } };
 PRESET_CONST RVALUE mrb_preset_object_147 = { .klass = { .tt = MRB_TT_CLASS, .color = 4, .flags = 0xe, .c = (struct RClass *)&mrb_preset_object_148.klass, .gcnext = (struct RBasic *)&mrb_preset_object_169.basic, .iv = (struct iv_tbl *)&mrb_preset_iv_tbl_26, .mt = (struct kh_mt *)&mrb_preset_kh_mt_23, .super = (struct RClass *)&mrb_preset_object_168.klass, } };
 PRESET_CONST RVALUE mrb_preset_object_148 = { .klass = { .tt = MRB_TT_SCLASS, .color = 4, .flags = 0x0, .c = (struct RClass *)&mrb_preset_object_3.klass, .gcnext = (struct RBasic *)&mrb_preset_object_147.basic, .iv = (struct iv_tbl *)&mrb_preset_iv_tbl_27, .mt = (struct kh_mt *)&mrb_preset_kh_mt_22, .super = (struct RClass *)&mrb_preset_object_10.klass, } };
 PRESET_CONST RVALUE mrb_preset_object_149 = { .proc = { .tt = MRB_TT_PROC, .color = 4, .flags = 0x900, .c = NULL, .gcnext = NULL, .body = { .irep = (mrb_irep *)&mrb_preset_irep_50 }, .upper = (struct RProc *)&mrb_preset_object_147.proc, .e = { .target_class = (struct RClass *)&mrb_preset_object_147.klass }, } };
 PRESET_CONST RVALUE mrb_preset_object_150 = { .proc = { .tt = MRB_TT_PROC, .color = 4, .flags = 0x900, .c = NULL, .gcnext = NULL, .body = { .irep = (mrb_irep *)&mrb_preset_irep_51 }, .upper = (struct RProc *)&mrb_preset_object_147.proc, .e = { .target_class = (struct RClass *)&mrb_preset_object_147.klass }, } };
 PRESET_CONST RVALUE mrb_preset_object_151 = { .proc = { .tt = MRB_TT_PROC, .color = 4, .flags = 0x900, .c = NULL, .gcnext = NULL, .body = { .irep = (mrb_irep *)&mrb_preset_irep_52 }, .upper = (struct RProc *)&mrb_preset_object_147.proc, .e = { .target_class = (struct RClass *)&mrb_preset_object_147.klass }, } };
-PRESET_CONST RVALUE mrb_preset_object_152 = { .string = { .tt = MRB_TT_STRING, .color = 4, .flags = 0x4000c, .c = (struct RClass *)&mrb_preset_object_59.klass, .gcnext = NULL, .as = { .heap = { .len = 2,.aux = { .capa = 0 }, .ptr = (char *)&mrb_preset_strings_34 } }, } };
-PRESET_CONST RVALUE mrb_preset_object_153 = { .string = { .tt = MRB_TT_STRING, .color = 4, .flags = 0x4000c, .c = (struct RClass *)&mrb_preset_object_59.klass, .gcnext = NULL, .as = { .heap = { .len = 1,.aux = { .capa = 0 }, .ptr = (char *)&mrb_preset_strings_34 } }, } };
-PRESET_CONST RVALUE mrb_preset_object_154 = { .string = { .tt = MRB_TT_STRING, .color = 4, .flags = 0x4000c, .c = (struct RClass *)&mrb_preset_object_59.klass, .gcnext = NULL, .as = { .heap = { .len = 2,.aux = { .capa = 0 }, .ptr = (char *)&mrb_preset_strings_8 } }, } };
-PRESET_CONST RVALUE mrb_preset_object_155 = { .string = { .tt = MRB_TT_STRING, .color = 4, .flags = 0x4000c, .c = (struct RClass *)&mrb_preset_object_59.klass, .gcnext = NULL, .as = { .heap = { .len = 1,.aux = { .capa = 0 }, .ptr = (char *)&mrb_preset_strings_35 } }, } };
+PRESET_CONST RVALUE mrb_preset_object_152 = { .string = { .tt = MRB_TT_STRING, .color = 4, .flags = 0x4000c, .c = (struct RClass *)&mrb_preset_object_30.klass, .gcnext = NULL, .as = { .heap = { .len = 2,.aux = { .capa = 0 }, .ptr = (char *)&mrb_preset_strings_34 } }, } };
+PRESET_CONST RVALUE mrb_preset_object_153 = { .string = { .tt = MRB_TT_STRING, .color = 4, .flags = 0x4000c, .c = (struct RClass *)&mrb_preset_object_30.klass, .gcnext = NULL, .as = { .heap = { .len = 1,.aux = { .capa = 0 }, .ptr = (char *)&mrb_preset_strings_34 } }, } };
+PRESET_CONST RVALUE mrb_preset_object_154 = { .string = { .tt = MRB_TT_STRING, .color = 4, .flags = 0x4000c, .c = (struct RClass *)&mrb_preset_object_30.klass, .gcnext = NULL, .as = { .heap = { .len = 2,.aux = { .capa = 0 }, .ptr = (char *)&mrb_preset_strings_4 } }, } };
+PRESET_CONST RVALUE mrb_preset_object_155 = { .string = { .tt = MRB_TT_STRING, .color = 4, .flags = 0x4000c, .c = (struct RClass *)&mrb_preset_object_30.klass, .gcnext = NULL, .as = { .heap = { .len = 1,.aux = { .capa = 0 }, .ptr = (char *)&mrb_preset_strings_35 } }, } };
 PRESET_CONST RVALUE mrb_preset_object_156 = { .proc = { .tt = MRB_TT_PROC, .color = 4, .flags = 0x900, .c = NULL, .gcnext = NULL, .body = { .irep = (mrb_irep *)&mrb_preset_irep_54 }, .upper = (struct RProc *)&mrb_preset_object_147.proc, .e = { .target_class = (struct RClass *)&mrb_preset_object_147.klass }, } };
 PRESET_CONST RVALUE mrb_preset_object_157 = { .proc = { .tt = MRB_TT_PROC, .color = 4, .flags = 0x900, .c = NULL, .gcnext = NULL, .body = { .irep = (mrb_irep *)&mrb_preset_irep_55 }, .upper = (struct RProc *)&mrb_preset_object_147.proc, .e = { .target_class = (struct RClass *)&mrb_preset_object_147.klass }, } };
 PRESET_CONST RVALUE mrb_preset_object_158 = { .proc = { .tt = MRB_TT_PROC, .color = 4, .flags = 0x900, .c = NULL, .gcnext = NULL, .body = { .irep = (mrb_irep *)&mrb_preset_irep_56 }, .upper = (struct RProc *)&mrb_preset_object_147.proc, .e = { .target_class = (struct RClass *)&mrb_preset_object_147.klass }, } };
-PRESET_CONST RVALUE mrb_preset_object_159 = { .string = { .tt = MRB_TT_STRING, .color = 4, .flags = 0x4000c, .c = (struct RClass *)&mrb_preset_object_59.klass, .gcnext = NULL, .as = { .heap = { .len = 5,.aux = { .capa = 0 }, .ptr = (char *)&mrb_preset_strings_36 } }, } };
+PRESET_CONST RVALUE mrb_preset_object_159 = { .string = { .tt = MRB_TT_STRING, .color = 4, .flags = 0x4000c, .c = (struct RClass *)&mrb_preset_object_30.klass, .gcnext = NULL, .as = { .heap = { .len = 5,.aux = { .capa = 0 }, .ptr = (char *)&mrb_preset_strings_36 } }, } };
 PRESET_CONST RVALUE mrb_preset_object_160 = { .proc = { .tt = MRB_TT_PROC, .color = 4, .flags = 0x900, .c = NULL, .gcnext = NULL, .body = { .irep = (mrb_irep *)&mrb_preset_irep_57 }, .upper = (struct RProc *)&mrb_preset_object_147.proc, .e = { .target_class = (struct RClass *)&mrb_preset_object_147.klass }, } };
-PRESET_CONST RVALUE mrb_preset_object_161 = { .string = { .tt = MRB_TT_STRING, .color = 4, .flags = 0x4000c, .c = (struct RClass *)&mrb_preset_object_59.klass, .gcnext = NULL, .as = { .heap = { .len = 33,.aux = { .capa = 0 }, .ptr = (char *)&mrb_preset_strings_37 } }, } };
-PRESET_CONST RVALUE mrb_preset_object_162 = { .string = { .tt = MRB_TT_STRING, .color = 4, .flags = 0x4000c, .c = (struct RClass *)&mrb_preset_object_59.klass, .gcnext = NULL, .as = { .heap = { .len = 19,.aux = { .capa = 0 }, .ptr = (char *)&mrb_preset_strings_38 } }, } };
+PRESET_CONST RVALUE mrb_preset_object_161 = { .string = { .tt = MRB_TT_STRING, .color = 4, .flags = 0x4000c, .c = (struct RClass *)&mrb_preset_object_30.klass, .gcnext = NULL, .as = { .heap = { .len = 33,.aux = { .capa = 0 }, .ptr = (char *)&mrb_preset_strings_37 } }, } };
+PRESET_CONST RVALUE mrb_preset_object_162 = { .string = { .tt = MRB_TT_STRING, .color = 4, .flags = 0x4000c, .c = (struct RClass *)&mrb_preset_object_30.klass, .gcnext = NULL, .as = { .heap = { .len = 19,.aux = { .capa = 0 }, .ptr = (char *)&mrb_preset_strings_38 } }, } };
 PRESET_CONST RVALUE mrb_preset_object_163 = { .proc = { .tt = MRB_TT_PROC, .color = 4, .flags = 0x900, .c = NULL, .gcnext = NULL, .body = { .irep = (mrb_irep *)&mrb_preset_irep_58 }, .upper = (struct RProc *)&mrb_preset_object_147.proc, .e = { .target_class = (struct RClass *)&mrb_preset_object_147.klass }, } };
 PRESET_CONST RVALUE mrb_preset_object_164 = { .proc = { .tt = MRB_TT_PROC, .color = 4, .flags = 0x900, .c = NULL, .gcnext = NULL, .body = { .irep = (mrb_irep *)&mrb_preset_irep_59 }, .upper = (struct RProc *)&mrb_preset_object_147.proc, .e = { .target_class = (struct RClass *)&mrb_preset_object_147.klass }, } };
 PRESET_CONST RVALUE mrb_preset_object_165 = { .proc = { .tt = MRB_TT_PROC, .color = 4, .flags = 0x900, .c = NULL, .gcnext = NULL, .body = { .irep = (mrb_irep *)&mrb_preset_irep_60 }, .upper = (struct RProc *)&mrb_preset_object_147.proc, .e = { .target_class = (struct RClass *)&mrb_preset_object_147.klass }, } };
@@ -7892,7 +8270,7 @@ PRESET_CONST RVALUE mrb_preset_object_168 = { .klass = { .tt = MRB_TT_ICLASS, .c
 PRESET_CONST RVALUE mrb_preset_object_169 = { .klass = { .tt = MRB_TT_MODULE, .color = 4, .flags = 0x0, .c = (struct RClass *)&mrb_preset_object_6.klass, .gcnext = (struct RBasic *)&mrb_preset_object_168.basic, .iv = (struct iv_tbl *)&mrb_preset_iv_tbl_28, .mt = (struct kh_mt *)&mrb_preset_kh_mt_24, .super = NULL, } };
 PRESET_CONST RVALUE mrb_preset_object_170 = { .proc = { .tt = MRB_TT_PROC, .color = 4, .flags = 0x900, .c = NULL, .gcnext = NULL, .body = { .irep = (mrb_irep *)&mrb_preset_irep_63 }, .upper = (struct RProc *)&mrb_preset_object_169.proc, .e = { .target_class = (struct RClass *)&mrb_preset_object_169.klass }, } };
 PRESET_CONST RVALUE mrb_preset_object_171 = { .proc = { .tt = MRB_TT_PROC, .color = 4, .flags = 0x900, .c = NULL, .gcnext = NULL, .body = { .irep = (mrb_irep *)&mrb_preset_irep_65 }, .upper = (struct RProc *)&mrb_preset_object_169.proc, .e = { .target_class = (struct RClass *)&mrb_preset_object_169.klass }, } };
-PRESET_CONST RVALUE mrb_preset_object_172 = { .string = { .tt = MRB_TT_STRING, .color = 4, .flags = 0x4000c, .c = (struct RClass *)&mrb_preset_object_59.klass, .gcnext = NULL, .as = { .heap = { .len = 18,.aux = { .capa = 0 }, .ptr = (char *)&mrb_preset_strings_39 } }, } };
+PRESET_CONST RVALUE mrb_preset_object_172 = { .string = { .tt = MRB_TT_STRING, .color = 4, .flags = 0x4000c, .c = (struct RClass *)&mrb_preset_object_30.klass, .gcnext = NULL, .as = { .heap = { .len = 18,.aux = { .capa = 0 }, .ptr = (char *)&mrb_preset_strings_39 } }, } };
 PRESET_CONST RVALUE mrb_preset_object_173 = { .proc = { .tt = MRB_TT_PROC, .color = 4, .flags = 0x900, .c = NULL, .gcnext = NULL, .body = { .irep = (mrb_irep *)&mrb_preset_irep_68 }, .upper = (struct RProc *)&mrb_preset_object_169.proc, .e = { .target_class = (struct RClass *)&mrb_preset_object_169.klass }, } };
 PRESET_CONST RVALUE mrb_preset_object_174 = { .proc = { .tt = MRB_TT_PROC, .color = 4, .flags = 0x900, .c = NULL, .gcnext = NULL, .body = { .irep = (mrb_irep *)&mrb_preset_irep_70 }, .upper = (struct RProc *)&mrb_preset_object_169.proc, .e = { .target_class = (struct RClass *)&mrb_preset_object_169.klass }, } };
 PRESET_CONST RVALUE mrb_preset_object_175 = { .proc = { .tt = MRB_TT_PROC, .color = 4, .flags = 0x900, .c = NULL, .gcnext = NULL, .body = { .irep = (mrb_irep *)&mrb_preset_irep_73 }, .upper = (struct RProc *)&mrb_preset_object_169.proc, .e = { .target_class = (struct RClass *)&mrb_preset_object_169.klass }, } };
@@ -7936,19 +8314,19 @@ PRESET_CONST RVALUE mrb_preset_object_212 = { .klass = { .tt = MRB_TT_SCLASS, .c
 PRESET_CONST RVALUE mrb_preset_object_213 = { .klass = { .tt = MRB_TT_CLASS, .color = 4, .flags = 0xf, .c = (struct RClass *)&mrb_preset_object_214.klass, .gcnext = (struct RBasic *)&mrb_preset_object_239.basic, .iv = (struct iv_tbl *)&mrb_preset_iv_tbl_44, .mt = (struct kh_mt *)&mrb_preset_kh_mt_43, .super = (struct RClass *)&mrb_preset_object_239.klass, } };
 PRESET_CONST RVALUE mrb_preset_object_214 = { .klass = { .tt = MRB_TT_SCLASS, .color = 4, .flags = 0x0, .c = (struct RClass *)&mrb_preset_object_3.klass, .gcnext = (struct RBasic *)&mrb_preset_object_213.basic, .iv = (struct iv_tbl *)&mrb_preset_iv_tbl_45, .mt = (struct kh_mt *)&mrb_preset_kh_mt_42, .super = (struct RClass *)&mrb_preset_object_10.klass, } };
 PRESET_CONST RVALUE mrb_preset_object_215 = { .proc = { .tt = MRB_TT_PROC, .color = 4, .flags = 0x900, .c = NULL, .gcnext = NULL, .body = { .irep = (mrb_irep *)&mrb_preset_irep_101 }, .upper = (struct RProc *)&mrb_preset_object_213.proc, .e = { .target_class = (struct RClass *)&mrb_preset_object_213.klass }, } };
-PRESET_CONST RVALUE mrb_preset_object_216 = { .string = { .tt = MRB_TT_STRING, .color = 4, .flags = 0x4000c, .c = (struct RClass *)&mrb_preset_object_59.klass, .gcnext = NULL, .as = { .heap = { .len = 32,.aux = { .capa = 0 }, .ptr = (char *)&mrb_preset_strings_40 } }, } };
+PRESET_CONST RVALUE mrb_preset_object_216 = { .string = { .tt = MRB_TT_STRING, .color = 4, .flags = 0x4000c, .c = (struct RClass *)&mrb_preset_object_30.klass, .gcnext = NULL, .as = { .heap = { .len = 32,.aux = { .capa = 0 }, .ptr = (char *)&mrb_preset_strings_40 } }, } };
 PRESET_CONST RVALUE mrb_preset_object_217 = { .proc = { .tt = MRB_TT_PROC, .color = 4, .flags = 0x900, .c = NULL, .gcnext = NULL, .body = { .irep = (mrb_irep *)&mrb_preset_irep_103 }, .upper = (struct RProc *)&mrb_preset_object_213.proc, .e = { .target_class = (struct RClass *)&mrb_preset_object_213.klass }, } };
-PRESET_CONST RVALUE mrb_preset_object_218 = { .string = { .tt = MRB_TT_STRING, .color = 4, .flags = 0x4000c, .c = (struct RClass *)&mrb_preset_object_59.klass, .gcnext = NULL, .as = { .heap = { .len = 5,.aux = { .capa = 0 }, .ptr = (char *)&mrb_preset_strings_41 } }, } };
+PRESET_CONST RVALUE mrb_preset_object_218 = { .string = { .tt = MRB_TT_STRING, .color = 4, .flags = 0x4000c, .c = (struct RClass *)&mrb_preset_object_30.klass, .gcnext = NULL, .as = { .heap = { .len = 5,.aux = { .capa = 0 }, .ptr = (char *)&mrb_preset_strings_41 } }, } };
 PRESET_CONST RVALUE mrb_preset_object_219 = { .proc = { .tt = MRB_TT_PROC, .color = 4, .flags = 0x900, .c = NULL, .gcnext = NULL, .body = { .irep = (mrb_irep *)&mrb_preset_irep_104 }, .upper = (struct RProc *)&mrb_preset_object_213.proc, .e = { .target_class = (struct RClass *)&mrb_preset_object_213.klass }, } };
-PRESET_CONST RVALUE mrb_preset_object_220 = { .string = { .tt = MRB_TT_STRING, .color = 4, .flags = 0x4000c, .c = (struct RClass *)&mrb_preset_object_59.klass, .gcnext = NULL, .as = { .heap = { .len = 2,.aux = { .capa = 0 }, .ptr = (char *)&mrb_preset_strings_42 } }, } };
-PRESET_CONST RVALUE mrb_preset_object_221 = { .string = { .tt = MRB_TT_STRING, .color = 4, .flags = 0x4000c, .c = (struct RClass *)&mrb_preset_object_59.klass, .gcnext = NULL, .as = { .heap = { .len = 1,.aux = { .capa = 0 }, .ptr = (char *)&mrb_preset_strings_41 } }, } };
-PRESET_CONST RVALUE mrb_preset_object_222 = { .string = { .tt = MRB_TT_STRING, .color = 4, .flags = 0x4000c, .c = (struct RClass *)&mrb_preset_object_59.klass, .gcnext = NULL, .as = { .heap = { .len = 2,.aux = { .capa = 0 }, .ptr = (char *)&mrb_preset_strings_8 } }, } };
-PRESET_CONST RVALUE mrb_preset_object_223 = { .string = { .tt = MRB_TT_STRING, .color = 4, .flags = 0x4000c, .c = (struct RClass *)&mrb_preset_object_59.klass, .gcnext = NULL, .as = { .heap = { .len = 1,.aux = { .capa = 0 }, .ptr = (char *)&mrb_preset_strings_43 } }, } };
-PRESET_CONST RVALUE mrb_preset_object_224 = { .string = { .tt = MRB_TT_STRING, .color = 4, .flags = 0x4000c, .c = (struct RClass *)&mrb_preset_object_59.klass, .gcnext = NULL, .as = { .heap = { .len = 2,.aux = { .capa = 0 }, .ptr = (char *)&mrb_preset_strings_44 } }, } };
+PRESET_CONST RVALUE mrb_preset_object_220 = { .string = { .tt = MRB_TT_STRING, .color = 4, .flags = 0x4000c, .c = (struct RClass *)&mrb_preset_object_30.klass, .gcnext = NULL, .as = { .heap = { .len = 2,.aux = { .capa = 0 }, .ptr = (char *)&mrb_preset_strings_42 } }, } };
+PRESET_CONST RVALUE mrb_preset_object_221 = { .string = { .tt = MRB_TT_STRING, .color = 4, .flags = 0x4000c, .c = (struct RClass *)&mrb_preset_object_30.klass, .gcnext = NULL, .as = { .heap = { .len = 1,.aux = { .capa = 0 }, .ptr = (char *)&mrb_preset_strings_41 } }, } };
+PRESET_CONST RVALUE mrb_preset_object_222 = { .string = { .tt = MRB_TT_STRING, .color = 4, .flags = 0x4000c, .c = (struct RClass *)&mrb_preset_object_30.klass, .gcnext = NULL, .as = { .heap = { .len = 2,.aux = { .capa = 0 }, .ptr = (char *)&mrb_preset_strings_4 } }, } };
+PRESET_CONST RVALUE mrb_preset_object_223 = { .string = { .tt = MRB_TT_STRING, .color = 4, .flags = 0x4000c, .c = (struct RClass *)&mrb_preset_object_30.klass, .gcnext = NULL, .as = { .heap = { .len = 1,.aux = { .capa = 0 }, .ptr = (char *)&mrb_preset_strings_43 } }, } };
+PRESET_CONST RVALUE mrb_preset_object_224 = { .string = { .tt = MRB_TT_STRING, .color = 4, .flags = 0x4000c, .c = (struct RClass *)&mrb_preset_object_30.klass, .gcnext = NULL, .as = { .heap = { .len = 2,.aux = { .capa = 0 }, .ptr = (char *)&mrb_preset_strings_44 } }, } };
 PRESET_CONST RVALUE mrb_preset_object_225 = { .proc = { .tt = MRB_TT_PROC, .color = 4, .flags = 0x900, .c = NULL, .gcnext = NULL, .body = { .irep = (mrb_irep *)&mrb_preset_irep_106 }, .upper = (struct RProc *)&mrb_preset_object_213.proc, .e = { .target_class = (struct RClass *)&mrb_preset_object_213.klass }, } };
 PRESET_CONST RVALUE mrb_preset_object_226 = { .proc = { .tt = MRB_TT_PROC, .color = 4, .flags = 0x900, .c = NULL, .gcnext = NULL, .body = { .irep = (mrb_irep *)&mrb_preset_irep_107 }, .upper = (struct RProc *)&mrb_preset_object_213.proc, .e = { .target_class = (struct RClass *)&mrb_preset_object_213.klass }, } };
 PRESET_CONST RVALUE mrb_preset_object_227 = { .proc = { .tt = MRB_TT_PROC, .color = 4, .flags = 0x900, .c = NULL, .gcnext = NULL, .body = { .irep = (mrb_irep *)&mrb_preset_irep_109 }, .upper = (struct RProc *)&mrb_preset_object_213.proc, .e = { .target_class = (struct RClass *)&mrb_preset_object_213.klass }, } };
-PRESET_CONST RVALUE mrb_preset_object_228 = { .string = { .tt = MRB_TT_STRING, .color = 4, .flags = 0x4000c, .c = (struct RClass *)&mrb_preset_object_59.klass, .gcnext = NULL, .as = { .heap = { .len = 32,.aux = { .capa = 0 }, .ptr = (char *)&mrb_preset_strings_40 } }, } };
+PRESET_CONST RVALUE mrb_preset_object_228 = { .string = { .tt = MRB_TT_STRING, .color = 4, .flags = 0x4000c, .c = (struct RClass *)&mrb_preset_object_30.klass, .gcnext = NULL, .as = { .heap = { .len = 32,.aux = { .capa = 0 }, .ptr = (char *)&mrb_preset_strings_40 } }, } };
 PRESET_CONST RVALUE mrb_preset_object_229 = { .proc = { .tt = MRB_TT_PROC, .color = 4, .flags = 0x900, .c = NULL, .gcnext = NULL, .body = { .irep = (mrb_irep *)&mrb_preset_irep_113 }, .upper = (struct RProc *)&mrb_preset_object_213.proc, .e = { .target_class = (struct RClass *)&mrb_preset_object_213.klass }, } };
 PRESET_CONST RVALUE mrb_preset_object_230 = { .proc = { .tt = MRB_TT_PROC, .color = 4, .flags = 0x900, .c = NULL, .gcnext = NULL, .body = { .irep = (mrb_irep *)&mrb_preset_irep_115 }, .upper = (struct RProc *)&mrb_preset_object_213.proc, .e = { .target_class = (struct RClass *)&mrb_preset_object_213.klass }, } };
 PRESET_CONST RVALUE mrb_preset_object_231 = { .proc = { .tt = MRB_TT_PROC, .color = 4, .flags = 0x900, .c = NULL, .gcnext = NULL, .body = { .irep = (mrb_irep *)&mrb_preset_irep_118 }, .upper = (struct RProc *)&mrb_preset_object_213.proc, .e = { .target_class = (struct RClass *)&mrb_preset_object_213.klass }, } };
@@ -7968,16 +8346,16 @@ PRESET_CONST RVALUE mrb_preset_object_244 = { .proc = { .tt = MRB_TT_PROC, .colo
 PRESET_CONST RVALUE mrb_preset_object_245 = { .proc = { .tt = MRB_TT_PROC, .color = 4, .flags = 0x900, .c = NULL, .gcnext = NULL, .body = { .irep = (mrb_irep *)&mrb_preset_irep_138 }, .upper = (struct RProc *)&mrb_preset_object_240.proc, .e = { .target_class = (struct RClass *)&mrb_preset_object_240.klass }, } };
 PRESET_CONST RVALUE mrb_preset_object_246 = { .proc = { .tt = MRB_TT_PROC, .color = 4, .flags = 0x900, .c = NULL, .gcnext = NULL, .body = { .irep = (mrb_irep *)&mrb_preset_irep_139 }, .upper = (struct RProc *)&mrb_preset_object_240.proc, .e = { .target_class = (struct RClass *)&mrb_preset_object_240.klass }, } };
 PRESET_CONST RVALUE mrb_preset_object_247 = { .proc = { .tt = MRB_TT_PROC, .color = 4, .flags = 0x900, .c = NULL, .gcnext = NULL, .body = { .irep = (mrb_irep *)&mrb_preset_irep_140 }, .upper = (struct RProc *)&mrb_preset_object_240.proc, .e = { .target_class = (struct RClass *)&mrb_preset_object_240.klass }, } };
-PRESET_CONST RVALUE mrb_preset_object_248 = { .string = { .tt = MRB_TT_STRING, .color = 4, .flags = 0x4000c, .c = (struct RClass *)&mrb_preset_object_59.klass, .gcnext = NULL, .as = { .heap = { .len = 15,.aux = { .capa = 0 }, .ptr = (char *)&mrb_preset_strings_45 } }, } };
-PRESET_CONST RVALUE mrb_preset_object_249 = { .string = { .tt = MRB_TT_STRING, .color = 4, .flags = 0x4000c, .c = (struct RClass *)&mrb_preset_object_59.klass, .gcnext = NULL, .as = { .heap = { .len = 5,.aux = { .capa = 0 }, .ptr = (char *)&mrb_preset_strings_46 } }, } };
-PRESET_CONST RVALUE mrb_preset_object_250 = { .proc = { .tt = MRB_TT_PROC, .color = 4, .flags = 0x900, .c = NULL, .gcnext = NULL, .body = { .irep = (mrb_irep *)&mrb_preset_irep_141 }, .upper = (struct RProc *)&mrb_preset_object_240.proc, .e = { .target_class = (struct RClass *)&mrb_preset_object_240.klass }, } };
+PRESET_CONST RVALUE mrb_preset_object_248 = { .proc = { .tt = MRB_TT_PROC, .color = 4, .flags = 0x900, .c = NULL, .gcnext = NULL, .body = { .irep = (mrb_irep *)&mrb_preset_irep_141 }, .upper = (struct RProc *)&mrb_preset_object_240.proc, .e = { .target_class = (struct RClass *)&mrb_preset_object_240.klass }, } };
+PRESET_CONST RVALUE mrb_preset_object_249 = { .string = { .tt = MRB_TT_STRING, .color = 4, .flags = 0x4000c, .c = (struct RClass *)&mrb_preset_object_30.klass, .gcnext = NULL, .as = { .heap = { .len = 15,.aux = { .capa = 0 }, .ptr = (char *)&mrb_preset_strings_45 } }, } };
+PRESET_CONST RVALUE mrb_preset_object_250 = { .string = { .tt = MRB_TT_STRING, .color = 4, .flags = 0x4000c, .c = (struct RClass *)&mrb_preset_object_30.klass, .gcnext = NULL, .as = { .heap = { .len = 5,.aux = { .capa = 0 }, .ptr = (char *)&mrb_preset_strings_46 } }, } };
 PRESET_CONST RVALUE mrb_preset_object_251 = { .proc = { .tt = MRB_TT_PROC, .color = 4, .flags = 0x900, .c = NULL, .gcnext = NULL, .body = { .irep = (mrb_irep *)&mrb_preset_irep_142 }, .upper = (struct RProc *)&mrb_preset_object_240.proc, .e = { .target_class = (struct RClass *)&mrb_preset_object_240.klass }, } };
 PRESET_CONST RVALUE mrb_preset_object_252 = { .proc = { .tt = MRB_TT_PROC, .color = 4, .flags = 0x900, .c = NULL, .gcnext = NULL, .body = { .irep = (mrb_irep *)&mrb_preset_irep_143 }, .upper = (struct RProc *)&mrb_preset_object_240.proc, .e = { .target_class = (struct RClass *)&mrb_preset_object_240.klass }, } };
 PRESET_CONST RVALUE mrb_preset_object_253 = { .klass = { .tt = MRB_TT_CLASS, .color = 4, .flags = 0x11, .c = (struct RClass *)&mrb_preset_object_254.klass, .gcnext = (struct RBasic *)&mrb_preset_object_258.basic, .iv = (struct iv_tbl *)&mrb_preset_iv_tbl_47, .mt = (struct kh_mt *)&mrb_preset_kh_mt_46, .super = (struct RClass *)&mrb_preset_object_258.klass, } };
 PRESET_CONST RVALUE mrb_preset_object_254 = { .klass = { .tt = MRB_TT_SCLASS, .color = 4, .flags = 0x0, .c = (struct RClass *)&mrb_preset_object_3.klass, .gcnext = (struct RBasic *)&mrb_preset_object_253.basic, .iv = (struct iv_tbl *)&mrb_preset_iv_tbl_48, .mt = (struct kh_mt *)&mrb_preset_kh_mt_45, .super = (struct RClass *)&mrb_preset_object_10.klass, } };
 PRESET_CONST RVALUE mrb_preset_object_255 = { .proc = { .tt = MRB_TT_PROC, .color = 4, .flags = 0x900, .c = NULL, .gcnext = NULL, .body = { .irep = (mrb_irep *)&mrb_preset_irep_144 }, .upper = (struct RProc *)&mrb_preset_object_253.proc, .e = { .target_class = (struct RClass *)&mrb_preset_object_253.klass }, } };
 PRESET_CONST RVALUE mrb_preset_object_256 = { .proc = { .tt = MRB_TT_PROC, .color = 4, .flags = 0x900, .c = NULL, .gcnext = NULL, .body = { .irep = (mrb_irep *)&mrb_preset_irep_145 }, .upper = (struct RProc *)&mrb_preset_object_253.proc, .e = { .target_class = (struct RClass *)&mrb_preset_object_253.klass }, } };
-PRESET_CONST RVALUE mrb_preset_object_257 = { .string = { .tt = MRB_TT_STRING, .color = 4, .flags = 0x4000c, .c = (struct RClass *)&mrb_preset_object_59.klass, .gcnext = NULL, .as = { .heap = { .len = 13,.aux = { .capa = 0 }, .ptr = (char *)&mrb_preset_strings_47 } }, } };
+PRESET_CONST RVALUE mrb_preset_object_257 = { .string = { .tt = MRB_TT_STRING, .color = 4, .flags = 0x4000c, .c = (struct RClass *)&mrb_preset_object_30.klass, .gcnext = NULL, .as = { .heap = { .len = 13,.aux = { .capa = 0 }, .ptr = (char *)&mrb_preset_strings_47 } }, } };
 PRESET_CONST RVALUE mrb_preset_object_258 = { .klass = { .tt = MRB_TT_ICLASS, .color = 4, .flags = 0x0, .c = (struct RClass *)&mrb_preset_object_169.klass, .gcnext = (struct RBasic *)&mrb_preset_object_260.basic, .iv = (struct iv_tbl *)&mrb_preset_iv_tbl_28, .mt = (struct kh_mt *)&mrb_preset_kh_mt_24, .super = (struct RClass *)&mrb_preset_object_0.klass, } };
 PRESET_CONST RVALUE mrb_preset_object_259 = { .klass = { .tt = MRB_TT_CLASS, .color = 4, .flags = 0x6, .c = (struct RClass *)&mrb_preset_object_260.klass, .gcnext = (struct RBasic *)&mrb_preset_object_267.basic, .iv = (struct iv_tbl *)&mrb_preset_iv_tbl_49, .mt = (struct kh_mt *)&mrb_preset_kh_mt_50, .super = (struct RClass *)&mrb_preset_object_267.klass, } };
 PRESET_CONST RVALUE mrb_preset_object_260 = { .klass = { .tt = MRB_TT_SCLASS, .color = 4, .flags = 0x0, .c = (struct RClass *)&mrb_preset_object_3.klass, .gcnext = (struct RBasic *)&mrb_preset_object_262.basic, .iv = (struct iv_tbl *)&mrb_preset_iv_tbl_50, .mt = (struct kh_mt *)&mrb_preset_kh_mt_47, .super = (struct RClass *)&mrb_preset_object_261.klass, } };
@@ -7987,63 +8365,73 @@ PRESET_CONST RVALUE mrb_preset_object_263 = { .proc = { .tt = MRB_TT_PROC, .colo
 PRESET_CONST RVALUE mrb_preset_object_264 = { .proc = { .tt = MRB_TT_PROC, .color = 4, .flags = 0x900, .c = NULL, .gcnext = NULL, .body = { .irep = (mrb_irep *)&mrb_preset_irep_147 }, .upper = (struct RProc *)&mrb_preset_object_262.proc, .e = { .target_class = (struct RClass *)&mrb_preset_object_262.klass }, } };
 PRESET_CONST RVALUE mrb_preset_object_265 = { .proc = { .tt = MRB_TT_PROC, .color = 4, .flags = 0x900, .c = NULL, .gcnext = NULL, .body = { .irep = (mrb_irep *)&mrb_preset_irep_148 }, .upper = (struct RProc *)&mrb_preset_object_262.proc, .e = { .target_class = (struct RClass *)&mrb_preset_object_262.klass }, } };
 PRESET_CONST RVALUE mrb_preset_object_266 = { .klass = { .tt = MRB_TT_ICLASS, .color = 4, .flags = 0x0, .c = (struct RClass *)&mrb_preset_object_127.klass, .gcnext = (struct RBasic *)&mrb_preset_object_261.basic, .iv = (struct iv_tbl *)&mrb_preset_iv_tbl_25, .mt = (struct kh_mt *)&mrb_preset_kh_mt_21, .super = (struct RClass *)&mrb_preset_object_0.klass, } };
-PRESET_CONST RVALUE mrb_preset_object_267 = { .klass = { .tt = MRB_TT_ICLASS, .color = 4, .flags = 0x0, .c = (struct RClass *)&mrb_preset_object_240.klass, .gcnext = (struct RBasic *)&mrb_preset_object_271.basic, .iv = (struct iv_tbl *)&mrb_preset_iv_tbl_46, .mt = (struct kh_mt *)&mrb_preset_kh_mt_44, .super = (struct RClass *)&mrb_preset_object_262.klass, } };
-PRESET_CONST RVALUE mrb_preset_object_268 = { .string = { .tt = MRB_TT_STRING, .color = 4, .flags = 0x4, .c = (struct RClass *)&mrb_preset_object_59.klass, .gcnext = NULL, .as = { .heap = { .len = 9,.aux = { .capa = 0 }, .ptr = (char *)&mrb_preset_strings_48 } }, } };
-PRESET_CONST RVALUE mrb_preset_object_269 = { .string = { .tt = MRB_TT_STRING, .color = 4, .flags = 0x4, .c = (struct RClass *)&mrb_preset_object_59.klass, .gcnext = NULL, .as = { .heap = { .len = 5,.aux = { .capa = 0 }, .ptr = (char *)&mrb_preset_strings_49 } }, } };
-PRESET_CONST RVALUE mrb_preset_object_270 = { .klass = { .tt = MRB_TT_CLASS, .color = 4, .flags = 0x2, .c = (struct RClass *)&mrb_preset_object_271.klass, .gcnext = (struct RBasic *)&mrb_preset_object_273.basic, .iv = (struct iv_tbl *)&mrb_preset_iv_tbl_53, .mt = (struct kh_mt *)&mrb_preset_kh_mt_52, .super = (struct RClass *)&mrb_preset_object_0.klass, } };
-PRESET_CONST RVALUE mrb_preset_object_271 = { .klass = { .tt = MRB_TT_SCLASS, .color = 4, .flags = 0x0, .c = (struct RClass *)&mrb_preset_object_3.klass, .gcnext = (struct RBasic *)&mrb_preset_object_270.basic, .iv = (struct iv_tbl *)&mrb_preset_iv_tbl_54, .mt = (struct kh_mt *)&mrb_preset_kh_mt_51, .super = (struct RClass *)&mrb_preset_object_10.klass, } };
-PRESET_CONST RVALUE mrb_preset_object_272 = { .klass = { .tt = MRB_TT_CLASS, .color = 4, .flags = 0x2, .c = (struct RClass *)&mrb_preset_object_273.klass, .gcnext = (struct RBasic *)&mrb_preset_object_276.basic, .iv = (struct iv_tbl *)&mrb_preset_iv_tbl_55, .mt = (struct kh_mt *)&mrb_preset_kh_mt_54, .super = (struct RClass *)&mrb_preset_object_0.klass, } };
-PRESET_CONST RVALUE mrb_preset_object_273 = { .klass = { .tt = MRB_TT_SCLASS, .color = 4, .flags = 0x0, .c = (struct RClass *)&mrb_preset_object_3.klass, .gcnext = (struct RBasic *)&mrb_preset_object_272.basic, .iv = (struct iv_tbl *)&mrb_preset_iv_tbl_56, .mt = (struct kh_mt *)&mrb_preset_kh_mt_53, .super = (struct RClass *)&mrb_preset_object_10.klass, } };
-PRESET_CONST RVALUE mrb_preset_object_274 = { .klass = { .tt = MRB_TT_MODULE, .color = 4, .flags = 0x0, .c = (struct RClass *)&mrb_preset_object_275.klass, .gcnext = (struct RBasic *)&mrb_preset_object_286.basic, .iv = (struct iv_tbl *)&mrb_preset_iv_tbl_57, .mt = (struct kh_mt *)&mrb_preset_kh_mt_57, .super = NULL, } };
-PRESET_CONST RVALUE mrb_preset_object_275 = { .klass = { .tt = MRB_TT_SCLASS, .color = 4, .flags = 0x0, .c = (struct RClass *)&mrb_preset_object_276.klass, .gcnext = (struct RBasic *)&mrb_preset_object_274.basic, .iv = (struct iv_tbl *)&mrb_preset_iv_tbl_58, .mt = (struct kh_mt *)&mrb_preset_kh_mt_56, .super = (struct RClass *)&mrb_preset_object_6.klass, } };
-PRESET_CONST RVALUE mrb_preset_object_276 = { .klass = { .tt = MRB_TT_SCLASS, .color = 4, .flags = 0x0, .c = (struct RClass *)&mrb_preset_object_3.klass, .gcnext = (struct RBasic *)&mrb_preset_object_275.basic, .iv = (struct iv_tbl *)&mrb_preset_iv_tbl_59, .mt = (struct kh_mt *)&mrb_preset_kh_mt_55, .super = (struct RClass *)&mrb_preset_object_5.klass, } };
-PRESET_CONST RVALUE mrb_preset_object_277 = { .proc = { .tt = MRB_TT_PROC, .color = 4, .flags = 0x900, .c = NULL, .gcnext = NULL, .body = { .irep = (mrb_irep *)&mrb_preset_irep_149 }, .upper = (struct RProc *)&mrb_preset_object_274.proc, .e = { .target_class = (struct RClass *)&mrb_preset_object_274.klass }, } };
-PRESET_CONST RVALUE mrb_preset_object_278 = { .proc = { .tt = MRB_TT_PROC, .color = 4, .flags = 0x900, .c = NULL, .gcnext = NULL, .body = { .irep = (mrb_irep *)&mrb_preset_irep_150 }, .upper = (struct RProc *)&mrb_preset_object_274.proc, .e = { .target_class = (struct RClass *)&mrb_preset_object_274.klass }, } };
-PRESET_CONST RVALUE mrb_preset_object_279 = { .proc = { .tt = MRB_TT_PROC, .color = 4, .flags = 0x900, .c = NULL, .gcnext = NULL, .body = { .irep = (mrb_irep *)&mrb_preset_irep_151 }, .upper = (struct RProc *)&mrb_preset_object_274.proc, .e = { .target_class = (struct RClass *)&mrb_preset_object_274.klass }, } };
-PRESET_CONST RVALUE mrb_preset_object_280 = { .string = { .tt = MRB_TT_STRING, .color = 4, .flags = 0x4000c, .c = (struct RClass *)&mrb_preset_object_59.klass, .gcnext = NULL, .as = { .heap = { .len = 29,.aux = { .capa = 0 }, .ptr = (char *)&mrb_preset_strings_50 } }, } };
-PRESET_CONST RVALUE mrb_preset_object_281 = { .proc = { .tt = MRB_TT_PROC, .color = 4, .flags = 0x900, .c = NULL, .gcnext = NULL, .body = { .irep = (mrb_irep *)&mrb_preset_irep_152 }, .upper = (struct RProc *)&mrb_preset_object_274.proc, .e = { .target_class = (struct RClass *)&mrb_preset_object_274.klass }, } };
-PRESET_CONST RVALUE mrb_preset_object_282 = { .string = { .tt = MRB_TT_STRING, .color = 4, .flags = 0x4000c, .c = (struct RClass *)&mrb_preset_object_59.klass, .gcnext = NULL, .as = { .heap = { .len = 26,.aux = { .capa = 0 }, .ptr = (char *)&mrb_preset_strings_51 } }, } };
-PRESET_CONST RVALUE mrb_preset_object_283 = { .proc = { .tt = MRB_TT_PROC, .color = 4, .flags = 0x900, .c = NULL, .gcnext = NULL, .body = { .irep = (mrb_irep *)&mrb_preset_irep_153 }, .upper = (struct RProc *)&mrb_preset_object_274.proc, .e = { .target_class = (struct RClass *)&mrb_preset_object_274.klass }, } };
-PRESET_CONST RVALUE mrb_preset_object_284 = { .string = { .tt = MRB_TT_STRING, .color = 4, .flags = 0x4, .c = (struct RClass *)&mrb_preset_object_59.klass, .gcnext = NULL, .as = { .heap = { .len = 3,.aux = { .capa = 0 }, .ptr = (char *)&mrb_preset_strings_52 } }, } };
-PRESET_CONST RVALUE mrb_preset_object_285 = { .klass = { .tt = MRB_TT_CLASS, .color = 4, .flags = 0x2, .c = (struct RClass *)&mrb_preset_object_286.klass, .gcnext = (struct RBasic *)&mrb_preset_object_289.basic, .iv = (struct iv_tbl *)&mrb_preset_iv_tbl_60, .mt = (struct kh_mt *)&mrb_preset_kh_mt_59, .super = (struct RClass *)&mrb_preset_object_0.klass, } };
-PRESET_CONST RVALUE mrb_preset_object_286 = { .klass = { .tt = MRB_TT_SCLASS, .color = 4, .flags = 0x0, .c = (struct RClass *)&mrb_preset_object_3.klass, .gcnext = (struct RBasic *)&mrb_preset_object_285.basic, .iv = (struct iv_tbl *)&mrb_preset_iv_tbl_61, .mt = (struct kh_mt *)&mrb_preset_kh_mt_58, .super = (struct RClass *)&mrb_preset_object_10.klass, } };
-PRESET_CONST RVALUE mrb_preset_object_287 = { .string = { .tt = MRB_TT_STRING, .color = 4, .flags = 0x4, .c = (struct RClass *)&mrb_preset_object_59.klass, .gcnext = NULL, .as = { .heap = { .len = 5,.aux = { .capa = 0 }, .ptr = (char *)&mrb_preset_strings_53 } }, } };
-PRESET_CONST RVALUE mrb_preset_object_288 = { .klass = { .tt = MRB_TT_CLASS, .color = 4, .flags = 0x3, .c = (struct RClass *)&mrb_preset_object_289.klass, .gcnext = (struct RBasic *)&mrb_preset_object_296.basic, .iv = (struct iv_tbl *)&mrb_preset_iv_tbl_62, .mt = (struct kh_mt *)&mrb_preset_kh_mt_63, .super = (struct RClass *)&mrb_preset_object_291.klass, } };
-PRESET_CONST RVALUE mrb_preset_object_289 = { .klass = { .tt = MRB_TT_SCLASS, .color = 4, .flags = 0x0, .c = (struct RClass *)&mrb_preset_object_3.klass, .gcnext = (struct RBasic *)&mrb_preset_object_291.basic, .iv = (struct iv_tbl *)&mrb_preset_iv_tbl_63, .mt = (struct kh_mt *)&mrb_preset_kh_mt_60, .super = (struct RClass *)&mrb_preset_object_290.klass, } };
-PRESET_CONST RVALUE mrb_preset_object_290 = { .klass = { .tt = MRB_TT_SCLASS, .color = 4, .flags = 0x0, .c = (struct RClass *)&mrb_preset_object_3.klass, .gcnext = (struct RBasic *)&mrb_preset_object_288.basic, .iv = (struct iv_tbl *)&mrb_preset_iv_tbl_64, .mt = (struct kh_mt *)&mrb_preset_kh_mt_62, .super = (struct RClass *)&mrb_preset_object_261.klass, } };
-PRESET_CONST RVALUE mrb_preset_object_291 = { .klass = { .tt = MRB_TT_CLASS, .color = 4, .flags = 0x3, .c = (struct RClass *)&mrb_preset_object_290.klass, .gcnext = (struct RBasic *)&mrb_preset_object_294.basic, .iv = (struct iv_tbl *)&mrb_preset_iv_tbl_65, .mt = (struct kh_mt *)&mrb_preset_kh_mt_61, .super = (struct RClass *)&mrb_preset_object_294.klass, } };
-PRESET_CONST RVALUE mrb_preset_object_292 = { .proc = { .tt = MRB_TT_PROC, .color = 4, .flags = 0x900, .c = NULL, .gcnext = NULL, .body = { .irep = (mrb_irep *)&mrb_preset_irep_154 }, .upper = (struct RProc *)&mrb_preset_object_291.proc, .e = { .target_class = (struct RClass *)&mrb_preset_object_291.klass }, } };
-PRESET_CONST RVALUE mrb_preset_object_293 = { .proc = { .tt = MRB_TT_PROC, .color = 4, .flags = 0x900, .c = NULL, .gcnext = NULL, .body = { .irep = (mrb_irep *)&mrb_preset_irep_155 }, .upper = (struct RProc *)&mrb_preset_object_291.proc, .e = { .target_class = (struct RClass *)&mrb_preset_object_291.klass }, } };
-PRESET_CONST RVALUE mrb_preset_object_294 = { .klass = { .tt = MRB_TT_ICLASS, .color = 4, .flags = 0x0, .c = (struct RClass *)&mrb_preset_object_240.klass, .gcnext = (struct RBasic *)&mrb_preset_object_290.basic, .iv = (struct iv_tbl *)&mrb_preset_iv_tbl_46, .mt = (struct kh_mt *)&mrb_preset_kh_mt_44, .super = (struct RClass *)&mrb_preset_object_262.klass, } };
-PRESET_CONST RVALUE mrb_preset_object_295 = { .klass = { .tt = MRB_TT_CLASS, .color = 4, .flags = 0x12, .c = (struct RClass *)&mrb_preset_object_296.klass, .gcnext = (struct RBasic *)&mrb_preset_object_300.basic, .iv = (struct iv_tbl *)&mrb_preset_iv_tbl_66, .mt = (struct kh_mt *)&mrb_preset_kh_mt_67, .super = (struct RClass *)&mrb_preset_object_298.klass, } };
-PRESET_CONST RVALUE mrb_preset_object_296 = { .klass = { .tt = MRB_TT_SCLASS, .color = 4, .flags = 0x0, .c = (struct RClass *)&mrb_preset_object_3.klass, .gcnext = (struct RBasic *)&mrb_preset_object_298.basic, .iv = (struct iv_tbl *)&mrb_preset_iv_tbl_67, .mt = (struct kh_mt *)&mrb_preset_kh_mt_64, .super = (struct RClass *)&mrb_preset_object_297.klass, } };
-PRESET_CONST RVALUE mrb_preset_object_297 = { .klass = { .tt = MRB_TT_SCLASS, .color = 4, .flags = 0x0, .c = (struct RClass *)&mrb_preset_object_3.klass, .gcnext = (struct RBasic *)&mrb_preset_object_295.basic, .iv = (struct iv_tbl *)&mrb_preset_iv_tbl_68, .mt = (struct kh_mt *)&mrb_preset_kh_mt_66, .super = (struct RClass *)&mrb_preset_object_16.klass, } };
-PRESET_CONST RVALUE mrb_preset_object_298 = { .klass = { .tt = MRB_TT_CLASS, .color = 4, .flags = 0x12, .c = (struct RClass *)&mrb_preset_object_297.klass, .gcnext = (struct RBasic *)&mrb_preset_object_297.basic, .iv = (struct iv_tbl *)&mrb_preset_iv_tbl_69, .mt = (struct kh_mt *)&mrb_preset_kh_mt_65, .super = (struct RClass *)&mrb_preset_object_15.klass, } };
-PRESET_CONST RVALUE mrb_preset_object_299 = { .klass = { .tt = MRB_TT_CLASS, .color = 4, .flags = 0x4, .c = (struct RClass *)&mrb_preset_object_300.klass, .gcnext = (struct RBasic *)&mrb_preset_object_302.basic, .iv = (struct iv_tbl *)&mrb_preset_iv_tbl_70, .mt = (struct kh_mt *)&mrb_preset_kh_mt_69, .super = (struct RClass *)&mrb_preset_object_0.klass, } };
-PRESET_CONST RVALUE mrb_preset_object_300 = { .klass = { .tt = MRB_TT_SCLASS, .color = 4, .flags = 0x0, .c = (struct RClass *)&mrb_preset_object_3.klass, .gcnext = (struct RBasic *)&mrb_preset_object_299.basic, .iv = (struct iv_tbl *)&mrb_preset_iv_tbl_71, .mt = (struct kh_mt *)&mrb_preset_kh_mt_68, .super = (struct RClass *)&mrb_preset_object_10.klass, } };
-PRESET_CONST RVALUE mrb_preset_object_301 = { .klass = { .tt = MRB_TT_CLASS, .color = 4, .flags = 0x12, .c = (struct RClass *)&mrb_preset_object_302.klass, .gcnext = (struct RBasic *)&mrb_preset_object_304.basic, .iv = (struct iv_tbl *)&mrb_preset_iv_tbl_72, .mt = (struct kh_mt *)&mrb_preset_kh_mt_71, .super = (struct RClass *)&mrb_preset_object_15.klass, } };
-PRESET_CONST RVALUE mrb_preset_object_302 = { .klass = { .tt = MRB_TT_SCLASS, .color = 4, .flags = 0x0, .c = (struct RClass *)&mrb_preset_object_3.klass, .gcnext = (struct RBasic *)&mrb_preset_object_301.basic, .iv = (struct iv_tbl *)&mrb_preset_iv_tbl_73, .mt = (struct kh_mt *)&mrb_preset_kh_mt_70, .super = (struct RClass *)&mrb_preset_object_16.klass, } };
-PRESET_CONST RVALUE mrb_preset_object_303 = { .klass = { .tt = MRB_TT_CLASS, .color = 4, .flags = 0x12, .c = (struct RClass *)&mrb_preset_object_304.klass, .gcnext = (struct RBasic *)&mrb_preset_object_306.basic, .iv = (struct iv_tbl *)&mrb_preset_iv_tbl_74, .mt = (struct kh_mt *)&mrb_preset_kh_mt_73, .super = (struct RClass *)&mrb_preset_object_15.klass, } };
-PRESET_CONST RVALUE mrb_preset_object_304 = { .klass = { .tt = MRB_TT_SCLASS, .color = 4, .flags = 0x0, .c = (struct RClass *)&mrb_preset_object_3.klass, .gcnext = (struct RBasic *)&mrb_preset_object_303.basic, .iv = (struct iv_tbl *)&mrb_preset_iv_tbl_75, .mt = (struct kh_mt *)&mrb_preset_kh_mt_72, .super = (struct RClass *)&mrb_preset_object_16.klass, } };
-PRESET_CONST RVALUE mrb_preset_object_305 = { .klass = { .tt = MRB_TT_CLASS, .color = 4, .flags = 0x12, .c = (struct RClass *)&mrb_preset_object_306.klass, .gcnext = (struct RBasic *)&mrb_preset_object_309.basic, .iv = (struct iv_tbl *)&mrb_preset_iv_tbl_76, .mt = (struct kh_mt *)&mrb_preset_kh_mt_75, .super = (struct RClass *)&mrb_preset_object_18.klass, } };
-PRESET_CONST RVALUE mrb_preset_object_306 = { .klass = { .tt = MRB_TT_SCLASS, .color = 4, .flags = 0x0, .c = (struct RClass *)&mrb_preset_object_3.klass, .gcnext = (struct RBasic *)&mrb_preset_object_305.basic, .iv = (struct iv_tbl *)&mrb_preset_iv_tbl_77, .mt = (struct kh_mt *)&mrb_preset_kh_mt_74, .super = (struct RClass *)&mrb_preset_object_17.klass, } };
-PRESET_CONST RVALUE mrb_preset_object_307 = { .string = { .tt = MRB_TT_STRING, .color = 4, .flags = 0x4, .c = (struct RClass *)&mrb_preset_object_59.klass, .gcnext = NULL, .as = { .heap = { .len = 24,.aux = { .capa = 0 }, .ptr = (char *)&mrb_preset_strings_54 } }, } };
-PRESET_CONST RVALUE mrb_preset_object_308 = { .klass = { .tt = MRB_TT_CLASS, .color = 4, .flags = 0x12, .c = (struct RClass *)&mrb_preset_object_309.klass, .gcnext = (struct RBasic *)&mrb_preset_object_312.basic, .iv = (struct iv_tbl *)&mrb_preset_iv_tbl_78, .mt = (struct kh_mt *)&mrb_preset_kh_mt_77, .super = (struct RClass *)&mrb_preset_object_196.klass, } };
-PRESET_CONST RVALUE mrb_preset_object_309 = { .klass = { .tt = MRB_TT_SCLASS, .color = 4, .flags = 0x0, .c = (struct RClass *)&mrb_preset_object_3.klass, .gcnext = (struct RBasic *)&mrb_preset_object_308.basic, .iv = (struct iv_tbl *)&mrb_preset_iv_tbl_79, .mt = (struct kh_mt *)&mrb_preset_kh_mt_76, .super = (struct RClass *)&mrb_preset_object_197.klass, } };
-PRESET_CONST RVALUE mrb_preset_object_310 = { .string = { .tt = MRB_TT_STRING, .color = 4, .flags = 0x4, .c = (struct RClass *)&mrb_preset_object_59.klass, .gcnext = NULL, .as = { .heap = { .len = 48,.aux = { .capa = 0 }, .ptr = (char *)&mrb_preset_strings_55 } }, } };
-PRESET_CONST RVALUE mrb_preset_object_311 = { .klass = { .tt = MRB_TT_CLASS, .color = 4, .flags = 0x12, .c = (struct RClass *)&mrb_preset_object_312.klass, .gcnext = (struct RBasic *)&mrb_preset_object_314.basic, .iv = (struct iv_tbl *)&mrb_preset_iv_tbl_80, .mt = (struct kh_mt *)&mrb_preset_kh_mt_79, .super = (struct RClass *)&mrb_preset_object_15.klass, } };
-PRESET_CONST RVALUE mrb_preset_object_312 = { .klass = { .tt = MRB_TT_SCLASS, .color = 4, .flags = 0x0, .c = (struct RClass *)&mrb_preset_object_3.klass, .gcnext = (struct RBasic *)&mrb_preset_object_311.basic, .iv = (struct iv_tbl *)&mrb_preset_iv_tbl_81, .mt = (struct kh_mt *)&mrb_preset_kh_mt_78, .super = (struct RClass *)&mrb_preset_object_16.klass, } };
-PRESET_CONST RVALUE mrb_preset_object_313 = { .klass = { .tt = MRB_TT_CLASS, .color = 4, .flags = 0x12, .c = (struct RClass *)&mrb_preset_object_314.klass, .gcnext = (struct RBasic *)&mrb_preset_object_316.basic, .iv = (struct iv_tbl *)&mrb_preset_iv_tbl_82, .mt = (struct kh_mt *)&mrb_preset_kh_mt_81, .super = (struct RClass *)&mrb_preset_object_18.klass, } };
-PRESET_CONST RVALUE mrb_preset_object_314 = { .klass = { .tt = MRB_TT_SCLASS, .color = 4, .flags = 0x0, .c = (struct RClass *)&mrb_preset_object_3.klass, .gcnext = (struct RBasic *)&mrb_preset_object_313.basic, .iv = (struct iv_tbl *)&mrb_preset_iv_tbl_83, .mt = (struct kh_mt *)&mrb_preset_kh_mt_80, .super = (struct RClass *)&mrb_preset_object_17.klass, } };
-PRESET_CONST RVALUE mrb_preset_object_315 = { .klass = { .tt = MRB_TT_CLASS, .color = 4, .flags = 0x12, .c = (struct RClass *)&mrb_preset_object_316.klass, .gcnext = NULL, .iv = (struct iv_tbl *)&mrb_preset_iv_tbl_84, .mt = (struct kh_mt *)&mrb_preset_kh_mt_83, .super = (struct RClass *)&mrb_preset_object_196.klass, } };
-PRESET_CONST RVALUE mrb_preset_object_316 = { .klass = { .tt = MRB_TT_SCLASS, .color = 4, .flags = 0x0, .c = (struct RClass *)&mrb_preset_object_3.klass, .gcnext = (struct RBasic *)&mrb_preset_object_315.basic, .iv = (struct iv_tbl *)&mrb_preset_iv_tbl_85, .mt = (struct kh_mt *)&mrb_preset_kh_mt_82, .super = (struct RClass *)&mrb_preset_object_197.klass, } };
-PRESET_CONST RVALUE mrb_preset_object_317 = { .klass = { .tt = MRB_TT_ICLASS, .color = 4, .flags = 0x0, .c = (struct RClass *)&mrb_preset_object_274.klass, .gcnext = (struct RBasic *)&mrb_preset_object_318.basic, .iv = (struct iv_tbl *)&mrb_preset_iv_tbl_57, .mt = (struct kh_mt *)&mrb_preset_kh_mt_57, .super = (struct RClass *)&mrb_preset_object_12.klass, } };
-PRESET_CONST RVALUE mrb_preset_object_318 = { .exc = { .tt = MRB_TT_EXCEPTION, .color = 4, .flags = 0x0, .c = (struct RClass *)&mrb_preset_object_313.klass, .gcnext = (struct RBasic *)&mrb_preset_object_320.basic, .iv = (struct iv_tbl *)&mrb_preset_iv_tbl_86, } };
-PRESET_CONST RVALUE mrb_preset_object_319 = { .string = { .tt = MRB_TT_STRING, .color = 4, .flags = 0x4, .c = (struct RClass *)&mrb_preset_object_59.klass, .gcnext = NULL, .as = { .heap = { .len = 13,.aux = { .capa = 0 }, .ptr = (char *)&mrb_preset_strings_56 } }, } };
-PRESET_CONST RVALUE mrb_preset_object_320 = { .exc = { .tt = MRB_TT_EXCEPTION, .color = 4, .flags = 0x0, .c = (struct RClass *)&mrb_preset_object_305.klass, .gcnext = (struct RBasic *)&mrb_preset_object_322.basic, .iv = (struct iv_tbl *)&mrb_preset_iv_tbl_87, } };
-PRESET_CONST RVALUE mrb_preset_object_321 = { .string = { .tt = MRB_TT_STRING, .color = 4, .flags = 0x4, .c = (struct RClass *)&mrb_preset_object_59.klass, .gcnext = NULL, .as = { .heap = { .len = 20,.aux = { .capa = 0 }, .ptr = (char *)&mrb_preset_strings_57 } }, } };
-PRESET_CONST RVALUE mrb_preset_object_322 = { .exc = { .tt = MRB_TT_EXCEPTION, .color = 4, .flags = 0x0, .c = (struct RClass *)&mrb_preset_object_313.klass, .gcnext = (struct RBasic *)&mrb_preset_object_4.basic, .iv = (struct iv_tbl *)&mrb_preset_iv_tbl_88, } };
-PRESET_CONST RVALUE mrb_preset_object_323 = { .string = { .tt = MRB_TT_STRING, .color = 4, .flags = 0x4, .c = (struct RClass *)&mrb_preset_object_59.klass, .gcnext = NULL, .as = { .heap = { .len = 20,.aux = { .capa = 0 }, .ptr = (char *)&mrb_preset_strings_58 } }, } };
+PRESET_CONST RVALUE mrb_preset_object_267 = { .klass = { .tt = MRB_TT_ICLASS, .color = 4, .flags = 0x0, .c = (struct RClass *)&mrb_preset_object_240.klass, .gcnext = (struct RBasic *)&mrb_preset_object_272.basic, .iv = (struct iv_tbl *)&mrb_preset_iv_tbl_46, .mt = (struct kh_mt *)&mrb_preset_kh_mt_44, .super = (struct RClass *)&mrb_preset_object_262.klass, } };
+PRESET_CONST RVALUE mrb_preset_object_268 = { .string = { .tt = MRB_TT_STRING, .color = 4, .flags = 0x4, .c = (struct RClass *)&mrb_preset_object_30.klass, .gcnext = NULL, .as = { .heap = { .len = 9,.aux = { .capa = 0 }, .ptr = (char *)&mrb_preset_strings_48 } }, } };
+PRESET_CONST RVALUE mrb_preset_object_269 = { .klass = { .tt = MRB_TT_MODULE, .color = 4, .flags = 0x0, .c = (struct RClass *)&mrb_preset_object_273.klass, .gcnext = (struct RBasic *)&mrb_preset_object_277.basic, .iv = (struct iv_tbl *)&mrb_preset_iv_tbl_53, .mt = (struct kh_mt *)&mrb_preset_kh_mt_55, .super = NULL, } };
+PRESET_CONST RVALUE mrb_preset_object_270 = { .klass = { .tt = MRB_TT_CLASS, .color = 4, .flags = 0x12, .c = (struct RClass *)&mrb_preset_object_272.klass, .gcnext = (struct RBasic *)&mrb_preset_object_274.basic, .iv = (struct iv_tbl *)&mrb_preset_iv_tbl_54, .mt = (struct kh_mt *)&mrb_preset_kh_mt_52, .super = (struct RClass *)&mrb_preset_object_15.klass, } };
+PRESET_CONST RVALUE mrb_preset_object_271 = { .string = { .tt = MRB_TT_STRING, .color = 4, .flags = 0x0, .c = (struct RClass *)&mrb_preset_object_30.klass, .gcnext = NULL, .as = { .heap = { .len = 17,.aux = { .capa = 22 }, .ptr = (char *)&mrb_preset_strings_49 } }, } };
+PRESET_CONST RVALUE mrb_preset_object_272 = { .klass = { .tt = MRB_TT_SCLASS, .color = 4, .flags = 0x0, .c = (struct RClass *)&mrb_preset_object_3.klass, .gcnext = (struct RBasic *)&mrb_preset_object_270.basic, .iv = (struct iv_tbl *)&mrb_preset_iv_tbl_55, .mt = (struct kh_mt *)&mrb_preset_kh_mt_51, .super = (struct RClass *)&mrb_preset_object_16.klass, } };
+PRESET_CONST RVALUE mrb_preset_object_273 = { .klass = { .tt = MRB_TT_SCLASS, .color = 4, .flags = 0x0, .c = (struct RClass *)&mrb_preset_object_274.klass, .gcnext = (struct RBasic *)&mrb_preset_object_269.basic, .iv = (struct iv_tbl *)&mrb_preset_iv_tbl_56, .mt = (struct kh_mt *)&mrb_preset_kh_mt_54, .super = (struct RClass *)&mrb_preset_object_6.klass, } };
+PRESET_CONST RVALUE mrb_preset_object_274 = { .klass = { .tt = MRB_TT_SCLASS, .color = 4, .flags = 0x0, .c = (struct RClass *)&mrb_preset_object_3.klass, .gcnext = (struct RBasic *)&mrb_preset_object_273.basic, .iv = (struct iv_tbl *)&mrb_preset_iv_tbl_57, .mt = (struct kh_mt *)&mrb_preset_kh_mt_53, .super = (struct RClass *)&mrb_preset_object_5.klass, } };
+PRESET_CONST RVALUE mrb_preset_object_275 = { .string = { .tt = MRB_TT_STRING, .color = 4, .flags = 0x4, .c = (struct RClass *)&mrb_preset_object_30.klass, .gcnext = NULL, .as = { .heap = { .len = 5,.aux = { .capa = 0 }, .ptr = (char *)&mrb_preset_strings_50 } }, } };
+PRESET_CONST RVALUE mrb_preset_object_276 = { .klass = { .tt = MRB_TT_CLASS, .color = 4, .flags = 0x2, .c = (struct RClass *)&mrb_preset_object_277.klass, .gcnext = (struct RBasic *)&mrb_preset_object_279.basic, .iv = (struct iv_tbl *)&mrb_preset_iv_tbl_58, .mt = (struct kh_mt *)&mrb_preset_kh_mt_57, .super = (struct RClass *)&mrb_preset_object_0.klass, } };
+PRESET_CONST RVALUE mrb_preset_object_277 = { .klass = { .tt = MRB_TT_SCLASS, .color = 4, .flags = 0x0, .c = (struct RClass *)&mrb_preset_object_3.klass, .gcnext = (struct RBasic *)&mrb_preset_object_276.basic, .iv = (struct iv_tbl *)&mrb_preset_iv_tbl_59, .mt = (struct kh_mt *)&mrb_preset_kh_mt_56, .super = (struct RClass *)&mrb_preset_object_10.klass, } };
+PRESET_CONST RVALUE mrb_preset_object_278 = { .klass = { .tt = MRB_TT_CLASS, .color = 4, .flags = 0x2, .c = (struct RClass *)&mrb_preset_object_279.klass, .gcnext = (struct RBasic *)&mrb_preset_object_282.basic, .iv = (struct iv_tbl *)&mrb_preset_iv_tbl_60, .mt = (struct kh_mt *)&mrb_preset_kh_mt_59, .super = (struct RClass *)&mrb_preset_object_0.klass, } };
+PRESET_CONST RVALUE mrb_preset_object_279 = { .klass = { .tt = MRB_TT_SCLASS, .color = 4, .flags = 0x0, .c = (struct RClass *)&mrb_preset_object_3.klass, .gcnext = (struct RBasic *)&mrb_preset_object_278.basic, .iv = (struct iv_tbl *)&mrb_preset_iv_tbl_61, .mt = (struct kh_mt *)&mrb_preset_kh_mt_58, .super = (struct RClass *)&mrb_preset_object_10.klass, } };
+PRESET_CONST RVALUE mrb_preset_object_280 = { .klass = { .tt = MRB_TT_MODULE, .color = 4, .flags = 0x0, .c = (struct RClass *)&mrb_preset_object_281.klass, .gcnext = (struct RBasic *)&mrb_preset_object_292.basic, .iv = (struct iv_tbl *)&mrb_preset_iv_tbl_62, .mt = (struct kh_mt *)&mrb_preset_kh_mt_62, .super = NULL, } };
+PRESET_CONST RVALUE mrb_preset_object_281 = { .klass = { .tt = MRB_TT_SCLASS, .color = 4, .flags = 0x0, .c = (struct RClass *)&mrb_preset_object_282.klass, .gcnext = (struct RBasic *)&mrb_preset_object_280.basic, .iv = (struct iv_tbl *)&mrb_preset_iv_tbl_63, .mt = (struct kh_mt *)&mrb_preset_kh_mt_61, .super = (struct RClass *)&mrb_preset_object_6.klass, } };
+PRESET_CONST RVALUE mrb_preset_object_282 = { .klass = { .tt = MRB_TT_SCLASS, .color = 4, .flags = 0x0, .c = (struct RClass *)&mrb_preset_object_3.klass, .gcnext = (struct RBasic *)&mrb_preset_object_281.basic, .iv = (struct iv_tbl *)&mrb_preset_iv_tbl_64, .mt = (struct kh_mt *)&mrb_preset_kh_mt_60, .super = (struct RClass *)&mrb_preset_object_5.klass, } };
+PRESET_CONST RVALUE mrb_preset_object_283 = { .proc = { .tt = MRB_TT_PROC, .color = 4, .flags = 0x900, .c = NULL, .gcnext = NULL, .body = { .irep = (mrb_irep *)&mrb_preset_irep_149 }, .upper = (struct RProc *)&mrb_preset_object_280.proc, .e = { .target_class = (struct RClass *)&mrb_preset_object_280.klass }, } };
+PRESET_CONST RVALUE mrb_preset_object_284 = { .proc = { .tt = MRB_TT_PROC, .color = 4, .flags = 0x900, .c = NULL, .gcnext = NULL, .body = { .irep = (mrb_irep *)&mrb_preset_irep_150 }, .upper = (struct RProc *)&mrb_preset_object_280.proc, .e = { .target_class = (struct RClass *)&mrb_preset_object_280.klass }, } };
+PRESET_CONST RVALUE mrb_preset_object_285 = { .proc = { .tt = MRB_TT_PROC, .color = 4, .flags = 0x900, .c = NULL, .gcnext = NULL, .body = { .irep = (mrb_irep *)&mrb_preset_irep_151 }, .upper = (struct RProc *)&mrb_preset_object_280.proc, .e = { .target_class = (struct RClass *)&mrb_preset_object_280.klass }, } };
+PRESET_CONST RVALUE mrb_preset_object_286 = { .string = { .tt = MRB_TT_STRING, .color = 4, .flags = 0x4000c, .c = (struct RClass *)&mrb_preset_object_30.klass, .gcnext = NULL, .as = { .heap = { .len = 29,.aux = { .capa = 0 }, .ptr = (char *)&mrb_preset_strings_51 } }, } };
+PRESET_CONST RVALUE mrb_preset_object_287 = { .proc = { .tt = MRB_TT_PROC, .color = 4, .flags = 0x900, .c = NULL, .gcnext = NULL, .body = { .irep = (mrb_irep *)&mrb_preset_irep_152 }, .upper = (struct RProc *)&mrb_preset_object_280.proc, .e = { .target_class = (struct RClass *)&mrb_preset_object_280.klass }, } };
+PRESET_CONST RVALUE mrb_preset_object_288 = { .string = { .tt = MRB_TT_STRING, .color = 4, .flags = 0x4000c, .c = (struct RClass *)&mrb_preset_object_30.klass, .gcnext = NULL, .as = { .heap = { .len = 26,.aux = { .capa = 0 }, .ptr = (char *)&mrb_preset_strings_52 } }, } };
+PRESET_CONST RVALUE mrb_preset_object_289 = { .proc = { .tt = MRB_TT_PROC, .color = 4, .flags = 0x900, .c = NULL, .gcnext = NULL, .body = { .irep = (mrb_irep *)&mrb_preset_irep_153 }, .upper = (struct RProc *)&mrb_preset_object_280.proc, .e = { .target_class = (struct RClass *)&mrb_preset_object_280.klass }, } };
+PRESET_CONST RVALUE mrb_preset_object_290 = { .string = { .tt = MRB_TT_STRING, .color = 4, .flags = 0x4, .c = (struct RClass *)&mrb_preset_object_30.klass, .gcnext = NULL, .as = { .heap = { .len = 3,.aux = { .capa = 0 }, .ptr = (char *)&mrb_preset_strings_53 } }, } };
+PRESET_CONST RVALUE mrb_preset_object_291 = { .klass = { .tt = MRB_TT_CLASS, .color = 4, .flags = 0x2, .c = (struct RClass *)&mrb_preset_object_292.klass, .gcnext = (struct RBasic *)&mrb_preset_object_295.basic, .iv = (struct iv_tbl *)&mrb_preset_iv_tbl_65, .mt = (struct kh_mt *)&mrb_preset_kh_mt_64, .super = (struct RClass *)&mrb_preset_object_0.klass, } };
+PRESET_CONST RVALUE mrb_preset_object_292 = { .klass = { .tt = MRB_TT_SCLASS, .color = 4, .flags = 0x0, .c = (struct RClass *)&mrb_preset_object_3.klass, .gcnext = (struct RBasic *)&mrb_preset_object_291.basic, .iv = (struct iv_tbl *)&mrb_preset_iv_tbl_66, .mt = (struct kh_mt *)&mrb_preset_kh_mt_63, .super = (struct RClass *)&mrb_preset_object_10.klass, } };
+PRESET_CONST RVALUE mrb_preset_object_293 = { .string = { .tt = MRB_TT_STRING, .color = 4, .flags = 0x4, .c = (struct RClass *)&mrb_preset_object_30.klass, .gcnext = NULL, .as = { .heap = { .len = 5,.aux = { .capa = 0 }, .ptr = (char *)&mrb_preset_strings_54 } }, } };
+PRESET_CONST RVALUE mrb_preset_object_294 = { .klass = { .tt = MRB_TT_CLASS, .color = 4, .flags = 0x3, .c = (struct RClass *)&mrb_preset_object_295.klass, .gcnext = (struct RBasic *)&mrb_preset_object_302.basic, .iv = (struct iv_tbl *)&mrb_preset_iv_tbl_67, .mt = (struct kh_mt *)&mrb_preset_kh_mt_68, .super = (struct RClass *)&mrb_preset_object_297.klass, } };
+PRESET_CONST RVALUE mrb_preset_object_295 = { .klass = { .tt = MRB_TT_SCLASS, .color = 4, .flags = 0x0, .c = (struct RClass *)&mrb_preset_object_3.klass, .gcnext = (struct RBasic *)&mrb_preset_object_297.basic, .iv = (struct iv_tbl *)&mrb_preset_iv_tbl_68, .mt = (struct kh_mt *)&mrb_preset_kh_mt_65, .super = (struct RClass *)&mrb_preset_object_296.klass, } };
+PRESET_CONST RVALUE mrb_preset_object_296 = { .klass = { .tt = MRB_TT_SCLASS, .color = 4, .flags = 0x0, .c = (struct RClass *)&mrb_preset_object_3.klass, .gcnext = (struct RBasic *)&mrb_preset_object_294.basic, .iv = (struct iv_tbl *)&mrb_preset_iv_tbl_69, .mt = (struct kh_mt *)&mrb_preset_kh_mt_67, .super = (struct RClass *)&mrb_preset_object_261.klass, } };
+PRESET_CONST RVALUE mrb_preset_object_297 = { .klass = { .tt = MRB_TT_CLASS, .color = 4, .flags = 0x3, .c = (struct RClass *)&mrb_preset_object_296.klass, .gcnext = (struct RBasic *)&mrb_preset_object_300.basic, .iv = (struct iv_tbl *)&mrb_preset_iv_tbl_70, .mt = (struct kh_mt *)&mrb_preset_kh_mt_66, .super = (struct RClass *)&mrb_preset_object_300.klass, } };
+PRESET_CONST RVALUE mrb_preset_object_298 = { .proc = { .tt = MRB_TT_PROC, .color = 4, .flags = 0x900, .c = NULL, .gcnext = NULL, .body = { .irep = (mrb_irep *)&mrb_preset_irep_154 }, .upper = (struct RProc *)&mrb_preset_object_297.proc, .e = { .target_class = (struct RClass *)&mrb_preset_object_297.klass }, } };
+PRESET_CONST RVALUE mrb_preset_object_299 = { .proc = { .tt = MRB_TT_PROC, .color = 4, .flags = 0x900, .c = NULL, .gcnext = NULL, .body = { .irep = (mrb_irep *)&mrb_preset_irep_155 }, .upper = (struct RProc *)&mrb_preset_object_297.proc, .e = { .target_class = (struct RClass *)&mrb_preset_object_297.klass }, } };
+PRESET_CONST RVALUE mrb_preset_object_300 = { .klass = { .tt = MRB_TT_ICLASS, .color = 4, .flags = 0x0, .c = (struct RClass *)&mrb_preset_object_240.klass, .gcnext = (struct RBasic *)&mrb_preset_object_296.basic, .iv = (struct iv_tbl *)&mrb_preset_iv_tbl_46, .mt = (struct kh_mt *)&mrb_preset_kh_mt_44, .super = (struct RClass *)&mrb_preset_object_262.klass, } };
+PRESET_CONST RVALUE mrb_preset_object_301 = { .klass = { .tt = MRB_TT_CLASS, .color = 4, .flags = 0x16, .c = (struct RClass *)&mrb_preset_object_302.klass, .gcnext = (struct RBasic *)&mrb_preset_object_304.basic, .iv = (struct iv_tbl *)&mrb_preset_iv_tbl_71, .mt = (struct kh_mt *)&mrb_preset_kh_mt_70, .super = (struct RClass *)&mrb_preset_object_0.klass, } };
+PRESET_CONST RVALUE mrb_preset_object_302 = { .klass = { .tt = MRB_TT_SCLASS, .color = 4, .flags = 0x0, .c = (struct RClass *)&mrb_preset_object_3.klass, .gcnext = (struct RBasic *)&mrb_preset_object_301.basic, .iv = (struct iv_tbl *)&mrb_preset_iv_tbl_72, .mt = (struct kh_mt *)&mrb_preset_kh_mt_69, .super = (struct RClass *)&mrb_preset_object_10.klass, } };
+PRESET_CONST RVALUE mrb_preset_object_303 = { .klass = { .tt = MRB_TT_CLASS, .color = 4, .flags = 0x12, .c = (struct RClass *)&mrb_preset_object_304.klass, .gcnext = (struct RBasic *)&mrb_preset_object_308.basic, .iv = (struct iv_tbl *)&mrb_preset_iv_tbl_73, .mt = (struct kh_mt *)&mrb_preset_kh_mt_74, .super = (struct RClass *)&mrb_preset_object_306.klass, } };
+PRESET_CONST RVALUE mrb_preset_object_304 = { .klass = { .tt = MRB_TT_SCLASS, .color = 4, .flags = 0x0, .c = (struct RClass *)&mrb_preset_object_3.klass, .gcnext = (struct RBasic *)&mrb_preset_object_306.basic, .iv = (struct iv_tbl *)&mrb_preset_iv_tbl_74, .mt = (struct kh_mt *)&mrb_preset_kh_mt_71, .super = (struct RClass *)&mrb_preset_object_305.klass, } };
+PRESET_CONST RVALUE mrb_preset_object_305 = { .klass = { .tt = MRB_TT_SCLASS, .color = 4, .flags = 0x0, .c = (struct RClass *)&mrb_preset_object_3.klass, .gcnext = (struct RBasic *)&mrb_preset_object_303.basic, .iv = (struct iv_tbl *)&mrb_preset_iv_tbl_75, .mt = (struct kh_mt *)&mrb_preset_kh_mt_73, .super = (struct RClass *)&mrb_preset_object_16.klass, } };
+PRESET_CONST RVALUE mrb_preset_object_306 = { .klass = { .tt = MRB_TT_CLASS, .color = 4, .flags = 0x12, .c = (struct RClass *)&mrb_preset_object_305.klass, .gcnext = (struct RBasic *)&mrb_preset_object_305.basic, .iv = (struct iv_tbl *)&mrb_preset_iv_tbl_76, .mt = (struct kh_mt *)&mrb_preset_kh_mt_72, .super = (struct RClass *)&mrb_preset_object_15.klass, } };
+PRESET_CONST RVALUE mrb_preset_object_307 = { .klass = { .tt = MRB_TT_CLASS, .color = 4, .flags = 0x4, .c = (struct RClass *)&mrb_preset_object_308.klass, .gcnext = (struct RBasic *)&mrb_preset_object_310.basic, .iv = (struct iv_tbl *)&mrb_preset_iv_tbl_77, .mt = (struct kh_mt *)&mrb_preset_kh_mt_76, .super = (struct RClass *)&mrb_preset_object_0.klass, } };
+PRESET_CONST RVALUE mrb_preset_object_308 = { .klass = { .tt = MRB_TT_SCLASS, .color = 4, .flags = 0x0, .c = (struct RClass *)&mrb_preset_object_3.klass, .gcnext = (struct RBasic *)&mrb_preset_object_307.basic, .iv = (struct iv_tbl *)&mrb_preset_iv_tbl_78, .mt = (struct kh_mt *)&mrb_preset_kh_mt_75, .super = (struct RClass *)&mrb_preset_object_10.klass, } };
+PRESET_CONST RVALUE mrb_preset_object_309 = { .klass = { .tt = MRB_TT_CLASS, .color = 4, .flags = 0x12, .c = (struct RClass *)&mrb_preset_object_310.klass, .gcnext = (struct RBasic *)&mrb_preset_object_312.basic, .iv = (struct iv_tbl *)&mrb_preset_iv_tbl_79, .mt = (struct kh_mt *)&mrb_preset_kh_mt_78, .super = (struct RClass *)&mrb_preset_object_15.klass, } };
+PRESET_CONST RVALUE mrb_preset_object_310 = { .klass = { .tt = MRB_TT_SCLASS, .color = 4, .flags = 0x0, .c = (struct RClass *)&mrb_preset_object_3.klass, .gcnext = (struct RBasic *)&mrb_preset_object_309.basic, .iv = (struct iv_tbl *)&mrb_preset_iv_tbl_80, .mt = (struct kh_mt *)&mrb_preset_kh_mt_77, .super = (struct RClass *)&mrb_preset_object_16.klass, } };
+PRESET_CONST RVALUE mrb_preset_object_311 = { .klass = { .tt = MRB_TT_CLASS, .color = 4, .flags = 0x12, .c = (struct RClass *)&mrb_preset_object_312.klass, .gcnext = (struct RBasic *)&mrb_preset_object_314.basic, .iv = (struct iv_tbl *)&mrb_preset_iv_tbl_81, .mt = (struct kh_mt *)&mrb_preset_kh_mt_80, .super = (struct RClass *)&mrb_preset_object_15.klass, } };
+PRESET_CONST RVALUE mrb_preset_object_312 = { .klass = { .tt = MRB_TT_SCLASS, .color = 4, .flags = 0x0, .c = (struct RClass *)&mrb_preset_object_3.klass, .gcnext = (struct RBasic *)&mrb_preset_object_311.basic, .iv = (struct iv_tbl *)&mrb_preset_iv_tbl_82, .mt = (struct kh_mt *)&mrb_preset_kh_mt_79, .super = (struct RClass *)&mrb_preset_object_16.klass, } };
+PRESET_CONST RVALUE mrb_preset_object_313 = { .klass = { .tt = MRB_TT_CLASS, .color = 4, .flags = 0x12, .c = (struct RClass *)&mrb_preset_object_314.klass, .gcnext = (struct RBasic *)&mrb_preset_object_317.basic, .iv = (struct iv_tbl *)&mrb_preset_iv_tbl_83, .mt = (struct kh_mt *)&mrb_preset_kh_mt_82, .super = (struct RClass *)&mrb_preset_object_18.klass, } };
+PRESET_CONST RVALUE mrb_preset_object_314 = { .klass = { .tt = MRB_TT_SCLASS, .color = 4, .flags = 0x0, .c = (struct RClass *)&mrb_preset_object_3.klass, .gcnext = (struct RBasic *)&mrb_preset_object_313.basic, .iv = (struct iv_tbl *)&mrb_preset_iv_tbl_84, .mt = (struct kh_mt *)&mrb_preset_kh_mt_81, .super = (struct RClass *)&mrb_preset_object_17.klass, } };
+PRESET_CONST RVALUE mrb_preset_object_315 = { .string = { .tt = MRB_TT_STRING, .color = 4, .flags = 0x4, .c = (struct RClass *)&mrb_preset_object_30.klass, .gcnext = NULL, .as = { .heap = { .len = 24,.aux = { .capa = 0 }, .ptr = (char *)&mrb_preset_strings_55 } }, } };
+PRESET_CONST RVALUE mrb_preset_object_316 = { .klass = { .tt = MRB_TT_CLASS, .color = 4, .flags = 0x12, .c = (struct RClass *)&mrb_preset_object_317.klass, .gcnext = (struct RBasic *)&mrb_preset_object_320.basic, .iv = (struct iv_tbl *)&mrb_preset_iv_tbl_85, .mt = (struct kh_mt *)&mrb_preset_kh_mt_84, .super = (struct RClass *)&mrb_preset_object_196.klass, } };
+PRESET_CONST RVALUE mrb_preset_object_317 = { .klass = { .tt = MRB_TT_SCLASS, .color = 4, .flags = 0x0, .c = (struct RClass *)&mrb_preset_object_3.klass, .gcnext = (struct RBasic *)&mrb_preset_object_316.basic, .iv = (struct iv_tbl *)&mrb_preset_iv_tbl_86, .mt = (struct kh_mt *)&mrb_preset_kh_mt_83, .super = (struct RClass *)&mrb_preset_object_197.klass, } };
+PRESET_CONST RVALUE mrb_preset_object_318 = { .string = { .tt = MRB_TT_STRING, .color = 4, .flags = 0x4, .c = (struct RClass *)&mrb_preset_object_30.klass, .gcnext = NULL, .as = { .heap = { .len = 48,.aux = { .capa = 0 }, .ptr = (char *)&mrb_preset_strings_56 } }, } };
+PRESET_CONST RVALUE mrb_preset_object_319 = { .klass = { .tt = MRB_TT_CLASS, .color = 4, .flags = 0x12, .c = (struct RClass *)&mrb_preset_object_320.klass, .gcnext = (struct RBasic *)&mrb_preset_object_322.basic, .iv = (struct iv_tbl *)&mrb_preset_iv_tbl_87, .mt = (struct kh_mt *)&mrb_preset_kh_mt_86, .super = (struct RClass *)&mrb_preset_object_15.klass, } };
+PRESET_CONST RVALUE mrb_preset_object_320 = { .klass = { .tt = MRB_TT_SCLASS, .color = 4, .flags = 0x0, .c = (struct RClass *)&mrb_preset_object_3.klass, .gcnext = (struct RBasic *)&mrb_preset_object_319.basic, .iv = (struct iv_tbl *)&mrb_preset_iv_tbl_88, .mt = (struct kh_mt *)&mrb_preset_kh_mt_85, .super = (struct RClass *)&mrb_preset_object_16.klass, } };
+PRESET_CONST RVALUE mrb_preset_object_321 = { .klass = { .tt = MRB_TT_CLASS, .color = 4, .flags = 0x12, .c = (struct RClass *)&mrb_preset_object_322.klass, .gcnext = (struct RBasic *)&mrb_preset_object_324.basic, .iv = (struct iv_tbl *)&mrb_preset_iv_tbl_89, .mt = (struct kh_mt *)&mrb_preset_kh_mt_88, .super = (struct RClass *)&mrb_preset_object_18.klass, } };
+PRESET_CONST RVALUE mrb_preset_object_322 = { .klass = { .tt = MRB_TT_SCLASS, .color = 4, .flags = 0x0, .c = (struct RClass *)&mrb_preset_object_3.klass, .gcnext = (struct RBasic *)&mrb_preset_object_321.basic, .iv = (struct iv_tbl *)&mrb_preset_iv_tbl_90, .mt = (struct kh_mt *)&mrb_preset_kh_mt_87, .super = (struct RClass *)&mrb_preset_object_17.klass, } };
+PRESET_CONST RVALUE mrb_preset_object_323 = { .klass = { .tt = MRB_TT_CLASS, .color = 4, .flags = 0x12, .c = (struct RClass *)&mrb_preset_object_324.klass, .gcnext = (struct RBasic *)&mrb_preset_object_326.basic, .iv = (struct iv_tbl *)&mrb_preset_iv_tbl_91, .mt = (struct kh_mt *)&mrb_preset_kh_mt_90, .super = (struct RClass *)&mrb_preset_object_196.klass, } };
+PRESET_CONST RVALUE mrb_preset_object_324 = { .klass = { .tt = MRB_TT_SCLASS, .color = 4, .flags = 0x0, .c = (struct RClass *)&mrb_preset_object_3.klass, .gcnext = (struct RBasic *)&mrb_preset_object_323.basic, .iv = (struct iv_tbl *)&mrb_preset_iv_tbl_92, .mt = (struct kh_mt *)&mrb_preset_kh_mt_89, .super = (struct RClass *)&mrb_preset_object_197.klass, } };
+PRESET_CONST RVALUE mrb_preset_object_325 = { .klass = { .tt = MRB_TT_CLASS, .color = 4, .flags = 0x12, .c = (struct RClass *)&mrb_preset_object_326.klass, .gcnext = NULL, .iv = (struct iv_tbl *)&mrb_preset_iv_tbl_93, .mt = (struct kh_mt *)&mrb_preset_kh_mt_92, .super = (struct RClass *)&mrb_preset_object_15.klass, } };
+PRESET_CONST RVALUE mrb_preset_object_326 = { .klass = { .tt = MRB_TT_SCLASS, .color = 4, .flags = 0x0, .c = (struct RClass *)&mrb_preset_object_3.klass, .gcnext = (struct RBasic *)&mrb_preset_object_325.basic, .iv = (struct iv_tbl *)&mrb_preset_iv_tbl_94, .mt = (struct kh_mt *)&mrb_preset_kh_mt_91, .super = (struct RClass *)&mrb_preset_object_16.klass, } };
+PRESET_CONST RVALUE mrb_preset_object_327 = { .klass = { .tt = MRB_TT_ICLASS, .color = 4, .flags = 0x0, .c = (struct RClass *)&mrb_preset_object_280.klass, .gcnext = (struct RBasic *)&mrb_preset_object_328.basic, .iv = (struct iv_tbl *)&mrb_preset_iv_tbl_62, .mt = (struct kh_mt *)&mrb_preset_kh_mt_62, .super = (struct RClass *)&mrb_preset_object_12.klass, } };
+PRESET_CONST RVALUE mrb_preset_object_328 = { .exc = { .tt = MRB_TT_EXCEPTION, .color = 4, .flags = 0x0, .c = (struct RClass *)&mrb_preset_object_321.klass, .gcnext = (struct RBasic *)&mrb_preset_object_330.basic, .iv = (struct iv_tbl *)&mrb_preset_iv_tbl_95, } };
+PRESET_CONST RVALUE mrb_preset_object_329 = { .string = { .tt = MRB_TT_STRING, .color = 4, .flags = 0x4, .c = (struct RClass *)&mrb_preset_object_30.klass, .gcnext = NULL, .as = { .heap = { .len = 13,.aux = { .capa = 0 }, .ptr = (char *)&mrb_preset_strings_57 } }, } };
+PRESET_CONST RVALUE mrb_preset_object_330 = { .exc = { .tt = MRB_TT_EXCEPTION, .color = 4, .flags = 0x0, .c = (struct RClass *)&mrb_preset_object_313.klass, .gcnext = (struct RBasic *)&mrb_preset_object_332.basic, .iv = (struct iv_tbl *)&mrb_preset_iv_tbl_96, } };
+PRESET_CONST RVALUE mrb_preset_object_331 = { .string = { .tt = MRB_TT_STRING, .color = 4, .flags = 0x4, .c = (struct RClass *)&mrb_preset_object_30.klass, .gcnext = NULL, .as = { .heap = { .len = 20,.aux = { .capa = 0 }, .ptr = (char *)&mrb_preset_strings_58 } }, } };
+PRESET_CONST RVALUE mrb_preset_object_332 = { .exc = { .tt = MRB_TT_EXCEPTION, .color = 4, .flags = 0x0, .c = (struct RClass *)&mrb_preset_object_321.klass, .gcnext = (struct RBasic *)&mrb_preset_object_4.basic, .iv = (struct iv_tbl *)&mrb_preset_iv_tbl_97, } };
+PRESET_CONST RVALUE mrb_preset_object_333 = { .string = { .tt = MRB_TT_STRING, .color = 4, .flags = 0x4, .c = (struct RClass *)&mrb_preset_object_30.klass, .gcnext = NULL, .as = { .heap = { .len = 20,.aux = { .capa = 0 }, .ptr = (char *)&mrb_preset_strings_59 } }, } };
 
 PRESET_DATA struct mrb_state mrb_preset_state = {
 	.jmp = NULL,
@@ -8059,19 +8447,19 @@ PRESET_DATA struct mrb_state mrb_preset_state = {
 	.class_class = (struct RClass *)&mrb_preset_object_3.klass,
 	.module_class = (struct RClass *)&mrb_preset_object_6.klass,
 	.proc_class = (struct RClass *)&mrb_preset_object_208.klass,
-	.string_class = (struct RClass *)&mrb_preset_object_59.klass,
+	.string_class = (struct RClass *)&mrb_preset_object_30.klass,
 	.array_class = (struct RClass *)&mrb_preset_object_147.klass,
 	.hash_class = (struct RClass *)&mrb_preset_object_213.klass,
 	.range_class = (struct RClass *)&mrb_preset_object_253.klass,
 #ifndef MRB_WITHOUT_FLOAT
 	.float_class = (struct RClass *)&mrb_preset_object_259.klass,
 #endif
-	.fixnum_class = (struct RClass *)&mrb_preset_object_288.klass,
-	.true_class = (struct RClass *)&mrb_preset_object_270.klass,
-	.false_class = (struct RClass *)&mrb_preset_object_272.klass,
-	.nil_class = (struct RClass *)&mrb_preset_object_285.klass,
-	.symbol_class = (struct RClass *)&mrb_preset_object_299.klass,
-	.kernel_module = (struct RClass *)&mrb_preset_object_274.klass,
+	.fixnum_class = (struct RClass *)&mrb_preset_object_294.klass,
+	.true_class = (struct RClass *)&mrb_preset_object_276.klass,
+	.false_class = (struct RClass *)&mrb_preset_object_278.klass,
+	.nil_class = (struct RClass *)&mrb_preset_object_291.klass,
+	.symbol_class = (struct RClass *)&mrb_preset_object_307.klass,
+	.kernel_module = (struct RClass *)&mrb_preset_object_280.klass,
 	.mems = NULL,
 	.gc = { 0 },
 #ifdef MRB_METHOD_CACHE
@@ -8090,10 +8478,10 @@ PRESET_DATA struct mrb_state mrb_preset_state = {
 #endif
 	.eException_class = (struct RClass *)&mrb_preset_object_18.klass,
 	.eStandardError_class = (struct RClass *)&mrb_preset_object_15.klass,
-	.nomem_err = (struct RObject *)&mrb_preset_object_318.object,
-	.stack_err = (struct RObject *)&mrb_preset_object_320.object,
+	.nomem_err = (struct RObject *)&mrb_preset_object_328.object,
+	.stack_err = (struct RObject *)&mrb_preset_object_330.object,
 #ifdef MRB_GC_FIXED_ARENA
-	.arena_err = (struct RObject *)&mrb_preset_object_322.object,
+	.arena_err = (struct RObject *)&mrb_preset_object_332.object,
 #endif
 	.ud = NULL,
 	.atexit_stack = NULL,
