@@ -44,6 +44,7 @@
 #include "ntp_cli.h"
 #include "resolver.h"
 #include "netapp_var.h"
+#include <time.h>
 
 extern "C" void enableInterrupt(int intno)
 {
@@ -523,6 +524,74 @@ err_ret:
 	return rret;
 }
 
+mrb_value mrb_target_board_getTime(mrb_state *mrb, mrb_value self)
+{
+	ER ret;
+	SYSTIM now;
+	struct tm _tm;
+	mrb_value arv[7];
+
+	ret = get_tim(&now);
+	if (ret == E_OK) {
+		now /= 1000000;
+		gmtime_r((time_t *)&now, &_tm);
+
+		arv[0] = mrb_fixnum_value(_tm.tm_year + 1900);
+		arv[1] = mrb_fixnum_value(_tm.tm_mon + 1);
+		arv[2] = mrb_fixnum_value(_tm.tm_mday);
+		arv[3] = mrb_fixnum_value(_tm.tm_hour);
+		arv[4] = mrb_fixnum_value(_tm.tm_min);
+		arv[5] = mrb_fixnum_value(_tm.tm_sec);
+		arv[6] = mrb_fixnum_value(_tm.tm_wday);
+	}
+	else{
+		arv[0] = mrb_fixnum_value(-1);
+		arv[1] = mrb_fixnum_value(-1);
+		arv[2] = mrb_fixnum_value(-1);
+		arv[3] = mrb_fixnum_value(-1);
+		arv[4] = mrb_fixnum_value(-1);
+		arv[5] = mrb_fixnum_value(-1);
+		arv[6] = mrb_fixnum_value(-1);
+	}
+	return mrb_ary_new_from_values(mrb, 7, arv);
+}
+
+mrb_value mrb_target_board_setTime(mrb_state *mrb, mrb_value self)
+{
+	ER ret;
+	SYSTIM now;
+	struct tm _tm;
+	mrb_value value;
+
+	mrb_get_args(mrb, "A", &value);
+
+	if ( !mrb_array_p( value ) ){
+		return mrb_fixnum_value(0);
+	}
+
+    int len = RARRAY_LEN( value );
+	if(len < 6){
+		return mrb_fixnum_value(0);
+	}
+
+	_tm.tm_year = mrb_fixnum(mrb_ary_ref(mrb, value, 0)) - 1900;
+	_tm.tm_mon = mrb_fixnum(mrb_ary_ref(mrb, value, 1)) - 1;
+	_tm.tm_mday = mrb_fixnum(mrb_ary_ref(mrb, value, 2));
+	_tm.tm_hour = mrb_fixnum(mrb_ary_ref(mrb, value, 3));
+	_tm.tm_min = mrb_fixnum(mrb_ary_ref(mrb, value, 4));
+	_tm.tm_sec = mrb_fixnum(mrb_ary_ref(mrb, value, 5));
+
+	if ((now = mktime(&_tm)) != 0)
+		return mrb_false_value();
+
+	now *= 1000000;
+	ret = set_tim(now);
+	if (ret != E_OK)
+		return mrb_false_value();
+
+	return mrb_true_value();
+}
+
 extern "C" void mrb_mruby_others_gem_init(mrb_state* mrb)
 {
 	_module_target_board = mrb_define_module(mrb, "TargetBoard");
@@ -539,6 +608,9 @@ extern "C" void mrb_mruby_others_gem_init(mrb_state* mrb)
 	mrb_define_class_method(mrb, _module_target_board, "ntpdate", mrb_target_board_ntpdate, MRB_ARGS_NONE());
 	mrb_define_class_method(mrb, _module_target_board, "ping", mrb_target_board_ping, MRB_ARGS_NONE());
 	mrb_define_class_method(mrb, _module_target_board, "nslookup", mrb_target_board_nslookup, MRB_ARGS_NONE());
+
+	mrb_define_module_function(mrb, _module_target_board, "setTime", mrb_target_board_setTime, MRB_ARGS_REQ(6));
+	mrb_define_module_function(mrb, _module_target_board, "getTime", mrb_target_board_getTime, MRB_ARGS_NONE());
 
 	mrb_mruby_lcd_gem_init(mrb);
 	mrb_mruby_remocon_gem_init(mrb);
