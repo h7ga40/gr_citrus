@@ -198,6 +198,8 @@ void attachInterrupt(uint8_t interruptNum, void (*userFunc)(void), int mode) {
     // Determine which IRQ is being requested. Each pin is mapped to a specific
     // IRQ (external pin interrupt) and some IRQs are mapped to multiple pins.
     // Some pin choices are unavailable on the Sakura.
+    MPC.PWPR.BIT.B0WI = 0;
+    MPC.PWPR.BIT.PFSWE = 1;
     switch (interruptNum)
     {
 #ifdef GRSAKURA

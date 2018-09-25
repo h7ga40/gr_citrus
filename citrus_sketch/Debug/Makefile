@@ -158,11 +158,11 @@ APPLDIR = ../src
 APPL_CFG = $(APPLNAME).cfg
 
 APPL_DIR = $(APPLDIR) $(SRCDIR)/library \
-	../../mruby-1.4.1/include \
-	../../wrbb-v2lib-firm/firmware/gr_common \
-	../../wrbb-v2lib-firm/firmware/gr_common/lib/SD \
-	../../wrbb-v2lib-firm/firmware/gr_common/core \
-	../../wrbb-v2lib-firm/firmware/wrbb_eepfile \
+  ../../mruby-1.4.1/include \
+  ../../wrbb-v2lib-firm/firmware/gr_common \
+  ../../wrbb-v2lib-firm/firmware/gr_common/lib/SD \
+  ../../wrbb-v2lib-firm/firmware/gr_common/core \
+  ../../wrbb-v2lib-firm/firmware/wrbb_eepfile \
   ../../wrbb-v2lib-firm/firmware/wrbb_mruby \
   ../../sketch_common/Adafruit_GFX \
   ../../sketch_common/Adafruit_SSD1306 \

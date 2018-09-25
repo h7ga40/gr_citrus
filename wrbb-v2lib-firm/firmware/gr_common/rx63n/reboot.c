@@ -26,8 +26,9 @@ void system_reboot(reboot_mode mode)
     sei();
     switch (mode) {
     case REBOOT_USERAPP:
-        //SYSTEM.PRCR.WORD = 0xa502;
+        SYSTEM.PRCR.WORD = 0xa502;
         SYSTEM.SWRR = 0xa501;
+        SYSTEM.PRCR.WORD = 0xa500;
         break;
     case REBOOT_FIRMWARE:
         SYSTEM.RSTSR0.BYTE = 0x00;

@@ -77,15 +77,6 @@ void HardwareSetup(void)
     //EtherC, EDMAC
     SYSTEM.MSTPCRB.BIT.MSTPB15 = 0;
 
-#ifndef __RX600__
     // Protection on
     SYSTEM.PRCR.WORD = 0xA500u;
-#else
-    // Enable the PFSWE midification.
-    MPC.PWPR.BIT.B0WI = 0;
-
-    // Disable the PFS register protect.
-    MPC.PWPR.BIT.PFSWE = 1;
-#endif
-
 }

@@ -90,19 +90,20 @@ static fInterruptFunc_t g_fRTCInterruptFunc = NULL;
  ***************************************************************************/
 int rtc_init()
 {
-#ifndef __RX600__
-    /* Protection off */
-    SYSTEM.PRCR.WORD = 0xA503;
-#endif
-
     /* Check if the MCU has come from a cold start (power on reset) */
     if(0 == SYSTEM.RSTSR1.BIT.CWSF)
     {
+        /* Protection off */
+        SYSTEM.PRCR.WORD = 0xA503;
+
         /* Set the warm start flag */
         SYSTEM.RSTSR1.BIT.CWSF = 1;
 
         /* Disable the sub-clock oscillator */
         SYSTEM.SOSCCR.BIT.SOSTP = 1;
+
+        /* Protection on */
+        SYSTEM.PRCR.WORD = 0xA500;
 
         /* Wait for register modification to complete */
         while(1 != SYSTEM.SOSCCR.BIT.SOSTP);
@@ -117,8 +118,14 @@ int rtc_init()
         uint32_t wait = 0x6000;
         while(wait--);
 
+        /* Protection off */
+        SYSTEM.PRCR.WORD = 0xA503;
+
         /* Start sub-clock */
         SYSTEM.SOSCCR.BIT.SOSTP = 0;
+
+        /* Protection off */
+        SYSTEM.PRCR.WORD = 0xA500;
 
         /* Perform 8 delay iterations */
         for(uint8_t i = 0; i < 8; i++)
@@ -130,8 +137,14 @@ int rtc_init()
     }
     else
     {
+        /* Protection off */
+        SYSTEM.PRCR.WORD = 0xA503;
+
         /* Start sub-clock */
         SYSTEM.SOSCCR.BIT.SOSTP = 0;
+
+        /* Protection off */
+        SYSTEM.PRCR.WORD = 0xA500;
 
         /* Wait for the register modification to complete */
         while(0 != SYSTEM.SOSCCR.BIT.SOSTP);

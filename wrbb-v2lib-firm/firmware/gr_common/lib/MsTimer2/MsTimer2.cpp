@@ -106,10 +106,10 @@ void MsTimer2::set(unsigned long ms, void (*f)()) {
         prescaler = 256.0;
     }
 #elif defined (__RX600__)
-//    SYSTEM.PRCR.WORD = 0xA503;
+    SYSTEM.PRCR.WORD = 0xA503;
     // Cancel any module stops for the TPUB channels and re-lock.
     SYSTEM.MSTPCRA.BIT.MSTPA13 = 0U;
-//    SYSTEM.PRCR.WORD = 0xA500;
+    SYSTEM.PRCR.WORD = 0xA500;
 
     // Stop the timer.
     TPUA.TSTR.BIT.CST1 = 0U;
