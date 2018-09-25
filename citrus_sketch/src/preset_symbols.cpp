@@ -4927,11 +4927,11 @@ PRESET_CONST mrb_value mrb_preset_env_stacks_203[] = {
 	{ .value = { .sym = (mrb_sym)374 }, .tt = MRB_TT_SYMBOL },
 };
 
-PRESET_DATA uint8_t mrb_preset_iv_tbl_0_ed_flags[] = {
+PRESET_CONST uint8_t mrb_preset_iv_tbl_0_ed_flags[] = {
 	0x2a, 0x8a, 0x02, 0x08, 0x20, 0x82, 0x02, 0x28, 0xaa, 0xaa, 0x28, 0xaa, 0xa2, 0xaa, 0xaa, 0xaa,
 	0x88, 0x0a, 0xa0, 0xa0, 0x08, 0x2a, 0xa8, 0x2a, 0x82, 0x2a, 0x80, 0x82, 0x00, 0x28, 0x28, 0x02,
 };
-PRESET_DATA mrb_sym mrb_preset_iv_tbl_0_keys[] = {
+PRESET_CONST mrb_sym mrb_preset_iv_tbl_0_keys[] = {
 	0, 0, 0, 243, 0, 0, 242, 0, 0, 241, 2, 136, 240, 0, 216, 3,
 	143, 5, 0, 246, 0, 4, 142, 0, 0, 244, 7, 141, 245, 0, 0, 6,
 	0, 0, 0, 0, 0, 0, 0, 0, 170, 0, 0, 211, 0, 0, 0, 0,
@@ -4941,7 +4941,7 @@ PRESET_DATA mrb_sym mrb_preset_iv_tbl_0_keys[] = {
 	0, 465, 237, 0, 0, 0, 0, 102, 239, 101, 236, 0, 0, 100, 151, 0,
 	238, 145, 232, 185, 144, 0, 0, 233, 234, 0, 0, 147, 0, 235, 471, 195,
 };
-PRESET_DATA mrb_value mrb_preset_iv_tbl_0_vals[] = {
+PRESET_CONST mrb_value mrb_preset_iv_tbl_0_vals[] = {
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
@@ -5073,13 +5073,13 @@ PRESET_DATA mrb_value mrb_preset_iv_tbl_0_vals[] = {
 };
 PRESET_DATA kh_iv_t mrb_preset_iv_tbl_0 = { .n_buckets = 128, .size = 54, .n_occupied = 54, .ed_flags = (uint8_t *)&mrb_preset_iv_tbl_0_ed_flags, .keys = (mrb_sym *)&mrb_preset_iv_tbl_0_keys, .vals = (mrb_value *)&mrb_preset_iv_tbl_0_vals };
 
-PRESET_DATA uint8_t mrb_preset_iv_tbl_1_ed_flags[] = {
+PRESET_CONST uint8_t mrb_preset_iv_tbl_1_ed_flags[] = {
 	0xaa, 0x2a,
 };
-PRESET_DATA mrb_sym mrb_preset_iv_tbl_1_keys[] = {
+PRESET_CONST mrb_sym mrb_preset_iv_tbl_1_keys[] = {
 	0, 0, 0, 0, 0, 0, 0, 6,
 };
-PRESET_DATA mrb_value mrb_preset_iv_tbl_1_vals[] = {
+PRESET_CONST mrb_value mrb_preset_iv_tbl_1_vals[] = {
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
@@ -5091,13 +5091,13 @@ PRESET_DATA mrb_value mrb_preset_iv_tbl_1_vals[] = {
 };
 PRESET_DATA kh_iv_t mrb_preset_iv_tbl_1 = { .n_buckets = 8, .size = 1, .n_occupied = 1, .ed_flags = (uint8_t *)&mrb_preset_iv_tbl_1_ed_flags, .keys = (mrb_sym *)&mrb_preset_iv_tbl_1_keys, .vals = (mrb_value *)&mrb_preset_iv_tbl_1_vals };
 
-PRESET_DATA uint8_t mrb_preset_iv_tbl_2_ed_flags[] = {
+PRESET_CONST uint8_t mrb_preset_iv_tbl_2_ed_flags[] = {
 	0xaa, 0xa2,
 };
-PRESET_DATA mrb_sym mrb_preset_iv_tbl_2_keys[] = {
+PRESET_CONST mrb_sym mrb_preset_iv_tbl_2_keys[] = {
 	0, 0, 0, 0, 0, 1, 0, 0,
 };
-PRESET_DATA mrb_value mrb_preset_iv_tbl_2_vals[] = {
+PRESET_CONST mrb_value mrb_preset_iv_tbl_2_vals[] = {
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
@@ -5109,13 +5109,13 @@ PRESET_DATA mrb_value mrb_preset_iv_tbl_2_vals[] = {
 };
 PRESET_DATA kh_iv_t mrb_preset_iv_tbl_2 = { .n_buckets = 8, .size = 1, .n_occupied = 1, .ed_flags = (uint8_t *)&mrb_preset_iv_tbl_2_ed_flags, .keys = (mrb_sym *)&mrb_preset_iv_tbl_2_keys, .vals = (mrb_value *)&mrb_preset_iv_tbl_2_vals };
 
-PRESET_DATA uint8_t mrb_preset_iv_tbl_3_ed_flags[] = {
+PRESET_CONST uint8_t mrb_preset_iv_tbl_3_ed_flags[] = {
 	0xaa, 0x2a,
 };
-PRESET_DATA mrb_sym mrb_preset_iv_tbl_3_keys[] = {
+PRESET_CONST mrb_sym mrb_preset_iv_tbl_3_keys[] = {
 	0, 0, 0, 0, 0, 0, 0, 6,
 };
-PRESET_DATA mrb_value mrb_preset_iv_tbl_3_vals[] = {
+PRESET_CONST mrb_value mrb_preset_iv_tbl_3_vals[] = {
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
@@ -5127,13 +5127,13 @@ PRESET_DATA mrb_value mrb_preset_iv_tbl_3_vals[] = {
 };
 PRESET_DATA kh_iv_t mrb_preset_iv_tbl_3 = { .n_buckets = 8, .size = 1, .n_occupied = 1, .ed_flags = (uint8_t *)&mrb_preset_iv_tbl_3_ed_flags, .keys = (mrb_sym *)&mrb_preset_iv_tbl_3_keys, .vals = (mrb_value *)&mrb_preset_iv_tbl_3_vals };
 
-PRESET_DATA uint8_t mrb_preset_iv_tbl_4_ed_flags[] = {
+PRESET_CONST uint8_t mrb_preset_iv_tbl_4_ed_flags[] = {
 	0xaa, 0xa2,
 };
-PRESET_DATA mrb_sym mrb_preset_iv_tbl_4_keys[] = {
+PRESET_CONST mrb_sym mrb_preset_iv_tbl_4_keys[] = {
 	0, 0, 0, 0, 0, 1, 0, 0,
 };
-PRESET_DATA mrb_value mrb_preset_iv_tbl_4_vals[] = {
+PRESET_CONST mrb_value mrb_preset_iv_tbl_4_vals[] = {
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
@@ -5145,13 +5145,13 @@ PRESET_DATA mrb_value mrb_preset_iv_tbl_4_vals[] = {
 };
 PRESET_DATA kh_iv_t mrb_preset_iv_tbl_4 = { .n_buckets = 8, .size = 1, .n_occupied = 1, .ed_flags = (uint8_t *)&mrb_preset_iv_tbl_4_ed_flags, .keys = (mrb_sym *)&mrb_preset_iv_tbl_4_keys, .vals = (mrb_value *)&mrb_preset_iv_tbl_4_vals };
 
-PRESET_DATA uint8_t mrb_preset_iv_tbl_5_ed_flags[] = {
+PRESET_CONST uint8_t mrb_preset_iv_tbl_5_ed_flags[] = {
 	0xaa, 0xa2,
 };
-PRESET_DATA mrb_sym mrb_preset_iv_tbl_5_keys[] = {
+PRESET_CONST mrb_sym mrb_preset_iv_tbl_5_keys[] = {
 	0, 0, 0, 0, 0, 1, 0, 0,
 };
-PRESET_DATA mrb_value mrb_preset_iv_tbl_5_vals[] = {
+PRESET_CONST mrb_value mrb_preset_iv_tbl_5_vals[] = {
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
@@ -5163,13 +5163,13 @@ PRESET_DATA mrb_value mrb_preset_iv_tbl_5_vals[] = {
 };
 PRESET_DATA kh_iv_t mrb_preset_iv_tbl_5 = { .n_buckets = 8, .size = 1, .n_occupied = 1, .ed_flags = (uint8_t *)&mrb_preset_iv_tbl_5_ed_flags, .keys = (mrb_sym *)&mrb_preset_iv_tbl_5_keys, .vals = (mrb_value *)&mrb_preset_iv_tbl_5_vals };
 
-PRESET_DATA uint8_t mrb_preset_iv_tbl_6_ed_flags[] = {
+PRESET_CONST uint8_t mrb_preset_iv_tbl_6_ed_flags[] = {
 	0xaa, 0x2a,
 };
-PRESET_DATA mrb_sym mrb_preset_iv_tbl_6_keys[] = {
+PRESET_CONST mrb_sym mrb_preset_iv_tbl_6_keys[] = {
 	0, 0, 0, 0, 0, 0, 0, 6,
 };
-PRESET_DATA mrb_value mrb_preset_iv_tbl_6_vals[] = {
+PRESET_CONST mrb_value mrb_preset_iv_tbl_6_vals[] = {
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
@@ -5181,13 +5181,13 @@ PRESET_DATA mrb_value mrb_preset_iv_tbl_6_vals[] = {
 };
 PRESET_DATA kh_iv_t mrb_preset_iv_tbl_6 = { .n_buckets = 8, .size = 1, .n_occupied = 1, .ed_flags = (uint8_t *)&mrb_preset_iv_tbl_6_ed_flags, .keys = (mrb_sym *)&mrb_preset_iv_tbl_6_keys, .vals = (mrb_value *)&mrb_preset_iv_tbl_6_vals };
 
-PRESET_DATA uint8_t mrb_preset_iv_tbl_7_ed_flags[] = {
+PRESET_CONST uint8_t mrb_preset_iv_tbl_7_ed_flags[] = {
 	0xaa, 0xa2,
 };
-PRESET_DATA mrb_sym mrb_preset_iv_tbl_7_keys[] = {
+PRESET_CONST mrb_sym mrb_preset_iv_tbl_7_keys[] = {
 	0, 0, 0, 0, 0, 1, 0, 0,
 };
-PRESET_DATA mrb_value mrb_preset_iv_tbl_7_vals[] = {
+PRESET_CONST mrb_value mrb_preset_iv_tbl_7_vals[] = {
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
@@ -5199,13 +5199,13 @@ PRESET_DATA mrb_value mrb_preset_iv_tbl_7_vals[] = {
 };
 PRESET_DATA kh_iv_t mrb_preset_iv_tbl_7 = { .n_buckets = 8, .size = 1, .n_occupied = 1, .ed_flags = (uint8_t *)&mrb_preset_iv_tbl_7_ed_flags, .keys = (mrb_sym *)&mrb_preset_iv_tbl_7_keys, .vals = (mrb_value *)&mrb_preset_iv_tbl_7_vals };
 
-PRESET_DATA uint8_t mrb_preset_iv_tbl_8_ed_flags[] = {
+PRESET_CONST uint8_t mrb_preset_iv_tbl_8_ed_flags[] = {
 	0xaa, 0xa2,
 };
-PRESET_DATA mrb_sym mrb_preset_iv_tbl_8_keys[] = {
+PRESET_CONST mrb_sym mrb_preset_iv_tbl_8_keys[] = {
 	0, 0, 0, 0, 0, 1, 0, 0,
 };
-PRESET_DATA mrb_value mrb_preset_iv_tbl_8_vals[] = {
+PRESET_CONST mrb_value mrb_preset_iv_tbl_8_vals[] = {
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
@@ -5217,13 +5217,13 @@ PRESET_DATA mrb_value mrb_preset_iv_tbl_8_vals[] = {
 };
 PRESET_DATA kh_iv_t mrb_preset_iv_tbl_8 = { .n_buckets = 8, .size = 1, .n_occupied = 1, .ed_flags = (uint8_t *)&mrb_preset_iv_tbl_8_ed_flags, .keys = (mrb_sym *)&mrb_preset_iv_tbl_8_keys, .vals = (mrb_value *)&mrb_preset_iv_tbl_8_vals };
 
-PRESET_DATA uint8_t mrb_preset_iv_tbl_9_ed_flags[] = {
+PRESET_CONST uint8_t mrb_preset_iv_tbl_9_ed_flags[] = {
 	0x8a, 0x2a,
 };
-PRESET_DATA mrb_sym mrb_preset_iv_tbl_9_keys[] = {
+PRESET_CONST mrb_sym mrb_preset_iv_tbl_9_keys[] = {
 	0, 0, 2, 0, 0, 0, 0, 6,
 };
-PRESET_DATA mrb_value mrb_preset_iv_tbl_9_vals[] = {
+PRESET_CONST mrb_value mrb_preset_iv_tbl_9_vals[] = {
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .p = (void *)&mrb_preset_object_12 }, .tt = MRB_TT_CLASS },
@@ -5235,13 +5235,13 @@ PRESET_DATA mrb_value mrb_preset_iv_tbl_9_vals[] = {
 };
 PRESET_DATA kh_iv_t mrb_preset_iv_tbl_9 = { .n_buckets = 8, .size = 2, .n_occupied = 2, .ed_flags = (uint8_t *)&mrb_preset_iv_tbl_9_ed_flags, .keys = (mrb_sym *)&mrb_preset_iv_tbl_9_keys, .vals = (mrb_value *)&mrb_preset_iv_tbl_9_vals };
 
-PRESET_DATA uint8_t mrb_preset_iv_tbl_10_ed_flags[] = {
+PRESET_CONST uint8_t mrb_preset_iv_tbl_10_ed_flags[] = {
 	0xaa, 0xa2,
 };
-PRESET_DATA mrb_sym mrb_preset_iv_tbl_10_keys[] = {
+PRESET_CONST mrb_sym mrb_preset_iv_tbl_10_keys[] = {
 	0, 0, 0, 0, 0, 1, 0, 0,
 };
-PRESET_DATA mrb_value mrb_preset_iv_tbl_10_vals[] = {
+PRESET_CONST mrb_value mrb_preset_iv_tbl_10_vals[] = {
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
@@ -5253,13 +5253,13 @@ PRESET_DATA mrb_value mrb_preset_iv_tbl_10_vals[] = {
 };
 PRESET_DATA kh_iv_t mrb_preset_iv_tbl_10 = { .n_buckets = 8, .size = 1, .n_occupied = 1, .ed_flags = (uint8_t *)&mrb_preset_iv_tbl_10_ed_flags, .keys = (mrb_sym *)&mrb_preset_iv_tbl_10_keys, .vals = (mrb_value *)&mrb_preset_iv_tbl_10_vals };
 
-PRESET_DATA uint8_t mrb_preset_iv_tbl_11_ed_flags[] = {
+PRESET_CONST uint8_t mrb_preset_iv_tbl_11_ed_flags[] = {
 	0xaa, 0x2a,
 };
-PRESET_DATA mrb_sym mrb_preset_iv_tbl_11_keys[] = {
+PRESET_CONST mrb_sym mrb_preset_iv_tbl_11_keys[] = {
 	0, 0, 0, 0, 0, 0, 0, 6,
 };
-PRESET_DATA mrb_value mrb_preset_iv_tbl_11_vals[] = {
+PRESET_CONST mrb_value mrb_preset_iv_tbl_11_vals[] = {
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
@@ -5271,13 +5271,13 @@ PRESET_DATA mrb_value mrb_preset_iv_tbl_11_vals[] = {
 };
 PRESET_DATA kh_iv_t mrb_preset_iv_tbl_11 = { .n_buckets = 8, .size = 1, .n_occupied = 1, .ed_flags = (uint8_t *)&mrb_preset_iv_tbl_11_ed_flags, .keys = (mrb_sym *)&mrb_preset_iv_tbl_11_keys, .vals = (mrb_value *)&mrb_preset_iv_tbl_11_vals };
 
-PRESET_DATA uint8_t mrb_preset_iv_tbl_12_ed_flags[] = {
+PRESET_CONST uint8_t mrb_preset_iv_tbl_12_ed_flags[] = {
 	0xaa, 0x2a,
 };
-PRESET_DATA mrb_sym mrb_preset_iv_tbl_12_keys[] = {
+PRESET_CONST mrb_sym mrb_preset_iv_tbl_12_keys[] = {
 	0, 0, 0, 0, 0, 0, 0, 6,
 };
-PRESET_DATA mrb_value mrb_preset_iv_tbl_12_vals[] = {
+PRESET_CONST mrb_value mrb_preset_iv_tbl_12_vals[] = {
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
@@ -5289,13 +5289,13 @@ PRESET_DATA mrb_value mrb_preset_iv_tbl_12_vals[] = {
 };
 PRESET_DATA kh_iv_t mrb_preset_iv_tbl_12 = { .n_buckets = 8, .size = 1, .n_occupied = 1, .ed_flags = (uint8_t *)&mrb_preset_iv_tbl_12_ed_flags, .keys = (mrb_sym *)&mrb_preset_iv_tbl_12_keys, .vals = (mrb_value *)&mrb_preset_iv_tbl_12_vals };
 
-PRESET_DATA uint8_t mrb_preset_iv_tbl_13_ed_flags[] = {
+PRESET_CONST uint8_t mrb_preset_iv_tbl_13_ed_flags[] = {
 	0xaa, 0xa2,
 };
-PRESET_DATA mrb_sym mrb_preset_iv_tbl_13_keys[] = {
+PRESET_CONST mrb_sym mrb_preset_iv_tbl_13_keys[] = {
 	0, 0, 0, 0, 0, 1, 0, 0,
 };
-PRESET_DATA mrb_value mrb_preset_iv_tbl_13_vals[] = {
+PRESET_CONST mrb_value mrb_preset_iv_tbl_13_vals[] = {
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
@@ -5307,13 +5307,13 @@ PRESET_DATA mrb_value mrb_preset_iv_tbl_13_vals[] = {
 };
 PRESET_DATA kh_iv_t mrb_preset_iv_tbl_13 = { .n_buckets = 8, .size = 1, .n_occupied = 1, .ed_flags = (uint8_t *)&mrb_preset_iv_tbl_13_ed_flags, .keys = (mrb_sym *)&mrb_preset_iv_tbl_13_keys, .vals = (mrb_value *)&mrb_preset_iv_tbl_13_vals };
 
-PRESET_DATA uint8_t mrb_preset_iv_tbl_14_ed_flags[] = {
+PRESET_CONST uint8_t mrb_preset_iv_tbl_14_ed_flags[] = {
 	0xaa, 0xa2,
 };
-PRESET_DATA mrb_sym mrb_preset_iv_tbl_14_keys[] = {
+PRESET_CONST mrb_sym mrb_preset_iv_tbl_14_keys[] = {
 	0, 0, 0, 0, 0, 1, 0, 0,
 };
-PRESET_DATA mrb_value mrb_preset_iv_tbl_14_vals[] = {
+PRESET_CONST mrb_value mrb_preset_iv_tbl_14_vals[] = {
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
@@ -5325,13 +5325,13 @@ PRESET_DATA mrb_value mrb_preset_iv_tbl_14_vals[] = {
 };
 PRESET_DATA kh_iv_t mrb_preset_iv_tbl_14 = { .n_buckets = 8, .size = 1, .n_occupied = 1, .ed_flags = (uint8_t *)&mrb_preset_iv_tbl_14_ed_flags, .keys = (mrb_sym *)&mrb_preset_iv_tbl_14_keys, .vals = (mrb_value *)&mrb_preset_iv_tbl_14_vals };
 
-PRESET_DATA uint8_t mrb_preset_iv_tbl_15_ed_flags[] = {
+PRESET_CONST uint8_t mrb_preset_iv_tbl_15_ed_flags[] = {
 	0xaa, 0x2a,
 };
-PRESET_DATA mrb_sym mrb_preset_iv_tbl_15_keys[] = {
+PRESET_CONST mrb_sym mrb_preset_iv_tbl_15_keys[] = {
 	0, 0, 0, 0, 0, 0, 0, 6,
 };
-PRESET_DATA mrb_value mrb_preset_iv_tbl_15_vals[] = {
+PRESET_CONST mrb_value mrb_preset_iv_tbl_15_vals[] = {
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
@@ -5343,13 +5343,13 @@ PRESET_DATA mrb_value mrb_preset_iv_tbl_15_vals[] = {
 };
 PRESET_DATA kh_iv_t mrb_preset_iv_tbl_15 = { .n_buckets = 8, .size = 1, .n_occupied = 1, .ed_flags = (uint8_t *)&mrb_preset_iv_tbl_15_ed_flags, .keys = (mrb_sym *)&mrb_preset_iv_tbl_15_keys, .vals = (mrb_value *)&mrb_preset_iv_tbl_15_vals };
 
-PRESET_DATA uint8_t mrb_preset_iv_tbl_16_ed_flags[] = {
+PRESET_CONST uint8_t mrb_preset_iv_tbl_16_ed_flags[] = {
 	0xaa, 0x2a,
 };
-PRESET_DATA mrb_sym mrb_preset_iv_tbl_16_keys[] = {
+PRESET_CONST mrb_sym mrb_preset_iv_tbl_16_keys[] = {
 	0, 0, 0, 0, 0, 0, 0, 6,
 };
-PRESET_DATA mrb_value mrb_preset_iv_tbl_16_vals[] = {
+PRESET_CONST mrb_value mrb_preset_iv_tbl_16_vals[] = {
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
@@ -5361,13 +5361,13 @@ PRESET_DATA mrb_value mrb_preset_iv_tbl_16_vals[] = {
 };
 PRESET_DATA kh_iv_t mrb_preset_iv_tbl_16 = { .n_buckets = 8, .size = 1, .n_occupied = 1, .ed_flags = (uint8_t *)&mrb_preset_iv_tbl_16_ed_flags, .keys = (mrb_sym *)&mrb_preset_iv_tbl_16_keys, .vals = (mrb_value *)&mrb_preset_iv_tbl_16_vals };
 
-PRESET_DATA uint8_t mrb_preset_iv_tbl_17_ed_flags[] = {
+PRESET_CONST uint8_t mrb_preset_iv_tbl_17_ed_flags[] = {
 	0xaa, 0xa2,
 };
-PRESET_DATA mrb_sym mrb_preset_iv_tbl_17_keys[] = {
+PRESET_CONST mrb_sym mrb_preset_iv_tbl_17_keys[] = {
 	0, 0, 0, 0, 0, 1, 0, 0,
 };
-PRESET_DATA mrb_value mrb_preset_iv_tbl_17_vals[] = {
+PRESET_CONST mrb_value mrb_preset_iv_tbl_17_vals[] = {
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
@@ -5379,13 +5379,13 @@ PRESET_DATA mrb_value mrb_preset_iv_tbl_17_vals[] = {
 };
 PRESET_DATA kh_iv_t mrb_preset_iv_tbl_17 = { .n_buckets = 8, .size = 1, .n_occupied = 1, .ed_flags = (uint8_t *)&mrb_preset_iv_tbl_17_ed_flags, .keys = (mrb_sym *)&mrb_preset_iv_tbl_17_keys, .vals = (mrb_value *)&mrb_preset_iv_tbl_17_vals };
 
-PRESET_DATA uint8_t mrb_preset_iv_tbl_18_ed_flags[] = {
+PRESET_CONST uint8_t mrb_preset_iv_tbl_18_ed_flags[] = {
 	0xaa, 0xa2,
 };
-PRESET_DATA mrb_sym mrb_preset_iv_tbl_18_keys[] = {
+PRESET_CONST mrb_sym mrb_preset_iv_tbl_18_keys[] = {
 	0, 0, 0, 0, 0, 1, 0, 0,
 };
-PRESET_DATA mrb_value mrb_preset_iv_tbl_18_vals[] = {
+PRESET_CONST mrb_value mrb_preset_iv_tbl_18_vals[] = {
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
@@ -5397,13 +5397,13 @@ PRESET_DATA mrb_value mrb_preset_iv_tbl_18_vals[] = {
 };
 PRESET_DATA kh_iv_t mrb_preset_iv_tbl_18 = { .n_buckets = 8, .size = 1, .n_occupied = 1, .ed_flags = (uint8_t *)&mrb_preset_iv_tbl_18_ed_flags, .keys = (mrb_sym *)&mrb_preset_iv_tbl_18_keys, .vals = (mrb_value *)&mrb_preset_iv_tbl_18_vals };
 
-PRESET_DATA uint8_t mrb_preset_iv_tbl_19_ed_flags[] = {
+PRESET_CONST uint8_t mrb_preset_iv_tbl_19_ed_flags[] = {
 	0xaa, 0x2a,
 };
-PRESET_DATA mrb_sym mrb_preset_iv_tbl_19_keys[] = {
+PRESET_CONST mrb_sym mrb_preset_iv_tbl_19_keys[] = {
 	0, 0, 0, 0, 0, 0, 0, 6,
 };
-PRESET_DATA mrb_value mrb_preset_iv_tbl_19_vals[] = {
+PRESET_CONST mrb_value mrb_preset_iv_tbl_19_vals[] = {
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
@@ -5415,13 +5415,13 @@ PRESET_DATA mrb_value mrb_preset_iv_tbl_19_vals[] = {
 };
 PRESET_DATA kh_iv_t mrb_preset_iv_tbl_19 = { .n_buckets = 8, .size = 1, .n_occupied = 1, .ed_flags = (uint8_t *)&mrb_preset_iv_tbl_19_ed_flags, .keys = (mrb_sym *)&mrb_preset_iv_tbl_19_keys, .vals = (mrb_value *)&mrb_preset_iv_tbl_19_vals };
 
-PRESET_DATA uint8_t mrb_preset_iv_tbl_20_ed_flags[] = {
+PRESET_CONST uint8_t mrb_preset_iv_tbl_20_ed_flags[] = {
 	0xaa, 0xaa,
 };
-PRESET_DATA mrb_sym mrb_preset_iv_tbl_20_keys[] = {
+PRESET_CONST mrb_sym mrb_preset_iv_tbl_20_keys[] = {
 	0, 0, 0, 0, 0, 0, 0, 0,
 };
-PRESET_DATA mrb_value mrb_preset_iv_tbl_20_vals[] = {
+PRESET_CONST mrb_value mrb_preset_iv_tbl_20_vals[] = {
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
@@ -5433,13 +5433,13 @@ PRESET_DATA mrb_value mrb_preset_iv_tbl_20_vals[] = {
 };
 PRESET_DATA kh_iv_t mrb_preset_iv_tbl_20 = { .n_buckets = 8, .size = 0, .n_occupied = 0, .ed_flags = (uint8_t *)&mrb_preset_iv_tbl_20_ed_flags, .keys = (mrb_sym *)&mrb_preset_iv_tbl_20_keys, .vals = (mrb_value *)&mrb_preset_iv_tbl_20_vals };
 
-PRESET_DATA uint8_t mrb_preset_iv_tbl_21_ed_flags[] = {
+PRESET_CONST uint8_t mrb_preset_iv_tbl_21_ed_flags[] = {
 	0xaa, 0xa2,
 };
-PRESET_DATA mrb_sym mrb_preset_iv_tbl_21_keys[] = {
+PRESET_CONST mrb_sym mrb_preset_iv_tbl_21_keys[] = {
 	0, 0, 0, 0, 0, 1, 0, 0,
 };
-PRESET_DATA mrb_value mrb_preset_iv_tbl_21_vals[] = {
+PRESET_CONST mrb_value mrb_preset_iv_tbl_21_vals[] = {
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
@@ -5451,13 +5451,13 @@ PRESET_DATA mrb_value mrb_preset_iv_tbl_21_vals[] = {
 };
 PRESET_DATA kh_iv_t mrb_preset_iv_tbl_21 = { .n_buckets = 8, .size = 1, .n_occupied = 1, .ed_flags = (uint8_t *)&mrb_preset_iv_tbl_21_ed_flags, .keys = (mrb_sym *)&mrb_preset_iv_tbl_21_keys, .vals = (mrb_value *)&mrb_preset_iv_tbl_21_vals };
 
-PRESET_DATA uint8_t mrb_preset_iv_tbl_22_ed_flags[] = {
+PRESET_CONST uint8_t mrb_preset_iv_tbl_22_ed_flags[] = {
 	0xaa, 0xa2,
 };
-PRESET_DATA mrb_sym mrb_preset_iv_tbl_22_keys[] = {
+PRESET_CONST mrb_sym mrb_preset_iv_tbl_22_keys[] = {
 	0, 0, 0, 0, 0, 1, 0, 0,
 };
-PRESET_DATA mrb_value mrb_preset_iv_tbl_22_vals[] = {
+PRESET_CONST mrb_value mrb_preset_iv_tbl_22_vals[] = {
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
@@ -5469,13 +5469,13 @@ PRESET_DATA mrb_value mrb_preset_iv_tbl_22_vals[] = {
 };
 PRESET_DATA kh_iv_t mrb_preset_iv_tbl_22 = { .n_buckets = 8, .size = 1, .n_occupied = 1, .ed_flags = (uint8_t *)&mrb_preset_iv_tbl_22_ed_flags, .keys = (mrb_sym *)&mrb_preset_iv_tbl_22_keys, .vals = (mrb_value *)&mrb_preset_iv_tbl_22_vals };
 
-PRESET_DATA uint8_t mrb_preset_iv_tbl_23_ed_flags[] = {
+PRESET_CONST uint8_t mrb_preset_iv_tbl_23_ed_flags[] = {
 	0xaa, 0x2a,
 };
-PRESET_DATA mrb_sym mrb_preset_iv_tbl_23_keys[] = {
+PRESET_CONST mrb_sym mrb_preset_iv_tbl_23_keys[] = {
 	0, 0, 0, 0, 0, 0, 0, 6,
 };
-PRESET_DATA mrb_value mrb_preset_iv_tbl_23_vals[] = {
+PRESET_CONST mrb_value mrb_preset_iv_tbl_23_vals[] = {
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
@@ -5487,13 +5487,13 @@ PRESET_DATA mrb_value mrb_preset_iv_tbl_23_vals[] = {
 };
 PRESET_DATA kh_iv_t mrb_preset_iv_tbl_23 = { .n_buckets = 8, .size = 1, .n_occupied = 1, .ed_flags = (uint8_t *)&mrb_preset_iv_tbl_23_ed_flags, .keys = (mrb_sym *)&mrb_preset_iv_tbl_23_keys, .vals = (mrb_value *)&mrb_preset_iv_tbl_23_vals };
 
-PRESET_DATA uint8_t mrb_preset_iv_tbl_24_ed_flags[] = {
+PRESET_CONST uint8_t mrb_preset_iv_tbl_24_ed_flags[] = {
 	0xaa, 0xa2,
 };
-PRESET_DATA mrb_sym mrb_preset_iv_tbl_24_keys[] = {
+PRESET_CONST mrb_sym mrb_preset_iv_tbl_24_keys[] = {
 	0, 0, 0, 0, 0, 1, 0, 0,
 };
-PRESET_DATA mrb_value mrb_preset_iv_tbl_24_vals[] = {
+PRESET_CONST mrb_value mrb_preset_iv_tbl_24_vals[] = {
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
@@ -5505,13 +5505,13 @@ PRESET_DATA mrb_value mrb_preset_iv_tbl_24_vals[] = {
 };
 PRESET_DATA kh_iv_t mrb_preset_iv_tbl_24 = { .n_buckets = 8, .size = 1, .n_occupied = 1, .ed_flags = (uint8_t *)&mrb_preset_iv_tbl_24_ed_flags, .keys = (mrb_sym *)&mrb_preset_iv_tbl_24_keys, .vals = (mrb_value *)&mrb_preset_iv_tbl_24_vals };
 
-PRESET_DATA uint8_t mrb_preset_iv_tbl_25_ed_flags[] = {
+PRESET_CONST uint8_t mrb_preset_iv_tbl_25_ed_flags[] = {
 	0xaa, 0x2a,
 };
-PRESET_DATA mrb_sym mrb_preset_iv_tbl_25_keys[] = {
+PRESET_CONST mrb_sym mrb_preset_iv_tbl_25_keys[] = {
 	0, 0, 0, 0, 0, 0, 0, 6,
 };
-PRESET_DATA mrb_value mrb_preset_iv_tbl_25_vals[] = {
+PRESET_CONST mrb_value mrb_preset_iv_tbl_25_vals[] = {
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
@@ -5523,13 +5523,13 @@ PRESET_DATA mrb_value mrb_preset_iv_tbl_25_vals[] = {
 };
 PRESET_DATA kh_iv_t mrb_preset_iv_tbl_25 = { .n_buckets = 8, .size = 1, .n_occupied = 1, .ed_flags = (uint8_t *)&mrb_preset_iv_tbl_25_ed_flags, .keys = (mrb_sym *)&mrb_preset_iv_tbl_25_keys, .vals = (mrb_value *)&mrb_preset_iv_tbl_25_vals };
 
-PRESET_DATA uint8_t mrb_preset_iv_tbl_26_ed_flags[] = {
+PRESET_CONST uint8_t mrb_preset_iv_tbl_26_ed_flags[] = {
 	0xaa, 0x2a,
 };
-PRESET_DATA mrb_sym mrb_preset_iv_tbl_26_keys[] = {
+PRESET_CONST mrb_sym mrb_preset_iv_tbl_26_keys[] = {
 	0, 0, 0, 0, 0, 0, 0, 6,
 };
-PRESET_DATA mrb_value mrb_preset_iv_tbl_26_vals[] = {
+PRESET_CONST mrb_value mrb_preset_iv_tbl_26_vals[] = {
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
@@ -5541,13 +5541,13 @@ PRESET_DATA mrb_value mrb_preset_iv_tbl_26_vals[] = {
 };
 PRESET_DATA kh_iv_t mrb_preset_iv_tbl_26 = { .n_buckets = 8, .size = 1, .n_occupied = 1, .ed_flags = (uint8_t *)&mrb_preset_iv_tbl_26_ed_flags, .keys = (mrb_sym *)&mrb_preset_iv_tbl_26_keys, .vals = (mrb_value *)&mrb_preset_iv_tbl_26_vals };
 
-PRESET_DATA uint8_t mrb_preset_iv_tbl_27_ed_flags[] = {
+PRESET_CONST uint8_t mrb_preset_iv_tbl_27_ed_flags[] = {
 	0xaa, 0xa2,
 };
-PRESET_DATA mrb_sym mrb_preset_iv_tbl_27_keys[] = {
+PRESET_CONST mrb_sym mrb_preset_iv_tbl_27_keys[] = {
 	0, 0, 0, 0, 0, 1, 0, 0,
 };
-PRESET_DATA mrb_value mrb_preset_iv_tbl_27_vals[] = {
+PRESET_CONST mrb_value mrb_preset_iv_tbl_27_vals[] = {
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
@@ -5559,13 +5559,13 @@ PRESET_DATA mrb_value mrb_preset_iv_tbl_27_vals[] = {
 };
 PRESET_DATA kh_iv_t mrb_preset_iv_tbl_27 = { .n_buckets = 8, .size = 1, .n_occupied = 1, .ed_flags = (uint8_t *)&mrb_preset_iv_tbl_27_ed_flags, .keys = (mrb_sym *)&mrb_preset_iv_tbl_27_keys, .vals = (mrb_value *)&mrb_preset_iv_tbl_27_vals };
 
-PRESET_DATA uint8_t mrb_preset_iv_tbl_28_ed_flags[] = {
+PRESET_CONST uint8_t mrb_preset_iv_tbl_28_ed_flags[] = {
 	0xaa, 0x2a,
 };
-PRESET_DATA mrb_sym mrb_preset_iv_tbl_28_keys[] = {
+PRESET_CONST mrb_sym mrb_preset_iv_tbl_28_keys[] = {
 	0, 0, 0, 0, 0, 0, 0, 6,
 };
-PRESET_DATA mrb_value mrb_preset_iv_tbl_28_vals[] = {
+PRESET_CONST mrb_value mrb_preset_iv_tbl_28_vals[] = {
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
@@ -5577,13 +5577,13 @@ PRESET_DATA mrb_value mrb_preset_iv_tbl_28_vals[] = {
 };
 PRESET_DATA kh_iv_t mrb_preset_iv_tbl_28 = { .n_buckets = 8, .size = 1, .n_occupied = 1, .ed_flags = (uint8_t *)&mrb_preset_iv_tbl_28_ed_flags, .keys = (mrb_sym *)&mrb_preset_iv_tbl_28_keys, .vals = (mrb_value *)&mrb_preset_iv_tbl_28_vals };
 
-PRESET_DATA uint8_t mrb_preset_iv_tbl_29_ed_flags[] = {
+PRESET_CONST uint8_t mrb_preset_iv_tbl_29_ed_flags[] = {
 	0xaa, 0x2a,
 };
-PRESET_DATA mrb_sym mrb_preset_iv_tbl_29_keys[] = {
+PRESET_CONST mrb_sym mrb_preset_iv_tbl_29_keys[] = {
 	0, 0, 0, 0, 0, 0, 0, 6,
 };
-PRESET_DATA mrb_value mrb_preset_iv_tbl_29_vals[] = {
+PRESET_CONST mrb_value mrb_preset_iv_tbl_29_vals[] = {
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
@@ -5595,13 +5595,13 @@ PRESET_DATA mrb_value mrb_preset_iv_tbl_29_vals[] = {
 };
 PRESET_DATA kh_iv_t mrb_preset_iv_tbl_29 = { .n_buckets = 8, .size = 1, .n_occupied = 1, .ed_flags = (uint8_t *)&mrb_preset_iv_tbl_29_ed_flags, .keys = (mrb_sym *)&mrb_preset_iv_tbl_29_keys, .vals = (mrb_value *)&mrb_preset_iv_tbl_29_vals };
 
-PRESET_DATA uint8_t mrb_preset_iv_tbl_30_ed_flags[] = {
+PRESET_CONST uint8_t mrb_preset_iv_tbl_30_ed_flags[] = {
 	0xaa, 0xa2,
 };
-PRESET_DATA mrb_sym mrb_preset_iv_tbl_30_keys[] = {
+PRESET_CONST mrb_sym mrb_preset_iv_tbl_30_keys[] = {
 	0, 0, 0, 0, 0, 1, 0, 0,
 };
-PRESET_DATA mrb_value mrb_preset_iv_tbl_30_vals[] = {
+PRESET_CONST mrb_value mrb_preset_iv_tbl_30_vals[] = {
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
@@ -5613,13 +5613,13 @@ PRESET_DATA mrb_value mrb_preset_iv_tbl_30_vals[] = {
 };
 PRESET_DATA kh_iv_t mrb_preset_iv_tbl_30 = { .n_buckets = 8, .size = 1, .n_occupied = 1, .ed_flags = (uint8_t *)&mrb_preset_iv_tbl_30_ed_flags, .keys = (mrb_sym *)&mrb_preset_iv_tbl_30_keys, .vals = (mrb_value *)&mrb_preset_iv_tbl_30_vals };
 
-PRESET_DATA uint8_t mrb_preset_iv_tbl_31_ed_flags[] = {
+PRESET_CONST uint8_t mrb_preset_iv_tbl_31_ed_flags[] = {
 	0xaa, 0xa2,
 };
-PRESET_DATA mrb_sym mrb_preset_iv_tbl_31_keys[] = {
+PRESET_CONST mrb_sym mrb_preset_iv_tbl_31_keys[] = {
 	0, 0, 0, 0, 0, 1, 0, 0,
 };
-PRESET_DATA mrb_value mrb_preset_iv_tbl_31_vals[] = {
+PRESET_CONST mrb_value mrb_preset_iv_tbl_31_vals[] = {
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
@@ -5631,13 +5631,13 @@ PRESET_DATA mrb_value mrb_preset_iv_tbl_31_vals[] = {
 };
 PRESET_DATA kh_iv_t mrb_preset_iv_tbl_31 = { .n_buckets = 8, .size = 1, .n_occupied = 1, .ed_flags = (uint8_t *)&mrb_preset_iv_tbl_31_ed_flags, .keys = (mrb_sym *)&mrb_preset_iv_tbl_31_keys, .vals = (mrb_value *)&mrb_preset_iv_tbl_31_vals };
 
-PRESET_DATA uint8_t mrb_preset_iv_tbl_32_ed_flags[] = {
+PRESET_CONST uint8_t mrb_preset_iv_tbl_32_ed_flags[] = {
 	0xaa, 0x2a,
 };
-PRESET_DATA mrb_sym mrb_preset_iv_tbl_32_keys[] = {
+PRESET_CONST mrb_sym mrb_preset_iv_tbl_32_keys[] = {
 	0, 0, 0, 0, 0, 0, 0, 6,
 };
-PRESET_DATA mrb_value mrb_preset_iv_tbl_32_vals[] = {
+PRESET_CONST mrb_value mrb_preset_iv_tbl_32_vals[] = {
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
@@ -5649,13 +5649,13 @@ PRESET_DATA mrb_value mrb_preset_iv_tbl_32_vals[] = {
 };
 PRESET_DATA kh_iv_t mrb_preset_iv_tbl_32 = { .n_buckets = 8, .size = 1, .n_occupied = 1, .ed_flags = (uint8_t *)&mrb_preset_iv_tbl_32_ed_flags, .keys = (mrb_sym *)&mrb_preset_iv_tbl_32_keys, .vals = (mrb_value *)&mrb_preset_iv_tbl_32_vals };
 
-PRESET_DATA uint8_t mrb_preset_iv_tbl_33_ed_flags[] = {
+PRESET_CONST uint8_t mrb_preset_iv_tbl_33_ed_flags[] = {
 	0xaa, 0xa2,
 };
-PRESET_DATA mrb_sym mrb_preset_iv_tbl_33_keys[] = {
+PRESET_CONST mrb_sym mrb_preset_iv_tbl_33_keys[] = {
 	0, 0, 0, 0, 0, 1, 0, 0,
 };
-PRESET_DATA mrb_value mrb_preset_iv_tbl_33_vals[] = {
+PRESET_CONST mrb_value mrb_preset_iv_tbl_33_vals[] = {
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
@@ -5667,13 +5667,13 @@ PRESET_DATA mrb_value mrb_preset_iv_tbl_33_vals[] = {
 };
 PRESET_DATA kh_iv_t mrb_preset_iv_tbl_33 = { .n_buckets = 8, .size = 1, .n_occupied = 1, .ed_flags = (uint8_t *)&mrb_preset_iv_tbl_33_ed_flags, .keys = (mrb_sym *)&mrb_preset_iv_tbl_33_keys, .vals = (mrb_value *)&mrb_preset_iv_tbl_33_vals };
 
-PRESET_DATA uint8_t mrb_preset_iv_tbl_34_ed_flags[] = {
+PRESET_CONST uint8_t mrb_preset_iv_tbl_34_ed_flags[] = {
 	0xaa, 0x2a,
 };
-PRESET_DATA mrb_sym mrb_preset_iv_tbl_34_keys[] = {
+PRESET_CONST mrb_sym mrb_preset_iv_tbl_34_keys[] = {
 	0, 0, 0, 0, 0, 0, 0, 6,
 };
-PRESET_DATA mrb_value mrb_preset_iv_tbl_34_vals[] = {
+PRESET_CONST mrb_value mrb_preset_iv_tbl_34_vals[] = {
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
@@ -5685,13 +5685,13 @@ PRESET_DATA mrb_value mrb_preset_iv_tbl_34_vals[] = {
 };
 PRESET_DATA kh_iv_t mrb_preset_iv_tbl_34 = { .n_buckets = 8, .size = 1, .n_occupied = 1, .ed_flags = (uint8_t *)&mrb_preset_iv_tbl_34_ed_flags, .keys = (mrb_sym *)&mrb_preset_iv_tbl_34_keys, .vals = (mrb_value *)&mrb_preset_iv_tbl_34_vals };
 
-PRESET_DATA uint8_t mrb_preset_iv_tbl_35_ed_flags[] = {
+PRESET_CONST uint8_t mrb_preset_iv_tbl_35_ed_flags[] = {
 	0xaa, 0xa2,
 };
-PRESET_DATA mrb_sym mrb_preset_iv_tbl_35_keys[] = {
+PRESET_CONST mrb_sym mrb_preset_iv_tbl_35_keys[] = {
 	0, 0, 0, 0, 0, 1, 0, 0,
 };
-PRESET_DATA mrb_value mrb_preset_iv_tbl_35_vals[] = {
+PRESET_CONST mrb_value mrb_preset_iv_tbl_35_vals[] = {
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
@@ -5703,13 +5703,13 @@ PRESET_DATA mrb_value mrb_preset_iv_tbl_35_vals[] = {
 };
 PRESET_DATA kh_iv_t mrb_preset_iv_tbl_35 = { .n_buckets = 8, .size = 1, .n_occupied = 1, .ed_flags = (uint8_t *)&mrb_preset_iv_tbl_35_ed_flags, .keys = (mrb_sym *)&mrb_preset_iv_tbl_35_keys, .vals = (mrb_value *)&mrb_preset_iv_tbl_35_vals };
 
-PRESET_DATA uint8_t mrb_preset_iv_tbl_36_ed_flags[] = {
+PRESET_CONST uint8_t mrb_preset_iv_tbl_36_ed_flags[] = {
 	0xaa, 0x2a,
 };
-PRESET_DATA mrb_sym mrb_preset_iv_tbl_36_keys[] = {
+PRESET_CONST mrb_sym mrb_preset_iv_tbl_36_keys[] = {
 	0, 0, 0, 0, 0, 0, 0, 6,
 };
-PRESET_DATA mrb_value mrb_preset_iv_tbl_36_vals[] = {
+PRESET_CONST mrb_value mrb_preset_iv_tbl_36_vals[] = {
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
@@ -5721,13 +5721,13 @@ PRESET_DATA mrb_value mrb_preset_iv_tbl_36_vals[] = {
 };
 PRESET_DATA kh_iv_t mrb_preset_iv_tbl_36 = { .n_buckets = 8, .size = 1, .n_occupied = 1, .ed_flags = (uint8_t *)&mrb_preset_iv_tbl_36_ed_flags, .keys = (mrb_sym *)&mrb_preset_iv_tbl_36_keys, .vals = (mrb_value *)&mrb_preset_iv_tbl_36_vals };
 
-PRESET_DATA uint8_t mrb_preset_iv_tbl_37_ed_flags[] = {
+PRESET_CONST uint8_t mrb_preset_iv_tbl_37_ed_flags[] = {
 	0xaa, 0xa2,
 };
-PRESET_DATA mrb_sym mrb_preset_iv_tbl_37_keys[] = {
+PRESET_CONST mrb_sym mrb_preset_iv_tbl_37_keys[] = {
 	0, 0, 0, 0, 0, 1, 0, 0,
 };
-PRESET_DATA mrb_value mrb_preset_iv_tbl_37_vals[] = {
+PRESET_CONST mrb_value mrb_preset_iv_tbl_37_vals[] = {
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
@@ -5739,13 +5739,13 @@ PRESET_DATA mrb_value mrb_preset_iv_tbl_37_vals[] = {
 };
 PRESET_DATA kh_iv_t mrb_preset_iv_tbl_37 = { .n_buckets = 8, .size = 1, .n_occupied = 1, .ed_flags = (uint8_t *)&mrb_preset_iv_tbl_37_ed_flags, .keys = (mrb_sym *)&mrb_preset_iv_tbl_37_keys, .vals = (mrb_value *)&mrb_preset_iv_tbl_37_vals };
 
-PRESET_DATA uint8_t mrb_preset_iv_tbl_38_ed_flags[] = {
+PRESET_CONST uint8_t mrb_preset_iv_tbl_38_ed_flags[] = {
 	0xaa, 0x2a,
 };
-PRESET_DATA mrb_sym mrb_preset_iv_tbl_38_keys[] = {
+PRESET_CONST mrb_sym mrb_preset_iv_tbl_38_keys[] = {
 	0, 0, 0, 0, 0, 0, 0, 6,
 };
-PRESET_DATA mrb_value mrb_preset_iv_tbl_38_vals[] = {
+PRESET_CONST mrb_value mrb_preset_iv_tbl_38_vals[] = {
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
@@ -5757,13 +5757,13 @@ PRESET_DATA mrb_value mrb_preset_iv_tbl_38_vals[] = {
 };
 PRESET_DATA kh_iv_t mrb_preset_iv_tbl_38 = { .n_buckets = 8, .size = 1, .n_occupied = 1, .ed_flags = (uint8_t *)&mrb_preset_iv_tbl_38_ed_flags, .keys = (mrb_sym *)&mrb_preset_iv_tbl_38_keys, .vals = (mrb_value *)&mrb_preset_iv_tbl_38_vals };
 
-PRESET_DATA uint8_t mrb_preset_iv_tbl_39_ed_flags[] = {
+PRESET_CONST uint8_t mrb_preset_iv_tbl_39_ed_flags[] = {
 	0xaa, 0xa2,
 };
-PRESET_DATA mrb_sym mrb_preset_iv_tbl_39_keys[] = {
+PRESET_CONST mrb_sym mrb_preset_iv_tbl_39_keys[] = {
 	0, 0, 0, 0, 0, 1, 0, 0,
 };
-PRESET_DATA mrb_value mrb_preset_iv_tbl_39_vals[] = {
+PRESET_CONST mrb_value mrb_preset_iv_tbl_39_vals[] = {
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
@@ -5775,13 +5775,13 @@ PRESET_DATA mrb_value mrb_preset_iv_tbl_39_vals[] = {
 };
 PRESET_DATA kh_iv_t mrb_preset_iv_tbl_39 = { .n_buckets = 8, .size = 1, .n_occupied = 1, .ed_flags = (uint8_t *)&mrb_preset_iv_tbl_39_ed_flags, .keys = (mrb_sym *)&mrb_preset_iv_tbl_39_keys, .vals = (mrb_value *)&mrb_preset_iv_tbl_39_vals };
 
-PRESET_DATA uint8_t mrb_preset_iv_tbl_40_ed_flags[] = {
+PRESET_CONST uint8_t mrb_preset_iv_tbl_40_ed_flags[] = {
 	0xaa, 0x2a,
 };
-PRESET_DATA mrb_sym mrb_preset_iv_tbl_40_keys[] = {
+PRESET_CONST mrb_sym mrb_preset_iv_tbl_40_keys[] = {
 	0, 0, 0, 0, 0, 0, 0, 6,
 };
-PRESET_DATA mrb_value mrb_preset_iv_tbl_40_vals[] = {
+PRESET_CONST mrb_value mrb_preset_iv_tbl_40_vals[] = {
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
@@ -5793,13 +5793,13 @@ PRESET_DATA mrb_value mrb_preset_iv_tbl_40_vals[] = {
 };
 PRESET_DATA kh_iv_t mrb_preset_iv_tbl_40 = { .n_buckets = 8, .size = 1, .n_occupied = 1, .ed_flags = (uint8_t *)&mrb_preset_iv_tbl_40_ed_flags, .keys = (mrb_sym *)&mrb_preset_iv_tbl_40_keys, .vals = (mrb_value *)&mrb_preset_iv_tbl_40_vals };
 
-PRESET_DATA uint8_t mrb_preset_iv_tbl_41_ed_flags[] = {
+PRESET_CONST uint8_t mrb_preset_iv_tbl_41_ed_flags[] = {
 	0xaa, 0xa2,
 };
-PRESET_DATA mrb_sym mrb_preset_iv_tbl_41_keys[] = {
+PRESET_CONST mrb_sym mrb_preset_iv_tbl_41_keys[] = {
 	0, 0, 0, 0, 0, 1, 0, 0,
 };
-PRESET_DATA mrb_value mrb_preset_iv_tbl_41_vals[] = {
+PRESET_CONST mrb_value mrb_preset_iv_tbl_41_vals[] = {
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
@@ -5811,13 +5811,13 @@ PRESET_DATA mrb_value mrb_preset_iv_tbl_41_vals[] = {
 };
 PRESET_DATA kh_iv_t mrb_preset_iv_tbl_41 = { .n_buckets = 8, .size = 1, .n_occupied = 1, .ed_flags = (uint8_t *)&mrb_preset_iv_tbl_41_ed_flags, .keys = (mrb_sym *)&mrb_preset_iv_tbl_41_keys, .vals = (mrb_value *)&mrb_preset_iv_tbl_41_vals };
 
-PRESET_DATA uint8_t mrb_preset_iv_tbl_42_ed_flags[] = {
+PRESET_CONST uint8_t mrb_preset_iv_tbl_42_ed_flags[] = {
 	0xaa, 0x2a,
 };
-PRESET_DATA mrb_sym mrb_preset_iv_tbl_42_keys[] = {
+PRESET_CONST mrb_sym mrb_preset_iv_tbl_42_keys[] = {
 	0, 0, 0, 0, 0, 0, 0, 6,
 };
-PRESET_DATA mrb_value mrb_preset_iv_tbl_42_vals[] = {
+PRESET_CONST mrb_value mrb_preset_iv_tbl_42_vals[] = {
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
@@ -5829,13 +5829,13 @@ PRESET_DATA mrb_value mrb_preset_iv_tbl_42_vals[] = {
 };
 PRESET_DATA kh_iv_t mrb_preset_iv_tbl_42 = { .n_buckets = 8, .size = 1, .n_occupied = 1, .ed_flags = (uint8_t *)&mrb_preset_iv_tbl_42_ed_flags, .keys = (mrb_sym *)&mrb_preset_iv_tbl_42_keys, .vals = (mrb_value *)&mrb_preset_iv_tbl_42_vals };
 
-PRESET_DATA uint8_t mrb_preset_iv_tbl_43_ed_flags[] = {
+PRESET_CONST uint8_t mrb_preset_iv_tbl_43_ed_flags[] = {
 	0xaa, 0xa2,
 };
-PRESET_DATA mrb_sym mrb_preset_iv_tbl_43_keys[] = {
+PRESET_CONST mrb_sym mrb_preset_iv_tbl_43_keys[] = {
 	0, 0, 0, 0, 0, 1, 0, 0,
 };
-PRESET_DATA mrb_value mrb_preset_iv_tbl_43_vals[] = {
+PRESET_CONST mrb_value mrb_preset_iv_tbl_43_vals[] = {
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
@@ -5847,13 +5847,13 @@ PRESET_DATA mrb_value mrb_preset_iv_tbl_43_vals[] = {
 };
 PRESET_DATA kh_iv_t mrb_preset_iv_tbl_43 = { .n_buckets = 8, .size = 1, .n_occupied = 1, .ed_flags = (uint8_t *)&mrb_preset_iv_tbl_43_ed_flags, .keys = (mrb_sym *)&mrb_preset_iv_tbl_43_keys, .vals = (mrb_value *)&mrb_preset_iv_tbl_43_vals };
 
-PRESET_DATA uint8_t mrb_preset_iv_tbl_44_ed_flags[] = {
+PRESET_CONST uint8_t mrb_preset_iv_tbl_44_ed_flags[] = {
 	0xaa, 0x2a,
 };
-PRESET_DATA mrb_sym mrb_preset_iv_tbl_44_keys[] = {
+PRESET_CONST mrb_sym mrb_preset_iv_tbl_44_keys[] = {
 	0, 0, 0, 0, 0, 0, 0, 6,
 };
-PRESET_DATA mrb_value mrb_preset_iv_tbl_44_vals[] = {
+PRESET_CONST mrb_value mrb_preset_iv_tbl_44_vals[] = {
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
@@ -5865,13 +5865,13 @@ PRESET_DATA mrb_value mrb_preset_iv_tbl_44_vals[] = {
 };
 PRESET_DATA kh_iv_t mrb_preset_iv_tbl_44 = { .n_buckets = 8, .size = 1, .n_occupied = 1, .ed_flags = (uint8_t *)&mrb_preset_iv_tbl_44_ed_flags, .keys = (mrb_sym *)&mrb_preset_iv_tbl_44_keys, .vals = (mrb_value *)&mrb_preset_iv_tbl_44_vals };
 
-PRESET_DATA uint8_t mrb_preset_iv_tbl_45_ed_flags[] = {
+PRESET_CONST uint8_t mrb_preset_iv_tbl_45_ed_flags[] = {
 	0xaa, 0xa2,
 };
-PRESET_DATA mrb_sym mrb_preset_iv_tbl_45_keys[] = {
+PRESET_CONST mrb_sym mrb_preset_iv_tbl_45_keys[] = {
 	0, 0, 0, 0, 0, 1, 0, 0,
 };
-PRESET_DATA mrb_value mrb_preset_iv_tbl_45_vals[] = {
+PRESET_CONST mrb_value mrb_preset_iv_tbl_45_vals[] = {
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
@@ -5883,13 +5883,13 @@ PRESET_DATA mrb_value mrb_preset_iv_tbl_45_vals[] = {
 };
 PRESET_DATA kh_iv_t mrb_preset_iv_tbl_45 = { .n_buckets = 8, .size = 1, .n_occupied = 1, .ed_flags = (uint8_t *)&mrb_preset_iv_tbl_45_ed_flags, .keys = (mrb_sym *)&mrb_preset_iv_tbl_45_keys, .vals = (mrb_value *)&mrb_preset_iv_tbl_45_vals };
 
-PRESET_DATA uint8_t mrb_preset_iv_tbl_46_ed_flags[] = {
+PRESET_CONST uint8_t mrb_preset_iv_tbl_46_ed_flags[] = {
 	0xaa, 0x2a,
 };
-PRESET_DATA mrb_sym mrb_preset_iv_tbl_46_keys[] = {
+PRESET_CONST mrb_sym mrb_preset_iv_tbl_46_keys[] = {
 	0, 0, 0, 0, 0, 0, 0, 6,
 };
-PRESET_DATA mrb_value mrb_preset_iv_tbl_46_vals[] = {
+PRESET_CONST mrb_value mrb_preset_iv_tbl_46_vals[] = {
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
@@ -5901,13 +5901,13 @@ PRESET_DATA mrb_value mrb_preset_iv_tbl_46_vals[] = {
 };
 PRESET_DATA kh_iv_t mrb_preset_iv_tbl_46 = { .n_buckets = 8, .size = 1, .n_occupied = 1, .ed_flags = (uint8_t *)&mrb_preset_iv_tbl_46_ed_flags, .keys = (mrb_sym *)&mrb_preset_iv_tbl_46_keys, .vals = (mrb_value *)&mrb_preset_iv_tbl_46_vals };
 
-PRESET_DATA uint8_t mrb_preset_iv_tbl_47_ed_flags[] = {
+PRESET_CONST uint8_t mrb_preset_iv_tbl_47_ed_flags[] = {
 	0xaa, 0x2a,
 };
-PRESET_DATA mrb_sym mrb_preset_iv_tbl_47_keys[] = {
+PRESET_CONST mrb_sym mrb_preset_iv_tbl_47_keys[] = {
 	0, 0, 0, 0, 0, 0, 0, 6,
 };
-PRESET_DATA mrb_value mrb_preset_iv_tbl_47_vals[] = {
+PRESET_CONST mrb_value mrb_preset_iv_tbl_47_vals[] = {
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
@@ -5919,13 +5919,13 @@ PRESET_DATA mrb_value mrb_preset_iv_tbl_47_vals[] = {
 };
 PRESET_DATA kh_iv_t mrb_preset_iv_tbl_47 = { .n_buckets = 8, .size = 1, .n_occupied = 1, .ed_flags = (uint8_t *)&mrb_preset_iv_tbl_47_ed_flags, .keys = (mrb_sym *)&mrb_preset_iv_tbl_47_keys, .vals = (mrb_value *)&mrb_preset_iv_tbl_47_vals };
 
-PRESET_DATA uint8_t mrb_preset_iv_tbl_48_ed_flags[] = {
+PRESET_CONST uint8_t mrb_preset_iv_tbl_48_ed_flags[] = {
 	0xaa, 0xa2,
 };
-PRESET_DATA mrb_sym mrb_preset_iv_tbl_48_keys[] = {
+PRESET_CONST mrb_sym mrb_preset_iv_tbl_48_keys[] = {
 	0, 0, 0, 0, 0, 1, 0, 0,
 };
-PRESET_DATA mrb_value mrb_preset_iv_tbl_48_vals[] = {
+PRESET_CONST mrb_value mrb_preset_iv_tbl_48_vals[] = {
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
@@ -5937,13 +5937,13 @@ PRESET_DATA mrb_value mrb_preset_iv_tbl_48_vals[] = {
 };
 PRESET_DATA kh_iv_t mrb_preset_iv_tbl_48 = { .n_buckets = 8, .size = 1, .n_occupied = 1, .ed_flags = (uint8_t *)&mrb_preset_iv_tbl_48_ed_flags, .keys = (mrb_sym *)&mrb_preset_iv_tbl_48_keys, .vals = (mrb_value *)&mrb_preset_iv_tbl_48_vals };
 
-PRESET_DATA uint8_t mrb_preset_iv_tbl_49_ed_flags[] = {
+PRESET_CONST uint8_t mrb_preset_iv_tbl_49_ed_flags[] = {
 	0xa2, 0x0a,
 };
-PRESET_DATA mrb_sym mrb_preset_iv_tbl_49_keys[] = {
+PRESET_CONST mrb_sym mrb_preset_iv_tbl_49_keys[] = {
 	0, 209, 0, 0, 0, 0, 210, 6,
 };
-PRESET_DATA mrb_value mrb_preset_iv_tbl_49_vals[] = {
+PRESET_CONST mrb_value mrb_preset_iv_tbl_49_vals[] = {
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .f = INFINITY }, .tt = MRB_TT_FLOAT },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
@@ -5955,13 +5955,13 @@ PRESET_DATA mrb_value mrb_preset_iv_tbl_49_vals[] = {
 };
 PRESET_DATA kh_iv_t mrb_preset_iv_tbl_49 = { .n_buckets = 8, .size = 3, .n_occupied = 3, .ed_flags = (uint8_t *)&mrb_preset_iv_tbl_49_ed_flags, .keys = (mrb_sym *)&mrb_preset_iv_tbl_49_keys, .vals = (mrb_value *)&mrb_preset_iv_tbl_49_vals };
 
-PRESET_DATA uint8_t mrb_preset_iv_tbl_50_ed_flags[] = {
+PRESET_CONST uint8_t mrb_preset_iv_tbl_50_ed_flags[] = {
 	0xaa, 0xa2,
 };
-PRESET_DATA mrb_sym mrb_preset_iv_tbl_50_keys[] = {
+PRESET_CONST mrb_sym mrb_preset_iv_tbl_50_keys[] = {
 	0, 0, 0, 0, 0, 1, 0, 0,
 };
-PRESET_DATA mrb_value mrb_preset_iv_tbl_50_vals[] = {
+PRESET_CONST mrb_value mrb_preset_iv_tbl_50_vals[] = {
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
@@ -5973,13 +5973,13 @@ PRESET_DATA mrb_value mrb_preset_iv_tbl_50_vals[] = {
 };
 PRESET_DATA kh_iv_t mrb_preset_iv_tbl_50 = { .n_buckets = 8, .size = 1, .n_occupied = 1, .ed_flags = (uint8_t *)&mrb_preset_iv_tbl_50_ed_flags, .keys = (mrb_sym *)&mrb_preset_iv_tbl_50_keys, .vals = (mrb_value *)&mrb_preset_iv_tbl_50_vals };
 
-PRESET_DATA uint8_t mrb_preset_iv_tbl_51_ed_flags[] = {
+PRESET_CONST uint8_t mrb_preset_iv_tbl_51_ed_flags[] = {
 	0xaa, 0xa2,
 };
-PRESET_DATA mrb_sym mrb_preset_iv_tbl_51_keys[] = {
+PRESET_CONST mrb_sym mrb_preset_iv_tbl_51_keys[] = {
 	0, 0, 0, 0, 0, 1, 0, 0,
 };
-PRESET_DATA mrb_value mrb_preset_iv_tbl_51_vals[] = {
+PRESET_CONST mrb_value mrb_preset_iv_tbl_51_vals[] = {
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
@@ -5991,13 +5991,13 @@ PRESET_DATA mrb_value mrb_preset_iv_tbl_51_vals[] = {
 };
 PRESET_DATA kh_iv_t mrb_preset_iv_tbl_51 = { .n_buckets = 8, .size = 1, .n_occupied = 1, .ed_flags = (uint8_t *)&mrb_preset_iv_tbl_51_ed_flags, .keys = (mrb_sym *)&mrb_preset_iv_tbl_51_keys, .vals = (mrb_value *)&mrb_preset_iv_tbl_51_vals };
 
-PRESET_DATA uint8_t mrb_preset_iv_tbl_52_ed_flags[] = {
+PRESET_CONST uint8_t mrb_preset_iv_tbl_52_ed_flags[] = {
 	0xaa, 0x2a,
 };
-PRESET_DATA mrb_sym mrb_preset_iv_tbl_52_keys[] = {
+PRESET_CONST mrb_sym mrb_preset_iv_tbl_52_keys[] = {
 	0, 0, 0, 0, 0, 0, 0, 6,
 };
-PRESET_DATA mrb_value mrb_preset_iv_tbl_52_vals[] = {
+PRESET_CONST mrb_value mrb_preset_iv_tbl_52_vals[] = {
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
@@ -6009,13 +6009,13 @@ PRESET_DATA mrb_value mrb_preset_iv_tbl_52_vals[] = {
 };
 PRESET_DATA kh_iv_t mrb_preset_iv_tbl_52 = { .n_buckets = 8, .size = 1, .n_occupied = 1, .ed_flags = (uint8_t *)&mrb_preset_iv_tbl_52_ed_flags, .keys = (mrb_sym *)&mrb_preset_iv_tbl_52_keys, .vals = (mrb_value *)&mrb_preset_iv_tbl_52_vals };
 
-PRESET_DATA uint8_t mrb_preset_iv_tbl_53_ed_flags[] = {
+PRESET_CONST uint8_t mrb_preset_iv_tbl_53_ed_flags[] = {
 	0x22, 0x08,
 };
-PRESET_DATA mrb_sym mrb_preset_iv_tbl_53_keys[] = {
+PRESET_CONST mrb_sym mrb_preset_iv_tbl_53_keys[] = {
 	0, 379, 0, 377, 378, 0, 380, 6,
 };
-PRESET_DATA mrb_value mrb_preset_iv_tbl_53_vals[] = {
+PRESET_CONST mrb_value mrb_preset_iv_tbl_53_vals[] = {
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .f = 2.71828 }, .tt = MRB_TT_FLOAT },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
@@ -6027,13 +6027,13 @@ PRESET_DATA mrb_value mrb_preset_iv_tbl_53_vals[] = {
 };
 PRESET_DATA kh_iv_t mrb_preset_iv_tbl_53 = { .n_buckets = 8, .size = 5, .n_occupied = 5, .ed_flags = (uint8_t *)&mrb_preset_iv_tbl_53_ed_flags, .keys = (mrb_sym *)&mrb_preset_iv_tbl_53_keys, .vals = (mrb_value *)&mrb_preset_iv_tbl_53_vals };
 
-PRESET_DATA uint8_t mrb_preset_iv_tbl_54_ed_flags[] = {
+PRESET_CONST uint8_t mrb_preset_iv_tbl_54_ed_flags[] = {
 	0xaa, 0x2a,
 };
-PRESET_DATA mrb_sym mrb_preset_iv_tbl_54_keys[] = {
+PRESET_CONST mrb_sym mrb_preset_iv_tbl_54_keys[] = {
 	0, 0, 0, 0, 0, 0, 0, 6,
 };
-PRESET_DATA mrb_value mrb_preset_iv_tbl_54_vals[] = {
+PRESET_CONST mrb_value mrb_preset_iv_tbl_54_vals[] = {
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
@@ -6045,13 +6045,13 @@ PRESET_DATA mrb_value mrb_preset_iv_tbl_54_vals[] = {
 };
 PRESET_DATA kh_iv_t mrb_preset_iv_tbl_54 = { .n_buckets = 8, .size = 1, .n_occupied = 1, .ed_flags = (uint8_t *)&mrb_preset_iv_tbl_54_ed_flags, .keys = (mrb_sym *)&mrb_preset_iv_tbl_54_keys, .vals = (mrb_value *)&mrb_preset_iv_tbl_54_vals };
 
-PRESET_DATA uint8_t mrb_preset_iv_tbl_55_ed_flags[] = {
+PRESET_CONST uint8_t mrb_preset_iv_tbl_55_ed_flags[] = {
 	0xaa, 0xa2,
 };
-PRESET_DATA mrb_sym mrb_preset_iv_tbl_55_keys[] = {
+PRESET_CONST mrb_sym mrb_preset_iv_tbl_55_keys[] = {
 	0, 0, 0, 0, 0, 1, 0, 0,
 };
-PRESET_DATA mrb_value mrb_preset_iv_tbl_55_vals[] = {
+PRESET_CONST mrb_value mrb_preset_iv_tbl_55_vals[] = {
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
@@ -6063,13 +6063,13 @@ PRESET_DATA mrb_value mrb_preset_iv_tbl_55_vals[] = {
 };
 PRESET_DATA kh_iv_t mrb_preset_iv_tbl_55 = { .n_buckets = 8, .size = 1, .n_occupied = 1, .ed_flags = (uint8_t *)&mrb_preset_iv_tbl_55_ed_flags, .keys = (mrb_sym *)&mrb_preset_iv_tbl_55_keys, .vals = (mrb_value *)&mrb_preset_iv_tbl_55_vals };
 
-PRESET_DATA uint8_t mrb_preset_iv_tbl_56_ed_flags[] = {
+PRESET_CONST uint8_t mrb_preset_iv_tbl_56_ed_flags[] = {
 	0xaa, 0xa2,
 };
-PRESET_DATA mrb_sym mrb_preset_iv_tbl_56_keys[] = {
+PRESET_CONST mrb_sym mrb_preset_iv_tbl_56_keys[] = {
 	0, 0, 0, 0, 0, 1, 0, 0,
 };
-PRESET_DATA mrb_value mrb_preset_iv_tbl_56_vals[] = {
+PRESET_CONST mrb_value mrb_preset_iv_tbl_56_vals[] = {
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
@@ -6081,13 +6081,13 @@ PRESET_DATA mrb_value mrb_preset_iv_tbl_56_vals[] = {
 };
 PRESET_DATA kh_iv_t mrb_preset_iv_tbl_56 = { .n_buckets = 8, .size = 1, .n_occupied = 1, .ed_flags = (uint8_t *)&mrb_preset_iv_tbl_56_ed_flags, .keys = (mrb_sym *)&mrb_preset_iv_tbl_56_keys, .vals = (mrb_value *)&mrb_preset_iv_tbl_56_vals };
 
-PRESET_DATA uint8_t mrb_preset_iv_tbl_57_ed_flags[] = {
+PRESET_CONST uint8_t mrb_preset_iv_tbl_57_ed_flags[] = {
 	0xaa, 0xa2,
 };
-PRESET_DATA mrb_sym mrb_preset_iv_tbl_57_keys[] = {
+PRESET_CONST mrb_sym mrb_preset_iv_tbl_57_keys[] = {
 	0, 0, 0, 0, 0, 1, 0, 0,
 };
-PRESET_DATA mrb_value mrb_preset_iv_tbl_57_vals[] = {
+PRESET_CONST mrb_value mrb_preset_iv_tbl_57_vals[] = {
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
@@ -6099,13 +6099,13 @@ PRESET_DATA mrb_value mrb_preset_iv_tbl_57_vals[] = {
 };
 PRESET_DATA kh_iv_t mrb_preset_iv_tbl_57 = { .n_buckets = 8, .size = 1, .n_occupied = 1, .ed_flags = (uint8_t *)&mrb_preset_iv_tbl_57_ed_flags, .keys = (mrb_sym *)&mrb_preset_iv_tbl_57_keys, .vals = (mrb_value *)&mrb_preset_iv_tbl_57_vals };
 
-PRESET_DATA uint8_t mrb_preset_iv_tbl_58_ed_flags[] = {
+PRESET_CONST uint8_t mrb_preset_iv_tbl_58_ed_flags[] = {
 	0xaa, 0x2a,
 };
-PRESET_DATA mrb_sym mrb_preset_iv_tbl_58_keys[] = {
+PRESET_CONST mrb_sym mrb_preset_iv_tbl_58_keys[] = {
 	0, 0, 0, 0, 0, 0, 0, 6,
 };
-PRESET_DATA mrb_value mrb_preset_iv_tbl_58_vals[] = {
+PRESET_CONST mrb_value mrb_preset_iv_tbl_58_vals[] = {
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
@@ -6117,13 +6117,13 @@ PRESET_DATA mrb_value mrb_preset_iv_tbl_58_vals[] = {
 };
 PRESET_DATA kh_iv_t mrb_preset_iv_tbl_58 = { .n_buckets = 8, .size = 1, .n_occupied = 1, .ed_flags = (uint8_t *)&mrb_preset_iv_tbl_58_ed_flags, .keys = (mrb_sym *)&mrb_preset_iv_tbl_58_keys, .vals = (mrb_value *)&mrb_preset_iv_tbl_58_vals };
 
-PRESET_DATA uint8_t mrb_preset_iv_tbl_59_ed_flags[] = {
+PRESET_CONST uint8_t mrb_preset_iv_tbl_59_ed_flags[] = {
 	0xaa, 0xa2,
 };
-PRESET_DATA mrb_sym mrb_preset_iv_tbl_59_keys[] = {
+PRESET_CONST mrb_sym mrb_preset_iv_tbl_59_keys[] = {
 	0, 0, 0, 0, 0, 1, 0, 0,
 };
-PRESET_DATA mrb_value mrb_preset_iv_tbl_59_vals[] = {
+PRESET_CONST mrb_value mrb_preset_iv_tbl_59_vals[] = {
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
@@ -6135,13 +6135,13 @@ PRESET_DATA mrb_value mrb_preset_iv_tbl_59_vals[] = {
 };
 PRESET_DATA kh_iv_t mrb_preset_iv_tbl_59 = { .n_buckets = 8, .size = 1, .n_occupied = 1, .ed_flags = (uint8_t *)&mrb_preset_iv_tbl_59_ed_flags, .keys = (mrb_sym *)&mrb_preset_iv_tbl_59_keys, .vals = (mrb_value *)&mrb_preset_iv_tbl_59_vals };
 
-PRESET_DATA uint8_t mrb_preset_iv_tbl_60_ed_flags[] = {
+PRESET_CONST uint8_t mrb_preset_iv_tbl_60_ed_flags[] = {
 	0xaa, 0x2a,
 };
-PRESET_DATA mrb_sym mrb_preset_iv_tbl_60_keys[] = {
+PRESET_CONST mrb_sym mrb_preset_iv_tbl_60_keys[] = {
 	0, 0, 0, 0, 0, 0, 0, 6,
 };
-PRESET_DATA mrb_value mrb_preset_iv_tbl_60_vals[] = {
+PRESET_CONST mrb_value mrb_preset_iv_tbl_60_vals[] = {
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
@@ -6153,13 +6153,13 @@ PRESET_DATA mrb_value mrb_preset_iv_tbl_60_vals[] = {
 };
 PRESET_DATA kh_iv_t mrb_preset_iv_tbl_60 = { .n_buckets = 8, .size = 1, .n_occupied = 1, .ed_flags = (uint8_t *)&mrb_preset_iv_tbl_60_ed_flags, .keys = (mrb_sym *)&mrb_preset_iv_tbl_60_keys, .vals = (mrb_value *)&mrb_preset_iv_tbl_60_vals };
 
-PRESET_DATA uint8_t mrb_preset_iv_tbl_61_ed_flags[] = {
+PRESET_CONST uint8_t mrb_preset_iv_tbl_61_ed_flags[] = {
 	0xaa, 0xa2,
 };
-PRESET_DATA mrb_sym mrb_preset_iv_tbl_61_keys[] = {
+PRESET_CONST mrb_sym mrb_preset_iv_tbl_61_keys[] = {
 	0, 0, 0, 0, 0, 1, 0, 0,
 };
-PRESET_DATA mrb_value mrb_preset_iv_tbl_61_vals[] = {
+PRESET_CONST mrb_value mrb_preset_iv_tbl_61_vals[] = {
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
@@ -6171,13 +6171,13 @@ PRESET_DATA mrb_value mrb_preset_iv_tbl_61_vals[] = {
 };
 PRESET_DATA kh_iv_t mrb_preset_iv_tbl_61 = { .n_buckets = 8, .size = 1, .n_occupied = 1, .ed_flags = (uint8_t *)&mrb_preset_iv_tbl_61_ed_flags, .keys = (mrb_sym *)&mrb_preset_iv_tbl_61_keys, .vals = (mrb_value *)&mrb_preset_iv_tbl_61_vals };
 
-PRESET_DATA uint8_t mrb_preset_iv_tbl_62_ed_flags[] = {
+PRESET_CONST uint8_t mrb_preset_iv_tbl_62_ed_flags[] = {
 	0xaa, 0x2a,
 };
-PRESET_DATA mrb_sym mrb_preset_iv_tbl_62_keys[] = {
+PRESET_CONST mrb_sym mrb_preset_iv_tbl_62_keys[] = {
 	0, 0, 0, 0, 0, 0, 0, 6,
 };
-PRESET_DATA mrb_value mrb_preset_iv_tbl_62_vals[] = {
+PRESET_CONST mrb_value mrb_preset_iv_tbl_62_vals[] = {
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
@@ -6189,13 +6189,13 @@ PRESET_DATA mrb_value mrb_preset_iv_tbl_62_vals[] = {
 };
 PRESET_DATA kh_iv_t mrb_preset_iv_tbl_62 = { .n_buckets = 8, .size = 1, .n_occupied = 1, .ed_flags = (uint8_t *)&mrb_preset_iv_tbl_62_ed_flags, .keys = (mrb_sym *)&mrb_preset_iv_tbl_62_keys, .vals = (mrb_value *)&mrb_preset_iv_tbl_62_vals };
 
-PRESET_DATA uint8_t mrb_preset_iv_tbl_63_ed_flags[] = {
+PRESET_CONST uint8_t mrb_preset_iv_tbl_63_ed_flags[] = {
 	0xaa, 0xa2,
 };
-PRESET_DATA mrb_sym mrb_preset_iv_tbl_63_keys[] = {
+PRESET_CONST mrb_sym mrb_preset_iv_tbl_63_keys[] = {
 	0, 0, 0, 0, 0, 1, 0, 0,
 };
-PRESET_DATA mrb_value mrb_preset_iv_tbl_63_vals[] = {
+PRESET_CONST mrb_value mrb_preset_iv_tbl_63_vals[] = {
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
@@ -6207,13 +6207,13 @@ PRESET_DATA mrb_value mrb_preset_iv_tbl_63_vals[] = {
 };
 PRESET_DATA kh_iv_t mrb_preset_iv_tbl_63 = { .n_buckets = 8, .size = 1, .n_occupied = 1, .ed_flags = (uint8_t *)&mrb_preset_iv_tbl_63_ed_flags, .keys = (mrb_sym *)&mrb_preset_iv_tbl_63_keys, .vals = (mrb_value *)&mrb_preset_iv_tbl_63_vals };
 
-PRESET_DATA uint8_t mrb_preset_iv_tbl_64_ed_flags[] = {
+PRESET_CONST uint8_t mrb_preset_iv_tbl_64_ed_flags[] = {
 	0xaa, 0xa2,
 };
-PRESET_DATA mrb_sym mrb_preset_iv_tbl_64_keys[] = {
+PRESET_CONST mrb_sym mrb_preset_iv_tbl_64_keys[] = {
 	0, 0, 0, 0, 0, 1, 0, 0,
 };
-PRESET_DATA mrb_value mrb_preset_iv_tbl_64_vals[] = {
+PRESET_CONST mrb_value mrb_preset_iv_tbl_64_vals[] = {
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
@@ -6225,13 +6225,13 @@ PRESET_DATA mrb_value mrb_preset_iv_tbl_64_vals[] = {
 };
 PRESET_DATA kh_iv_t mrb_preset_iv_tbl_64 = { .n_buckets = 8, .size = 1, .n_occupied = 1, .ed_flags = (uint8_t *)&mrb_preset_iv_tbl_64_ed_flags, .keys = (mrb_sym *)&mrb_preset_iv_tbl_64_keys, .vals = (mrb_value *)&mrb_preset_iv_tbl_64_vals };
 
-PRESET_DATA uint8_t mrb_preset_iv_tbl_65_ed_flags[] = {
+PRESET_CONST uint8_t mrb_preset_iv_tbl_65_ed_flags[] = {
 	0xaa, 0x2a,
 };
-PRESET_DATA mrb_sym mrb_preset_iv_tbl_65_keys[] = {
+PRESET_CONST mrb_sym mrb_preset_iv_tbl_65_keys[] = {
 	0, 0, 0, 0, 0, 0, 0, 6,
 };
-PRESET_DATA mrb_value mrb_preset_iv_tbl_65_vals[] = {
+PRESET_CONST mrb_value mrb_preset_iv_tbl_65_vals[] = {
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
@@ -6243,13 +6243,13 @@ PRESET_DATA mrb_value mrb_preset_iv_tbl_65_vals[] = {
 };
 PRESET_DATA kh_iv_t mrb_preset_iv_tbl_65 = { .n_buckets = 8, .size = 1, .n_occupied = 1, .ed_flags = (uint8_t *)&mrb_preset_iv_tbl_65_ed_flags, .keys = (mrb_sym *)&mrb_preset_iv_tbl_65_keys, .vals = (mrb_value *)&mrb_preset_iv_tbl_65_vals };
 
-PRESET_DATA uint8_t mrb_preset_iv_tbl_66_ed_flags[] = {
+PRESET_CONST uint8_t mrb_preset_iv_tbl_66_ed_flags[] = {
 	0xaa, 0xa2,
 };
-PRESET_DATA mrb_sym mrb_preset_iv_tbl_66_keys[] = {
+PRESET_CONST mrb_sym mrb_preset_iv_tbl_66_keys[] = {
 	0, 0, 0, 0, 0, 1, 0, 0,
 };
-PRESET_DATA mrb_value mrb_preset_iv_tbl_66_vals[] = {
+PRESET_CONST mrb_value mrb_preset_iv_tbl_66_vals[] = {
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
@@ -6261,13 +6261,13 @@ PRESET_DATA mrb_value mrb_preset_iv_tbl_66_vals[] = {
 };
 PRESET_DATA kh_iv_t mrb_preset_iv_tbl_66 = { .n_buckets = 8, .size = 1, .n_occupied = 1, .ed_flags = (uint8_t *)&mrb_preset_iv_tbl_66_ed_flags, .keys = (mrb_sym *)&mrb_preset_iv_tbl_66_keys, .vals = (mrb_value *)&mrb_preset_iv_tbl_66_vals };
 
-PRESET_DATA uint8_t mrb_preset_iv_tbl_67_ed_flags[] = {
+PRESET_CONST uint8_t mrb_preset_iv_tbl_67_ed_flags[] = {
 	0xaa, 0x2a,
 };
-PRESET_DATA mrb_sym mrb_preset_iv_tbl_67_keys[] = {
+PRESET_CONST mrb_sym mrb_preset_iv_tbl_67_keys[] = {
 	0, 0, 0, 0, 0, 0, 0, 6,
 };
-PRESET_DATA mrb_value mrb_preset_iv_tbl_67_vals[] = {
+PRESET_CONST mrb_value mrb_preset_iv_tbl_67_vals[] = {
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
@@ -6279,13 +6279,13 @@ PRESET_DATA mrb_value mrb_preset_iv_tbl_67_vals[] = {
 };
 PRESET_DATA kh_iv_t mrb_preset_iv_tbl_67 = { .n_buckets = 8, .size = 1, .n_occupied = 1, .ed_flags = (uint8_t *)&mrb_preset_iv_tbl_67_ed_flags, .keys = (mrb_sym *)&mrb_preset_iv_tbl_67_keys, .vals = (mrb_value *)&mrb_preset_iv_tbl_67_vals };
 
-PRESET_DATA uint8_t mrb_preset_iv_tbl_68_ed_flags[] = {
+PRESET_CONST uint8_t mrb_preset_iv_tbl_68_ed_flags[] = {
 	0xaa, 0xa2,
 };
-PRESET_DATA mrb_sym mrb_preset_iv_tbl_68_keys[] = {
+PRESET_CONST mrb_sym mrb_preset_iv_tbl_68_keys[] = {
 	0, 0, 0, 0, 0, 1, 0, 0,
 };
-PRESET_DATA mrb_value mrb_preset_iv_tbl_68_vals[] = {
+PRESET_CONST mrb_value mrb_preset_iv_tbl_68_vals[] = {
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
@@ -6297,13 +6297,13 @@ PRESET_DATA mrb_value mrb_preset_iv_tbl_68_vals[] = {
 };
 PRESET_DATA kh_iv_t mrb_preset_iv_tbl_68 = { .n_buckets = 8, .size = 1, .n_occupied = 1, .ed_flags = (uint8_t *)&mrb_preset_iv_tbl_68_ed_flags, .keys = (mrb_sym *)&mrb_preset_iv_tbl_68_keys, .vals = (mrb_value *)&mrb_preset_iv_tbl_68_vals };
 
-PRESET_DATA uint8_t mrb_preset_iv_tbl_69_ed_flags[] = {
+PRESET_CONST uint8_t mrb_preset_iv_tbl_69_ed_flags[] = {
 	0xaa, 0xa2,
 };
-PRESET_DATA mrb_sym mrb_preset_iv_tbl_69_keys[] = {
+PRESET_CONST mrb_sym mrb_preset_iv_tbl_69_keys[] = {
 	0, 0, 0, 0, 0, 1, 0, 0,
 };
-PRESET_DATA mrb_value mrb_preset_iv_tbl_69_vals[] = {
+PRESET_CONST mrb_value mrb_preset_iv_tbl_69_vals[] = {
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
@@ -6315,13 +6315,13 @@ PRESET_DATA mrb_value mrb_preset_iv_tbl_69_vals[] = {
 };
 PRESET_DATA kh_iv_t mrb_preset_iv_tbl_69 = { .n_buckets = 8, .size = 1, .n_occupied = 1, .ed_flags = (uint8_t *)&mrb_preset_iv_tbl_69_ed_flags, .keys = (mrb_sym *)&mrb_preset_iv_tbl_69_keys, .vals = (mrb_value *)&mrb_preset_iv_tbl_69_vals };
 
-PRESET_DATA uint8_t mrb_preset_iv_tbl_70_ed_flags[] = {
+PRESET_CONST uint8_t mrb_preset_iv_tbl_70_ed_flags[] = {
 	0xaa, 0x2a,
 };
-PRESET_DATA mrb_sym mrb_preset_iv_tbl_70_keys[] = {
+PRESET_CONST mrb_sym mrb_preset_iv_tbl_70_keys[] = {
 	0, 0, 0, 0, 0, 0, 0, 6,
 };
-PRESET_DATA mrb_value mrb_preset_iv_tbl_70_vals[] = {
+PRESET_CONST mrb_value mrb_preset_iv_tbl_70_vals[] = {
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
@@ -6333,13 +6333,13 @@ PRESET_DATA mrb_value mrb_preset_iv_tbl_70_vals[] = {
 };
 PRESET_DATA kh_iv_t mrb_preset_iv_tbl_70 = { .n_buckets = 8, .size = 1, .n_occupied = 1, .ed_flags = (uint8_t *)&mrb_preset_iv_tbl_70_ed_flags, .keys = (mrb_sym *)&mrb_preset_iv_tbl_70_keys, .vals = (mrb_value *)&mrb_preset_iv_tbl_70_vals };
 
-PRESET_DATA uint8_t mrb_preset_iv_tbl_71_ed_flags[] = {
+PRESET_CONST uint8_t mrb_preset_iv_tbl_71_ed_flags[] = {
 	0xaa, 0x2a,
 };
-PRESET_DATA mrb_sym mrb_preset_iv_tbl_71_keys[] = {
+PRESET_CONST mrb_sym mrb_preset_iv_tbl_71_keys[] = {
 	0, 0, 0, 0, 0, 0, 0, 6,
 };
-PRESET_DATA mrb_value mrb_preset_iv_tbl_71_vals[] = {
+PRESET_CONST mrb_value mrb_preset_iv_tbl_71_vals[] = {
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
@@ -6351,13 +6351,13 @@ PRESET_DATA mrb_value mrb_preset_iv_tbl_71_vals[] = {
 };
 PRESET_DATA kh_iv_t mrb_preset_iv_tbl_71 = { .n_buckets = 8, .size = 1, .n_occupied = 1, .ed_flags = (uint8_t *)&mrb_preset_iv_tbl_71_ed_flags, .keys = (mrb_sym *)&mrb_preset_iv_tbl_71_keys, .vals = (mrb_value *)&mrb_preset_iv_tbl_71_vals };
 
-PRESET_DATA uint8_t mrb_preset_iv_tbl_72_ed_flags[] = {
+PRESET_CONST uint8_t mrb_preset_iv_tbl_72_ed_flags[] = {
 	0xaa, 0xa2,
 };
-PRESET_DATA mrb_sym mrb_preset_iv_tbl_72_keys[] = {
+PRESET_CONST mrb_sym mrb_preset_iv_tbl_72_keys[] = {
 	0, 0, 0, 0, 0, 1, 0, 0,
 };
-PRESET_DATA mrb_value mrb_preset_iv_tbl_72_vals[] = {
+PRESET_CONST mrb_value mrb_preset_iv_tbl_72_vals[] = {
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
@@ -6369,13 +6369,13 @@ PRESET_DATA mrb_value mrb_preset_iv_tbl_72_vals[] = {
 };
 PRESET_DATA kh_iv_t mrb_preset_iv_tbl_72 = { .n_buckets = 8, .size = 1, .n_occupied = 1, .ed_flags = (uint8_t *)&mrb_preset_iv_tbl_72_ed_flags, .keys = (mrb_sym *)&mrb_preset_iv_tbl_72_keys, .vals = (mrb_value *)&mrb_preset_iv_tbl_72_vals };
 
-PRESET_DATA uint8_t mrb_preset_iv_tbl_73_ed_flags[] = {
+PRESET_CONST uint8_t mrb_preset_iv_tbl_73_ed_flags[] = {
 	0xaa, 0x2a,
 };
-PRESET_DATA mrb_sym mrb_preset_iv_tbl_73_keys[] = {
+PRESET_CONST mrb_sym mrb_preset_iv_tbl_73_keys[] = {
 	0, 0, 0, 0, 0, 0, 0, 6,
 };
-PRESET_DATA mrb_value mrb_preset_iv_tbl_73_vals[] = {
+PRESET_CONST mrb_value mrb_preset_iv_tbl_73_vals[] = {
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
@@ -6387,13 +6387,13 @@ PRESET_DATA mrb_value mrb_preset_iv_tbl_73_vals[] = {
 };
 PRESET_DATA kh_iv_t mrb_preset_iv_tbl_73 = { .n_buckets = 8, .size = 1, .n_occupied = 1, .ed_flags = (uint8_t *)&mrb_preset_iv_tbl_73_ed_flags, .keys = (mrb_sym *)&mrb_preset_iv_tbl_73_keys, .vals = (mrb_value *)&mrb_preset_iv_tbl_73_vals };
 
-PRESET_DATA uint8_t mrb_preset_iv_tbl_74_ed_flags[] = {
+PRESET_CONST uint8_t mrb_preset_iv_tbl_74_ed_flags[] = {
 	0xaa, 0xa2,
 };
-PRESET_DATA mrb_sym mrb_preset_iv_tbl_74_keys[] = {
+PRESET_CONST mrb_sym mrb_preset_iv_tbl_74_keys[] = {
 	0, 0, 0, 0, 0, 1, 0, 0,
 };
-PRESET_DATA mrb_value mrb_preset_iv_tbl_74_vals[] = {
+PRESET_CONST mrb_value mrb_preset_iv_tbl_74_vals[] = {
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
@@ -6405,13 +6405,13 @@ PRESET_DATA mrb_value mrb_preset_iv_tbl_74_vals[] = {
 };
 PRESET_DATA kh_iv_t mrb_preset_iv_tbl_74 = { .n_buckets = 8, .size = 1, .n_occupied = 1, .ed_flags = (uint8_t *)&mrb_preset_iv_tbl_74_ed_flags, .keys = (mrb_sym *)&mrb_preset_iv_tbl_74_keys, .vals = (mrb_value *)&mrb_preset_iv_tbl_74_vals };
 
-PRESET_DATA uint8_t mrb_preset_iv_tbl_75_ed_flags[] = {
+PRESET_CONST uint8_t mrb_preset_iv_tbl_75_ed_flags[] = {
 	0xaa, 0xa2,
 };
-PRESET_DATA mrb_sym mrb_preset_iv_tbl_75_keys[] = {
+PRESET_CONST mrb_sym mrb_preset_iv_tbl_75_keys[] = {
 	0, 0, 0, 0, 0, 1, 0, 0,
 };
-PRESET_DATA mrb_value mrb_preset_iv_tbl_75_vals[] = {
+PRESET_CONST mrb_value mrb_preset_iv_tbl_75_vals[] = {
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
@@ -6423,13 +6423,13 @@ PRESET_DATA mrb_value mrb_preset_iv_tbl_75_vals[] = {
 };
 PRESET_DATA kh_iv_t mrb_preset_iv_tbl_75 = { .n_buckets = 8, .size = 1, .n_occupied = 1, .ed_flags = (uint8_t *)&mrb_preset_iv_tbl_75_ed_flags, .keys = (mrb_sym *)&mrb_preset_iv_tbl_75_keys, .vals = (mrb_value *)&mrb_preset_iv_tbl_75_vals };
 
-PRESET_DATA uint8_t mrb_preset_iv_tbl_76_ed_flags[] = {
+PRESET_CONST uint8_t mrb_preset_iv_tbl_76_ed_flags[] = {
 	0xaa, 0x2a,
 };
-PRESET_DATA mrb_sym mrb_preset_iv_tbl_76_keys[] = {
+PRESET_CONST mrb_sym mrb_preset_iv_tbl_76_keys[] = {
 	0, 0, 0, 0, 0, 0, 0, 6,
 };
-PRESET_DATA mrb_value mrb_preset_iv_tbl_76_vals[] = {
+PRESET_CONST mrb_value mrb_preset_iv_tbl_76_vals[] = {
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
@@ -6441,13 +6441,13 @@ PRESET_DATA mrb_value mrb_preset_iv_tbl_76_vals[] = {
 };
 PRESET_DATA kh_iv_t mrb_preset_iv_tbl_76 = { .n_buckets = 8, .size = 1, .n_occupied = 1, .ed_flags = (uint8_t *)&mrb_preset_iv_tbl_76_ed_flags, .keys = (mrb_sym *)&mrb_preset_iv_tbl_76_keys, .vals = (mrb_value *)&mrb_preset_iv_tbl_76_vals };
 
-PRESET_DATA uint8_t mrb_preset_iv_tbl_77_ed_flags[] = {
+PRESET_CONST uint8_t mrb_preset_iv_tbl_77_ed_flags[] = {
 	0xaa, 0x2a,
 };
-PRESET_DATA mrb_sym mrb_preset_iv_tbl_77_keys[] = {
+PRESET_CONST mrb_sym mrb_preset_iv_tbl_77_keys[] = {
 	0, 0, 0, 0, 0, 0, 0, 6,
 };
-PRESET_DATA mrb_value mrb_preset_iv_tbl_77_vals[] = {
+PRESET_CONST mrb_value mrb_preset_iv_tbl_77_vals[] = {
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
@@ -6459,13 +6459,13 @@ PRESET_DATA mrb_value mrb_preset_iv_tbl_77_vals[] = {
 };
 PRESET_DATA kh_iv_t mrb_preset_iv_tbl_77 = { .n_buckets = 8, .size = 1, .n_occupied = 1, .ed_flags = (uint8_t *)&mrb_preset_iv_tbl_77_ed_flags, .keys = (mrb_sym *)&mrb_preset_iv_tbl_77_keys, .vals = (mrb_value *)&mrb_preset_iv_tbl_77_vals };
 
-PRESET_DATA uint8_t mrb_preset_iv_tbl_78_ed_flags[] = {
+PRESET_CONST uint8_t mrb_preset_iv_tbl_78_ed_flags[] = {
 	0xaa, 0xa2,
 };
-PRESET_DATA mrb_sym mrb_preset_iv_tbl_78_keys[] = {
+PRESET_CONST mrb_sym mrb_preset_iv_tbl_78_keys[] = {
 	0, 0, 0, 0, 0, 1, 0, 0,
 };
-PRESET_DATA mrb_value mrb_preset_iv_tbl_78_vals[] = {
+PRESET_CONST mrb_value mrb_preset_iv_tbl_78_vals[] = {
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
@@ -6477,13 +6477,13 @@ PRESET_DATA mrb_value mrb_preset_iv_tbl_78_vals[] = {
 };
 PRESET_DATA kh_iv_t mrb_preset_iv_tbl_78 = { .n_buckets = 8, .size = 1, .n_occupied = 1, .ed_flags = (uint8_t *)&mrb_preset_iv_tbl_78_ed_flags, .keys = (mrb_sym *)&mrb_preset_iv_tbl_78_keys, .vals = (mrb_value *)&mrb_preset_iv_tbl_78_vals };
 
-PRESET_DATA uint8_t mrb_preset_iv_tbl_79_ed_flags[] = {
+PRESET_CONST uint8_t mrb_preset_iv_tbl_79_ed_flags[] = {
 	0xaa, 0x2a,
 };
-PRESET_DATA mrb_sym mrb_preset_iv_tbl_79_keys[] = {
+PRESET_CONST mrb_sym mrb_preset_iv_tbl_79_keys[] = {
 	0, 0, 0, 0, 0, 0, 0, 6,
 };
-PRESET_DATA mrb_value mrb_preset_iv_tbl_79_vals[] = {
+PRESET_CONST mrb_value mrb_preset_iv_tbl_79_vals[] = {
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
@@ -6495,13 +6495,13 @@ PRESET_DATA mrb_value mrb_preset_iv_tbl_79_vals[] = {
 };
 PRESET_DATA kh_iv_t mrb_preset_iv_tbl_79 = { .n_buckets = 8, .size = 1, .n_occupied = 1, .ed_flags = (uint8_t *)&mrb_preset_iv_tbl_79_ed_flags, .keys = (mrb_sym *)&mrb_preset_iv_tbl_79_keys, .vals = (mrb_value *)&mrb_preset_iv_tbl_79_vals };
 
-PRESET_DATA uint8_t mrb_preset_iv_tbl_80_ed_flags[] = {
+PRESET_CONST uint8_t mrb_preset_iv_tbl_80_ed_flags[] = {
 	0xaa, 0xa2,
 };
-PRESET_DATA mrb_sym mrb_preset_iv_tbl_80_keys[] = {
+PRESET_CONST mrb_sym mrb_preset_iv_tbl_80_keys[] = {
 	0, 0, 0, 0, 0, 1, 0, 0,
 };
-PRESET_DATA mrb_value mrb_preset_iv_tbl_80_vals[] = {
+PRESET_CONST mrb_value mrb_preset_iv_tbl_80_vals[] = {
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
@@ -6513,13 +6513,13 @@ PRESET_DATA mrb_value mrb_preset_iv_tbl_80_vals[] = {
 };
 PRESET_DATA kh_iv_t mrb_preset_iv_tbl_80 = { .n_buckets = 8, .size = 1, .n_occupied = 1, .ed_flags = (uint8_t *)&mrb_preset_iv_tbl_80_ed_flags, .keys = (mrb_sym *)&mrb_preset_iv_tbl_80_keys, .vals = (mrb_value *)&mrb_preset_iv_tbl_80_vals };
 
-PRESET_DATA uint8_t mrb_preset_iv_tbl_81_ed_flags[] = {
+PRESET_CONST uint8_t mrb_preset_iv_tbl_81_ed_flags[] = {
 	0xaa, 0x2a,
 };
-PRESET_DATA mrb_sym mrb_preset_iv_tbl_81_keys[] = {
+PRESET_CONST mrb_sym mrb_preset_iv_tbl_81_keys[] = {
 	0, 0, 0, 0, 0, 0, 0, 6,
 };
-PRESET_DATA mrb_value mrb_preset_iv_tbl_81_vals[] = {
+PRESET_CONST mrb_value mrb_preset_iv_tbl_81_vals[] = {
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
@@ -6531,13 +6531,13 @@ PRESET_DATA mrb_value mrb_preset_iv_tbl_81_vals[] = {
 };
 PRESET_DATA kh_iv_t mrb_preset_iv_tbl_81 = { .n_buckets = 8, .size = 1, .n_occupied = 1, .ed_flags = (uint8_t *)&mrb_preset_iv_tbl_81_ed_flags, .keys = (mrb_sym *)&mrb_preset_iv_tbl_81_keys, .vals = (mrb_value *)&mrb_preset_iv_tbl_81_vals };
 
-PRESET_DATA uint8_t mrb_preset_iv_tbl_82_ed_flags[] = {
+PRESET_CONST uint8_t mrb_preset_iv_tbl_82_ed_flags[] = {
 	0xaa, 0xa2,
 };
-PRESET_DATA mrb_sym mrb_preset_iv_tbl_82_keys[] = {
+PRESET_CONST mrb_sym mrb_preset_iv_tbl_82_keys[] = {
 	0, 0, 0, 0, 0, 1, 0, 0,
 };
-PRESET_DATA mrb_value mrb_preset_iv_tbl_82_vals[] = {
+PRESET_CONST mrb_value mrb_preset_iv_tbl_82_vals[] = {
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
@@ -6549,13 +6549,13 @@ PRESET_DATA mrb_value mrb_preset_iv_tbl_82_vals[] = {
 };
 PRESET_DATA kh_iv_t mrb_preset_iv_tbl_82 = { .n_buckets = 8, .size = 1, .n_occupied = 1, .ed_flags = (uint8_t *)&mrb_preset_iv_tbl_82_ed_flags, .keys = (mrb_sym *)&mrb_preset_iv_tbl_82_keys, .vals = (mrb_value *)&mrb_preset_iv_tbl_82_vals };
 
-PRESET_DATA uint8_t mrb_preset_iv_tbl_83_ed_flags[] = {
+PRESET_CONST uint8_t mrb_preset_iv_tbl_83_ed_flags[] = {
 	0xaa, 0x2a,
 };
-PRESET_DATA mrb_sym mrb_preset_iv_tbl_83_keys[] = {
+PRESET_CONST mrb_sym mrb_preset_iv_tbl_83_keys[] = {
 	0, 0, 0, 0, 0, 0, 0, 6,
 };
-PRESET_DATA mrb_value mrb_preset_iv_tbl_83_vals[] = {
+PRESET_CONST mrb_value mrb_preset_iv_tbl_83_vals[] = {
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
@@ -6567,13 +6567,13 @@ PRESET_DATA mrb_value mrb_preset_iv_tbl_83_vals[] = {
 };
 PRESET_DATA kh_iv_t mrb_preset_iv_tbl_83 = { .n_buckets = 8, .size = 1, .n_occupied = 1, .ed_flags = (uint8_t *)&mrb_preset_iv_tbl_83_ed_flags, .keys = (mrb_sym *)&mrb_preset_iv_tbl_83_keys, .vals = (mrb_value *)&mrb_preset_iv_tbl_83_vals };
 
-PRESET_DATA uint8_t mrb_preset_iv_tbl_84_ed_flags[] = {
+PRESET_CONST uint8_t mrb_preset_iv_tbl_84_ed_flags[] = {
 	0xaa, 0xa2,
 };
-PRESET_DATA mrb_sym mrb_preset_iv_tbl_84_keys[] = {
+PRESET_CONST mrb_sym mrb_preset_iv_tbl_84_keys[] = {
 	0, 0, 0, 0, 0, 1, 0, 0,
 };
-PRESET_DATA mrb_value mrb_preset_iv_tbl_84_vals[] = {
+PRESET_CONST mrb_value mrb_preset_iv_tbl_84_vals[] = {
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
@@ -6585,13 +6585,13 @@ PRESET_DATA mrb_value mrb_preset_iv_tbl_84_vals[] = {
 };
 PRESET_DATA kh_iv_t mrb_preset_iv_tbl_84 = { .n_buckets = 8, .size = 1, .n_occupied = 1, .ed_flags = (uint8_t *)&mrb_preset_iv_tbl_84_ed_flags, .keys = (mrb_sym *)&mrb_preset_iv_tbl_84_keys, .vals = (mrb_value *)&mrb_preset_iv_tbl_84_vals };
 
-PRESET_DATA uint8_t mrb_preset_iv_tbl_85_ed_flags[] = {
+PRESET_CONST uint8_t mrb_preset_iv_tbl_85_ed_flags[] = {
 	0xaa, 0x2a,
 };
-PRESET_DATA mrb_sym mrb_preset_iv_tbl_85_keys[] = {
+PRESET_CONST mrb_sym mrb_preset_iv_tbl_85_keys[] = {
 	0, 0, 0, 0, 0, 0, 0, 6,
 };
-PRESET_DATA mrb_value mrb_preset_iv_tbl_85_vals[] = {
+PRESET_CONST mrb_value mrb_preset_iv_tbl_85_vals[] = {
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
@@ -6603,13 +6603,13 @@ PRESET_DATA mrb_value mrb_preset_iv_tbl_85_vals[] = {
 };
 PRESET_DATA kh_iv_t mrb_preset_iv_tbl_85 = { .n_buckets = 8, .size = 1, .n_occupied = 1, .ed_flags = (uint8_t *)&mrb_preset_iv_tbl_85_ed_flags, .keys = (mrb_sym *)&mrb_preset_iv_tbl_85_keys, .vals = (mrb_value *)&mrb_preset_iv_tbl_85_vals };
 
-PRESET_DATA uint8_t mrb_preset_iv_tbl_86_ed_flags[] = {
+PRESET_CONST uint8_t mrb_preset_iv_tbl_86_ed_flags[] = {
 	0xaa, 0xa2,
 };
-PRESET_DATA mrb_sym mrb_preset_iv_tbl_86_keys[] = {
+PRESET_CONST mrb_sym mrb_preset_iv_tbl_86_keys[] = {
 	0, 0, 0, 0, 0, 1, 0, 0,
 };
-PRESET_DATA mrb_value mrb_preset_iv_tbl_86_vals[] = {
+PRESET_CONST mrb_value mrb_preset_iv_tbl_86_vals[] = {
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
@@ -6621,13 +6621,13 @@ PRESET_DATA mrb_value mrb_preset_iv_tbl_86_vals[] = {
 };
 PRESET_DATA kh_iv_t mrb_preset_iv_tbl_86 = { .n_buckets = 8, .size = 1, .n_occupied = 1, .ed_flags = (uint8_t *)&mrb_preset_iv_tbl_86_ed_flags, .keys = (mrb_sym *)&mrb_preset_iv_tbl_86_keys, .vals = (mrb_value *)&mrb_preset_iv_tbl_86_vals };
 
-PRESET_DATA uint8_t mrb_preset_iv_tbl_87_ed_flags[] = {
+PRESET_CONST uint8_t mrb_preset_iv_tbl_87_ed_flags[] = {
 	0xaa, 0x2a,
 };
-PRESET_DATA mrb_sym mrb_preset_iv_tbl_87_keys[] = {
+PRESET_CONST mrb_sym mrb_preset_iv_tbl_87_keys[] = {
 	0, 0, 0, 0, 0, 0, 0, 6,
 };
-PRESET_DATA mrb_value mrb_preset_iv_tbl_87_vals[] = {
+PRESET_CONST mrb_value mrb_preset_iv_tbl_87_vals[] = {
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
@@ -6639,13 +6639,13 @@ PRESET_DATA mrb_value mrb_preset_iv_tbl_87_vals[] = {
 };
 PRESET_DATA kh_iv_t mrb_preset_iv_tbl_87 = { .n_buckets = 8, .size = 1, .n_occupied = 1, .ed_flags = (uint8_t *)&mrb_preset_iv_tbl_87_ed_flags, .keys = (mrb_sym *)&mrb_preset_iv_tbl_87_keys, .vals = (mrb_value *)&mrb_preset_iv_tbl_87_vals };
 
-PRESET_DATA uint8_t mrb_preset_iv_tbl_88_ed_flags[] = {
+PRESET_CONST uint8_t mrb_preset_iv_tbl_88_ed_flags[] = {
 	0xaa, 0xa2,
 };
-PRESET_DATA mrb_sym mrb_preset_iv_tbl_88_keys[] = {
+PRESET_CONST mrb_sym mrb_preset_iv_tbl_88_keys[] = {
 	0, 0, 0, 0, 0, 1, 0, 0,
 };
-PRESET_DATA mrb_value mrb_preset_iv_tbl_88_vals[] = {
+PRESET_CONST mrb_value mrb_preset_iv_tbl_88_vals[] = {
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
@@ -6657,13 +6657,13 @@ PRESET_DATA mrb_value mrb_preset_iv_tbl_88_vals[] = {
 };
 PRESET_DATA kh_iv_t mrb_preset_iv_tbl_88 = { .n_buckets = 8, .size = 1, .n_occupied = 1, .ed_flags = (uint8_t *)&mrb_preset_iv_tbl_88_ed_flags, .keys = (mrb_sym *)&mrb_preset_iv_tbl_88_keys, .vals = (mrb_value *)&mrb_preset_iv_tbl_88_vals };
 
-PRESET_DATA uint8_t mrb_preset_iv_tbl_89_ed_flags[] = {
+PRESET_CONST uint8_t mrb_preset_iv_tbl_89_ed_flags[] = {
 	0xaa, 0x2a,
 };
-PRESET_DATA mrb_sym mrb_preset_iv_tbl_89_keys[] = {
+PRESET_CONST mrb_sym mrb_preset_iv_tbl_89_keys[] = {
 	0, 0, 0, 0, 0, 0, 0, 6,
 };
-PRESET_DATA mrb_value mrb_preset_iv_tbl_89_vals[] = {
+PRESET_CONST mrb_value mrb_preset_iv_tbl_89_vals[] = {
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
@@ -6675,13 +6675,13 @@ PRESET_DATA mrb_value mrb_preset_iv_tbl_89_vals[] = {
 };
 PRESET_DATA kh_iv_t mrb_preset_iv_tbl_89 = { .n_buckets = 8, .size = 1, .n_occupied = 1, .ed_flags = (uint8_t *)&mrb_preset_iv_tbl_89_ed_flags, .keys = (mrb_sym *)&mrb_preset_iv_tbl_89_keys, .vals = (mrb_value *)&mrb_preset_iv_tbl_89_vals };
 
-PRESET_DATA uint8_t mrb_preset_iv_tbl_90_ed_flags[] = {
+PRESET_CONST uint8_t mrb_preset_iv_tbl_90_ed_flags[] = {
 	0xaa, 0xa2,
 };
-PRESET_DATA mrb_sym mrb_preset_iv_tbl_90_keys[] = {
+PRESET_CONST mrb_sym mrb_preset_iv_tbl_90_keys[] = {
 	0, 0, 0, 0, 0, 1, 0, 0,
 };
-PRESET_DATA mrb_value mrb_preset_iv_tbl_90_vals[] = {
+PRESET_CONST mrb_value mrb_preset_iv_tbl_90_vals[] = {
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
@@ -6693,13 +6693,13 @@ PRESET_DATA mrb_value mrb_preset_iv_tbl_90_vals[] = {
 };
 PRESET_DATA kh_iv_t mrb_preset_iv_tbl_90 = { .n_buckets = 8, .size = 1, .n_occupied = 1, .ed_flags = (uint8_t *)&mrb_preset_iv_tbl_90_ed_flags, .keys = (mrb_sym *)&mrb_preset_iv_tbl_90_keys, .vals = (mrb_value *)&mrb_preset_iv_tbl_90_vals };
 
-PRESET_DATA uint8_t mrb_preset_iv_tbl_91_ed_flags[] = {
+PRESET_CONST uint8_t mrb_preset_iv_tbl_91_ed_flags[] = {
 	0xaa, 0x2a,
 };
-PRESET_DATA mrb_sym mrb_preset_iv_tbl_91_keys[] = {
+PRESET_CONST mrb_sym mrb_preset_iv_tbl_91_keys[] = {
 	0, 0, 0, 0, 0, 0, 0, 6,
 };
-PRESET_DATA mrb_value mrb_preset_iv_tbl_91_vals[] = {
+PRESET_CONST mrb_value mrb_preset_iv_tbl_91_vals[] = {
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
@@ -6711,13 +6711,13 @@ PRESET_DATA mrb_value mrb_preset_iv_tbl_91_vals[] = {
 };
 PRESET_DATA kh_iv_t mrb_preset_iv_tbl_91 = { .n_buckets = 8, .size = 1, .n_occupied = 1, .ed_flags = (uint8_t *)&mrb_preset_iv_tbl_91_ed_flags, .keys = (mrb_sym *)&mrb_preset_iv_tbl_91_keys, .vals = (mrb_value *)&mrb_preset_iv_tbl_91_vals };
 
-PRESET_DATA uint8_t mrb_preset_iv_tbl_92_ed_flags[] = {
+PRESET_CONST uint8_t mrb_preset_iv_tbl_92_ed_flags[] = {
 	0xaa, 0xa2,
 };
-PRESET_DATA mrb_sym mrb_preset_iv_tbl_92_keys[] = {
+PRESET_CONST mrb_sym mrb_preset_iv_tbl_92_keys[] = {
 	0, 0, 0, 0, 0, 1, 0, 0,
 };
-PRESET_DATA mrb_value mrb_preset_iv_tbl_92_vals[] = {
+PRESET_CONST mrb_value mrb_preset_iv_tbl_92_vals[] = {
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
@@ -6729,13 +6729,13 @@ PRESET_DATA mrb_value mrb_preset_iv_tbl_92_vals[] = {
 };
 PRESET_DATA kh_iv_t mrb_preset_iv_tbl_92 = { .n_buckets = 8, .size = 1, .n_occupied = 1, .ed_flags = (uint8_t *)&mrb_preset_iv_tbl_92_ed_flags, .keys = (mrb_sym *)&mrb_preset_iv_tbl_92_keys, .vals = (mrb_value *)&mrb_preset_iv_tbl_92_vals };
 
-PRESET_DATA uint8_t mrb_preset_iv_tbl_93_ed_flags[] = {
+PRESET_CONST uint8_t mrb_preset_iv_tbl_93_ed_flags[] = {
 	0xaa, 0x2a,
 };
-PRESET_DATA mrb_sym mrb_preset_iv_tbl_93_keys[] = {
+PRESET_CONST mrb_sym mrb_preset_iv_tbl_93_keys[] = {
 	0, 0, 0, 0, 0, 0, 0, 6,
 };
-PRESET_DATA mrb_value mrb_preset_iv_tbl_93_vals[] = {
+PRESET_CONST mrb_value mrb_preset_iv_tbl_93_vals[] = {
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
@@ -6747,13 +6747,13 @@ PRESET_DATA mrb_value mrb_preset_iv_tbl_93_vals[] = {
 };
 PRESET_DATA kh_iv_t mrb_preset_iv_tbl_93 = { .n_buckets = 8, .size = 1, .n_occupied = 1, .ed_flags = (uint8_t *)&mrb_preset_iv_tbl_93_ed_flags, .keys = (mrb_sym *)&mrb_preset_iv_tbl_93_keys, .vals = (mrb_value *)&mrb_preset_iv_tbl_93_vals };
 
-PRESET_DATA uint8_t mrb_preset_iv_tbl_94_ed_flags[] = {
+PRESET_CONST uint8_t mrb_preset_iv_tbl_94_ed_flags[] = {
 	0xaa, 0xa2,
 };
-PRESET_DATA mrb_sym mrb_preset_iv_tbl_94_keys[] = {
+PRESET_CONST mrb_sym mrb_preset_iv_tbl_94_keys[] = {
 	0, 0, 0, 0, 0, 1, 0, 0,
 };
-PRESET_DATA mrb_value mrb_preset_iv_tbl_94_vals[] = {
+PRESET_CONST mrb_value mrb_preset_iv_tbl_94_vals[] = {
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
@@ -6765,13 +6765,13 @@ PRESET_DATA mrb_value mrb_preset_iv_tbl_94_vals[] = {
 };
 PRESET_DATA kh_iv_t mrb_preset_iv_tbl_94 = { .n_buckets = 8, .size = 1, .n_occupied = 1, .ed_flags = (uint8_t *)&mrb_preset_iv_tbl_94_ed_flags, .keys = (mrb_sym *)&mrb_preset_iv_tbl_94_keys, .vals = (mrb_value *)&mrb_preset_iv_tbl_94_vals };
 
-PRESET_DATA uint8_t mrb_preset_iv_tbl_95_ed_flags[] = {
+PRESET_CONST uint8_t mrb_preset_iv_tbl_95_ed_flags[] = {
 	0xaa, 0x8a,
 };
-PRESET_DATA mrb_sym mrb_preset_iv_tbl_95_keys[] = {
+PRESET_CONST mrb_sym mrb_preset_iv_tbl_95_keys[] = {
 	0, 0, 0, 0, 0, 0, 146, 0,
 };
-PRESET_DATA mrb_value mrb_preset_iv_tbl_95_vals[] = {
+PRESET_CONST mrb_value mrb_preset_iv_tbl_95_vals[] = {
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
@@ -6783,13 +6783,13 @@ PRESET_DATA mrb_value mrb_preset_iv_tbl_95_vals[] = {
 };
 PRESET_DATA kh_iv_t mrb_preset_iv_tbl_95 = { .n_buckets = 8, .size = 1, .n_occupied = 1, .ed_flags = (uint8_t *)&mrb_preset_iv_tbl_95_ed_flags, .keys = (mrb_sym *)&mrb_preset_iv_tbl_95_keys, .vals = (mrb_value *)&mrb_preset_iv_tbl_95_vals };
 
-PRESET_DATA uint8_t mrb_preset_iv_tbl_96_ed_flags[] = {
+PRESET_CONST uint8_t mrb_preset_iv_tbl_96_ed_flags[] = {
 	0xaa, 0x8a,
 };
-PRESET_DATA mrb_sym mrb_preset_iv_tbl_96_keys[] = {
+PRESET_CONST mrb_sym mrb_preset_iv_tbl_96_keys[] = {
 	0, 0, 0, 0, 0, 0, 146, 0,
 };
-PRESET_DATA mrb_value mrb_preset_iv_tbl_96_vals[] = {
+PRESET_CONST mrb_value mrb_preset_iv_tbl_96_vals[] = {
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
@@ -6801,13 +6801,13 @@ PRESET_DATA mrb_value mrb_preset_iv_tbl_96_vals[] = {
 };
 PRESET_DATA kh_iv_t mrb_preset_iv_tbl_96 = { .n_buckets = 8, .size = 1, .n_occupied = 1, .ed_flags = (uint8_t *)&mrb_preset_iv_tbl_96_ed_flags, .keys = (mrb_sym *)&mrb_preset_iv_tbl_96_keys, .vals = (mrb_value *)&mrb_preset_iv_tbl_96_vals };
 
-PRESET_DATA uint8_t mrb_preset_iv_tbl_97_ed_flags[] = {
+PRESET_CONST uint8_t mrb_preset_iv_tbl_97_ed_flags[] = {
 	0xaa, 0x8a,
 };
-PRESET_DATA mrb_sym mrb_preset_iv_tbl_97_keys[] = {
+PRESET_CONST mrb_sym mrb_preset_iv_tbl_97_keys[] = {
 	0, 0, 0, 0, 0, 0, 146, 0,
 };
-PRESET_DATA mrb_value mrb_preset_iv_tbl_97_vals[] = {
+PRESET_CONST mrb_value mrb_preset_iv_tbl_97_vals[] = {
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
 	{ .value = { .i = 0 }, .tt = MRB_TT_FALSE },
@@ -6820,234 +6820,234 @@ PRESET_DATA mrb_value mrb_preset_iv_tbl_97_vals[] = {
 PRESET_DATA kh_iv_t mrb_preset_iv_tbl_97 = { .n_buckets = 8, .size = 1, .n_occupied = 1, .ed_flags = (uint8_t *)&mrb_preset_iv_tbl_97_ed_flags, .keys = (mrb_sym *)&mrb_preset_iv_tbl_97_keys, .vals = (mrb_value *)&mrb_preset_iv_tbl_97_vals };
 
 
-PRESET_DATA uint8_t mrb_preset_kh_mt_0_ed_flags[] = {
+PRESET_CONST uint8_t mrb_preset_kh_mt_0_ed_flags[] = {
 	0xa8, 0xaa,
 };
-PRESET_DATA mrb_sym mrb_preset_kh_mt_0_keys[] = {
+PRESET_CONST mrb_sym mrb_preset_kh_mt_0_keys[] = {
 	15, 0, 0, 0, 0, 0, 0, 0,
 };
-PRESET_DATA mrb_method_t mrb_preset_kh_mt_0_vals[] = {
+PRESET_CONST mrb_method_t mrb_preset_kh_mt_0_vals[] = {
 	{ .func_p = 1, { .func = (mrb_func_t)&mrb_class_new_class } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, 
 };
 PRESET_DATA kh_mt_t mrb_preset_kh_mt_0 = { .n_buckets = 8, .size = 1, .n_occupied = 1, .ed_flags = (uint8_t *)&mrb_preset_kh_mt_0_ed_flags, .keys = (mrb_sym *)&mrb_preset_kh_mt_0_keys, .vals = (mrb_method_t *)&mrb_preset_kh_mt_0_vals };
 
-PRESET_DATA uint8_t mrb_preset_kh_mt_1_ed_flags[] = {
+PRESET_CONST uint8_t mrb_preset_kh_mt_1_ed_flags[] = {
 	0x82, 0x28, 0x28, 0x82, 0x88, 0x0a, 0x20, 0x82, 0x02, 0x08, 0x00, 0x80, 0x00, 0x08, 0x20, 0x00,
 };
-PRESET_DATA mrb_sym mrb_preset_kh_mt_1_keys[] = {
+PRESET_CONST mrb_sym mrb_preset_kh_mt_1_keys[] = {
 	0, 20, 40, 0, 21, 0, 0, 41, 42, 0, 0, 22, 0, 43, 23, 0,
 	249, 0, 45, 0, 0, 0, 247, 44, 47, 165, 0, 19, 0, 46, 18, 0,
 	0, 30, 34, 54, 31, 0, 55, 35, 32, 52, 8, 28, 53, 33, 29, 0,
 	248, 27, 39, 51, 26, 0, 50, 38, 37, 49, 0, 25, 48, 36, 24, 73,
 };
-PRESET_DATA mrb_method_t mrb_preset_kh_mt_1_vals[] = {
+PRESET_CONST mrb_method_t mrb_preset_kh_mt_1_vals[] = {
 	{ .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_mod_cvar_set } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_mod_attr_reader } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_mod_extend_object } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_mod_attr_writer } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_mod_to_s } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_bob_init } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_mod_to_s } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_bob_init } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_7.proc } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_mod_ancestors } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_8.proc } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_mod_alias } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_mod_const_defined } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_9.proc } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_mod_cvar_get } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_mod_undef } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_mod_cvar_defined } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_mod_instance_methods } }, { .func_p = 1, { .func = (mrb_func_t)&sym_to_sym } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_mod_class_variables } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_mod_method_defined } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_mod_eqq } }, { .func_p = 1, { .func = (mrb_func_t)&sym_to_sym } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_mod_module_eval } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_mod_const_missing } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_mod_initialize } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_bob_init } }, { .func_p = 1, { .func = (mrb_func_t)&mod_define_method } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_mod_module_function } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_mod_included_modules } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_mod_attr_reader } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_mod_module_eval } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_bob_init } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_mod_remove_const } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_mod_append_features } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_mod_constants } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_mod_remove_method } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_mod_remove_cvar } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_mod_const_set } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_mod_include_p } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_mod_const_get } }, { .func_p = 1, { .func = (mrb_func_t)&sym_to_sym } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_mod_prepend_features } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_obj_clone } }, 
 };
 PRESET_DATA kh_mt_t mrb_preset_kh_mt_1 = { .n_buckets = 64, .size = 44, .n_occupied = 44, .ed_flags = (uint8_t *)&mrb_preset_kh_mt_1_ed_flags, .keys = (mrb_sym *)&mrb_preset_kh_mt_1_keys, .vals = (mrb_method_t *)&mrb_preset_kh_mt_1_vals };
 
-PRESET_DATA uint8_t mrb_preset_kh_mt_2_ed_flags[] = {
+PRESET_CONST uint8_t mrb_preset_kh_mt_2_ed_flags[] = {
 	0xaa, 0x0a,
 };
-PRESET_DATA mrb_sym mrb_preset_kh_mt_2_keys[] = {
+PRESET_CONST mrb_sym mrb_preset_kh_mt_2_keys[] = {
 	0, 0, 0, 0, 0, 0, 50, 56,
 };
-PRESET_DATA mrb_method_t mrb_preset_kh_mt_2_vals[] = {
+PRESET_CONST mrb_method_t mrb_preset_kh_mt_2_vals[] = {
 	{ .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_mod_s_constants } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_mod_s_nesting } }, 
 };
 PRESET_DATA kh_mt_t mrb_preset_kh_mt_2 = { .n_buckets = 8, .size = 2, .n_occupied = 2, .ed_flags = (uint8_t *)&mrb_preset_kh_mt_2_ed_flags, .keys = (mrb_sym *)&mrb_preset_kh_mt_2_keys, .vals = (mrb_method_t *)&mrb_preset_kh_mt_2_vals };
 
-PRESET_DATA uint8_t mrb_preset_kh_mt_3_ed_flags[] = {
+PRESET_CONST uint8_t mrb_preset_kh_mt_3_ed_flags[] = {
 	0xaa, 0xaa,
 };
-PRESET_DATA mrb_sym mrb_preset_kh_mt_3_keys[] = {
+PRESET_CONST mrb_sym mrb_preset_kh_mt_3_keys[] = {
 	0, 0, 0, 0, 0, 0, 0, 0,
 };
-PRESET_DATA mrb_method_t mrb_preset_kh_mt_3_vals[] = {
+PRESET_CONST mrb_method_t mrb_preset_kh_mt_3_vals[] = {
 	{ .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, 
 };
 PRESET_DATA kh_mt_t mrb_preset_kh_mt_3 = { .n_buckets = 8, .size = 0, .n_occupied = 0, .ed_flags = (uint8_t *)&mrb_preset_kh_mt_3_ed_flags, .keys = (mrb_sym *)&mrb_preset_kh_mt_3_keys, .vals = (mrb_method_t *)&mrb_preset_kh_mt_3_vals };
 
-PRESET_DATA uint8_t mrb_preset_kh_mt_4_ed_flags[] = {
+PRESET_CONST uint8_t mrb_preset_kh_mt_4_ed_flags[] = {
 	0x88, 0x82, 0x0a, 0x2a,
 };
-PRESET_DATA mrb_sym mrb_preset_kh_mt_4_keys[] = {
+PRESET_CONST mrb_sym mrb_preset_kh_mt_4_keys[] = {
 	10, 0, 9, 0, 0, 11, 14, 0, 0, 0, 8, 13, 0, 0, 0, 12,
 };
-PRESET_DATA mrb_method_t mrb_preset_kh_mt_4_vals[] = {
+PRESET_CONST mrb_method_t mrb_preset_kh_mt_4_vals[] = {
 	{ .func_p = 1, { .func = (mrb_func_t)&mrb_obj_equal_m } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_bob_not } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_obj_not_equal_m } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_obj_instance_eval } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_bob_init } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_f_send } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_obj_hash } }, 
 };
 PRESET_DATA kh_mt_t mrb_preset_kh_mt_4 = { .n_buckets = 16, .size = 7, .n_occupied = 7, .ed_flags = (uint8_t *)&mrb_preset_kh_mt_4_ed_flags, .keys = (mrb_sym *)&mrb_preset_kh_mt_4_keys, .vals = (mrb_method_t *)&mrb_preset_kh_mt_4_vals };
 
-PRESET_DATA uint8_t mrb_preset_kh_mt_5_ed_flags[] = {
+PRESET_CONST uint8_t mrb_preset_kh_mt_5_ed_flags[] = {
 	0xaa, 0xaa,
 };
-PRESET_DATA mrb_sym mrb_preset_kh_mt_5_keys[] = {
+PRESET_CONST mrb_sym mrb_preset_kh_mt_5_keys[] = {
 	0, 0, 0, 0, 0, 0, 0, 0,
 };
-PRESET_DATA mrb_method_t mrb_preset_kh_mt_5_vals[] = {
+PRESET_CONST mrb_method_t mrb_preset_kh_mt_5_vals[] = {
 	{ .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, 
 };
 PRESET_DATA kh_mt_t mrb_preset_kh_mt_5 = { .n_buckets = 8, .size = 0, .n_occupied = 0, .ed_flags = (uint8_t *)&mrb_preset_kh_mt_5_ed_flags, .keys = (mrb_sym *)&mrb_preset_kh_mt_5_keys, .vals = (mrb_method_t *)&mrb_preset_kh_mt_5_vals };
 
-PRESET_DATA uint8_t mrb_preset_kh_mt_6_ed_flags[] = {
+PRESET_CONST uint8_t mrb_preset_kh_mt_6_ed_flags[] = {
 	0x80, 0x20,
 };
-PRESET_DATA mrb_sym mrb_preset_kh_mt_6_keys[] = {
+PRESET_CONST mrb_sym mrb_preset_kh_mt_6_keys[] = {
 	15, 17, 8, 0, 16, 26, 0, 21,
 };
-PRESET_DATA mrb_method_t mrb_preset_kh_mt_6_vals[] = {
+PRESET_CONST mrb_method_t mrb_preset_kh_mt_6_vals[] = {
 	{ .func_p = 1, { .func = (mrb_func_t)&mrb_instance_new } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_bob_init } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_class_initialize } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_class_superclass } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, 
 };
 PRESET_DATA kh_mt_t mrb_preset_kh_mt_6 = { .n_buckets = 8, .size = 6, .n_occupied = 6, .ed_flags = (uint8_t *)&mrb_preset_kh_mt_6_ed_flags, .keys = (mrb_sym *)&mrb_preset_kh_mt_6_keys, .vals = (mrb_method_t *)&mrb_preset_kh_mt_6_vals };
 
-PRESET_DATA uint8_t mrb_preset_kh_mt_7_ed_flags[] = {
+PRESET_CONST uint8_t mrb_preset_kh_mt_7_ed_flags[] = {
 	0xaa, 0xaa,
 };
-PRESET_DATA mrb_sym mrb_preset_kh_mt_7_keys[] = {
+PRESET_CONST mrb_sym mrb_preset_kh_mt_7_keys[] = {
 	0, 0, 0, 0, 0, 0, 0, 0,
 };
-PRESET_DATA mrb_method_t mrb_preset_kh_mt_7_vals[] = {
+PRESET_CONST mrb_method_t mrb_preset_kh_mt_7_vals[] = {
 	{ .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, 
 };
 PRESET_DATA kh_mt_t mrb_preset_kh_mt_7 = { .n_buckets = 8, .size = 0, .n_occupied = 0, .ed_flags = (uint8_t *)&mrb_preset_kh_mt_7_ed_flags, .keys = (mrb_sym *)&mrb_preset_kh_mt_7_keys, .vals = (mrb_method_t *)&mrb_preset_kh_mt_7_vals };
 
-PRESET_DATA uint8_t mrb_preset_kh_mt_8_ed_flags[] = {
+PRESET_CONST uint8_t mrb_preset_kh_mt_8_ed_flags[] = {
 	0xaa, 0xaa,
 };
-PRESET_DATA mrb_sym mrb_preset_kh_mt_8_keys[] = {
+PRESET_CONST mrb_sym mrb_preset_kh_mt_8_keys[] = {
 	0, 0, 0, 0, 0, 0, 0, 0,
 };
-PRESET_DATA mrb_method_t mrb_preset_kh_mt_8_vals[] = {
+PRESET_CONST mrb_method_t mrb_preset_kh_mt_8_vals[] = {
 	{ .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, 
 };
 PRESET_DATA kh_mt_t mrb_preset_kh_mt_8 = { .n_buckets = 8, .size = 0, .n_occupied = 0, .ed_flags = (uint8_t *)&mrb_preset_kh_mt_8_ed_flags, .keys = (mrb_sym *)&mrb_preset_kh_mt_8_keys, .vals = (mrb_method_t *)&mrb_preset_kh_mt_8_vals };
 
-PRESET_DATA uint8_t mrb_preset_kh_mt_9_ed_flags[] = {
+PRESET_CONST uint8_t mrb_preset_kh_mt_9_ed_flags[] = {
 	0xaa, 0xaa,
 };
-PRESET_DATA mrb_sym mrb_preset_kh_mt_9_keys[] = {
+PRESET_CONST mrb_sym mrb_preset_kh_mt_9_keys[] = {
 	0, 0, 0, 0, 0, 0, 0, 0,
 };
-PRESET_DATA mrb_method_t mrb_preset_kh_mt_9_vals[] = {
+PRESET_CONST mrb_method_t mrb_preset_kh_mt_9_vals[] = {
 	{ .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, 
 };
 PRESET_DATA kh_mt_t mrb_preset_kh_mt_9 = { .n_buckets = 8, .size = 0, .n_occupied = 0, .ed_flags = (uint8_t *)&mrb_preset_kh_mt_9_ed_flags, .keys = (mrb_sym *)&mrb_preset_kh_mt_9_keys, .vals = (mrb_method_t *)&mrb_preset_kh_mt_9_vals };
 
-PRESET_DATA uint8_t mrb_preset_kh_mt_10_ed_flags[] = {
+PRESET_CONST uint8_t mrb_preset_kh_mt_10_ed_flags[] = {
 	0x88, 0xa2, 0x88, 0x22,
 };
-PRESET_DATA mrb_sym mrb_preset_kh_mt_10_keys[] = {
+PRESET_CONST mrb_sym mrb_preset_kh_mt_10_keys[] = {
 	138, 0, 140, 0, 0, 139, 0, 0, 42, 0, 8, 0, 0, 43, 0, 137,
 };
-PRESET_DATA mrb_method_t mrb_preset_kh_mt_10_vals[] = {
+PRESET_CONST mrb_method_t mrb_preset_kh_mt_10_vals[] = {
 	{ .func_p = 1, { .func = (mrb_func_t)&exc_message } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&exc_set_backtrace } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_exc_backtrace } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&exc_to_s } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&exc_initialize } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&exc_inspect } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&exc_exception } }, 
 };
 PRESET_DATA kh_mt_t mrb_preset_kh_mt_10 = { .n_buckets = 16, .size = 7, .n_occupied = 7, .ed_flags = (uint8_t *)&mrb_preset_kh_mt_10_ed_flags, .keys = (mrb_sym *)&mrb_preset_kh_mt_10_keys, .vals = (mrb_method_t *)&mrb_preset_kh_mt_10_vals };
 
-PRESET_DATA uint8_t mrb_preset_kh_mt_11_ed_flags[] = {
+PRESET_CONST uint8_t mrb_preset_kh_mt_11_ed_flags[] = {
 	0xaa, 0x2a,
 };
-PRESET_DATA mrb_sym mrb_preset_kh_mt_11_keys[] = {
+PRESET_CONST mrb_sym mrb_preset_kh_mt_11_keys[] = {
 	0, 0, 0, 0, 0, 0, 0, 137,
 };
-PRESET_DATA mrb_method_t mrb_preset_kh_mt_11_vals[] = {
+PRESET_CONST mrb_method_t mrb_preset_kh_mt_11_vals[] = {
 	{ .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_instance_new } }, 
 };
 PRESET_DATA kh_mt_t mrb_preset_kh_mt_11 = { .n_buckets = 8, .size = 1, .n_occupied = 1, .ed_flags = (uint8_t *)&mrb_preset_kh_mt_11_ed_flags, .keys = (mrb_sym *)&mrb_preset_kh_mt_11_keys, .vals = (mrb_method_t *)&mrb_preset_kh_mt_11_vals };
 
-PRESET_DATA uint8_t mrb_preset_kh_mt_12_ed_flags[] = {
+PRESET_CONST uint8_t mrb_preset_kh_mt_12_ed_flags[] = {
 	0xaa, 0xaa,
 };
-PRESET_DATA mrb_sym mrb_preset_kh_mt_12_keys[] = {
+PRESET_CONST mrb_sym mrb_preset_kh_mt_12_keys[] = {
 	0, 0, 0, 0, 0, 0, 0, 0,
 };
-PRESET_DATA mrb_method_t mrb_preset_kh_mt_12_vals[] = {
+PRESET_CONST mrb_method_t mrb_preset_kh_mt_12_vals[] = {
 	{ .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, 
 };
 PRESET_DATA kh_mt_t mrb_preset_kh_mt_12 = { .n_buckets = 8, .size = 0, .n_occupied = 0, .ed_flags = (uint8_t *)&mrb_preset_kh_mt_12_ed_flags, .keys = (mrb_sym *)&mrb_preset_kh_mt_12_keys, .vals = (mrb_method_t *)&mrb_preset_kh_mt_12_vals };
 
-PRESET_DATA uint8_t mrb_preset_kh_mt_13_ed_flags[] = {
+PRESET_CONST uint8_t mrb_preset_kh_mt_13_ed_flags[] = {
 	0xaa, 0xaa,
 };
-PRESET_DATA mrb_sym mrb_preset_kh_mt_13_keys[] = {
+PRESET_CONST mrb_sym mrb_preset_kh_mt_13_keys[] = {
 	0, 0, 0, 0, 0, 0, 0, 0,
 };
-PRESET_DATA mrb_method_t mrb_preset_kh_mt_13_vals[] = {
+PRESET_CONST mrb_method_t mrb_preset_kh_mt_13_vals[] = {
 	{ .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, 
 };
 PRESET_DATA kh_mt_t mrb_preset_kh_mt_13 = { .n_buckets = 8, .size = 0, .n_occupied = 0, .ed_flags = (uint8_t *)&mrb_preset_kh_mt_13_ed_flags, .keys = (mrb_sym *)&mrb_preset_kh_mt_13_keys, .vals = (mrb_method_t *)&mrb_preset_kh_mt_13_vals };
 
-PRESET_DATA uint8_t mrb_preset_kh_mt_14_ed_flags[] = {
+PRESET_CONST uint8_t mrb_preset_kh_mt_14_ed_flags[] = {
 	0xaa, 0xaa,
 };
-PRESET_DATA mrb_sym mrb_preset_kh_mt_14_keys[] = {
+PRESET_CONST mrb_sym mrb_preset_kh_mt_14_keys[] = {
 	0, 0, 0, 0, 0, 0, 0, 0,
 };
-PRESET_DATA mrb_method_t mrb_preset_kh_mt_14_vals[] = {
+PRESET_CONST mrb_method_t mrb_preset_kh_mt_14_vals[] = {
 	{ .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, 
 };
 PRESET_DATA kh_mt_t mrb_preset_kh_mt_14 = { .n_buckets = 8, .size = 0, .n_occupied = 0, .ed_flags = (uint8_t *)&mrb_preset_kh_mt_14_ed_flags, .keys = (mrb_sym *)&mrb_preset_kh_mt_14_keys, .vals = (mrb_method_t *)&mrb_preset_kh_mt_14_vals };
 
-PRESET_DATA uint8_t mrb_preset_kh_mt_15_ed_flags[] = {
+PRESET_CONST uint8_t mrb_preset_kh_mt_15_ed_flags[] = {
 	0xaa, 0xaa,
 };
-PRESET_DATA mrb_sym mrb_preset_kh_mt_15_keys[] = {
+PRESET_CONST mrb_sym mrb_preset_kh_mt_15_keys[] = {
 	0, 0, 0, 0, 0, 0, 0, 0,
 };
-PRESET_DATA mrb_method_t mrb_preset_kh_mt_15_vals[] = {
+PRESET_CONST mrb_method_t mrb_preset_kh_mt_15_vals[] = {
 	{ .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, 
 };
 PRESET_DATA kh_mt_t mrb_preset_kh_mt_15 = { .n_buckets = 8, .size = 0, .n_occupied = 0, .ed_flags = (uint8_t *)&mrb_preset_kh_mt_15_ed_flags, .keys = (mrb_sym *)&mrb_preset_kh_mt_15_keys, .vals = (mrb_method_t *)&mrb_preset_kh_mt_15_vals };
 
-PRESET_DATA uint8_t mrb_preset_kh_mt_16_ed_flags[] = {
+PRESET_CONST uint8_t mrb_preset_kh_mt_16_ed_flags[] = {
 	0x82, 0xa8,
 };
-PRESET_DATA mrb_sym mrb_preset_kh_mt_16_keys[] = {
+PRESET_CONST mrb_sym mrb_preset_kh_mt_16_keys[] = {
 	0, 251, 8, 0, 373, 0, 0, 0,
 };
-PRESET_DATA mrb_method_t mrb_preset_kh_mt_16_vals[] = {
+PRESET_CONST mrb_method_t mrb_preset_kh_mt_16_vals[] = {
 	{ .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_23.proc } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_187.proc } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_188.proc } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, 
 };
 PRESET_DATA kh_mt_t mrb_preset_kh_mt_16 = { .n_buckets = 8, .size = 3, .n_occupied = 3, .ed_flags = (uint8_t *)&mrb_preset_kh_mt_16_ed_flags, .keys = (mrb_sym *)&mrb_preset_kh_mt_16_keys, .vals = (mrb_method_t *)&mrb_preset_kh_mt_16_vals };
 
-PRESET_DATA uint8_t mrb_preset_kh_mt_17_ed_flags[] = {
+PRESET_CONST uint8_t mrb_preset_kh_mt_17_ed_flags[] = {
 	0xaa, 0xaa,
 };
-PRESET_DATA mrb_sym mrb_preset_kh_mt_17_keys[] = {
+PRESET_CONST mrb_sym mrb_preset_kh_mt_17_keys[] = {
 	0, 0, 0, 0, 0, 0, 0, 0,
 };
-PRESET_DATA mrb_method_t mrb_preset_kh_mt_17_vals[] = {
+PRESET_CONST mrb_method_t mrb_preset_kh_mt_17_vals[] = {
 	{ .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, 
 };
 PRESET_DATA kh_mt_t mrb_preset_kh_mt_17 = { .n_buckets = 8, .size = 0, .n_occupied = 0, .ed_flags = (uint8_t *)&mrb_preset_kh_mt_17_ed_flags, .keys = (mrb_sym *)&mrb_preset_kh_mt_17_keys, .vals = (mrb_method_t *)&mrb_preset_kh_mt_17_vals };
 
-PRESET_DATA uint8_t mrb_preset_kh_mt_18_ed_flags[] = {
+PRESET_CONST uint8_t mrb_preset_kh_mt_18_ed_flags[] = {
 	0xa8, 0xa0,
 };
-PRESET_DATA mrb_sym mrb_preset_kh_mt_18_keys[] = {
+PRESET_CONST mrb_sym mrb_preset_kh_mt_18_keys[] = {
 	42, 0, 0, 0, 53, 43, 0, 0,
 };
-PRESET_DATA mrb_method_t mrb_preset_kh_mt_18_vals[] = {
+PRESET_CONST mrb_method_t mrb_preset_kh_mt_18_vals[] = {
 	{ .func_p = 1, { .func = (mrb_func_t)&inspect_main } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&top_define_method } }, { .func_p = 1, { .func = (mrb_func_t)&inspect_main } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, 
 };
 PRESET_DATA kh_mt_t mrb_preset_kh_mt_18 = { .n_buckets = 8, .size = 3, .n_occupied = 3, .ed_flags = (uint8_t *)&mrb_preset_kh_mt_18_ed_flags, .keys = (mrb_sym *)&mrb_preset_kh_mt_18_keys, .vals = (mrb_method_t *)&mrb_preset_kh_mt_18_vals };
 
-PRESET_DATA uint8_t mrb_preset_kh_mt_19_ed_flags[] = {
+PRESET_CONST uint8_t mrb_preset_kh_mt_19_ed_flags[] = {
 	0xaa, 0xa8,
 };
-PRESET_DATA mrb_sym mrb_preset_kh_mt_19_keys[] = {
+PRESET_CONST mrb_sym mrb_preset_kh_mt_19_keys[] = {
 	0, 0, 0, 0, 432, 0, 0, 0,
 };
-PRESET_DATA mrb_method_t mrb_preset_kh_mt_19_vals[] = {
+PRESET_CONST mrb_method_t mrb_preset_kh_mt_19_vals[] = {
 	{ .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_32.proc } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, 
 };
 PRESET_DATA kh_mt_t mrb_preset_kh_mt_19 = { .n_buckets = 8, .size = 1, .n_occupied = 1, .ed_flags = (uint8_t *)&mrb_preset_kh_mt_19_ed_flags, .keys = (mrb_sym *)&mrb_preset_kh_mt_19_keys, .vals = (mrb_method_t *)&mrb_preset_kh_mt_19_vals };
 
-PRESET_DATA uint8_t mrb_preset_kh_mt_20_ed_flags[] = {
+PRESET_CONST uint8_t mrb_preset_kh_mt_20_ed_flags[] = {
 	0x22, 0x00, 0x80, 0x20, 0x0a, 0x08, 0x80, 0xa0, 0x20, 0x00, 0x02, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x02, 0x80, 0x02, 0x00, 0x00, 0x08, 0x82, 0x00, 0x22, 0xa8, 0xa0, 0x88, 0x28, 0x20, 0xa2,
 };
-PRESET_DATA mrb_sym mrb_preset_kh_mt_20_keys[] = {
+PRESET_CONST mrb_sym mrb_preset_kh_mt_20_keys[] = {
 	0, 414, 0, 121, 80, 415, 120, 439, 42, 123, 436, 0, 122, 43, 0, 437,
 	0, 0, 438, 124, 313, 0, 125, 312, 165, 126, 433, 0, 127, 435, 0, 0,
 	10, 128, 0, 115, 310, 129, 114, 311, 0, 113, 8, 130, 112, 309, 405, 131,
@@ -7057,829 +7057,829 @@ PRESET_DATA mrb_sym mrb_preset_kh_mt_20_keys[] = {
 	79, 300, 424, 420, 0, 444, 0, 425, 426, 0, 0, 0, 302, 427, 0, 0,
 	74, 0, 429, 0, 445, 0, 0, 294, 428, 431, 0, 25, 0, 430, 0, 0,
 };
-PRESET_DATA mrb_method_t mrb_preset_kh_mt_20_vals[] = {
+PRESET_CONST mrb_method_t mrb_preset_kh_mt_20_vals[] = {
 	{ .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_str_dump } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_str_intern } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_str_replace } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_str_getbyte } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_str_index_m } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_33.proc } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_str_to_s } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_str_replace } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_34.proc } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_str_size } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_str_inspect } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_36.proc } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_38.proc } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_str_reverse } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_40.proc } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_str_reverse_bang } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_42.proc } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_43.proc } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_str_rindex } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_44.proc } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_str_size } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_47.proc } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_str_equal_m } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_str_aref_m } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_str_chop } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_51.proc } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_str_split_m } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_str_chomp_bang } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_53.proc } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_str_chomp } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_str_init } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_str_to_f } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_str_capitalize_bang } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_55.proc } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_str_chr } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_str_to_i } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_str_upcase } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_59.proc } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_61.proc } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_str_downcase_bang } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_64.proc } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_str_to_s } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_str_empty_p } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_66.proc } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_69.proc } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_71.proc } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_str_chop_bang } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_str_bytes } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_str_downcase } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_87.proc } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_89.proc } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_str_upcase_bang } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_93.proc } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_59.proc } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_str_times } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_str_swapcase_bang } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_94.proc } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_96.proc } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_str_plus_m } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_str_capitalize } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_str_setbyte } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_str_swapcase } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_str_aref_m } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_str_byteslice } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_100.proc } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_str_succ } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_str_concat_m } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_str_intern } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_str_oct } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_104.proc } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_106.proc } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_107.proc } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_str_cmp_m } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_str_end_with } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_str_hex } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_108.proc } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_str_bytesize } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_str_concat_m } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_str_hash_m } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_str_succ } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_str_lines } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_str_start_with } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_116.proc } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_str_succ_bang } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_str_succ_bang } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_str_upto } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_str_ord } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_str_eql } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_str_del_prefix } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_120.proc } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_124.proc } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_str_del_prefix_bang } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_str_del_suffix } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_str_include } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_str_del_suffix_bang } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, 
 };
 PRESET_DATA kh_mt_t mrb_preset_kh_mt_20 = { .n_buckets = 128, .size = 95, .n_occupied = 95, .ed_flags = (uint8_t *)&mrb_preset_kh_mt_20_ed_flags, .keys = (mrb_sym *)&mrb_preset_kh_mt_20_keys, .vals = (mrb_method_t *)&mrb_preset_kh_mt_20_vals };
 
-PRESET_DATA uint8_t mrb_preset_kh_mt_21_ed_flags[] = {
+PRESET_CONST uint8_t mrb_preset_kh_mt_21_ed_flags[] = {
 	0x00, 0x88,
 };
-PRESET_DATA mrb_sym mrb_preset_kh_mt_21_keys[] = {
+PRESET_CONST mrb_sym mrb_preset_kh_mt_21_keys[] = {
 	10, 190, 266, 192, 191, 0, 189, 0,
 };
-PRESET_DATA mrb_method_t mrb_preset_kh_mt_21_vals[] = {
+PRESET_CONST mrb_method_t mrb_preset_kh_mt_21_vals[] = {
 	{ .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_128.proc } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_129.proc } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_133.proc } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_134.proc } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_138.proc } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_142.proc } }, { .func_p = 0, { .proc = NULL } }, 
 };
 PRESET_DATA kh_mt_t mrb_preset_kh_mt_21 = { .n_buckets = 8, .size = 6, .n_occupied = 6, .ed_flags = (uint8_t *)&mrb_preset_kh_mt_21_ed_flags, .keys = (mrb_sym *)&mrb_preset_kh_mt_21_keys, .vals = (mrb_method_t *)&mrb_preset_kh_mt_21_vals };
 
-PRESET_DATA uint8_t mrb_preset_kh_mt_22_ed_flags[] = {
+PRESET_CONST uint8_t mrb_preset_kh_mt_22_ed_flags[] = {
 	0xaa, 0xa2,
 };
-PRESET_DATA mrb_sym mrb_preset_kh_mt_22_keys[] = {
+PRESET_CONST mrb_sym mrb_preset_kh_mt_22_keys[] = {
 	0, 0, 0, 0, 0, 110, 0, 0,
 };
-PRESET_DATA mrb_method_t mrb_preset_kh_mt_22_vals[] = {
+PRESET_CONST mrb_method_t mrb_preset_kh_mt_22_vals[] = {
 	{ .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_ary_s_create } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, 
 };
 PRESET_DATA kh_mt_t mrb_preset_kh_mt_22 = { .n_buckets = 8, .size = 1, .n_occupied = 1, .ed_flags = (uint8_t *)&mrb_preset_kh_mt_22_ed_flags, .keys = (mrb_sym *)&mrb_preset_kh_mt_22_keys, .vals = (mrb_method_t *)&mrb_preset_kh_mt_22_vals };
 
-PRESET_DATA uint8_t mrb_preset_kh_mt_23_ed_flags[] = {
+PRESET_CONST uint8_t mrb_preset_kh_mt_23_ed_flags[] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x80, 0x28, 0x02, 0x28, 0x80, 0x8a, 0xaa, 0xaa,
 };
-PRESET_DATA mrb_sym mrb_preset_kh_mt_23_keys[] = {
+PRESET_CONST mrb_sym mrb_preset_kh_mt_23_keys[] = {
 	256, 158, 109, 162, 80, 159, 120, 108, 160, 123, 163, 156, 122, 110, 157, 257,
 	161, 155, 167, 124, 154, 259, 125, 166, 165, 126, 105, 153, 127, 164, 152, 258,
 	128, 10, 168, 0, 42, 0, 0, 169, 0, 43, 8, 264, 250, 0, 0, 263,
 	74, 260, 265, 0, 0, 0, 119, 0, 0, 0, 0, 0, 0, 0, 0, 0,
 };
-PRESET_DATA mrb_method_t mrb_preset_kh_mt_23_vals[] = {
+PRESET_CONST mrb_method_t mrb_preset_kh_mt_23_vals[] = {
 	{ .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_149.proc } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_ary_join_m } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_ary_times } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_ary_push_m } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_ary_replace_m } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_ary_last } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_ary_index_m } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_ary_plus } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_ary_pop } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_ary_replace_m } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_ary_shift } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_ary_delete_at } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_ary_size } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_ary_aget } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_ary_first } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_150.proc } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_ary_push_m } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_ary_concat_m } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_ary_cmp } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_ary_reverse } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_ary_clear } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_151.proc } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_ary_reverse_bang } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_ary_eq } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_ary_unshift_m } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_ary_rindex_m } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_156.proc } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_ary_aset } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_ary_size } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_ary_unshift_m } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_ary_push_m } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_150.proc } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_ary_aget } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_157.proc } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_ary_index_m } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_158.proc } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_ary_svalue } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_158.proc } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_160.proc } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_163.proc } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_146.proc } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_164.proc } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_165.proc } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_166.proc } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_167.proc } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_ary_empty_p } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, 
 };
 PRESET_DATA kh_mt_t mrb_preset_kh_mt_23 = { .n_buckets = 64, .size = 46, .n_occupied = 46, .ed_flags = (uint8_t *)&mrb_preset_kh_mt_23_ed_flags, .keys = (mrb_sym *)&mrb_preset_kh_mt_23_keys, .vals = (mrb_method_t *)&mrb_preset_kh_mt_23_vals };
 
-PRESET_DATA uint8_t mrb_preset_kh_mt_24_ed_flags[] = {
+PRESET_CONST uint8_t mrb_preset_kh_mt_24_ed_flags[] = {
 	0x20, 0xa0, 0x00, 0x0a, 0x80, 0x20, 0x0a, 0x08,
 };
-PRESET_DATA mrb_sym mrb_preset_kh_mt_24_keys[] = {
+PRESET_CONST mrb_sym mrb_preset_kh_mt_24_keys[] = {
 	262, 276, 0, 79, 277, 267, 0, 0, 280, 180, 281, 278, 0, 0, 279, 265,
 	271, 273, 283, 0, 272, 270, 0, 282, 0, 0, 269, 275, 25, 0, 274, 268,
 };
-PRESET_DATA mrb_method_t mrb_preset_kh_mt_24_vals[] = {
+PRESET_CONST mrb_method_t mrb_preset_kh_mt_24_vals[] = {
 	{ .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_170.proc } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_171.proc } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_173.proc } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_171.proc } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_174.proc } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_175.proc } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_176.proc } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_177.proc } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_178.proc } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_179.proc } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_180.proc } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_181.proc } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_182.proc } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_183.proc } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_183.proc } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_182.proc } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_184.proc } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_170.proc } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_185.proc } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_176.proc } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_184.proc } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_186.proc } }, 
 };
 PRESET_DATA kh_mt_t mrb_preset_kh_mt_24 = { .n_buckets = 32, .size = 22, .n_occupied = 22, .ed_flags = (uint8_t *)&mrb_preset_kh_mt_24_ed_flags, .keys = (mrb_sym *)&mrb_preset_kh_mt_24_keys, .vals = (mrb_method_t *)&mrb_preset_kh_mt_24_vals };
 
-PRESET_DATA uint8_t mrb_preset_kh_mt_25_ed_flags[] = {
+PRESET_CONST uint8_t mrb_preset_kh_mt_25_ed_flags[] = {
 	0xaa, 0xaa,
 };
-PRESET_DATA mrb_sym mrb_preset_kh_mt_25_keys[] = {
+PRESET_CONST mrb_sym mrb_preset_kh_mt_25_keys[] = {
 	0, 0, 0, 0, 0, 0, 0, 0,
 };
-PRESET_DATA mrb_method_t mrb_preset_kh_mt_25_vals[] = {
+PRESET_CONST mrb_method_t mrb_preset_kh_mt_25_vals[] = {
 	{ .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, 
 };
 PRESET_DATA kh_mt_t mrb_preset_kh_mt_25 = { .n_buckets = 8, .size = 0, .n_occupied = 0, .ed_flags = (uint8_t *)&mrb_preset_kh_mt_25_ed_flags, .keys = (mrb_sym *)&mrb_preset_kh_mt_25_keys, .vals = (mrb_method_t *)&mrb_preset_kh_mt_25_vals };
 
-PRESET_DATA uint8_t mrb_preset_kh_mt_26_ed_flags[] = {
+PRESET_CONST uint8_t mrb_preset_kh_mt_26_ed_flags[] = {
 	0x8a, 0x8a,
 };
-PRESET_DATA mrb_sym mrb_preset_kh_mt_26_keys[] = {
+PRESET_CONST mrb_sym mrb_preset_kh_mt_26_keys[] = {
 	0, 0, 8, 0, 0, 0, 253, 0,
 };
-PRESET_DATA mrb_method_t mrb_preset_kh_mt_26_vals[] = {
+PRESET_CONST mrb_method_t mrb_preset_kh_mt_26_vals[] = {
 	{ .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_190.proc } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_191.proc } }, { .func_p = 0, { .proc = NULL } }, 
 };
 PRESET_DATA kh_mt_t mrb_preset_kh_mt_26 = { .n_buckets = 8, .size = 2, .n_occupied = 2, .ed_flags = (uint8_t *)&mrb_preset_kh_mt_26_ed_flags, .keys = (mrb_sym *)&mrb_preset_kh_mt_26_keys, .vals = (mrb_method_t *)&mrb_preset_kh_mt_26_vals };
 
-PRESET_DATA uint8_t mrb_preset_kh_mt_27_ed_flags[] = {
+PRESET_CONST uint8_t mrb_preset_kh_mt_27_ed_flags[] = {
 	0xaa, 0xaa,
 };
-PRESET_DATA mrb_sym mrb_preset_kh_mt_27_keys[] = {
+PRESET_CONST mrb_sym mrb_preset_kh_mt_27_keys[] = {
 	0, 0, 0, 0, 0, 0, 0, 0,
 };
-PRESET_DATA mrb_method_t mrb_preset_kh_mt_27_vals[] = {
+PRESET_CONST mrb_method_t mrb_preset_kh_mt_27_vals[] = {
 	{ .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, 
 };
 PRESET_DATA kh_mt_t mrb_preset_kh_mt_27 = { .n_buckets = 8, .size = 0, .n_occupied = 0, .ed_flags = (uint8_t *)&mrb_preset_kh_mt_27_ed_flags, .keys = (mrb_sym *)&mrb_preset_kh_mt_27_keys, .vals = (mrb_method_t *)&mrb_preset_kh_mt_27_vals };
 
-PRESET_DATA uint8_t mrb_preset_kh_mt_28_ed_flags[] = {
+PRESET_CONST uint8_t mrb_preset_kh_mt_28_ed_flags[] = {
 	0x82, 0xa0, 0x28, 0x80,
 };
-PRESET_DATA mrb_sym mrb_preset_kh_mt_28_keys[] = {
+PRESET_CONST mrb_sym mrb_preset_kh_mt_28_keys[] = {
 	0, 219, 222, 0, 218, 223, 0, 0, 224, 0, 0, 217, 220, 225, 221, 0,
 };
-PRESET_DATA mrb_method_t mrb_preset_kh_mt_28_vals[] = {
+PRESET_CONST mrb_method_t mrb_preset_kh_mt_28_vals[] = {
 	{ .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&gc_disable } }, { .func_p = 1, { .func = (mrb_func_t)&gc_step_ratio_get } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&gc_enable } }, { .func_p = 1, { .func = (mrb_func_t)&gc_step_ratio_set } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&gc_generational_mode_set } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&gc_start } }, { .func_p = 1, { .func = (mrb_func_t)&gc_interval_ratio_get } }, { .func_p = 1, { .func = (mrb_func_t)&gc_generational_mode_get } }, { .func_p = 1, { .func = (mrb_func_t)&gc_interval_ratio_set } }, { .func_p = 0, { .proc = NULL } }, 
 };
 PRESET_DATA kh_mt_t mrb_preset_kh_mt_28 = { .n_buckets = 16, .size = 9, .n_occupied = 9, .ed_flags = (uint8_t *)&mrb_preset_kh_mt_28_ed_flags, .keys = (mrb_sym *)&mrb_preset_kh_mt_28_keys, .vals = (mrb_method_t *)&mrb_preset_kh_mt_28_vals };
 
-PRESET_DATA uint8_t mrb_preset_kh_mt_29_ed_flags[] = {
+PRESET_CONST uint8_t mrb_preset_kh_mt_29_ed_flags[] = {
 	0xaa, 0xaa,
 };
-PRESET_DATA mrb_sym mrb_preset_kh_mt_29_keys[] = {
+PRESET_CONST mrb_sym mrb_preset_kh_mt_29_keys[] = {
 	0, 0, 0, 0, 0, 0, 0, 0,
 };
-PRESET_DATA mrb_method_t mrb_preset_kh_mt_29_vals[] = {
+PRESET_CONST mrb_method_t mrb_preset_kh_mt_29_vals[] = {
 	{ .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, 
 };
 PRESET_DATA kh_mt_t mrb_preset_kh_mt_29 = { .n_buckets = 8, .size = 0, .n_occupied = 0, .ed_flags = (uint8_t *)&mrb_preset_kh_mt_29_ed_flags, .keys = (mrb_sym *)&mrb_preset_kh_mt_29_keys, .vals = (mrb_method_t *)&mrb_preset_kh_mt_29_vals };
 
-PRESET_DATA uint8_t mrb_preset_kh_mt_30_ed_flags[] = {
+PRESET_CONST uint8_t mrb_preset_kh_mt_30_ed_flags[] = {
 	0xaa, 0xaa,
 };
-PRESET_DATA mrb_sym mrb_preset_kh_mt_30_keys[] = {
+PRESET_CONST mrb_sym mrb_preset_kh_mt_30_keys[] = {
 	0, 0, 0, 0, 0, 0, 0, 0,
 };
-PRESET_DATA mrb_method_t mrb_preset_kh_mt_30_vals[] = {
+PRESET_CONST mrb_method_t mrb_preset_kh_mt_30_vals[] = {
 	{ .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, 
 };
 PRESET_DATA kh_mt_t mrb_preset_kh_mt_30 = { .n_buckets = 8, .size = 0, .n_occupied = 0, .ed_flags = (uint8_t *)&mrb_preset_kh_mt_30_ed_flags, .keys = (mrb_sym *)&mrb_preset_kh_mt_30_keys, .vals = (mrb_method_t *)&mrb_preset_kh_mt_30_vals };
 
-PRESET_DATA uint8_t mrb_preset_kh_mt_31_ed_flags[] = {
+PRESET_CONST uint8_t mrb_preset_kh_mt_31_ed_flags[] = {
 	0xaa, 0xaa,
 };
-PRESET_DATA mrb_sym mrb_preset_kh_mt_31_keys[] = {
+PRESET_CONST mrb_sym mrb_preset_kh_mt_31_keys[] = {
 	0, 0, 0, 0, 0, 0, 0, 0,
 };
-PRESET_DATA mrb_method_t mrb_preset_kh_mt_31_vals[] = {
+PRESET_CONST mrb_method_t mrb_preset_kh_mt_31_vals[] = {
 	{ .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, 
 };
 PRESET_DATA kh_mt_t mrb_preset_kh_mt_31 = { .n_buckets = 8, .size = 0, .n_occupied = 0, .ed_flags = (uint8_t *)&mrb_preset_kh_mt_31_ed_flags, .keys = (mrb_sym *)&mrb_preset_kh_mt_31_keys, .vals = (mrb_method_t *)&mrb_preset_kh_mt_31_vals };
 
-PRESET_DATA uint8_t mrb_preset_kh_mt_32_ed_flags[] = {
+PRESET_CONST uint8_t mrb_preset_kh_mt_32_ed_flags[] = {
 	0xaa, 0xaa,
 };
-PRESET_DATA mrb_sym mrb_preset_kh_mt_32_keys[] = {
+PRESET_CONST mrb_sym mrb_preset_kh_mt_32_keys[] = {
 	0, 0, 0, 0, 0, 0, 0, 0,
 };
-PRESET_DATA mrb_method_t mrb_preset_kh_mt_32_vals[] = {
+PRESET_CONST mrb_method_t mrb_preset_kh_mt_32_vals[] = {
 	{ .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, 
 };
 PRESET_DATA kh_mt_t mrb_preset_kh_mt_32 = { .n_buckets = 8, .size = 0, .n_occupied = 0, .ed_flags = (uint8_t *)&mrb_preset_kh_mt_32_ed_flags, .keys = (mrb_sym *)&mrb_preset_kh_mt_32_keys, .vals = (mrb_method_t *)&mrb_preset_kh_mt_32_vals };
 
-PRESET_DATA uint8_t mrb_preset_kh_mt_33_ed_flags[] = {
+PRESET_CONST uint8_t mrb_preset_kh_mt_33_ed_flags[] = {
 	0xaa, 0x88,
 };
-PRESET_DATA mrb_sym mrb_preset_kh_mt_33_keys[] = {
+PRESET_CONST mrb_sym mrb_preset_kh_mt_33_keys[] = {
 	0, 0, 0, 0, 255, 0, 375, 0,
 };
-PRESET_DATA mrb_method_t mrb_preset_kh_mt_33_vals[] = {
+PRESET_CONST mrb_method_t mrb_preset_kh_mt_33_vals[] = {
 	{ .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_200.proc } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_202.proc } }, { .func_p = 0, { .proc = NULL } }, 
 };
 PRESET_DATA kh_mt_t mrb_preset_kh_mt_33 = { .n_buckets = 8, .size = 2, .n_occupied = 2, .ed_flags = (uint8_t *)&mrb_preset_kh_mt_33_ed_flags, .keys = (mrb_sym *)&mrb_preset_kh_mt_33_keys, .vals = (mrb_method_t *)&mrb_preset_kh_mt_33_vals };
 
-PRESET_DATA uint8_t mrb_preset_kh_mt_34_ed_flags[] = {
+PRESET_CONST uint8_t mrb_preset_kh_mt_34_ed_flags[] = {
 	0xaa, 0xaa,
 };
-PRESET_DATA mrb_sym mrb_preset_kh_mt_34_keys[] = {
+PRESET_CONST mrb_sym mrb_preset_kh_mt_34_keys[] = {
 	0, 0, 0, 0, 0, 0, 0, 0,
 };
-PRESET_DATA mrb_method_t mrb_preset_kh_mt_34_vals[] = {
+PRESET_CONST mrb_method_t mrb_preset_kh_mt_34_vals[] = {
 	{ .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, 
 };
 PRESET_DATA kh_mt_t mrb_preset_kh_mt_34 = { .n_buckets = 8, .size = 0, .n_occupied = 0, .ed_flags = (uint8_t *)&mrb_preset_kh_mt_34_ed_flags, .keys = (mrb_sym *)&mrb_preset_kh_mt_34_keys, .vals = (mrb_method_t *)&mrb_preset_kh_mt_34_vals };
 
-PRESET_DATA uint8_t mrb_preset_kh_mt_35_ed_flags[] = {
+PRESET_CONST uint8_t mrb_preset_kh_mt_35_ed_flags[] = {
 	0xaa, 0xaa,
 };
-PRESET_DATA mrb_sym mrb_preset_kh_mt_35_keys[] = {
+PRESET_CONST mrb_sym mrb_preset_kh_mt_35_keys[] = {
 	0, 0, 0, 0, 0, 0, 0, 0,
 };
-PRESET_DATA mrb_method_t mrb_preset_kh_mt_35_vals[] = {
+PRESET_CONST mrb_method_t mrb_preset_kh_mt_35_vals[] = {
 	{ .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, 
 };
 PRESET_DATA kh_mt_t mrb_preset_kh_mt_35 = { .n_buckets = 8, .size = 0, .n_occupied = 0, .ed_flags = (uint8_t *)&mrb_preset_kh_mt_35_ed_flags, .keys = (mrb_sym *)&mrb_preset_kh_mt_35_keys, .vals = (mrb_method_t *)&mrb_preset_kh_mt_35_vals };
 
-PRESET_DATA uint8_t mrb_preset_kh_mt_36_ed_flags[] = {
+PRESET_CONST uint8_t mrb_preset_kh_mt_36_ed_flags[] = {
 	0xaa, 0xaa,
 };
-PRESET_DATA mrb_sym mrb_preset_kh_mt_36_keys[] = {
+PRESET_CONST mrb_sym mrb_preset_kh_mt_36_keys[] = {
 	0, 0, 0, 0, 0, 0, 0, 0,
 };
-PRESET_DATA mrb_method_t mrb_preset_kh_mt_36_vals[] = {
+PRESET_CONST mrb_method_t mrb_preset_kh_mt_36_vals[] = {
 	{ .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, 
 };
 PRESET_DATA kh_mt_t mrb_preset_kh_mt_36 = { .n_buckets = 8, .size = 0, .n_occupied = 0, .ed_flags = (uint8_t *)&mrb_preset_kh_mt_36_ed_flags, .keys = (mrb_sym *)&mrb_preset_kh_mt_36_keys, .vals = (mrb_method_t *)&mrb_preset_kh_mt_36_vals };
 
-PRESET_DATA uint8_t mrb_preset_kh_mt_37_ed_flags[] = {
+PRESET_CONST uint8_t mrb_preset_kh_mt_37_ed_flags[] = {
 	0xaa, 0xaa,
 };
-PRESET_DATA mrb_sym mrb_preset_kh_mt_37_keys[] = {
+PRESET_CONST mrb_sym mrb_preset_kh_mt_37_keys[] = {
 	0, 0, 0, 0, 0, 0, 0, 0,
 };
-PRESET_DATA mrb_method_t mrb_preset_kh_mt_37_vals[] = {
+PRESET_CONST mrb_method_t mrb_preset_kh_mt_37_vals[] = {
 	{ .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, 
 };
 PRESET_DATA kh_mt_t mrb_preset_kh_mt_37 = { .n_buckets = 8, .size = 0, .n_occupied = 0, .ed_flags = (uint8_t *)&mrb_preset_kh_mt_37_ed_flags, .keys = (mrb_sym *)&mrb_preset_kh_mt_37_keys, .vals = (mrb_method_t *)&mrb_preset_kh_mt_37_vals };
 
-PRESET_DATA uint8_t mrb_preset_kh_mt_38_ed_flags[] = {
+PRESET_CONST uint8_t mrb_preset_kh_mt_38_ed_flags[] = {
 	0xa8, 0xaa,
 };
-PRESET_DATA mrb_sym mrb_preset_kh_mt_38_keys[] = {
+PRESET_CONST mrb_sym mrb_preset_kh_mt_38_keys[] = {
 	15, 0, 0, 0, 0, 0, 0, 0,
 };
-PRESET_DATA mrb_method_t mrb_preset_kh_mt_38_vals[] = {
+PRESET_CONST mrb_method_t mrb_preset_kh_mt_38_vals[] = {
 	{ .func_p = 1, { .func = (mrb_func_t)&mrb_proc_s_new } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, 
 };
 PRESET_DATA kh_mt_t mrb_preset_kh_mt_38 = { .n_buckets = 8, .size = 1, .n_occupied = 1, .ed_flags = (uint8_t *)&mrb_preset_kh_mt_38_ed_flags, .keys = (mrb_sym *)&mrb_preset_kh_mt_38_keys, .vals = (mrb_method_t *)&mrb_preset_kh_mt_38_vals };
 
-PRESET_DATA uint8_t mrb_preset_kh_mt_39_ed_flags[] = {
+PRESET_CONST uint8_t mrb_preset_kh_mt_39_ed_flags[] = {
 	0xa2, 0x80,
 };
-PRESET_DATA mrb_sym mrb_preset_kh_mt_39_keys[] = {
+PRESET_CONST mrb_sym mrb_preset_kh_mt_39_keys[] = {
 	0, 148, 0, 0, 80, 149, 110, 0,
 };
-PRESET_DATA mrb_method_t mrb_preset_kh_mt_39_vals[] = {
+PRESET_CONST mrb_method_t mrb_preset_kh_mt_39_vals[] = {
 	{ .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_proc_arity } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_proc_init_copy } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_210.proc } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_210.proc } }, { .func_p = 0, { .proc = NULL } }, 
 };
 PRESET_DATA kh_mt_t mrb_preset_kh_mt_39 = { .n_buckets = 8, .size = 4, .n_occupied = 4, .ed_flags = (uint8_t *)&mrb_preset_kh_mt_39_ed_flags, .keys = (mrb_sym *)&mrb_preset_kh_mt_39_keys, .vals = (mrb_method_t *)&mrb_preset_kh_mt_39_vals };
 
-PRESET_DATA uint8_t mrb_preset_kh_mt_40_ed_flags[] = {
+PRESET_CONST uint8_t mrb_preset_kh_mt_40_ed_flags[] = {
 	0xaa, 0xaa,
 };
-PRESET_DATA mrb_sym mrb_preset_kh_mt_40_keys[] = {
+PRESET_CONST mrb_sym mrb_preset_kh_mt_40_keys[] = {
 	0, 0, 0, 0, 0, 0, 0, 0,
 };
-PRESET_DATA mrb_method_t mrb_preset_kh_mt_40_vals[] = {
+PRESET_CONST mrb_method_t mrb_preset_kh_mt_40_vals[] = {
 	{ .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, 
 };
 PRESET_DATA kh_mt_t mrb_preset_kh_mt_40 = { .n_buckets = 8, .size = 0, .n_occupied = 0, .ed_flags = (uint8_t *)&mrb_preset_kh_mt_40_ed_flags, .keys = (mrb_sym *)&mrb_preset_kh_mt_40_keys, .vals = (mrb_method_t *)&mrb_preset_kh_mt_40_vals };
 
-PRESET_DATA uint8_t mrb_preset_kh_mt_41_ed_flags[] = {
+PRESET_CONST uint8_t mrb_preset_kh_mt_41_ed_flags[] = {
 	0xaa, 0xaa,
 };
-PRESET_DATA mrb_sym mrb_preset_kh_mt_41_keys[] = {
+PRESET_CONST mrb_sym mrb_preset_kh_mt_41_keys[] = {
 	0, 0, 0, 0, 0, 0, 0, 0,
 };
-PRESET_DATA mrb_method_t mrb_preset_kh_mt_41_vals[] = {
+PRESET_CONST mrb_method_t mrb_preset_kh_mt_41_vals[] = {
 	{ .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, 
 };
 PRESET_DATA kh_mt_t mrb_preset_kh_mt_41 = { .n_buckets = 8, .size = 0, .n_occupied = 0, .ed_flags = (uint8_t *)&mrb_preset_kh_mt_41_ed_flags, .keys = (mrb_sym *)&mrb_preset_kh_mt_41_keys, .vals = (mrb_method_t *)&mrb_preset_kh_mt_41_vals };
 
-PRESET_DATA uint8_t mrb_preset_kh_mt_42_ed_flags[] = {
+PRESET_CONST uint8_t mrb_preset_kh_mt_42_ed_flags[] = {
 	0xaa, 0xaa,
 };
-PRESET_DATA mrb_sym mrb_preset_kh_mt_42_keys[] = {
+PRESET_CONST mrb_sym mrb_preset_kh_mt_42_keys[] = {
 	0, 0, 0, 0, 0, 0, 0, 0,
 };
-PRESET_DATA mrb_method_t mrb_preset_kh_mt_42_vals[] = {
+PRESET_CONST mrb_method_t mrb_preset_kh_mt_42_vals[] = {
 	{ .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, 
 };
 PRESET_DATA kh_mt_t mrb_preset_kh_mt_42 = { .n_buckets = 8, .size = 0, .n_occupied = 0, .ed_flags = (uint8_t *)&mrb_preset_kh_mt_42_ed_flags, .keys = (mrb_sym *)&mrb_preset_kh_mt_42_keys, .vals = (mrb_method_t *)&mrb_preset_kh_mt_42_vals };
 
-PRESET_DATA uint8_t mrb_preset_kh_mt_43_ed_flags[] = {
+PRESET_CONST uint8_t mrb_preset_kh_mt_43_ed_flags[] = {
 	0x2a, 0x08, 0x80, 0x00, 0x28, 0x80, 0x22, 0xa0, 0x80, 0xa8, 0x08, 0x80, 0x08, 0x08, 0x20, 0x20,
 };
-PRESET_DATA mrb_sym mrb_preset_kh_mt_43_keys[] = {
+PRESET_CONST mrb_sym mrb_preset_kh_mt_43_keys[] = {
 	0, 0, 0, 182, 80, 0, 183, 163, 42, 180, 123, 0, 122, 110, 43, 181,
 	259, 0, 0, 179, 154, 260, 178, 0, 0, 177, 0, 153, 127, 176, 0, 0,
 	10, 286, 290, 0, 287, 0, 0, 0, 288, 0, 8, 284, 250, 171, 285, 0,
 	74, 0, 173, 289, 282, 0, 184, 119, 172, 175, 0, 25, 281, 174, 0, 73,
 };
-PRESET_DATA mrb_method_t mrb_preset_kh_mt_43_vals[] = {
+PRESET_CONST mrb_method_t mrb_preset_kh_mt_43_vals[] = {
 	{ .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_hash_has_value } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_215.proc } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_hash_values } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_hash_shift } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_217.proc } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_hash_has_key } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_215.proc } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_hash_size_m } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_hash_aget } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_217.proc } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_hash_aset } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_219.proc } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_hash_keys } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_hash_clear } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_225.proc } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_hash_has_key } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_hash_has_value } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_hash_aset } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_hash_size_m } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_hash_has_key } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_226.proc } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_227.proc } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_229.proc } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_230.proc } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_231.proc } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_hash_init } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_232.proc } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_233.proc } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_hash_default } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_234.proc } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_235.proc } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_hash_default_proc } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_236.proc } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_237.proc } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&sym_to_sym } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_hash_empty_p } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_hash_set_default } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_hash_delete } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_hash_has_key } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_238.proc } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_hash_set_default_proc } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_hash_dup } }, 
 };
 PRESET_DATA kh_mt_t mrb_preset_kh_mt_43 = { .n_buckets = 64, .size = 42, .n_occupied = 42, .ed_flags = (uint8_t *)&mrb_preset_kh_mt_43_ed_flags, .keys = (mrb_sym *)&mrb_preset_kh_mt_43_keys, .vals = (mrb_method_t *)&mrb_preset_kh_mt_43_vals };
 
-PRESET_DATA uint8_t mrb_preset_kh_mt_44_ed_flags[] = {
+PRESET_CONST uint8_t mrb_preset_kh_mt_44_ed_flags[] = {
 	0xaa, 0xa8, 0x28, 0x00, 0x82, 0x28, 0x28, 0x82,
 };
-PRESET_DATA mrb_sym mrb_preset_kh_mt_44_keys[] = {
+PRESET_CONST mrb_sym mrb_preset_kh_mt_44_keys[] = {
 	0, 0, 0, 0, 405, 0, 0, 0, 298, 0, 0, 406, 412, 299, 407, 413,
 	0, 411, 301, 0, 410, 0, 0, 300, 303, 0, 0, 409, 0, 302, 408, 0,
 };
-PRESET_DATA mrb_method_t mrb_preset_kh_mt_44_vals[] = {
+PRESET_CONST mrb_method_t mrb_preset_kh_mt_44_vals[] = {
 	{ .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_int_chr } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_241.proc } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_int_allbits } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_242.proc } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_243.proc } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_int_anybits } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_244.proc } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_245.proc } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_246.proc } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_247.proc } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_243.proc } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_248.proc } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_251.proc } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_252.proc } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_int_nobits } }, { .func_p = 0, { .proc = NULL } }, 
 };
 PRESET_DATA kh_mt_t mrb_preset_kh_mt_44 = { .n_buckets = 32, .size = 15, .n_occupied = 15, .ed_flags = (uint8_t *)&mrb_preset_kh_mt_44_ed_flags, .keys = (mrb_sym *)&mrb_preset_kh_mt_44_keys, .vals = (mrb_method_t *)&mrb_preset_kh_mt_44_vals };
 
-PRESET_DATA uint8_t mrb_preset_kh_mt_45_ed_flags[] = {
+PRESET_CONST uint8_t mrb_preset_kh_mt_45_ed_flags[] = {
 	0xaa, 0xaa,
 };
-PRESET_DATA mrb_sym mrb_preset_kh_mt_45_keys[] = {
+PRESET_CONST mrb_sym mrb_preset_kh_mt_45_keys[] = {
 	0, 0, 0, 0, 0, 0, 0, 0,
 };
-PRESET_DATA mrb_method_t mrb_preset_kh_mt_45_vals[] = {
+PRESET_CONST mrb_method_t mrb_preset_kh_mt_45_vals[] = {
 	{ .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, 
 };
 PRESET_DATA kh_mt_t mrb_preset_kh_mt_45 = { .n_buckets = 8, .size = 0, .n_occupied = 0, .ed_flags = (uint8_t *)&mrb_preset_kh_mt_45_ed_flags, .keys = (mrb_sym *)&mrb_preset_kh_mt_45_keys, .vals = (mrb_method_t *)&mrb_preset_kh_mt_45_vals };
 
-PRESET_DATA uint8_t mrb_preset_kh_mt_46_ed_flags[] = {
+PRESET_CONST uint8_t mrb_preset_kh_mt_46_ed_flags[] = {
 	0xa0, 0x80, 0x80, 0x80, 0xa8, 0xa8, 0x2a, 0x88,
 };
-PRESET_DATA mrb_sym mrb_preset_kh_mt_46_keys[] = {
+PRESET_CONST mrb_sym mrb_preset_kh_mt_46_keys[] = {
 	10, 79, 0, 0, 159, 80, 55, 0, 42, 180, 8, 0, 250, 43, 157, 0,
 	74, 0, 0, 0, 213, 0, 0, 0, 0, 0, 0, 214, 25, 0, 215, 0,
 };
-PRESET_DATA mrb_method_t mrb_preset_kh_mt_46_vals[] = {
+PRESET_CONST mrb_method_t mrb_preset_kh_mt_46_vals[] = {
 	{ .func_p = 1, { .func = (mrb_func_t)&mrb_range_eq } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_255.proc } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_range_end } }, { .func_p = 1, { .func = (mrb_func_t)&range_initialize_copy } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_range_include } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&range_to_s } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_range_include } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_range_initialize } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_256.proc } }, { .func_p = 1, { .func = (mrb_func_t)&range_inspect } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_range_beg } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&range_eql } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_range_beg } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_range_end } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_range_include } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_range_excl } }, { .func_p = 0, { .proc = NULL } }, 
 };
 PRESET_DATA kh_mt_t mrb_preset_kh_mt_46 = { .n_buckets = 32, .size = 16, .n_occupied = 16, .ed_flags = (uint8_t *)&mrb_preset_kh_mt_46_ed_flags, .keys = (mrb_sym *)&mrb_preset_kh_mt_46_keys, .vals = (mrb_method_t *)&mrb_preset_kh_mt_46_vals };
 
-PRESET_DATA uint8_t mrb_preset_kh_mt_47_ed_flags[] = {
+PRESET_CONST uint8_t mrb_preset_kh_mt_47_ed_flags[] = {
 	0xa8, 0xaa,
 };
-PRESET_DATA mrb_sym mrb_preset_kh_mt_47_keys[] = {
+PRESET_CONST mrb_sym mrb_preset_kh_mt_47_keys[] = {
 	15, 0, 0, 0, 0, 0, 0, 0,
 };
-PRESET_DATA mrb_method_t mrb_preset_kh_mt_47_vals[] = {
+PRESET_CONST mrb_method_t mrb_preset_kh_mt_47_vals[] = {
 	{ .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, 
 };
 PRESET_DATA kh_mt_t mrb_preset_kh_mt_47 = { .n_buckets = 8, .size = 1, .n_occupied = 1, .ed_flags = (uint8_t *)&mrb_preset_kh_mt_47_ed_flags, .keys = (mrb_sym *)&mrb_preset_kh_mt_47_keys, .vals = (mrb_method_t *)&mrb_preset_kh_mt_47_vals };
 
-PRESET_DATA uint8_t mrb_preset_kh_mt_48_ed_flags[] = {
+PRESET_CONST uint8_t mrb_preset_kh_mt_48_ed_flags[] = {
 	0x0a, 0x0a, 0xa2, 0xa8, 0x88, 0x22, 0x82, 0xa8,
 };
-PRESET_DATA mrb_sym mrb_preset_kh_mt_48_keys[] = {
+PRESET_CONST mrb_sym mrb_preset_kh_mt_48_keys[] = {
 	0, 0, 296, 188, 0, 0, 189, 297, 0, 190, 0, 0, 191, 0, 0, 0,
 	192, 0, 295, 0, 0, 193, 0, 105, 0, 187, 194, 0, 186, 0, 0, 0,
 };
-PRESET_DATA mrb_method_t mrb_preset_kh_mt_48_vals[] = {
+PRESET_CONST mrb_method_t mrb_preset_kh_mt_48_vals[] = {
 	{ .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_263.proc } }, { .func_p = 1, { .func = (mrb_func_t)&num_div } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&num_lt } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_264.proc } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&num_le } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&num_gt } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&num_ge } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_265.proc } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&num_finite_p } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&num_cmp } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&num_div } }, { .func_p = 1, { .func = (mrb_func_t)&num_infinite_p } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&num_pow } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, 
 };
 PRESET_DATA kh_mt_t mrb_preset_kh_mt_48 = { .n_buckets = 32, .size = 13, .n_occupied = 13, .ed_flags = (uint8_t *)&mrb_preset_kh_mt_48_ed_flags, .keys = (mrb_sym *)&mrb_preset_kh_mt_48_keys, .vals = (mrb_method_t *)&mrb_preset_kh_mt_48_vals };
 
-PRESET_DATA uint8_t mrb_preset_kh_mt_49_ed_flags[] = {
+PRESET_CONST uint8_t mrb_preset_kh_mt_49_ed_flags[] = {
 	0xaa, 0xaa,
 };
-PRESET_DATA mrb_sym mrb_preset_kh_mt_49_keys[] = {
+PRESET_CONST mrb_sym mrb_preset_kh_mt_49_keys[] = {
 	0, 0, 0, 0, 0, 0, 0, 0,
 };
-PRESET_DATA mrb_method_t mrb_preset_kh_mt_49_vals[] = {
+PRESET_CONST mrb_method_t mrb_preset_kh_mt_49_vals[] = {
 	{ .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, 
 };
 PRESET_DATA kh_mt_t mrb_preset_kh_mt_49 = { .n_buckets = 8, .size = 0, .n_occupied = 0, .ed_flags = (uint8_t *)&mrb_preset_kh_mt_49_ed_flags, .keys = (mrb_sym *)&mrb_preset_kh_mt_49_keys, .vals = (mrb_method_t *)&mrb_preset_kh_mt_49_vals };
 
-PRESET_DATA uint8_t mrb_preset_kh_mt_50_ed_flags[] = {
+PRESET_CONST uint8_t mrb_preset_kh_mt_50_ed_flags[] = {
 	0x0a, 0x22, 0x88, 0x22, 0xa8, 0xa2, 0x82, 0x88, 0xa0, 0xa0, 0x0a, 0x2a, 0x88, 0xa2, 0x8a, 0xaa,
 };
-PRESET_DATA mrb_sym mrb_preset_kh_mt_50_keys[] = {
+PRESET_CONST mrb_sym mrb_preset_kh_mt_50_keys[] = {
 	0, 0, 109, 60, 0, 206, 0, 108, 42, 0, 205, 0, 0, 43, 0, 204,
 	202, 0, 0, 0, 0, 203, 0, 0, 0, 59, 200, 0, 58, 0, 152, 0,
 	10, 197, 0, 0, 208, 196, 0, 0, 0, 0, 199, 130, 0, 0, 0, 131,
 	74, 0, 198, 0, 0, 193, 0, 0, 0, 0, 194, 0, 0, 0, 0, 0,
 };
-PRESET_DATA mrb_method_t mrb_preset_kh_mt_50_vals[] = {
+PRESET_CONST mrb_method_t mrb_preset_kh_mt_50_vals[] = {
 	{ .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&flo_mul } }, { .func_p = 1, { .func = (mrb_func_t)&flo_or } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&flo_divmod } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&flo_plus } }, { .func_p = 1, { .func = (mrb_func_t)&flo_to_s } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&flo_lshift } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&flo_to_s } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&flo_rev } }, { .func_p = 1, { .func = (mrb_func_t)&flo_minus } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&flo_mod } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&flo_xor } }, { .func_p = 1, { .func = (mrb_func_t)&flo_truncate } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&flo_and } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&flo_rshift } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&flo_eq } }, { .func_p = 1, { .func = (mrb_func_t)&flo_ceil } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&flo_nan_p } }, { .func_p = 1, { .func = (mrb_func_t)&flo_truncate } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&flo_round } }, { .func_p = 1, { .func = (mrb_func_t)&sym_to_sym } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&flo_truncate } }, { .func_p = 1, { .func = (mrb_func_t)&flo_eql } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&flo_floor } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&flo_finite_p } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&flo_infinite_p } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, 
 };
 PRESET_DATA kh_mt_t mrb_preset_kh_mt_50 = { .n_buckets = 64, .size = 25, .n_occupied = 25, .ed_flags = (uint8_t *)&mrb_preset_kh_mt_50_ed_flags, .keys = (mrb_sym *)&mrb_preset_kh_mt_50_keys, .vals = (mrb_method_t *)&mrb_preset_kh_mt_50_vals };
 
-PRESET_DATA uint8_t mrb_preset_kh_mt_51_ed_flags[] = {
+PRESET_CONST uint8_t mrb_preset_kh_mt_51_ed_flags[] = {
 	0xaa, 0xaa,
 };
-PRESET_DATA mrb_sym mrb_preset_kh_mt_51_keys[] = {
+PRESET_CONST mrb_sym mrb_preset_kh_mt_51_keys[] = {
 	0, 0, 0, 0, 0, 0, 0, 0,
 };
-PRESET_DATA mrb_method_t mrb_preset_kh_mt_51_vals[] = {
+PRESET_CONST mrb_method_t mrb_preset_kh_mt_51_vals[] = {
 	{ .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, 
 };
 PRESET_DATA kh_mt_t mrb_preset_kh_mt_51 = { .n_buckets = 8, .size = 0, .n_occupied = 0, .ed_flags = (uint8_t *)&mrb_preset_kh_mt_51_ed_flags, .keys = (mrb_sym *)&mrb_preset_kh_mt_51_keys, .vals = (mrb_method_t *)&mrb_preset_kh_mt_51_vals };
 
-PRESET_DATA uint8_t mrb_preset_kh_mt_52_ed_flags[] = {
+PRESET_CONST uint8_t mrb_preset_kh_mt_52_ed_flags[] = {
 	0xaa, 0xaa,
 };
-PRESET_DATA mrb_sym mrb_preset_kh_mt_52_keys[] = {
+PRESET_CONST mrb_sym mrb_preset_kh_mt_52_keys[] = {
 	0, 0, 0, 0, 0, 0, 0, 0,
 };
-PRESET_DATA mrb_method_t mrb_preset_kh_mt_52_vals[] = {
+PRESET_CONST mrb_method_t mrb_preset_kh_mt_52_vals[] = {
 	{ .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, 
 };
 PRESET_DATA kh_mt_t mrb_preset_kh_mt_52 = { .n_buckets = 8, .size = 0, .n_occupied = 0, .ed_flags = (uint8_t *)&mrb_preset_kh_mt_52_ed_flags, .keys = (mrb_sym *)&mrb_preset_kh_mt_52_keys, .vals = (mrb_method_t *)&mrb_preset_kh_mt_52_vals };
 
-PRESET_DATA uint8_t mrb_preset_kh_mt_53_ed_flags[] = {
+PRESET_CONST uint8_t mrb_preset_kh_mt_53_ed_flags[] = {
 	0xaa, 0xaa,
 };
-PRESET_DATA mrb_sym mrb_preset_kh_mt_53_keys[] = {
+PRESET_CONST mrb_sym mrb_preset_kh_mt_53_keys[] = {
 	0, 0, 0, 0, 0, 0, 0, 0,
 };
-PRESET_DATA mrb_method_t mrb_preset_kh_mt_53_vals[] = {
+PRESET_CONST mrb_method_t mrb_preset_kh_mt_53_vals[] = {
 	{ .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, 
 };
 PRESET_DATA kh_mt_t mrb_preset_kh_mt_53 = { .n_buckets = 8, .size = 0, .n_occupied = 0, .ed_flags = (uint8_t *)&mrb_preset_kh_mt_53_ed_flags, .keys = (mrb_sym *)&mrb_preset_kh_mt_53_keys, .vals = (mrb_method_t *)&mrb_preset_kh_mt_53_vals };
 
-PRESET_DATA uint8_t mrb_preset_kh_mt_54_ed_flags[] = {
+PRESET_CONST uint8_t mrb_preset_kh_mt_54_ed_flags[] = {
 	0x80, 0x80, 0x08, 0x2a, 0x80, 0x00, 0x00, 0x08,
 };
-PRESET_DATA mrb_sym mrb_preset_kh_mt_54_keys[] = {
+PRESET_CONST mrb_sym mrb_preset_kh_mt_54_keys[] = {
 	384, 394, 396, 0, 404, 385, 395, 0, 403, 0, 386, 392, 0, 0, 0, 387,
 	389, 399, 393, 0, 400, 388, 381, 401, 398, 382, 391, 397, 383, 0, 402, 390,
 };
-PRESET_DATA mrb_method_t mrb_preset_kh_mt_54_vals[] = {
+PRESET_CONST mrb_method_t mrb_preset_kh_mt_54_vals[] = {
 	{ .func_p = 1, { .func = (mrb_func_t)&math_asin } }, { .func_p = 1, { .func = (mrb_func_t)&math_exp } }, { .func_p = 1, { .func = (mrb_func_t)&math_log2 } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&math_erfc } }, { .func_p = 1, { .func = (mrb_func_t)&math_acos } }, { .func_p = 1, { .func = (mrb_func_t)&math_log } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&math_erf } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&math_atan } }, { .func_p = 1, { .func = (mrb_func_t)&math_acosh } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&math_atan2 } }, { .func_p = 1, { .func = (mrb_func_t)&math_cosh } }, { .func_p = 1, { .func = (mrb_func_t)&math_cbrt } }, { .func_p = 1, { .func = (mrb_func_t)&math_atanh } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&math_frexp } }, { .func_p = 1, { .func = (mrb_func_t)&math_sinh } }, { .func_p = 1, { .func = (mrb_func_t)&math_sin } }, { .func_p = 1, { .func = (mrb_func_t)&math_ldexp } }, { .func_p = 1, { .func = (mrb_func_t)&math_sqrt } }, { .func_p = 1, { .func = (mrb_func_t)&math_cos } }, { .func_p = 1, { .func = (mrb_func_t)&math_asinh } }, { .func_p = 1, { .func = (mrb_func_t)&math_log10 } }, { .func_p = 1, { .func = (mrb_func_t)&math_tan } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&math_hypot } }, { .func_p = 1, { .func = (mrb_func_t)&math_tanh } }, 
 };
 PRESET_DATA kh_mt_t mrb_preset_kh_mt_54 = { .n_buckets = 32, .size = 24, .n_occupied = 24, .ed_flags = (uint8_t *)&mrb_preset_kh_mt_54_ed_flags, .keys = (mrb_sym *)&mrb_preset_kh_mt_54_keys, .vals = (mrb_method_t *)&mrb_preset_kh_mt_54_vals };
 
-PRESET_DATA uint8_t mrb_preset_kh_mt_55_ed_flags[] = {
+PRESET_CONST uint8_t mrb_preset_kh_mt_55_ed_flags[] = {
 	0x80, 0x80, 0x08, 0x2a, 0x80, 0x00, 0x00, 0x08,
 };
-PRESET_DATA mrb_sym mrb_preset_kh_mt_55_keys[] = {
+PRESET_CONST mrb_sym mrb_preset_kh_mt_55_keys[] = {
 	384, 394, 396, 0, 404, 385, 395, 0, 403, 0, 386, 392, 0, 0, 0, 387,
 	389, 399, 393, 0, 400, 388, 381, 401, 398, 382, 391, 397, 383, 0, 402, 390,
 };
-PRESET_DATA mrb_method_t mrb_preset_kh_mt_55_vals[] = {
+PRESET_CONST mrb_method_t mrb_preset_kh_mt_55_vals[] = {
 	{ .func_p = 1, { .func = (mrb_func_t)&math_asin } }, { .func_p = 1, { .func = (mrb_func_t)&math_exp } }, { .func_p = 1, { .func = (mrb_func_t)&math_log2 } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&math_erfc } }, { .func_p = 1, { .func = (mrb_func_t)&math_acos } }, { .func_p = 1, { .func = (mrb_func_t)&math_log } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&math_erf } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&math_atan } }, { .func_p = 1, { .func = (mrb_func_t)&math_acosh } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&math_atan2 } }, { .func_p = 1, { .func = (mrb_func_t)&math_cosh } }, { .func_p = 1, { .func = (mrb_func_t)&math_cbrt } }, { .func_p = 1, { .func = (mrb_func_t)&math_atanh } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&math_frexp } }, { .func_p = 1, { .func = (mrb_func_t)&math_sinh } }, { .func_p = 1, { .func = (mrb_func_t)&math_sin } }, { .func_p = 1, { .func = (mrb_func_t)&math_ldexp } }, { .func_p = 1, { .func = (mrb_func_t)&math_sqrt } }, { .func_p = 1, { .func = (mrb_func_t)&math_cos } }, { .func_p = 1, { .func = (mrb_func_t)&math_asinh } }, { .func_p = 1, { .func = (mrb_func_t)&math_log10 } }, { .func_p = 1, { .func = (mrb_func_t)&math_tan } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&math_hypot } }, { .func_p = 1, { .func = (mrb_func_t)&math_tanh } }, 
 };
 PRESET_DATA kh_mt_t mrb_preset_kh_mt_55 = { .n_buckets = 32, .size = 24, .n_occupied = 24, .ed_flags = (uint8_t *)&mrb_preset_kh_mt_55_ed_flags, .keys = (mrb_sym *)&mrb_preset_kh_mt_55_keys, .vals = (mrb_method_t *)&mrb_preset_kh_mt_55_vals };
 
-PRESET_DATA uint8_t mrb_preset_kh_mt_56_ed_flags[] = {
+PRESET_CONST uint8_t mrb_preset_kh_mt_56_ed_flags[] = {
 	0xa8, 0xaa,
 };
-PRESET_DATA mrb_sym mrb_preset_kh_mt_56_keys[] = {
+PRESET_CONST mrb_sym mrb_preset_kh_mt_56_keys[] = {
 	15, 0, 0, 0, 0, 0, 0, 0,
 };
-PRESET_DATA mrb_method_t mrb_preset_kh_mt_56_vals[] = {
+PRESET_CONST mrb_method_t mrb_preset_kh_mt_56_vals[] = {
 	{ .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, 
 };
 PRESET_DATA kh_mt_t mrb_preset_kh_mt_56 = { .n_buckets = 8, .size = 1, .n_occupied = 1, .ed_flags = (uint8_t *)&mrb_preset_kh_mt_56_ed_flags, .keys = (mrb_sym *)&mrb_preset_kh_mt_56_keys, .vals = (mrb_method_t *)&mrb_preset_kh_mt_56_vals };
 
-PRESET_DATA uint8_t mrb_preset_kh_mt_57_ed_flags[] = {
+PRESET_CONST uint8_t mrb_preset_kh_mt_57_ed_flags[] = {
 	0x20, 0xa0,
 };
-PRESET_DATA mrb_sym mrb_preset_kh_mt_57_keys[] = {
+PRESET_CONST mrb_sym mrb_preset_kh_mt_57_keys[] = {
 	42, 59, 0, 60, 58, 43, 0, 0,
 };
-PRESET_DATA mrb_method_t mrb_preset_kh_mt_57_vals[] = {
+PRESET_CONST mrb_method_t mrb_preset_kh_mt_57_vals[] = {
 	{ .func_p = 1, { .func = (mrb_func_t)&true_to_s } }, { .func_p = 1, { .func = (mrb_func_t)&true_xor } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_true } }, { .func_p = 1, { .func = (mrb_func_t)&false_xor } }, { .func_p = 1, { .func = (mrb_func_t)&true_to_s } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, 
 };
 PRESET_DATA kh_mt_t mrb_preset_kh_mt_57 = { .n_buckets = 8, .size = 5, .n_occupied = 5, .ed_flags = (uint8_t *)&mrb_preset_kh_mt_57_ed_flags, .keys = (mrb_sym *)&mrb_preset_kh_mt_57_keys, .vals = (mrb_method_t *)&mrb_preset_kh_mt_57_vals };
 
-PRESET_DATA uint8_t mrb_preset_kh_mt_58_ed_flags[] = {
+PRESET_CONST uint8_t mrb_preset_kh_mt_58_ed_flags[] = {
 	0xa8, 0xaa,
 };
-PRESET_DATA mrb_sym mrb_preset_kh_mt_58_keys[] = {
+PRESET_CONST mrb_sym mrb_preset_kh_mt_58_keys[] = {
 	15, 0, 0, 0, 0, 0, 0, 0,
 };
-PRESET_DATA mrb_method_t mrb_preset_kh_mt_58_vals[] = {
+PRESET_CONST mrb_method_t mrb_preset_kh_mt_58_vals[] = {
 	{ .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, 
 };
 PRESET_DATA kh_mt_t mrb_preset_kh_mt_58 = { .n_buckets = 8, .size = 1, .n_occupied = 1, .ed_flags = (uint8_t *)&mrb_preset_kh_mt_58_ed_flags, .keys = (mrb_sym *)&mrb_preset_kh_mt_58_keys, .vals = (mrb_method_t *)&mrb_preset_kh_mt_58_vals };
 
-PRESET_DATA uint8_t mrb_preset_kh_mt_59_ed_flags[] = {
+PRESET_CONST uint8_t mrb_preset_kh_mt_59_ed_flags[] = {
 	0x20, 0xa0,
 };
-PRESET_DATA mrb_sym mrb_preset_kh_mt_59_keys[] = {
+PRESET_CONST mrb_sym mrb_preset_kh_mt_59_keys[] = {
 	42, 59, 0, 60, 58, 43, 0, 0,
 };
-PRESET_DATA mrb_method_t mrb_preset_kh_mt_59_vals[] = {
+PRESET_CONST mrb_method_t mrb_preset_kh_mt_59_vals[] = {
 	{ .func_p = 1, { .func = (mrb_func_t)&false_to_s } }, { .func_p = 1, { .func = (mrb_func_t)&false_xor } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&false_xor } }, { .func_p = 1, { .func = (mrb_func_t)&false_and } }, { .func_p = 1, { .func = (mrb_func_t)&false_to_s } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, 
 };
 PRESET_DATA kh_mt_t mrb_preset_kh_mt_59 = { .n_buckets = 8, .size = 5, .n_occupied = 5, .ed_flags = (uint8_t *)&mrb_preset_kh_mt_59_ed_flags, .keys = (mrb_sym *)&mrb_preset_kh_mt_59_keys, .vals = (mrb_method_t *)&mrb_preset_kh_mt_59_vals };
 
-PRESET_DATA uint8_t mrb_preset_kh_mt_60_ed_flags[] = {
+PRESET_CONST uint8_t mrb_preset_kh_mt_60_ed_flags[] = {
 	0xaa, 0xaa,
 };
-PRESET_DATA mrb_sym mrb_preset_kh_mt_60_keys[] = {
+PRESET_CONST mrb_sym mrb_preset_kh_mt_60_keys[] = {
 	0, 0, 0, 0, 0, 0, 0, 0,
 };
-PRESET_DATA mrb_method_t mrb_preset_kh_mt_60_vals[] = {
+PRESET_CONST mrb_method_t mrb_preset_kh_mt_60_vals[] = {
 	{ .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, 
 };
 PRESET_DATA kh_mt_t mrb_preset_kh_mt_60 = { .n_buckets = 8, .size = 0, .n_occupied = 0, .ed_flags = (uint8_t *)&mrb_preset_kh_mt_60_ed_flags, .keys = (mrb_sym *)&mrb_preset_kh_mt_60_keys, .vals = (mrb_method_t *)&mrb_preset_kh_mt_60_vals };
 
-PRESET_DATA uint8_t mrb_preset_kh_mt_61_ed_flags[] = {
+PRESET_CONST uint8_t mrb_preset_kh_mt_61_ed_flags[] = {
 	0x08, 0x02,
 };
-PRESET_DATA mrb_sym mrb_preset_kh_mt_61_keys[] = {
+PRESET_CONST mrb_sym mrb_preset_kh_mt_61_keys[] = {
 	69, 0, 66, 150, 0, 65, 68, 67,
 };
-PRESET_DATA mrb_method_t mrb_preset_kh_mt_61_vals[] = {
+PRESET_CONST mrb_method_t mrb_preset_kh_mt_61_vals[] = {
 	{ .func_p = 1, { .func = (mrb_func_t)&mrb_f_raise } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_f_global_variables } }, { .func_p = 1, { .func = (mrb_func_t)&proc_lambda } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_f_block_given_p_m } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_local_variables } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_f_block_given_p_m } }, 
 };
 PRESET_DATA kh_mt_t mrb_preset_kh_mt_61 = { .n_buckets = 8, .size = 6, .n_occupied = 6, .ed_flags = (uint8_t *)&mrb_preset_kh_mt_61_ed_flags, .keys = (mrb_sym *)&mrb_preset_kh_mt_61_keys, .vals = (mrb_method_t *)&mrb_preset_kh_mt_61_vals };
 
-PRESET_DATA uint8_t mrb_preset_kh_mt_62_ed_flags[] = {
+PRESET_CONST uint8_t mrb_preset_kh_mt_62_ed_flags[] = {
 	0x20, 0x80, 0x08, 0x02, 0x20, 0xa0, 0x0a, 0x08, 0xa0, 0x00, 0x0a, 0x08, 0x00, 0x20, 0x00, 0x02,
 };
-PRESET_DATA mrb_sym mrb_preset_kh_mt_62_keys[] = {
+PRESET_CONST mrb_sym mrb_preset_kh_mt_62_keys[] = {
 	69, 81, 0, 292, 80, 68, 61, 0, 42, 0, 71, 83, 0, 43, 82, 70,
 	259, 84, 0, 261, 85, 65, 0, 0, 0, 0, 66, 86, 463, 0, 87, 67,
 	79, 91, 0, 0, 90, 78, 55, 291, 0, 0, 77, 89, 150, 0, 88, 76,
 	74, 94, 98, 464, 95, 75, 0, 99, 96, 293, 72, 92, 0, 97, 93, 73,
 };
-PRESET_DATA mrb_method_t mrb_preset_kh_mt_62_vals[] = {
+PRESET_CONST mrb_method_t mrb_preset_kh_mt_62_vals[] = {
 	{ .func_p = 1, { .func = (mrb_func_t)&mrb_f_raise } }, { .func_p = 1, { .func = (mrb_func_t)&obj_is_instance_of } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_283.proc } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_obj_init_copy } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_local_variables } }, { .func_p = 1, { .func = (mrb_func_t)&false_and } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_any_to_s } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_obj_class_m } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_obj_ivar_get } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_obj_inspect } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_obj_ivar_defined } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_singleton_class } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_284.proc } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_obj_ivar_set } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_285.proc } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_obj_instance_variables } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_f_block_given_p_m } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_f_global_variables } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_obj_is_kind_of_m } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_f_sprintf } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_obj_is_kind_of_m } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_f_block_given_p_m } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_obj_hash } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_obj_protected_methods } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_obj_private_methods } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_obj_frozen } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_equal_m } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_287.proc } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_obj_freeze } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_obj_hash } }, { .func_p = 1, { .func = (mrb_func_t)&proc_lambda } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_obj_public_methods } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_obj_extend_m } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_obj_equal_m } }, { .func_p = 1, { .func = (mrb_func_t)&obj_respond_to } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_obj_ceqq } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_f_sprintf } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_f_send } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_obj_equal_m } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_krn_class_defined } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_obj_singleton_methods_m } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_289.proc } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_obj_clone } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_obj_public_methods } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&mod_define_singleton_method } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_obj_remove_instance_variable } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_obj_dup } }, 
 };
 PRESET_DATA kh_mt_t mrb_preset_kh_mt_62 = { .n_buckets = 64, .size = 47, .n_occupied = 47, .ed_flags = (uint8_t *)&mrb_preset_kh_mt_62_ed_flags, .keys = (mrb_sym *)&mrb_preset_kh_mt_62_keys, .vals = (mrb_method_t *)&mrb_preset_kh_mt_62_vals };
 
-PRESET_DATA uint8_t mrb_preset_kh_mt_63_ed_flags[] = {
+PRESET_CONST uint8_t mrb_preset_kh_mt_63_ed_flags[] = {
 	0xa8, 0xaa,
 };
-PRESET_DATA mrb_sym mrb_preset_kh_mt_63_keys[] = {
+PRESET_CONST mrb_sym mrb_preset_kh_mt_63_keys[] = {
 	15, 0, 0, 0, 0, 0, 0, 0,
 };
-PRESET_DATA mrb_method_t mrb_preset_kh_mt_63_vals[] = {
+PRESET_CONST mrb_method_t mrb_preset_kh_mt_63_vals[] = {
 	{ .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, 
 };
 PRESET_DATA kh_mt_t mrb_preset_kh_mt_63 = { .n_buckets = 8, .size = 1, .n_occupied = 1, .ed_flags = (uint8_t *)&mrb_preset_kh_mt_63_ed_flags, .keys = (mrb_sym *)&mrb_preset_kh_mt_63_keys, .vals = (mrb_method_t *)&mrb_preset_kh_mt_63_vals };
 
-PRESET_DATA uint8_t mrb_preset_kh_mt_64_ed_flags[] = {
+PRESET_CONST uint8_t mrb_preset_kh_mt_64_ed_flags[] = {
 	0x20, 0x80,
 };
-PRESET_DATA mrb_sym mrb_preset_kh_mt_64_keys[] = {
+PRESET_CONST mrb_sym mrb_preset_kh_mt_64_keys[] = {
 	42, 59, 0, 60, 58, 43, 61, 0,
 };
-PRESET_DATA mrb_method_t mrb_preset_kh_mt_64_vals[] = {
+PRESET_CONST mrb_method_t mrb_preset_kh_mt_64_vals[] = {
 	{ .func_p = 1, { .func = (mrb_func_t)&nil_to_s } }, { .func_p = 1, { .func = (mrb_func_t)&false_xor } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&false_xor } }, { .func_p = 1, { .func = (mrb_func_t)&false_and } }, { .func_p = 1, { .func = (mrb_func_t)&nil_inspect } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_true } }, { .func_p = 0, { .proc = NULL } }, 
 };
 PRESET_DATA kh_mt_t mrb_preset_kh_mt_64 = { .n_buckets = 8, .size = 6, .n_occupied = 6, .ed_flags = (uint8_t *)&mrb_preset_kh_mt_64_ed_flags, .keys = (mrb_sym *)&mrb_preset_kh_mt_64_keys, .vals = (mrb_method_t *)&mrb_preset_kh_mt_64_vals };
 
-PRESET_DATA uint8_t mrb_preset_kh_mt_65_ed_flags[] = {
+PRESET_CONST uint8_t mrb_preset_kh_mt_65_ed_flags[] = {
 	0xaa, 0xaa,
 };
-PRESET_DATA mrb_sym mrb_preset_kh_mt_65_keys[] = {
+PRESET_CONST mrb_sym mrb_preset_kh_mt_65_keys[] = {
 	0, 0, 0, 0, 0, 0, 0, 0,
 };
-PRESET_DATA mrb_method_t mrb_preset_kh_mt_65_vals[] = {
+PRESET_CONST mrb_method_t mrb_preset_kh_mt_65_vals[] = {
 	{ .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, 
 };
 PRESET_DATA kh_mt_t mrb_preset_kh_mt_65 = { .n_buckets = 8, .size = 0, .n_occupied = 0, .ed_flags = (uint8_t *)&mrb_preset_kh_mt_65_ed_flags, .keys = (mrb_sym *)&mrb_preset_kh_mt_65_keys, .vals = (mrb_method_t *)&mrb_preset_kh_mt_65_vals };
 
-PRESET_DATA uint8_t mrb_preset_kh_mt_66_ed_flags[] = {
+PRESET_CONST uint8_t mrb_preset_kh_mt_66_ed_flags[] = {
 	0x88, 0xa2, 0x0a, 0x2a,
 };
-PRESET_DATA mrb_sym mrb_preset_kh_mt_66_keys[] = {
+PRESET_CONST mrb_sym mrb_preset_kh_mt_66_keys[] = {
 	197, 0, 131, 0, 0, 196, 0, 0, 0, 0, 199, 200, 0, 0, 0, 198,
 };
-PRESET_DATA mrb_method_t mrb_preset_kh_mt_66_vals[] = {
+PRESET_CONST mrb_method_t mrb_preset_kh_mt_66_vals[] = {
 	{ .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_298.proc } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&sym_to_sym } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&sym_to_sym } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_299.proc } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_299.proc } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = (struct RProc *)&mrb_preset_object_299.proc } }, 
 };
 PRESET_DATA kh_mt_t mrb_preset_kh_mt_66 = { .n_buckets = 16, .size = 6, .n_occupied = 6, .ed_flags = (uint8_t *)&mrb_preset_kh_mt_66_ed_flags, .keys = (mrb_sym *)&mrb_preset_kh_mt_66_keys, .vals = (mrb_method_t *)&mrb_preset_kh_mt_66_vals };
 
-PRESET_DATA uint8_t mrb_preset_kh_mt_67_ed_flags[] = {
+PRESET_CONST uint8_t mrb_preset_kh_mt_67_ed_flags[] = {
 	0xa8, 0xaa,
 };
-PRESET_DATA mrb_sym mrb_preset_kh_mt_67_keys[] = {
+PRESET_CONST mrb_sym mrb_preset_kh_mt_67_keys[] = {
 	15, 0, 0, 0, 0, 0, 0, 0,
 };
-PRESET_DATA mrb_method_t mrb_preset_kh_mt_67_vals[] = {
+PRESET_CONST mrb_method_t mrb_preset_kh_mt_67_vals[] = {
 	{ .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, 
 };
 PRESET_DATA kh_mt_t mrb_preset_kh_mt_67 = { .n_buckets = 8, .size = 1, .n_occupied = 1, .ed_flags = (uint8_t *)&mrb_preset_kh_mt_67_ed_flags, .keys = (mrb_sym *)&mrb_preset_kh_mt_67_keys, .vals = (mrb_method_t *)&mrb_preset_kh_mt_67_vals };
 
-PRESET_DATA uint8_t mrb_preset_kh_mt_68_ed_flags[] = {
+PRESET_CONST uint8_t mrb_preset_kh_mt_68_ed_flags[] = {
 	0x08, 0x20, 0x08, 0x22, 0xa0, 0xa2, 0xa2, 0x88,
 };
-PRESET_DATA mrb_sym mrb_preset_kh_mt_68_keys[] = {
+PRESET_CONST mrb_sym mrb_preset_kh_mt_68_keys[] = {
 	10, 0, 109, 60, 405, 206, 0, 108, 42, 0, 205, 130, 0, 43, 0, 204,
 	202, 74, 0, 0, 0, 203, 0, 0, 0, 59, 0, 0, 58, 0, 152, 0,
 };
-PRESET_DATA mrb_method_t mrb_preset_kh_mt_68_vals[] = {
+PRESET_CONST mrb_method_t mrb_preset_kh_mt_68_vals[] = {
 	{ .func_p = 1, { .func = (mrb_func_t)&fix_equal } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&fix_mul } }, { .func_p = 1, { .func = (mrb_func_t)&fix_or } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_fixnum_chr } }, { .func_p = 1, { .func = (mrb_func_t)&fix_divmod } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&fix_plus } }, { .func_p = 1, { .func = (mrb_func_t)&fix_to_s } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&fix_rshift } }, { .func_p = 1, { .func = (mrb_func_t)&fix_to_f } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&fix_to_s } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&fix_rev } }, { .func_p = 1, { .func = (mrb_func_t)&fix_minus } }, { .func_p = 1, { .func = (mrb_func_t)&fix_eql } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&fix_mod } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&fix_xor } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&fix_and } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&fix_lshift } }, { .func_p = 0, { .proc = NULL } }, 
 };
 PRESET_DATA kh_mt_t mrb_preset_kh_mt_68 = { .n_buckets = 32, .size = 17, .n_occupied = 17, .ed_flags = (uint8_t *)&mrb_preset_kh_mt_68_ed_flags, .keys = (mrb_sym *)&mrb_preset_kh_mt_68_keys, .vals = (mrb_method_t *)&mrb_preset_kh_mt_68_vals };
 
-PRESET_DATA uint8_t mrb_preset_kh_mt_69_ed_flags[] = {
+PRESET_CONST uint8_t mrb_preset_kh_mt_69_ed_flags[] = {
 	0x2a, 0xa8,
 };
-PRESET_DATA mrb_sym mrb_preset_kh_mt_69_keys[] = {
+PRESET_CONST mrb_sym mrb_preset_kh_mt_69_keys[] = {
 	0, 0, 0, 470, 469, 0, 0, 0,
 };
-PRESET_DATA mrb_method_t mrb_preset_kh_mt_69_vals[] = {
+PRESET_CONST mrb_method_t mrb_preset_kh_mt_69_vals[] = {
 	{ .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&fiber_current } }, { .func_p = 1, { .func = (mrb_func_t)&fiber_yield } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, 
 };
 PRESET_DATA kh_mt_t mrb_preset_kh_mt_69 = { .n_buckets = 8, .size = 2, .n_occupied = 2, .ed_flags = (uint8_t *)&mrb_preset_kh_mt_69_ed_flags, .keys = (mrb_sym *)&mrb_preset_kh_mt_69_keys, .vals = (mrb_method_t *)&mrb_preset_kh_mt_69_vals };
 
-PRESET_DATA uint8_t mrb_preset_kh_mt_70_ed_flags[] = {
+PRESET_CONST uint8_t mrb_preset_kh_mt_70_ed_flags[] = {
 	0x00, 0x8a,
 };
-PRESET_DATA mrb_sym mrb_preset_kh_mt_70_keys[] = {
+PRESET_CONST mrb_sym mrb_preset_kh_mt_70_keys[] = {
 	10, 468, 8, 467, 0, 0, 466, 0,
 };
-PRESET_DATA mrb_method_t mrb_preset_kh_mt_70_vals[] = {
+PRESET_CONST mrb_method_t mrb_preset_kh_mt_70_vals[] = {
 	{ .func_p = 1, { .func = (mrb_func_t)&fiber_eq } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_fiber_alive_p } }, { .func_p = 1, { .func = (mrb_func_t)&fiber_init } }, { .func_p = 1, { .func = (mrb_func_t)&fiber_transfer } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&fiber_resume } }, { .func_p = 0, { .proc = NULL } }, 
 };
 PRESET_DATA kh_mt_t mrb_preset_kh_mt_70 = { .n_buckets = 8, .size = 5, .n_occupied = 5, .ed_flags = (uint8_t *)&mrb_preset_kh_mt_70_ed_flags, .keys = (mrb_sym *)&mrb_preset_kh_mt_70_keys, .vals = (mrb_method_t *)&mrb_preset_kh_mt_70_vals };
 
-PRESET_DATA uint8_t mrb_preset_kh_mt_71_ed_flags[] = {
+PRESET_CONST uint8_t mrb_preset_kh_mt_71_ed_flags[] = {
 	0xaa, 0xaa,
 };
-PRESET_DATA mrb_sym mrb_preset_kh_mt_71_keys[] = {
+PRESET_CONST mrb_sym mrb_preset_kh_mt_71_keys[] = {
 	0, 0, 0, 0, 0, 0, 0, 0,
 };
-PRESET_DATA mrb_method_t mrb_preset_kh_mt_71_vals[] = {
+PRESET_CONST mrb_method_t mrb_preset_kh_mt_71_vals[] = {
 	{ .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, 
 };
 PRESET_DATA kh_mt_t mrb_preset_kh_mt_71 = { .n_buckets = 8, .size = 0, .n_occupied = 0, .ed_flags = (uint8_t *)&mrb_preset_kh_mt_71_ed_flags, .keys = (mrb_sym *)&mrb_preset_kh_mt_71_keys, .vals = (mrb_method_t *)&mrb_preset_kh_mt_71_vals };
 
-PRESET_DATA uint8_t mrb_preset_kh_mt_72_ed_flags[] = {
+PRESET_CONST uint8_t mrb_preset_kh_mt_72_ed_flags[] = {
 	0xaa, 0xaa,
 };
-PRESET_DATA mrb_sym mrb_preset_kh_mt_72_keys[] = {
+PRESET_CONST mrb_sym mrb_preset_kh_mt_72_keys[] = {
 	0, 0, 0, 0, 0, 0, 0, 0,
 };
-PRESET_DATA mrb_method_t mrb_preset_kh_mt_72_vals[] = {
+PRESET_CONST mrb_method_t mrb_preset_kh_mt_72_vals[] = {
 	{ .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, 
 };
 PRESET_DATA kh_mt_t mrb_preset_kh_mt_72 = { .n_buckets = 8, .size = 0, .n_occupied = 0, .ed_flags = (uint8_t *)&mrb_preset_kh_mt_72_ed_flags, .keys = (mrb_sym *)&mrb_preset_kh_mt_72_keys, .vals = (mrb_method_t *)&mrb_preset_kh_mt_72_vals };
 
-PRESET_DATA uint8_t mrb_preset_kh_mt_73_ed_flags[] = {
+PRESET_CONST uint8_t mrb_preset_kh_mt_73_ed_flags[] = {
 	0xaa, 0xaa,
 };
-PRESET_DATA mrb_sym mrb_preset_kh_mt_73_keys[] = {
+PRESET_CONST mrb_sym mrb_preset_kh_mt_73_keys[] = {
 	0, 0, 0, 0, 0, 0, 0, 0,
 };
-PRESET_DATA mrb_method_t mrb_preset_kh_mt_73_vals[] = {
+PRESET_CONST mrb_method_t mrb_preset_kh_mt_73_vals[] = {
 	{ .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, 
 };
 PRESET_DATA kh_mt_t mrb_preset_kh_mt_73 = { .n_buckets = 8, .size = 0, .n_occupied = 0, .ed_flags = (uint8_t *)&mrb_preset_kh_mt_73_ed_flags, .keys = (mrb_sym *)&mrb_preset_kh_mt_73_keys, .vals = (mrb_method_t *)&mrb_preset_kh_mt_73_vals };
 
-PRESET_DATA uint8_t mrb_preset_kh_mt_74_ed_flags[] = {
+PRESET_CONST uint8_t mrb_preset_kh_mt_74_ed_flags[] = {
 	0xaa, 0xaa,
 };
-PRESET_DATA mrb_sym mrb_preset_kh_mt_74_keys[] = {
+PRESET_CONST mrb_sym mrb_preset_kh_mt_74_keys[] = {
 	0, 0, 0, 0, 0, 0, 0, 0,
 };
-PRESET_DATA mrb_method_t mrb_preset_kh_mt_74_vals[] = {
+PRESET_CONST mrb_method_t mrb_preset_kh_mt_74_vals[] = {
 	{ .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, 
 };
 PRESET_DATA kh_mt_t mrb_preset_kh_mt_74 = { .n_buckets = 8, .size = 0, .n_occupied = 0, .ed_flags = (uint8_t *)&mrb_preset_kh_mt_74_ed_flags, .keys = (mrb_sym *)&mrb_preset_kh_mt_74_keys, .vals = (mrb_method_t *)&mrb_preset_kh_mt_74_vals };
 
-PRESET_DATA uint8_t mrb_preset_kh_mt_75_ed_flags[] = {
+PRESET_CONST uint8_t mrb_preset_kh_mt_75_ed_flags[] = {
 	0xa8, 0xaa,
 };
-PRESET_DATA mrb_sym mrb_preset_kh_mt_75_keys[] = {
+PRESET_CONST mrb_sym mrb_preset_kh_mt_75_keys[] = {
 	15, 0, 0, 0, 0, 0, 0, 0,
 };
-PRESET_DATA mrb_method_t mrb_preset_kh_mt_75_vals[] = {
+PRESET_CONST mrb_method_t mrb_preset_kh_mt_75_vals[] = {
 	{ .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, 
 };
 PRESET_DATA kh_mt_t mrb_preset_kh_mt_75 = { .n_buckets = 8, .size = 1, .n_occupied = 1, .ed_flags = (uint8_t *)&mrb_preset_kh_mt_75_ed_flags, .keys = (mrb_sym *)&mrb_preset_kh_mt_75_keys, .vals = (mrb_method_t *)&mrb_preset_kh_mt_75_vals };
 
-PRESET_DATA uint8_t mrb_preset_kh_mt_76_ed_flags[] = {
+PRESET_CONST uint8_t mrb_preset_kh_mt_76_ed_flags[] = {
 	0x08, 0x02,
 };
-PRESET_DATA mrb_sym mrb_preset_kh_mt_76_keys[] = {
+PRESET_CONST mrb_sym mrb_preset_kh_mt_76_keys[] = {
 	42, 0, 103, 104, 0, 43, 55, 105,
 };
-PRESET_DATA mrb_method_t mrb_preset_kh_mt_76_vals[] = {
+PRESET_CONST mrb_method_t mrb_preset_kh_mt_76_vals[] = {
 	{ .func_p = 1, { .func = (mrb_func_t)&mrb_sym_to_s } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&mrb_sym_to_s } }, { .func_p = 1, { .func = (mrb_func_t)&sym_to_sym } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 1, { .func = (mrb_func_t)&sym_inspect } }, { .func_p = 1, { .func = (mrb_func_t)&sym_equal } }, { .func_p = 1, { .func = (mrb_func_t)&sym_cmp } }, 
 };
 PRESET_DATA kh_mt_t mrb_preset_kh_mt_76 = { .n_buckets = 8, .size = 6, .n_occupied = 6, .ed_flags = (uint8_t *)&mrb_preset_kh_mt_76_ed_flags, .keys = (mrb_sym *)&mrb_preset_kh_mt_76_keys, .vals = (mrb_method_t *)&mrb_preset_kh_mt_76_vals };
 
-PRESET_DATA uint8_t mrb_preset_kh_mt_77_ed_flags[] = {
+PRESET_CONST uint8_t mrb_preset_kh_mt_77_ed_flags[] = {
 	0xaa, 0xaa,
 };
-PRESET_DATA mrb_sym mrb_preset_kh_mt_77_keys[] = {
+PRESET_CONST mrb_sym mrb_preset_kh_mt_77_keys[] = {
 	0, 0, 0, 0, 0, 0, 0, 0,
 };
-PRESET_DATA mrb_method_t mrb_preset_kh_mt_77_vals[] = {
+PRESET_CONST mrb_method_t mrb_preset_kh_mt_77_vals[] = {
 	{ .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, 
 };
 PRESET_DATA kh_mt_t mrb_preset_kh_mt_77 = { .n_buckets = 8, .size = 0, .n_occupied = 0, .ed_flags = (uint8_t *)&mrb_preset_kh_mt_77_ed_flags, .keys = (mrb_sym *)&mrb_preset_kh_mt_77_keys, .vals = (mrb_method_t *)&mrb_preset_kh_mt_77_vals };
 
-PRESET_DATA uint8_t mrb_preset_kh_mt_78_ed_flags[] = {
+PRESET_CONST uint8_t mrb_preset_kh_mt_78_ed_flags[] = {
 	0xaa, 0xaa,
 };
-PRESET_DATA mrb_sym mrb_preset_kh_mt_78_keys[] = {
+PRESET_CONST mrb_sym mrb_preset_kh_mt_78_keys[] = {
 	0, 0, 0, 0, 0, 0, 0, 0,
 };
-PRESET_DATA mrb_method_t mrb_preset_kh_mt_78_vals[] = {
+PRESET_CONST mrb_method_t mrb_preset_kh_mt_78_vals[] = {
 	{ .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, 
 };
 PRESET_DATA kh_mt_t mrb_preset_kh_mt_78 = { .n_buckets = 8, .size = 0, .n_occupied = 0, .ed_flags = (uint8_t *)&mrb_preset_kh_mt_78_ed_flags, .keys = (mrb_sym *)&mrb_preset_kh_mt_78_keys, .vals = (mrb_method_t *)&mrb_preset_kh_mt_78_vals };
 
-PRESET_DATA uint8_t mrb_preset_kh_mt_79_ed_flags[] = {
+PRESET_CONST uint8_t mrb_preset_kh_mt_79_ed_flags[] = {
 	0xaa, 0xaa,
 };
-PRESET_DATA mrb_sym mrb_preset_kh_mt_79_keys[] = {
+PRESET_CONST mrb_sym mrb_preset_kh_mt_79_keys[] = {
 	0, 0, 0, 0, 0, 0, 0, 0,
 };
-PRESET_DATA mrb_method_t mrb_preset_kh_mt_79_vals[] = {
+PRESET_CONST mrb_method_t mrb_preset_kh_mt_79_vals[] = {
 	{ .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, 
 };
 PRESET_DATA kh_mt_t mrb_preset_kh_mt_79 = { .n_buckets = 8, .size = 0, .n_occupied = 0, .ed_flags = (uint8_t *)&mrb_preset_kh_mt_79_ed_flags, .keys = (mrb_sym *)&mrb_preset_kh_mt_79_keys, .vals = (mrb_method_t *)&mrb_preset_kh_mt_79_vals };
 
-PRESET_DATA uint8_t mrb_preset_kh_mt_80_ed_flags[] = {
+PRESET_CONST uint8_t mrb_preset_kh_mt_80_ed_flags[] = {
 	0xaa, 0xaa,
 };
-PRESET_DATA mrb_sym mrb_preset_kh_mt_80_keys[] = {
+PRESET_CONST mrb_sym mrb_preset_kh_mt_80_keys[] = {
 	0, 0, 0, 0, 0, 0, 0, 0,
 };
-PRESET_DATA mrb_method_t mrb_preset_kh_mt_80_vals[] = {
+PRESET_CONST mrb_method_t mrb_preset_kh_mt_80_vals[] = {
 	{ .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, 
 };
 PRESET_DATA kh_mt_t mrb_preset_kh_mt_80 = { .n_buckets = 8, .size = 0, .n_occupied = 0, .ed_flags = (uint8_t *)&mrb_preset_kh_mt_80_ed_flags, .keys = (mrb_sym *)&mrb_preset_kh_mt_80_keys, .vals = (mrb_method_t *)&mrb_preset_kh_mt_80_vals };
 
-PRESET_DATA uint8_t mrb_preset_kh_mt_81_ed_flags[] = {
+PRESET_CONST uint8_t mrb_preset_kh_mt_81_ed_flags[] = {
 	0xaa, 0xaa,
 };
-PRESET_DATA mrb_sym mrb_preset_kh_mt_81_keys[] = {
+PRESET_CONST mrb_sym mrb_preset_kh_mt_81_keys[] = {
 	0, 0, 0, 0, 0, 0, 0, 0,
 };
-PRESET_DATA mrb_method_t mrb_preset_kh_mt_81_vals[] = {
+PRESET_CONST mrb_method_t mrb_preset_kh_mt_81_vals[] = {
 	{ .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, 
 };
 PRESET_DATA kh_mt_t mrb_preset_kh_mt_81 = { .n_buckets = 8, .size = 0, .n_occupied = 0, .ed_flags = (uint8_t *)&mrb_preset_kh_mt_81_ed_flags, .keys = (mrb_sym *)&mrb_preset_kh_mt_81_keys, .vals = (mrb_method_t *)&mrb_preset_kh_mt_81_vals };
 
-PRESET_DATA uint8_t mrb_preset_kh_mt_82_ed_flags[] = {
+PRESET_CONST uint8_t mrb_preset_kh_mt_82_ed_flags[] = {
 	0xaa, 0xaa,
 };
-PRESET_DATA mrb_sym mrb_preset_kh_mt_82_keys[] = {
+PRESET_CONST mrb_sym mrb_preset_kh_mt_82_keys[] = {
 	0, 0, 0, 0, 0, 0, 0, 0,
 };
-PRESET_DATA mrb_method_t mrb_preset_kh_mt_82_vals[] = {
+PRESET_CONST mrb_method_t mrb_preset_kh_mt_82_vals[] = {
 	{ .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, 
 };
 PRESET_DATA kh_mt_t mrb_preset_kh_mt_82 = { .n_buckets = 8, .size = 0, .n_occupied = 0, .ed_flags = (uint8_t *)&mrb_preset_kh_mt_82_ed_flags, .keys = (mrb_sym *)&mrb_preset_kh_mt_82_keys, .vals = (mrb_method_t *)&mrb_preset_kh_mt_82_vals };
 
-PRESET_DATA uint8_t mrb_preset_kh_mt_83_ed_flags[] = {
+PRESET_CONST uint8_t mrb_preset_kh_mt_83_ed_flags[] = {
 	0xaa, 0xaa,
 };
-PRESET_DATA mrb_sym mrb_preset_kh_mt_83_keys[] = {
+PRESET_CONST mrb_sym mrb_preset_kh_mt_83_keys[] = {
 	0, 0, 0, 0, 0, 0, 0, 0,
 };
-PRESET_DATA mrb_method_t mrb_preset_kh_mt_83_vals[] = {
+PRESET_CONST mrb_method_t mrb_preset_kh_mt_83_vals[] = {
 	{ .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, 
 };
 PRESET_DATA kh_mt_t mrb_preset_kh_mt_83 = { .n_buckets = 8, .size = 0, .n_occupied = 0, .ed_flags = (uint8_t *)&mrb_preset_kh_mt_83_ed_flags, .keys = (mrb_sym *)&mrb_preset_kh_mt_83_keys, .vals = (mrb_method_t *)&mrb_preset_kh_mt_83_vals };
 
-PRESET_DATA uint8_t mrb_preset_kh_mt_84_ed_flags[] = {
+PRESET_CONST uint8_t mrb_preset_kh_mt_84_ed_flags[] = {
 	0xaa, 0xaa,
 };
-PRESET_DATA mrb_sym mrb_preset_kh_mt_84_keys[] = {
+PRESET_CONST mrb_sym mrb_preset_kh_mt_84_keys[] = {
 	0, 0, 0, 0, 0, 0, 0, 0,
 };
-PRESET_DATA mrb_method_t mrb_preset_kh_mt_84_vals[] = {
+PRESET_CONST mrb_method_t mrb_preset_kh_mt_84_vals[] = {
 	{ .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, 
 };
 PRESET_DATA kh_mt_t mrb_preset_kh_mt_84 = { .n_buckets = 8, .size = 0, .n_occupied = 0, .ed_flags = (uint8_t *)&mrb_preset_kh_mt_84_ed_flags, .keys = (mrb_sym *)&mrb_preset_kh_mt_84_keys, .vals = (mrb_method_t *)&mrb_preset_kh_mt_84_vals };
 
-PRESET_DATA uint8_t mrb_preset_kh_mt_85_ed_flags[] = {
+PRESET_CONST uint8_t mrb_preset_kh_mt_85_ed_flags[] = {
 	0xaa, 0xaa,
 };
-PRESET_DATA mrb_sym mrb_preset_kh_mt_85_keys[] = {
+PRESET_CONST mrb_sym mrb_preset_kh_mt_85_keys[] = {
 	0, 0, 0, 0, 0, 0, 0, 0,
 };
-PRESET_DATA mrb_method_t mrb_preset_kh_mt_85_vals[] = {
+PRESET_CONST mrb_method_t mrb_preset_kh_mt_85_vals[] = {
 	{ .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, 
 };
 PRESET_DATA kh_mt_t mrb_preset_kh_mt_85 = { .n_buckets = 8, .size = 0, .n_occupied = 0, .ed_flags = (uint8_t *)&mrb_preset_kh_mt_85_ed_flags, .keys = (mrb_sym *)&mrb_preset_kh_mt_85_keys, .vals = (mrb_method_t *)&mrb_preset_kh_mt_85_vals };
 
-PRESET_DATA uint8_t mrb_preset_kh_mt_86_ed_flags[] = {
+PRESET_CONST uint8_t mrb_preset_kh_mt_86_ed_flags[] = {
 	0xaa, 0xaa,
 };
-PRESET_DATA mrb_sym mrb_preset_kh_mt_86_keys[] = {
+PRESET_CONST mrb_sym mrb_preset_kh_mt_86_keys[] = {
 	0, 0, 0, 0, 0, 0, 0, 0,
 };
-PRESET_DATA mrb_method_t mrb_preset_kh_mt_86_vals[] = {
+PRESET_CONST mrb_method_t mrb_preset_kh_mt_86_vals[] = {
 	{ .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, 
 };
 PRESET_DATA kh_mt_t mrb_preset_kh_mt_86 = { .n_buckets = 8, .size = 0, .n_occupied = 0, .ed_flags = (uint8_t *)&mrb_preset_kh_mt_86_ed_flags, .keys = (mrb_sym *)&mrb_preset_kh_mt_86_keys, .vals = (mrb_method_t *)&mrb_preset_kh_mt_86_vals };
 
-PRESET_DATA uint8_t mrb_preset_kh_mt_87_ed_flags[] = {
+PRESET_CONST uint8_t mrb_preset_kh_mt_87_ed_flags[] = {
 	0xaa, 0xaa,
 };
-PRESET_DATA mrb_sym mrb_preset_kh_mt_87_keys[] = {
+PRESET_CONST mrb_sym mrb_preset_kh_mt_87_keys[] = {
 	0, 0, 0, 0, 0, 0, 0, 0,
 };
-PRESET_DATA mrb_method_t mrb_preset_kh_mt_87_vals[] = {
+PRESET_CONST mrb_method_t mrb_preset_kh_mt_87_vals[] = {
 	{ .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, 
 };
 PRESET_DATA kh_mt_t mrb_preset_kh_mt_87 = { .n_buckets = 8, .size = 0, .n_occupied = 0, .ed_flags = (uint8_t *)&mrb_preset_kh_mt_87_ed_flags, .keys = (mrb_sym *)&mrb_preset_kh_mt_87_keys, .vals = (mrb_method_t *)&mrb_preset_kh_mt_87_vals };
 
-PRESET_DATA uint8_t mrb_preset_kh_mt_88_ed_flags[] = {
+PRESET_CONST uint8_t mrb_preset_kh_mt_88_ed_flags[] = {
 	0xaa, 0xaa,
 };
-PRESET_DATA mrb_sym mrb_preset_kh_mt_88_keys[] = {
+PRESET_CONST mrb_sym mrb_preset_kh_mt_88_keys[] = {
 	0, 0, 0, 0, 0, 0, 0, 0,
 };
-PRESET_DATA mrb_method_t mrb_preset_kh_mt_88_vals[] = {
+PRESET_CONST mrb_method_t mrb_preset_kh_mt_88_vals[] = {
 	{ .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, 
 };
 PRESET_DATA kh_mt_t mrb_preset_kh_mt_88 = { .n_buckets = 8, .size = 0, .n_occupied = 0, .ed_flags = (uint8_t *)&mrb_preset_kh_mt_88_ed_flags, .keys = (mrb_sym *)&mrb_preset_kh_mt_88_keys, .vals = (mrb_method_t *)&mrb_preset_kh_mt_88_vals };
 
-PRESET_DATA uint8_t mrb_preset_kh_mt_89_ed_flags[] = {
+PRESET_CONST uint8_t mrb_preset_kh_mt_89_ed_flags[] = {
 	0xaa, 0xaa,
 };
-PRESET_DATA mrb_sym mrb_preset_kh_mt_89_keys[] = {
+PRESET_CONST mrb_sym mrb_preset_kh_mt_89_keys[] = {
 	0, 0, 0, 0, 0, 0, 0, 0,
 };
-PRESET_DATA mrb_method_t mrb_preset_kh_mt_89_vals[] = {
+PRESET_CONST mrb_method_t mrb_preset_kh_mt_89_vals[] = {
 	{ .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, 
 };
 PRESET_DATA kh_mt_t mrb_preset_kh_mt_89 = { .n_buckets = 8, .size = 0, .n_occupied = 0, .ed_flags = (uint8_t *)&mrb_preset_kh_mt_89_ed_flags, .keys = (mrb_sym *)&mrb_preset_kh_mt_89_keys, .vals = (mrb_method_t *)&mrb_preset_kh_mt_89_vals };
 
-PRESET_DATA uint8_t mrb_preset_kh_mt_90_ed_flags[] = {
+PRESET_CONST uint8_t mrb_preset_kh_mt_90_ed_flags[] = {
 	0xaa, 0xaa,
 };
-PRESET_DATA mrb_sym mrb_preset_kh_mt_90_keys[] = {
+PRESET_CONST mrb_sym mrb_preset_kh_mt_90_keys[] = {
 	0, 0, 0, 0, 0, 0, 0, 0,
 };
-PRESET_DATA mrb_method_t mrb_preset_kh_mt_90_vals[] = {
+PRESET_CONST mrb_method_t mrb_preset_kh_mt_90_vals[] = {
 	{ .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, 
 };
 PRESET_DATA kh_mt_t mrb_preset_kh_mt_90 = { .n_buckets = 8, .size = 0, .n_occupied = 0, .ed_flags = (uint8_t *)&mrb_preset_kh_mt_90_ed_flags, .keys = (mrb_sym *)&mrb_preset_kh_mt_90_keys, .vals = (mrb_method_t *)&mrb_preset_kh_mt_90_vals };
 
-PRESET_DATA uint8_t mrb_preset_kh_mt_91_ed_flags[] = {
+PRESET_CONST uint8_t mrb_preset_kh_mt_91_ed_flags[] = {
 	0xaa, 0xaa,
 };
-PRESET_DATA mrb_sym mrb_preset_kh_mt_91_keys[] = {
+PRESET_CONST mrb_sym mrb_preset_kh_mt_91_keys[] = {
 	0, 0, 0, 0, 0, 0, 0, 0,
 };
-PRESET_DATA mrb_method_t mrb_preset_kh_mt_91_vals[] = {
+PRESET_CONST mrb_method_t mrb_preset_kh_mt_91_vals[] = {
 	{ .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, 
 };
 PRESET_DATA kh_mt_t mrb_preset_kh_mt_91 = { .n_buckets = 8, .size = 0, .n_occupied = 0, .ed_flags = (uint8_t *)&mrb_preset_kh_mt_91_ed_flags, .keys = (mrb_sym *)&mrb_preset_kh_mt_91_keys, .vals = (mrb_method_t *)&mrb_preset_kh_mt_91_vals };
 
-PRESET_DATA uint8_t mrb_preset_kh_mt_92_ed_flags[] = {
+PRESET_CONST uint8_t mrb_preset_kh_mt_92_ed_flags[] = {
 	0xaa, 0xaa,
 };
-PRESET_DATA mrb_sym mrb_preset_kh_mt_92_keys[] = {
+PRESET_CONST mrb_sym mrb_preset_kh_mt_92_keys[] = {
 	0, 0, 0, 0, 0, 0, 0, 0,
 };
-PRESET_DATA mrb_method_t mrb_preset_kh_mt_92_vals[] = {
+PRESET_CONST mrb_method_t mrb_preset_kh_mt_92_vals[] = {
 	{ .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, 
 };
 PRESET_DATA kh_mt_t mrb_preset_kh_mt_92 = { .n_buckets = 8, .size = 0, .n_occupied = 0, .ed_flags = (uint8_t *)&mrb_preset_kh_mt_92_ed_flags, .keys = (mrb_sym *)&mrb_preset_kh_mt_92_keys, .vals = (mrb_method_t *)&mrb_preset_kh_mt_92_vals };
 
-PRESET_DATA uint8_t mrb_preset_kh_mt_93_ed_flags[] = {
+PRESET_CONST uint8_t mrb_preset_kh_mt_93_ed_flags[] = {
 	0xaa, 0xaa,
 };
-PRESET_DATA mrb_sym mrb_preset_kh_mt_93_keys[] = {
+PRESET_CONST mrb_sym mrb_preset_kh_mt_93_keys[] = {
 	0, 0, 0, 0, 0, 0, 0, 0,
 };
-PRESET_DATA mrb_method_t mrb_preset_kh_mt_93_vals[] = {
+PRESET_CONST mrb_method_t mrb_preset_kh_mt_93_vals[] = {
 	{ .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, { .func_p = 0, { .proc = NULL } }, 
 };
 PRESET_DATA kh_mt_t mrb_preset_kh_mt_93 = { .n_buckets = 8, .size = 0, .n_occupied = 0, .ed_flags = (uint8_t *)&mrb_preset_kh_mt_93_ed_flags, .keys = (mrb_sym *)&mrb_preset_kh_mt_93_keys, .vals = (mrb_method_t *)&mrb_preset_kh_mt_93_vals };
@@ -8458,11 +8458,11 @@ PRESET_DATA struct mrb_state mrb_preset_state = {
 };
 
 extern "C" void mrb_gc_init(mrb_state*, mrb_gc*);
-extern "C"  void mrb_init_symtbl(mrb_state*);
+extern "C" void mrb_init_symtbl(mrb_state*);
 extern "C" void mrb_final_mrbgems(mrb_state*);
 extern "C" void GENERATED_TMP_mrb_mruby_ecnl_gem_init(mrb_state*);
 extern "C" void GENERATED_TMP_mrb_mruby_others_gem_init(mrb_state*);
-extern "C"  void sym_validate_len(mrb_state *mrb, size_t len);
+extern "C" void sym_validate_len(mrb_state *mrb, size_t len);
 
 extern "C" mrb_state* mrb_init(mrb_allocf f, void *ud)
 {
