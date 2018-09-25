@@ -414,6 +414,7 @@ dispatcher_pre_idle:
 
 dispatcher_idle_loop:
 	setpsw	i							; 全割込み許可
+	wait
 	clrpsw	i							; 全割込み禁止
 
 	mov.l	#__kernel_reqflg, r5		; reqflg が FALSE なら
