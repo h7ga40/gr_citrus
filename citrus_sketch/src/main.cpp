@@ -98,6 +98,8 @@ extern "C" ER syslog_wri_log(uint_t prio, const SYSLOG *p_syslog) throw()
 	return E_OK;
 }
 
+struct RClass *_module_target_board;
+
 /*
  *  メインタスク
  */
