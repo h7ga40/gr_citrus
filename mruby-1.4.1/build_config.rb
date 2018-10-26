@@ -8,7 +8,7 @@ MRuby::Build.new do |conf|
     toolchain :gcc
   end
 
-  enable_debug
+  #enable_debug
 
   # Use mrbgems
   # conf.gem 'examples/mrbgems/ruby_extension_example'
@@ -22,7 +22,48 @@ MRuby::Build.new do |conf|
   # conf.gem :git => 'git@github.com:iij/mruby-io.git', :branch => 'master', :options => '-v'
 
   # include the default GEMs
-  conf.gembox 'default'
+  #conf.gembox 'default'
+
+  #conf.gem "#{root}/mrbgems/mruby-array-ext"
+  ##conf.gem "#{root}/mrbgems/mruby-bin-debugger"
+  ##conf.gem "#{root}/mrbgems/mruby-bin-mirb"
+  conf.gem "#{root}/mrbgems/mruby-bin-mrbc"
+  ##conf.gem "#{root}/mrbgems/mruby-bin-mruby"
+  ##conf.gem "#{root}/mrbgems/mruby-bin-mruby-config"
+  ##conf.gem "#{root}/mrbgems/mruby-bin-strip"
+  conf.gem "#{root}/mrbgems/mruby-bin-dump"
+  #conf.gem "#{root}/mrbgems/mruby-class-ext"
+  #conf.gem "#{root}/mrbgems/mruby-compar-ext"
+  #conf.gem "#{root}/mrbgems/mruby-compiler"
+  #conf.gem "#{root}/mrbgems/mruby-enumerator"
+  #conf.gem "#{root}/mrbgems/mruby-enum-ext"
+  #conf.gem "#{root}/mrbgems/mruby-enum-lazy"
+  conf.gem "#{root}/mrbgems/mruby-error"
+  #conf.gem "#{root}/mrbgems/mruby-eval"
+  #conf.gem "#{root}/mrbgems/mruby-exit"
+  conf.gem "#{root}/mrbgems/mruby-fiber"
+  #conf.gem "#{root}/mrbgems/mruby-hash-ext"
+  #conf.gem "#{root}/mrbgems/mruby-inline-struct"
+  #conf.gem "#{root}/mrbgems/mruby-io"
+  #conf.gem "#{root}/mrbgems/mruby-kernel-ext"
+  conf.gem "#{root}/mrbgems/mruby-math"
+  #conf.gem "#{root}/mrbgems/mruby-method"
+  conf.gem "#{root}/mrbgems/mruby-numeric-ext"  #10.chr
+  #conf.gem "#{root}/mrbgems/mruby-object-ext"
+  #conf.gem "#{root}/mrbgems/mruby-objectspace"
+  #conf.gem "#{root}/mrbgems/mruby-pack"
+  #conf.gem "#{root}/mrbgems/mruby-print"
+  #conf.gem "#{root}/mrbgems/mruby-proc-ext"
+  #conf.gem "#{root}/mrbgems/mruby-random"
+  #conf.gem "#{root}/mrbgems/mruby-range-ext"
+  #conf.gem "#{root}/mrbgems/mruby-socket"
+  conf.gem "#{root}/mrbgems/mruby-sprintf"
+  conf.gem "#{root}/mrbgems/mruby-string-ext"	#str.split(",")
+  #conf.gem "#{root}/mrbgems/mruby-struct"
+  #conf.gem "#{root}/mrbgems/mruby-symbol-ext"
+  #conf.gem "#{root}/mrbgems/mruby-test"
+  #conf.gem "#{root}/mrbgems/mruby-time"
+  #conf.gem "#{root}/mrbgems/mruby-toplevel-ext"
 
   # C compiler settings
   # conf.cc do |cc|
