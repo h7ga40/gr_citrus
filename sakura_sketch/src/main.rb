@@ -371,6 +371,9 @@ end
 
 ctrl = Controller.new()
 
+lcd = LCD.new()
+lcd.drawString(0, 0, "ECHONETコントローラー", 1, 0)
+
 # メインループ
 while (true) do
 	# メッセージ待ち
@@ -382,8 +385,13 @@ while (true) do
 	# 経過時間の計算
 	ctrl.progress ret[0]
 
+	case ret.length
+	# 戻り値が２つなら
+	when 2
+		lcd.drawString(0, 12, "mac:#{TargetBoard::get_mac_addr}", 1, 0)
+		lcd.drawString(0, 24, "ip: #{TargetBoard::get_ip_addr}", 1, 0)
 	# 戻り値が３つなら
-	if ret.length == 3 then
+	when 3
 		# 通信レイヤーからのメッセージ（通信端点と電文）
 		ctrl.recv_msg(ret[1], ret[2])
 	end

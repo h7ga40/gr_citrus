@@ -354,6 +354,171 @@ netapp_srand (uint32_t seed)
 	rand_next += now + seed;
 	}
 
+
+/*
+ *  str_num -- cons_printf の数値変換
+ */
+
+static void
+str_chr(char *text, int *pos, int size, char c)
+{
+	if (*pos >= size)
+		return;
+	text[*pos] = c;
+	*pos = *pos + 1;
+}
+
+/*
+ *  str_num -- cons_printf の数値変換
+ */
+
+static int
+str_num(char *text, int *pos, int size, ulong_t 	val, int radix,
+         const char *radchar, int width, bool_t minus, char padchar)
+{
+	char	digits[24];
+	int	ix, pad, pchars;
+	bool_t	left;
+
+	if (width < 0) {
+		width = -width;
+		left = true;
+	}
+	else
+		left = false;
+
+	ix = 0;
+	do {
+		digits[ix ++] = radchar[val % radix];
+		val /= radix;
+	} while (val != 0);
+
+	if (minus)
+		digits[ix ++] = '-';
+
+	if (width > ix)
+		pchars = width;
+	else
+		pchars = ix;
+
+	pad = ix;
+	if (!left)	/* 右詰め */
+		for ( ; pad < width; pad ++)
+			str_chr(text, pos, size, padchar);
+
+	while (ix -- > 0)
+		str_chr(text, pos, size, digits[ix]);
+
+	if (left)	/* 左詰め */
+		for ( ; pad < width; pad ++)
+			str_chr(text, pos, size, padchar);
+
+	return pchars;
+}
+
+/*
+ *  str_ipv4addr -- IPv4 アドレス出力
+ */
+
+int
+str_ipv4addr (char *text, int size, const T_IN4_ADDR *addr, int width)
+{
+	int len = 3, pos = 0;	/* 3 は '.' の文字数 */
+
+	len += str_num(text, &pos, size, (*addr >> 24) & 0xff, 10, radhex, 0, false, ' '); 
+	str_chr(text, &pos, size, '.');
+	len += str_num(text, &pos, size, (*addr >> 16) & 0xff, 10, radhex, 0, false, ' '); 
+	str_chr(text, &pos, size, '.');
+	len += str_num(text, &pos, size, (*addr >>  8) & 0xff, 10, radhex, 0, false, ' '); 
+	str_chr(text, &pos, size, '.');
+	len += str_num(text, &pos, size,  *addr        & 0xff, 10, radhex, 0, false, ' '); 
+
+	for ( ; len < width; len ++)
+		str_chr(text, &pos, size, ' ');
+
+	return len;
+}
+
+/*
+ *  ipv6addr -- IPv6 アドレス出力
+ */
+
+int
+str_ipv6addr (char *text, int size, const T_IN6_ADDR *addr, int width)
+{
+	int	len = 0, ix, len6, pos = 0;
+	bool_t	omit = false, zero = false;
+
+	if (addr == NULL || IN6_IS_ADDR_UNSPECIFIED(addr)) {
+		str_chr(text, &pos, size, '0');
+		str_chr(text, &pos, size, ':');
+		str_chr(text, &pos, size, ':');
+		str_chr(text, &pos, size, '0');
+		len = 4;
+	}
+	else {
+		if (in6_is_addr_ipv4mapped(addr))
+			len6 = sizeof(T_IN6_ADDR) / 2 - 2;
+		else
+			len6 = sizeof(T_IN6_ADDR) / 2;
+		for (ix = 0; ix < len6; ix ++) {
+			if (omit) {
+				len += str_num(text, &pos, size, ntohs(addr->s6_addr16[ix]), 16, radhex, 0, false, ' '); 
+				if (ix < 7) {
+					str_chr(text, &pos, size, ':');
+					len ++;
+				}
+			}
+			else if (ix > 0 && ix < 7 && addr->s6_addr16[ix] == 0)
+				zero = true;
+			else {
+				if (zero) {
+					omit = true;
+					str_chr(text, &pos, size, ':');
+					len ++;
+				}
+				len += str_num(text, &pos, size, ntohs(addr->s6_addr16[ix]), 16, radhex, 0, false, ' '); 
+				if (ix < 7) {
+					str_chr(text, &pos, size, ':');
+					len ++;
+				}
+			}
+		}
+
+		if (len6 == sizeof(T_IN6_ADDR) / 2 - 2) {
+			T_IN4_ADDR ip4addr;
+
+			ip4addr = ntohl(addr->s6_addr32[3]);
+			len += str_ipv4addr(&text[len], size - len, &ip4addr, 0);
+		}
+
+		for ( ; len < width; len ++)
+			str_chr(text, &pos, size, ' ');
+	}
+	return len;
+}
+
+/*
+ *  str_macaddr -- MAC アドレス出力
+ */
+
+int
+str_macaddr (char *text, int size, uint8_t *mac, int width)
+{
+	int oct, len, pos = 0;
+
+	for (oct = 5; oct -- > 0; ) {
+		str_num(text, &pos, size, *mac ++, 16, radhex, 2, false, '0'); 
+		str_chr(text, &pos, size, ':');
+	}
+	str_num(text, &pos, size, *mac, 16, radhex, 2, false, '0'); 
+
+	for (len = 17; len < width; len ++)
+		str_chr(text, &pos, size, ' ');
+
+	return len;
+}
+
 #ifndef USE_NET_CONS
 
 /*

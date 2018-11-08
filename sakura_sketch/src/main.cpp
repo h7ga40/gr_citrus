@@ -424,6 +424,36 @@ static mrb_value mrb_target_board_get_multicast_addr(mrb_state *mrb, mrb_value s
 	return rep;
 }
 
+static mrb_value mrb_target_board_get_mac_addr(mrb_state *mrb, mrb_value self)
+{
+	char mac_text[30] = "";
+	mrb_value rep;
+	int pos;
+
+	pos = str_macaddr(mac_text, sizeof(mac_text), mac_addr, 0);
+	mac_text[pos] = '\0';
+
+	rep = mrb_str_new_cstr(mrb, mac_text);
+
+	return rep;
+}
+
+static mrb_value mrb_target_board_get_ip_addr(mrb_state *mrb, mrb_value self)
+{
+	char ipaddr_text[30] = "";
+	const T_IN4_ADDR *ip4_addr;
+	mrb_value rep;
+	int pos;
+
+	ip4_addr = in4_get_ifaddr(0);
+	pos = str_ipv4addr(ipaddr_text, sizeof(ipaddr_text), ip4_addr, 0);
+	ipaddr_text[pos] = '\0';
+
+	rep = mrb_str_new_cstr(mrb, ipaddr_text);
+
+	return rep;
+}
+
 /*
  * NTP開始
  */
@@ -603,6 +633,9 @@ extern "C" void mrb_mruby_others_gem_init(mrb_state* mrb)
 	mrb_define_class_method(mrb, _module_target_board, "equals_addr", mrb_target_board_equals_addr, MRB_ARGS_REQ(2));
 	mrb_define_class_method(mrb, _module_target_board, "get_local_addr", mrb_target_board_get_local_addr, MRB_ARGS_NONE());
 	mrb_define_class_method(mrb, _module_target_board, "get_multicast_addr", mrb_target_board_get_multicast_addr, MRB_ARGS_NONE());
+
+	mrb_define_class_method(mrb, _module_target_board, "get_mac_addr", mrb_target_board_get_mac_addr, MRB_ARGS_NONE());
+	mrb_define_class_method(mrb, _module_target_board, "get_ip_addr", mrb_target_board_get_ip_addr, MRB_ARGS_NONE());
 
 	mrb_define_class_method(mrb, _module_target_board, "dhclient", mrb_target_board_dhclient, MRB_ARGS_NONE());
 	mrb_define_class_method(mrb, _module_target_board, "ntpdate", mrb_target_board_ntpdate, MRB_ARGS_NONE());

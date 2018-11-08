@@ -8,6 +8,7 @@
 #define MAIN_PRIORITY	(TMAX_TPRI - 1)		/* メインタスクの優先度 */
 #define MAIN_STACK_SIZE	2048	/* スタック領域のサイズ */
 #define MAIN_STACK_ADDR	(CPU * 1024) - MAIN_STACK_SIZE
+#define MAIN_DATAQUEUE_COUNT	5
 
 #define INHNO_CMT0_CMI	INT_CMT0_CMI
 #define INTNO_CMT0_CMI	INT_CMT0_CMI

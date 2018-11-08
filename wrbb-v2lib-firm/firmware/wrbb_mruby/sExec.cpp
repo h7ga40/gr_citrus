@@ -152,14 +152,14 @@ bool HeaderCheck(rite_binary_header *he, unsigned long tsize)
 		Serial.println(az);
 		return false;
 	}
-
+#ifndef GRCITRUS
 	if (tsize>RUBY_CODE_SIZE) {
 		char az[50];
 		sprintf(az, "%s size is greater than %lu.", ExeFilename, RUBY_CODE_SIZE);
 		Serial.println(az);
 		return false;
 	}
-
+#endif
 	if (hsize > tsize) {
 		char az[70];
 		sprintf(az, "%s size is %lu greater than file size %lu.", ExeFilename, hsize, tsize);

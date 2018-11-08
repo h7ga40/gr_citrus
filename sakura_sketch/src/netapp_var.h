@@ -211,6 +211,10 @@ uint32_t	msg2host32 (void *msg);
 uint32_t	netapp_rand (void);
 void	netapp_srand (uint32_t seed);
 
+int str_ipv4addr(char *text, int size, const T_IN4_ADDR *addr, int width);
+int str_ipv6addr(char *text, int size, const T_IN6_ADDR *addr, int width);
+int str_macaddr(char *text, int size, uint8_t *mac, int width);
+
 #if defined(SUPPORT_INET6)
 
 #define TCP_CRE_REP(i,r)	tcp6_cre_rep(i,r)
