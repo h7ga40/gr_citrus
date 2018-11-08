@@ -191,28 +191,22 @@ ifdef TINETDIR
 	#
 	#  ネットワークサービスの定義
 	#
-
 	NO_USE_TINET_LIBRARY = false
 
 	#  ネットワークインタフェースの選択、何れか一つ選択する。
-
 	NET_IF = ether
 
 	#  イーサネット・ディバイスドライバの選択
-
 	NET_DEV = if_rx62n
 
 	#  ネットワーク層の選択
-
 	SUPPORT_INET6 = false
 	SUPPORT_INET4 = true
 
 	#  API に組込む機能の選択
-
 	API_CFG_IP4MAPPED_ADDR = false
 
 	#  トランスポート層の選択
-
 	SUPPORT_TCP = false
 	SUPPORT_UDP = true
 
@@ -287,10 +281,11 @@ endif
 #
 #  ターゲットファイル（複数を同時に選択してはならない）
 #
-#all: $(DEPDIR) check $(OBJFILE)
-#all: $(DEPDIR) check $(OBJNAME).bin
-#all: $(DEPDIR) check $(OBJNAME).srec
-all: $(DEPDIR) check $(OBJNAME).mot
+all: $(DEPDIR) kernel_cfg.timestamp offset.h
+#	@$(MAKE) check $(OBJFILE)
+#	@$(MAKE) check $(OBJNAME).bin
+#	@$(MAKE) check $(OBJNAME).srec
+	@$(MAKE) check $(OBJNAME).mot
 
 ##### 以下は編集しないこと #####
 
