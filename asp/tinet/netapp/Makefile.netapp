@@ -28,7 +28,7 @@
 #   含めて，いかなる保証も行わない．また，本ソフトウェアの利用により直
 #   接的または間接的に生じたいかなる損害に関しても，その責任を負わない．
 #  
-#   @(#) $Id: Makefile.netapp 1.7 2017/6/1 8:50:28 abe $
+#   @(#) $Id$
 # 
 
 #
@@ -49,7 +49,7 @@ endif
 #  応用プログラム
 
 TINET_ROOT = $(SRCDIR)/tinet
-NETAPP_DIR = $(TINET_ROOT)/netapp
+NETAPP_DIRS = $(TINET_ROOT)/netapp
 NETAPP_COBJS := $(NETAPP_COBJS) netapp_subr.o
 
 ifeq ($(USE_LCD),true)
@@ -86,7 +86,7 @@ ifeq ($(USE_WWW_SRV),true)
 	USE_NETAPP_SUBR = true
 	CDEFS := $(CDEFS) -DUSE_WWW_SRV
 	NETAPP_COBJS := $(NETAPP_COBJS) wwws.o
-	NETAPP_KERNEL_CFG := $(NETAPP_KERNEL_CFG) $(NETAPP_DIR)/wwws.cfg
+	NETAPP_KERNEL_CFG := $(NETAPP_KERNEL_CFG) $(NETAPP_DIRS)/wwws.cfg
 
 endif
 
@@ -101,7 +101,7 @@ ifeq ($(TCP_ECHO_SRV),tcp_echo_srv1)		# 送受信タスク同一型
 	USE_NETAPP_SUBR = true
 	CDEFS := $(CDEFS) -DUSE_TCP_ECHO_SRV1
 	NETAPP_COBJS := $(NETAPP_COBJS) tcp_echo_srv1.o
-	NETAPP_KERNEL_CFG := $(NETAPP_KERNEL_CFG) $(NETAPP_DIR)/tcp_echo_srv1.cfg
+	NETAPP_KERNEL_CFG := $(NETAPP_KERNEL_CFG) $(NETAPP_DIRS)/tcp_echo_srv1.cfg
 
 	ifeq ($(USE_TCP_NON_BLOCKING),true)
 		NETAPP_COBJS := $(NETAPP_COBJS) tcp_echo_srv1_nblk.o
@@ -118,7 +118,7 @@ ifeq ($(TCP_ECHO_SRV),tcp_echo_srv2)		# 送受信タスク分離型
 	USE_NETAPP_SUBR = true
 	CDEFS := $(CDEFS) -DUSE_TCP_ECHO_SRV2
 	NETAPP_COBJS := $(NETAPP_COBJS) tcp_echo_srv2.o
-	NETAPP_KERNEL_CFG := $(NETAPP_KERNEL_CFG) $(NETAPP_DIR)/tcp_echo_srv2.cfg
+	NETAPP_KERNEL_CFG := $(NETAPP_KERNEL_CFG) $(NETAPP_DIRS)/tcp_echo_srv2.cfg
 endif
 
 ifeq ($(USE_UDP4_ECHO_SRV),true)
@@ -134,13 +134,13 @@ ifeq ($(USE_UDP_ECHO_SRV),true)
 		USE_NETAPP_SUBR = true
 		CDEFS := $(CDEFS) -DUSE_UDP6_ECHO_SRV_TSK
 		NETAPP_COBJS := $(NETAPP_COBJS) udp6_echo_srv.o
-		NETAPP_KERNEL_CFG := $(NETAPP_KERNEL_CFG) $(NETAPP_DIR)/udp6_echo_srv.cfg
+		NETAPP_KERNEL_CFG := $(NETAPP_KERNEL_CFG) $(NETAPP_DIRS)/udp6_echo_srv.cfg
 
 		ifeq ($(SUPPORT_INET4),true)
 			ifeq ($(USE_UDP4_ECHO_SRV),true)
 				CDEFS := $(CDEFS) -DUSE_UDP4_ECHO_SRV_TSK
 				NETAPP_COBJS := $(NETAPP_COBJS) udp4_echo_srv.o
-				NETAPP_KERNEL_CFG := $(NETAPP_KERNEL_CFG) $(NETAPP_DIR)/udp4_echo_srv.cfg
+				NETAPP_KERNEL_CFG := $(NETAPP_KERNEL_CFG) $(NETAPP_DIRS)/udp4_echo_srv.cfg
 			endif
 		endif
 	else
@@ -149,7 +149,7 @@ ifeq ($(USE_UDP_ECHO_SRV),true)
 			USE_NETAPP_SUBR = true
 			CDEFS := $(CDEFS) -DUSE_UDP4_ECHO_SRV_TSK
 			NETAPP_COBJS := $(NETAPP_COBJS) udp4_echo_srv.o
-			NETAPP_KERNEL_CFG := $(NETAPP_KERNEL_CFG) $(NETAPP_DIR)/udp4_echo_srv.cfg
+			NETAPP_KERNEL_CFG := $(NETAPP_KERNEL_CFG) $(NETAPP_DIRS)/udp4_echo_srv.cfg
 		endif
 	endif
 endif
@@ -165,7 +165,7 @@ ifeq ($(USE_TCP_ECHO_CLI),true)
 	USE_NETAPP_SUBR = true
 	CDEFS := $(CDEFS) -DUSE_TCP_ECHO_CLI
 	NETAPP_COBJS := $(NETAPP_COBJS) tcp_echo_cli.o tcp_echo_cli_snd.o tcp_echo_cli_rcv.o
-	NETAPP_KERNEL_CFG := $(NETAPP_KERNEL_CFG) $(NETAPP_DIR)/tcp_echo_cli.cfg
+	NETAPP_KERNEL_CFG := $(NETAPP_KERNEL_CFG) $(NETAPP_DIRS)/tcp_echo_cli.cfg
 endif
 
 ifeq ($(USE_UDP4_ECHO_CLI),true)
@@ -181,13 +181,13 @@ ifeq ($(USE_UDP_ECHO_CLI),true)
 		USE_NETAPP_SUBR = true
 		CDEFS := $(CDEFS) -DUSE_UDP6_ECHO_CLI_TSK
 		NETAPP_COBJS := $(NETAPP_COBJS) udp6_echo_cli.o
-		NETAPP_KERNEL_CFG := $(NETAPP_KERNEL_CFG) $(NETAPP_DIR)/udp6_echo_cli.cfg
+		NETAPP_KERNEL_CFG := $(NETAPP_KERNEL_CFG) $(NETAPP_DIRS)/udp6_echo_cli.cfg
 	
 		ifeq ($(SUPPORT_INET4),true)
 			ifeq ($(USE_UDP4_ECHO_CLI),true)
 				CDEFS := $(CDEFS) -DUSE_UDP4_ECHO_CLI_TSK
 				NETAPP_COBJS := $(NETAPP_COBJS) udp4_echo_cli.o
-				NETAPP_KERNEL_CFG := $(NETAPP_KERNEL_CFG) $(NETAPP_DIR)/udp4_echo_cli.cfg
+				NETAPP_KERNEL_CFG := $(NETAPP_KERNEL_CFG) $(NETAPP_DIRS)/udp4_echo_cli.cfg
 			endif
 		endif
         else
@@ -196,7 +196,7 @@ ifeq ($(USE_UDP_ECHO_CLI),true)
 			USE_NETAPP_SUBR = true
 			CDEFS := $(CDEFS) -DUSE_UDP4_ECHO_CLI_TSK
 			NETAPP_COBJS := $(NETAPP_COBJS) udp4_echo_cli.o
-			NETAPP_KERNEL_CFG := $(NETAPP_KERNEL_CFG) $(NETAPP_DIR)/udp4_echo_cli.cfg
+			NETAPP_KERNEL_CFG := $(NETAPP_KERNEL_CFG) $(NETAPP_DIRS)/udp4_echo_cli.cfg
 		endif
 
 	endif
@@ -207,7 +207,7 @@ ifeq ($(USE_TCP_DISCARD_SRV),true)
 	USE_NETAPP_SUBR = true
 	CDEFS := $(CDEFS) -DUSE_TCP_DISCARD_SRV
 	NETAPP_COBJS := $(NETAPP_COBJS) tcp_discard_srv.o
-	NETAPP_KERNEL_CFG := $(NETAPP_KERNEL_CFG) $(NETAPP_DIR)/tcp_discard_srv.cfg
+	NETAPP_KERNEL_CFG := $(NETAPP_KERNEL_CFG) $(NETAPP_DIRS)/tcp_discard_srv.cfg
 endif
 
 ifeq ($(USE_TCP_DISCARD_CLI),true)
@@ -215,7 +215,7 @@ ifeq ($(USE_TCP_DISCARD_CLI),true)
 	USE_NETAPP_SUBR = true
 	CDEFS := $(CDEFS) -DUSE_TCP_DISCARD_CLI
 	NETAPP_COBJS := $(NETAPP_COBJS) tcp_discard_cli.o
-	NETAPP_KERNEL_CFG := $(NETAPP_KERNEL_CFG) $(NETAPP_DIR)/tcp_discard_cli.cfg
+	NETAPP_KERNEL_CFG := $(NETAPP_KERNEL_CFG) $(NETAPP_DIRS)/tcp_discard_cli.cfg
 endif
 
 ifeq ($(USE_UDP_DISCARD_CLI),true)
@@ -223,7 +223,7 @@ ifeq ($(USE_UDP_DISCARD_CLI),true)
 	USE_NETAPP_SUBR = true
 	CDEFS := $(CDEFS) -DUSE_UDP_DISCARD_CLI
 	NETAPP_COBJS := $(NETAPP_COBJS) udp_discard_cli.o
-	NETAPP_KERNEL_CFG := $(NETAPP_KERNEL_CFG) $(NETAPP_DIR)/udp_discard_cli.cfg
+	NETAPP_KERNEL_CFG := $(NETAPP_KERNEL_CFG) $(NETAPP_DIRS)/udp_discard_cli.cfg
 endif
 
 ifeq ($(USE_NET_CONS),true)
@@ -233,7 +233,7 @@ ifeq ($(USE_NET_CONS),true)
 		USE_NETAPP_SUBR = true
 		CDEFS := $(CDEFS) -DUSE_NET_CONS
 		NETAPP_COBJS := $(NETAPP_COBJS) net_cons.o
-		NETAPP_KERNEL_CFG := $(NETAPP_KERNEL_CFG) $(NETAPP_DIR)/net_cons.cfg
+		NETAPP_KERNEL_CFG := $(NETAPP_KERNEL_CFG) $(NETAPP_DIRS)/net_cons.cfg
 	endif
 endif
 
@@ -241,7 +241,7 @@ ifeq ($(USE_DBG_CONS),true)
 	USE_NETAPP_SUBR = true
 	CDEFS := $(CDEFS) -DUSE_DBG_CONS
 	NETAPP_COBJS := $(NETAPP_COBJS) dbg_cons.o 
-	NETAPP_KERNEL_CFG := $(NETAPP_KERNEL_CFG) $(NETAPP_DIR)/dbg_cons.cfg
+	NETAPP_KERNEL_CFG := $(NETAPP_KERNEL_CFG) $(NETAPP_DIRS)/dbg_cons.cfg
 	ifeq ($(USE_DBG_CONS_PARSER),true)
 		CDEFS := $(CDEFS) -DUSE_DBG_CONS_PARSER
 	endif
@@ -363,7 +363,7 @@ endif
 
 ifeq ($(TARGET_KERNEL),ASP)
 
-	APPLDIR := $(APPLDIR) $(NETAPP_DIR)
+	APPLDIRS := $(APPLDIRS) $(NETAPP_DIRS)
 	APPL_COBJS := $(APPL_COBJS) $(NETAPP_COBJS)
 	APPL_CFLAGS := $(APPL_CFLAGS) -fno-strict-aliasing
 
@@ -371,7 +371,7 @@ endif
 
 ifeq ($(TARGET_KERNEL),JSP)
 
-	UTASK_DIR := $(UTASK_DIR):$(NETAPP_DIR)
+	UTASK_DIRS := $(UTASK_DIRS):$(NETAPP_DIRS)
 	UTASK_COBJS := $(UTASK_COBJS) $(NETAPP_COBJS)
 	UTASK_CFLAGS := $(UTASK_CFLAGS) -fno-strict-aliasing
 
@@ -381,13 +381,13 @@ ifeq ($(USE_LCD),true)
 
 ifeq ($(TARGET_KERNEL),ASP)
 
-	APPLDIR := $(APPLDIR) $(SRCDIR)/pdic/sc1602
+	APPLDIRS := $(APPLDIRS) $(SRCDIR)/pdic/sc1602
 
 endif
 
 ifeq ($(TARGET_KERNEL),JSP)
 
-	UTASK_DIR := $(UTASK_DIR):$(SRCDIR)/pdic/sc1602
+	UTASK_DIRS := $(UTASK_DIRS):$(SRCDIR)/pdic/sc1602
 
 endif
 

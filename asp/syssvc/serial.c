@@ -5,7 +5,7 @@
  * 
  *  Copyright (C) 2000-2003 by Embedded and Real-Time Systems Laboratory
  *                              Toyohashi Univ. of Technology, JAPAN
- *  Copyright (C) 2006-2013 by Embedded and Real-Time Systems Laboratory
+ *  Copyright (C) 2006-2015 by Embedded and Real-Time Systems Laboratory
  *              Graduate School of Information Science, Nagoya Univ., JAPAN
  * 
  *  上記著作権者は，以下の(1)～(4)の条件を満たす場合に限り，本ソフトウェ
@@ -37,7 +37,7 @@
  *  アの利用により直接的または間接的に生じたいかなる損害に関しても，そ
  *  の責任を負わない．
  * 
- *  @(#) $Id: serial.c 1008 2016-07-11 01:31:16Z coas-nagasima $
+ *  @(#) $Id$
  */
 
 /*
@@ -571,7 +571,7 @@ serial_rea_chr(SPCB *p_spcb, char *p_c)
  *  シリアルポートからの文字列受信（サービスコール）
  */
 ER_UINT
-serial_rea_dat(ID portid, char *buf, uint_t len)
+serial_trea_dat(ID portid, char *buf, uint_t len, TMO tmout)
 {
 	SPCB	*p_spcb;
 	bool_t	buffer_empty;
@@ -597,8 +597,14 @@ serial_rea_dat(ID portid, char *buf, uint_t len)
 	buffer_empty = true;			/* ループの1回めはwai_semする */
 	while (reacnt < len) {
 		if (buffer_empty) {
-			SVC(rercd = wai_sem(p_spcb->p_spinib->rcv_semid),
-										gen_ercd_wait(rercd, p_spcb));
+			rercd = twai_sem(p_spcb->p_spinib->rcv_semid, tmout);
+			if (rercd == E_TMOUT)
+				return E_TMOUT;
+			if (rercd < 0) {
+				gen_ercd_wait(rercd, p_spcb);
+				ercd = rercd;
+				goto error_exit;
+			}
 		}
 		SVC(rercd = serial_rea_chr(p_spcb, &c), rercd);
 		*buf++ = c;

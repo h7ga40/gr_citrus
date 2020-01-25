@@ -28,7 +28,7 @@
  *  含めて，いかなる保証も行わない．また，本ソフトウェアの利用により直
  *  接的または間接的に生じたいかなる損害に関しても，その責任を負わない．
  * 
- *  @(#) $Id: nd6.c 1605 2018-07-29 15:33:03Z coas-nagasima $
+ *  @(#) $Id$
  */
 
 /*	$FreeBSD: src/sys/netinet6/nd6.c,v 1.20 2002/08/02 20:49:14 rwatson Exp $	*/
@@ -352,6 +352,7 @@ nd6_lookup (const T_IN6_ADDR *addr, bool_t create)
 		if (fix == -1)  {
 			if (nd6_cache[mix].hold != NULL) {
 				syscall(rel_net_buf(nd6_cache[mix].hold));
+				nd6_cache[mix].hold = NULL;
 				}
 			fix = mix;
 			}
@@ -561,6 +562,7 @@ nd6_output (T_IFNET *ifp, T_NET_BUF *output, const T_IN6_ADDR *dst, T_LLINFO_ND6
 			/* すでに、未解決のネットワークバッファがあれば、開放する。*/
 			if (ln->hold != NULL) {
 				syscall(rel_net_buf(ln->hold));
+				ln->hold = NULL;
 				}
 
 			/*

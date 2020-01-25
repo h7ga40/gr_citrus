@@ -28,7 +28,7 @@
  *  含めて，いかなる保証も行わない．また，本ソフトウェアの利用により直
  *  接的または間接的に生じたいかなる損害に関しても，その責任を負わない．
  * 
- *  @(#) $Id: tcp_input.c 1605 2018-07-29 15:33:03Z coas-nagasima $
+ *  @(#) $Id$
  */
 
 /*
@@ -520,7 +520,21 @@ syn_sent (T_TCP_HDR *tcph, T_TCP_CEP *cep)
 			if (cep->snd_nblk_tfn == TFN_TCP_CON_CEP) {
 
 				/* 相手のアドレスをコピーする。*/
+
+#if defined(_IP6_CFG) && defined(_IP4_CFG)
+
+				if (cep->flags & TCP_CEP_FLG_IPV4) {
+					(*cep->p_dstaddr4).ipaddr = ntohl(cep->dstaddr.ipaddr.s6_addr32[3]);
+					(*cep->p_dstaddr4).portno = cep->dstaddr.portno;
+					}
+				else
 				*cep->p_dstaddr = cep->dstaddr;
+
+#else	/* of #if defined(_IP6_CFG) && defined(_IP4_CFG) */
+
+				*cep->p_dstaddr = cep->dstaddr;
+
+#endif	/* of #if defined(_IP6_CFG) && defined(_IP4_CFG) */
 
 				if (IS_PTR_DEFINED(cep->callback)) {
 
@@ -846,7 +860,21 @@ proc_ack1 (T_NET_BUF *input, T_TCP_CEP *cep, uint_t thoff, bool_t *needoutput)
 			if (cep->snd_nblk_tfn == TFN_TCP_CON_CEP) {
 
 				/* 相手のアドレスをコピーする。*/
+
+#if defined(_IP6_CFG) && defined(_IP4_CFG)
+
+				if (cep->flags & TCP_CEP_FLG_IPV4) {
+					(*cep->p_dstaddr4).ipaddr = ntohl(cep->dstaddr.ipaddr.s6_addr32[3]);
+					(*cep->p_dstaddr4).portno = cep->dstaddr.portno;
+					}
+				else
 				*cep->p_dstaddr = cep->dstaddr;
+
+#else	/* of #if defined(_IP6_CFG) && defined(_IP4_CFG) */
+
+				*cep->p_dstaddr = cep->dstaddr;
+
+#endif	/* of #if defined(_IP6_CFG) && defined(_IP4_CFG) */
 
 				if (IS_PTR_DEFINED(cep->callback)) {
 
@@ -1362,6 +1390,10 @@ tcp_input (T_NET_BUF **inputp, uint_t *offp, uint_t *nextp)
 	NTOHS(tcph->urp);
 	NTOHS(tcph->sport);
 	NTOHS(tcph->dport);
+
+	/* SDU 長 より 緊急ポインタが大きい場合 */
+	if (tcph->urp > tcph->sum)
+		goto drop;
 
 find_cep:
 

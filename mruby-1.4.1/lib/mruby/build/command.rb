@@ -68,7 +68,7 @@ module MRuby
       path && build.filename("#{path}/#{name}").sub(/^"(.*)"$/, '\1')
     end
 
-    def all_flags(_defineds=[], _include_paths=[], _flags=[])
+    def all_flags(_defineds=[], _include_paths=[], _flags=[], params={})
       define_flags = [defines, _defineds].flatten.map{ |d| option_define % d }
       include_path_flags = [include_paths, _include_paths].flatten.map do |f|
         if MRUBY_BUILD_HOST_IS_CYGWIN
@@ -77,20 +77,42 @@ module MRuby
           option_include_path % filename(f)
         end
       end
-      [flags, define_flags, include_path_flags, _flags].flatten.join(' ')
+      if params.length > 0
+        __flags = flags.collect { |flag|
+          if flag.is_a?(Array)
+            flag.collect { |f|
+              if f.include?('%')
+                f % params
+              else
+                f
+              end
+              }.flatten
+          else
+            if flag.include?('%')
+              flag % params
+            else
+              flag
+            end
+          end
+        }.flatten
+      else
+        __flags = flags
+      end
+      [__flags, define_flags, include_path_flags, _flags].flatten.join(' ')
     end
 
     def run(outfile, infile, _defineds=[], _include_paths=[], _flags=[])
       FileUtils.mkdir_p File.dirname(outfile)
       _pp "CC", infile.relative_path, outfile.relative_path
+      params = { :outdir => File.dirname(outfile).gsub('/', @build.file_separator), :outfilebase => File.basename(outfile, ".*") }
       if MRUBY_BUILD_HOST_IS_CYGWIN
-        _run compile_options, { :flags => all_flags(_defineds, _include_paths, _flags),
+        _run compile_options, { :flags => all_flags(_defineds, _include_paths, _flags, params),
                                 :infile => cygwin_filename(infile), :outfile => cygwin_filename(outfile),
-                                :outdir => File.dirname(outfile), :outfilebase => File.basename(outfile, ".*") }
+                                :outdir => File.dirname(outfile).gsub('/', @build.file_separator), :outfilebase => File.basename(outfile, ".*") }
       else
-        _run compile_options, { :flags => all_flags(_defineds, _include_paths, _flags),
+        _run compile_options, { :flags => all_flags(_defineds, _include_paths, _flags, params),
                                 :infile => filename(infile), :outfile => filename(outfile),
-                                :outdir => File.dirname(outfile), :outfilebase => File.basename(outfile, ".*") }
+                                :outdir => File.dirname(outfile).gsub('/', @build.file_separator), :outfilebase => File.basename(outfile, ".*") }
       end
     end
 
@@ -147,6 +169,7 @@ module MRuby
 
     def initialize(build)
       super
+      @build = build
       @command = ENV['LD'] || 'ld'
       @flags = (ENV['LDFLAGS'] || [])
       @flags_before_libraries, @flags_after_libraries = [], []
@@ -157,7 +180,7 @@ module MRuby
       @link_options = "%{flags} -o %{outfile} %{objs} %{flags_before_libraries} %{libs} %{flags_after_libraries}"
     end
 
-    def all_flags(_library_paths=[], _flags=[])
+    def all_flags(_library_paths=[], _flags=[], params={})
       library_path_flags = [library_paths, _library_paths].flatten.map do |f|
         if MRUBY_BUILD_HOST_IS_CYGWIN
           option_library_path % cygwin_filename(f)
@@ -165,7 +188,28 @@ module MRuby
           option_library_path % filename(f)
         end
       end
-      [flags, library_path_flags, _flags].flatten.join(' ')
+      if params.length > 0
+        __flags = flags.collect { |flag|
+          if flag.is_a?(Array)
+            flag.collect { |f|
+              if f.include?('%')
+                f % params
+              else
+                f
+              end
+              }.flatten
+          else
+            if flag.include?('%')
+              flag % params
+            else
+              flag
+            end
+          end
+        }.flatten
+      else
+        __flags = flags
+      end
+      [__flags, library_path_flags, _flags].flatten.join(' ')
     end
 
     def library_flags(_libraries)
@@ -177,20 +221,21 @@ module MRuby
       library_flags = [libraries, _libraries].flatten.map { |d| option_library % d }
 
       _pp "LD", outfile.relative_path
+      params = { :outdir => File.dirname(outfile).gsub('/', @build.file_separator), :outfilebase => File.basename(outfile, ".*") }
       if MRUBY_BUILD_HOST_IS_CYGWIN
-        _run link_options, { :flags => all_flags(_library_paths, _flags),
+        _run link_options, { :flags => all_flags(_library_paths, _flags, params),
                              :outfile => cygwin_filename(outfile) , :objs => cygwin_filename(objfiles).join(' '),
                              :flags_before_libraries => [flags_before_libraries, _flags_before_libraries].flatten.join(' '),
                              :flags_after_libraries => [flags_after_libraries, _flags_after_libraries].flatten.join(' '),
                              :libs => library_flags.join(' '),
-                             :outdir => File.dirname(outfile), :outfilebase => File.basename(outfile, ".*") }
+                             :outdir => File.dirname(outfile).gsub('/', @build.file_separator), :outfilebase => File.basename(outfile, ".*") }
       else
-        _run link_options, { :flags => all_flags(_library_paths, _flags),
+        _run link_options, { :flags => all_flags(_library_paths, _flags, params),
                              :outfile => filename(outfile) , :objs => filename(objfiles).join(' '),
                              :flags_before_libraries => [flags_before_libraries, _flags_before_libraries].flatten.join(' '),
                              :flags_after_libraries => [flags_after_libraries, _flags_after_libraries].flatten.join(' '),
                              :libs => library_flags.join(' '),
-                             :outdir => File.dirname(outfile), :outfilebase => File.basename(outfile, ".*") }
+                             :outdir => File.dirname(outfile).gsub('/', @build.file_separator), :outfilebase => File.basename(outfile, ".*") }
       end
     end
   end
@@ -233,9 +278,9 @@ module MRuby
       end
 
       if MRUBY_BUILD_HOST_IS_CYGWIN
-        _run archive_options, { :outfile => cygwin_filename(outfile), :objs => cygwin_filename(newargs).join(' '), :outdir => File.dirname(outfile), :outfilebase => File.basename(outfile, ".*") }
+        _run archive_options, { :outfile => cygwin_filename(outfile), :objs => cygwin_filename(newargs).join(' '), :outdir => File.dirname(outfile).gsub('/', @build.file_separator), :outfilebase => File.basename(outfile, ".*") }
       else
-        _run archive_options, { :outfile => filename(outfile), :objs => filename(newargs).join(' '), :outdir => File.dirname(outfile), :outfilebase => File.basename(outfile, ".*") }
+        _run archive_options, { :outfile => filename(outfile), :objs => filename(newargs).join(' '), :outdir => File.dirname(outfile).gsub('/', @build.file_separator), :outfilebase => File.basename(outfile, ".*") }
       end
 
       to_delete.each do |d|

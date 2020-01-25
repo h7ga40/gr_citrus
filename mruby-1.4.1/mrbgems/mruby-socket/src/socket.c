@@ -103,7 +103,7 @@ int inet_pton(int af, const char *src, void *dst)
 
 #endif
 
-static mrb_value
+PRESET_REF mrb_value
 mrb_addrinfo_getaddrinfo(mrb_state *mrb, mrb_value klass)
 {
   struct addrinfo hints, *res0, *res;
@@ -177,7 +177,7 @@ mrb_addrinfo_getaddrinfo(mrb_state *mrb, mrb_value klass)
   return ary;
 }
 
-static mrb_value
+PRESET_REF mrb_value
 mrb_addrinfo_getnameinfo(mrb_state *mrb, mrb_value self)
 {
   mrb_int flags;
@@ -205,7 +205,7 @@ mrb_addrinfo_getnameinfo(mrb_state *mrb, mrb_value self)
   return ary;
 }
 
-static mrb_value
+PRESET_REF mrb_value
 mrb_addrinfo_unix_path(mrb_state *mrb, mrb_value self)
 {
 #ifndef _WIN32
@@ -271,7 +271,7 @@ socket_family(int s)
   return ss.ss_family;
 }
 
-static mrb_value
+PRESET_REF mrb_value
 mrb_basicsocket_getpeereid(mrb_state *mrb, mrb_value self)
 {
 #ifdef HAVE_GETPEEREID
@@ -294,7 +294,7 @@ mrb_basicsocket_getpeereid(mrb_state *mrb, mrb_value self)
 #endif
 }
 
-static mrb_value
+PRESET_REF mrb_value
 mrb_basicsocket_getpeername(mrb_state *mrb, mrb_value self)
 {
   struct sockaddr_storage ss;
@@ -307,7 +307,7 @@ mrb_basicsocket_getpeername(mrb_state *mrb, mrb_value self)
   return mrb_str_new(mrb, (char*)&ss, salen);
 }
 
-static mrb_value
+PRESET_REF mrb_value
 mrb_basicsocket_getsockname(mrb_state *mrb, mrb_value self)
 {
   struct sockaddr_storage ss;
@@ -320,7 +320,7 @@ mrb_basicsocket_getsockname(mrb_state *mrb, mrb_value self)
   return mrb_str_new(mrb, (char*)&ss, salen);
 }
 
-static mrb_value
+PRESET_REF mrb_value
 mrb_basicsocket_getsockopt(mrb_state *mrb, mrb_value self)
 {
   char opt[8];
@@ -340,7 +340,7 @@ mrb_basicsocket_getsockopt(mrb_state *mrb, mrb_value self)
   return mrb_funcall(mrb, c, "new", 4, mrb_fixnum_value(family), mrb_fixnum_value(level), mrb_fixnum_value(optname), data);
 }
 
-static mrb_value
+PRESET_REF mrb_value
 mrb_basicsocket_recv(mrb_state *mrb, mrb_value self)
 {
   ssize_t n;
@@ -356,7 +356,7 @@ mrb_basicsocket_recv(mrb_state *mrb, mrb_value self)
   return buf;
 }
 
-static mrb_value
+PRESET_REF mrb_value
 mrb_basicsocket_recvfrom(mrb_state *mrb, mrb_value self)
 {
   ssize_t n;
@@ -379,7 +379,7 @@ mrb_basicsocket_recvfrom(mrb_state *mrb, mrb_value self)
   return ary;
 }
 
-static mrb_value
+PRESET_REF mrb_value
 mrb_basicsocket_send(mrb_state *mrb, mrb_value self)
 {
   ssize_t n;
@@ -398,7 +398,7 @@ mrb_basicsocket_send(mrb_state *mrb, mrb_value self)
   return mrb_fixnum_value((mrb_int)n);
 }
 
-static mrb_value
+PRESET_REF mrb_value
 mrb_basicsocket_setnonblock(mrb_state *mrb, mrb_value self)
 {
   int fd, flags;
@@ -427,7 +427,7 @@ mrb_basicsocket_setnonblock(mrb_state *mrb, mrb_value self)
   return mrb_nil_value();
 }
 
-static mrb_value
+PRESET_REF mrb_value
 mrb_basicsocket_setsockopt(mrb_state *mrb, mrb_value self)
 {
   int s;
@@ -472,7 +472,7 @@ mrb_basicsocket_setsockopt(mrb_state *mrb, mrb_value self)
   return mrb_fixnum_value(0);
 }
 
-static mrb_value
+PRESET_REF mrb_value
 mrb_basicsocket_shutdown(mrb_state *mrb, mrb_value self)
 {
   mrb_int how = SHUT_RDWR;
@@ -483,7 +483,7 @@ mrb_basicsocket_shutdown(mrb_state *mrb, mrb_value self)
   return mrb_fixnum_value(0);
 }
 
-static mrb_value
+PRESET_REF mrb_value
 mrb_basicsocket_set_is_socket(mrb_state *mrb, mrb_value self)
 {
   mrb_bool b;
@@ -498,7 +498,7 @@ mrb_basicsocket_set_is_socket(mrb_state *mrb, mrb_value self)
   return mrb_bool_value(b);
 }
 
-static mrb_value
+PRESET_REF mrb_value
 mrb_ipsocket_ntop(mrb_state *mrb, mrb_value klass)
 {
   mrb_int af, n;
@@ -512,7 +512,7 @@ mrb_ipsocket_ntop(mrb_state *mrb, mrb_value klass)
   return mrb_str_new_cstr(mrb, buf);
 }
 
-static mrb_value
+PRESET_REF mrb_value
 mrb_ipsocket_pton(mrb_state *mrb, mrb_value klass)
 {
   mrb_int af, n;
@@ -570,7 +570,7 @@ mrb_ipsocket_recvfrom(mrb_state *mrb, mrb_value self)
   return pair;
 }
 
-static mrb_value
+PRESET_REF mrb_value
 mrb_socket_gethostname(mrb_state *mrb, mrb_value cls)
 {
   mrb_value buf;
@@ -588,7 +588,7 @@ mrb_socket_gethostname(mrb_state *mrb, mrb_value cls)
   return buf;
 }
 
-static mrb_value
+PRESET_REF mrb_value
 mrb_socket_accept(mrb_state *mrb, mrb_value klass)
 {
   int s1;
@@ -602,7 +602,7 @@ mrb_socket_accept(mrb_state *mrb, mrb_value klass)
   return mrb_fixnum_value(s1);
 }
 
-static mrb_value
+PRESET_REF mrb_value
 mrb_socket_accept2(mrb_state *mrb, mrb_value klass)
 {
   mrb_value ary, sastr;
@@ -625,7 +625,7 @@ mrb_socket_accept2(mrb_state *mrb, mrb_value klass)
   return ary;
 }
 
-static mrb_value
+PRESET_REF mrb_value
 mrb_socket_bind(mrb_state *mrb, mrb_value klass)
 {
   mrb_value sastr;
@@ -638,7 +638,7 @@ mrb_socket_bind(mrb_state *mrb, mrb_value klass)
   return mrb_nil_value();
 }
 
-static mrb_value
+PRESET_REF mrb_value
 mrb_socket_connect(mrb_state *mrb, mrb_value klass)
 {
   mrb_value sastr;
@@ -651,7 +651,7 @@ mrb_socket_connect(mrb_state *mrb, mrb_value klass)
   return mrb_nil_value();
 }
 
-static mrb_value
+PRESET_REF mrb_value
 mrb_socket_listen(mrb_state *mrb, mrb_value klass)
 {
   mrb_int backlog, s;
@@ -663,7 +663,7 @@ mrb_socket_listen(mrb_state *mrb, mrb_value klass)
   return mrb_nil_value();
 }
 
-static mrb_value
+PRESET_REF mrb_value
 mrb_socket_sockaddr_family(mrb_state *mrb, mrb_value klass)
 {
   mrb_value sa;
@@ -681,7 +681,7 @@ mrb_socket_sockaddr_family(mrb_state *mrb, mrb_value klass)
   return mrb_fixnum_value(((struct sockaddr *)RSTRING_PTR(sa))->sa_family);
 }
 
-static mrb_value
+PRESET_REF mrb_value
 mrb_socket_sockaddr_un(mrb_state *mrb, mrb_value klass)
 {
 #ifdef _WIN32
@@ -705,7 +705,7 @@ mrb_socket_sockaddr_un(mrb_state *mrb, mrb_value klass)
 #endif
 }
 
-static mrb_value
+PRESET_REF mrb_value
 mrb_socket_socketpair(mrb_state *mrb, mrb_value klass)
 {
 #ifdef _WIN32
@@ -728,7 +728,7 @@ mrb_socket_socketpair(mrb_state *mrb, mrb_value klass)
 #endif
 }
 
-static mrb_value
+PRESET_REF mrb_value
 mrb_socket_socket(mrb_state *mrb, mrb_value klass)
 {
   mrb_int domain, type, protocol;
@@ -741,7 +741,7 @@ mrb_socket_socket(mrb_state *mrb, mrb_value klass)
   return mrb_fixnum_value(s);
 }
 
-static mrb_value
+PRESET_REF mrb_value
 mrb_tcpsocket_allocate(mrb_state *mrb, mrb_value klass)
 {
   struct RClass *c = mrb_class_ptr(klass);

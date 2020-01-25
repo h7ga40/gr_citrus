@@ -77,9 +77,6 @@ MRuby::GemBox.new do |conf|
   # Generate mruby-strip command
   conf.gem :core => "mruby-bin-strip"
 
-  # Generate mruby-mrbdump command
-  conf.gem :core => "mruby-bin-dump"
-
   # Use Kernel module extension
   conf.gem :core => "mruby-kernel-ext"
 

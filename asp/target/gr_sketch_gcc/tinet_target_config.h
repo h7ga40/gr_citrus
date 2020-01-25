@@ -33,7 +33,7 @@
  *  アの利用により直接的または間接的に生じたいかなる損害に関しても，そ
  *  の責任を負わない．
  * 
- *  @(#) $Id: tinet_target_config.h 1605 2018-07-29 15:33:03Z coas-nagasima $
+ *  @(#) $Id$
  */
 
 #ifndef _TINET_TARGET_CONFIG_H_

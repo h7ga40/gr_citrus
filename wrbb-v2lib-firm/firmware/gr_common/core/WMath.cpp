@@ -20,7 +20,7 @@
   Free Software Foundation, Inc., 59 Temple Place, Suite 330,
   Boston, MA  02111-1307  USA
   
-  $Id: WMath.cpp 1607 2018-07-30 12:01:20Z coas-nagasima $
+  $Id$
 */
 
 extern "C" {

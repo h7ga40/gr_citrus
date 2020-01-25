@@ -28,7 +28,7 @@
  *  含めて，いかなる保証も行わない．また，本ソフトウェアの利用により直
  *  接的または間接的に生じたいかなる損害に関しても，その責任を負わない．
  * 
- *  @(#) $Id: udpn_usrreq_nblk.c 1605 2018-07-29 15:33:03Z coas-nagasima $
+ *  @(#) $Id$
  */
 
 /*
@@ -121,9 +121,9 @@ UDP_CAN_RCV (T_UDP_CEP *cep, ER error)
 		if (IS_PTR_DEFINED(cep->callback))
 
 #ifdef TCP_CFG_NON_BLOCKING_COMPAT14
-			(*cep->callback)(GET_UDP_CEPID(cep), TFN_UDP_RCV_DAT, (void*)error);
+			(*cep->callback)(GET_UDP_CEPID(cep), TFN_UDP_CAN_CEP, (void*)error);
 #else
-			(*cep->callback)(GET_UDP_CEPID(cep), TFN_UDP_RCV_DAT, (void*)&error);
+			(*cep->callback)(GET_UDP_CEPID(cep), TFN_UDP_CAN_CEP, (void*)&error);
 #endif
 		else
 			error = E_OBJ;

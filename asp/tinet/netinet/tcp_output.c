@@ -28,7 +28,7 @@
  *  含めて，いかなる保証も行わない．また，本ソフトウェアの利用により直
  *  接的または間接的に生じたいかなる損害に関しても，その責任を負わない．
  * 
- *  @(#) $Id: tcp_output.c 1605 2018-07-29 15:33:03Z coas-nagasima $
+ *  @(#) $Id$
  */
 
 /*
@@ -368,8 +368,10 @@ send_segment (bool_t *sendalot, T_TCP_CEP *cep, uint_t doff, uint_t win, uint_t 
 			tcph->urp    = htons((uint16_t)(cep->snd_up - cep->snd_nxt - 1));
 		tcph->flags |= TCP_FLG_URG;
 		}
-	else
+	else {
+		tcph->urp = 0;
 		cep->snd_up  = cep->snd_una;
+		}
 
 #endif	/* of #ifdef TCP_CFG_EXTENTIONS */
 

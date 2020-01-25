@@ -28,7 +28,7 @@
  *  含めて，いかなる保証も行わない．また，本ソフトウェアの利用により直
  *  接的または間接的に生じたいかなる損害に関しても，その責任を負わない．
  * 
- *  @(#) $Id: udp_var.h 1605 2018-07-29 15:33:03Z coas-nagasima $
+ *  @(#) $Id$
  */
 
 /*
@@ -99,6 +99,16 @@
  */
 
 typedef ER	(*t_udp_callback)(ID cepid, FN fncd, void *p_parblk);
+
+typedef struct t_udp_rcv_dat_para {
+	uint_t		len;
+	T_NET_BUF	*input;
+	uint_t		off;
+	union {
+		T_IPV4EP rep4;
+		T_IPV6EP rep6;
+	};
+	} T_UDP_RCV_DAT_PARA;
 
 /*
  *  UDP 通信端点

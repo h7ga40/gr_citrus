@@ -33,13 +33,13 @@
 #   アの利用により直接的または間接的に生じたいかなる損害に関しても，そ
 #   の責任を負わない．
 #  
-#   @(#) $Id: Makefile.tinet,v 1.5 2009/12/24 05:46:54 abe Exp abe $
+#   @(#) $Id$
 #
 
 #
 #  コンパイルオプション
 #
 INCLUDES	:= $(INCLUDES) -I$(TINET_ROOT)/netdev/$(NET_DEV)
-TINET_DIR	:= $(TINET_DIR):$(TINET_ROOT)/netdev/$(NET_DEV)
+TINET_DIRS	:= $(TINET_DIRS):$(TINET_ROOT)/netdev/$(NET_DEV)
 TINET_COBJS	:= $(TINET_COBJS) ether_phy.o if_rx62n.o
 TINET_KERNEL_CFG := $(TINET_KERNEL_CFG) $(TINET_ROOT)/netdev/$(NET_DEV)/if_rx62n.cfg

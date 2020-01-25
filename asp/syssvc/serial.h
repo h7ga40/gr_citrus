@@ -37,7 +37,7 @@
  *  アの利用により直接的または間接的に生じたいかなる損害に関しても，そ
  *  の責任を負わない．
  * 
- *  @(#) $Id: serial.h 1008 2016-07-11 01:31:16Z coas-nagasima $
+ *  @(#) $Id$
  */
 
 /*
@@ -74,10 +74,15 @@ extern bool_t	serial_get_chr(ID portid, char *p_c) throw();
  */
 extern ER		serial_opn_por(ID portid) throw();
 extern ER		serial_cls_por(ID portid) throw();
-extern ER_UINT	serial_rea_dat(ID portid, char *buf, uint_t len) throw();
+extern ER_UINT	serial_trea_dat(ID portid, char *buf, uint_t len, TMO tmout) throw();
 extern ER_UINT	serial_wri_dat(ID portid, const char *buf, uint_t len) throw();
 extern ER		serial_ctl_por(ID portid, uint_t ioctl) throw();
 extern ER		serial_ref_por(ID portid, T_SERIAL_RPOR *pk_rpor) throw();
+
+Inline ER_UINT	serial_rea_dat(ID portid, char *buf, uint_t len)
+{
+	return serial_trea_dat(portid, buf, len, TMO_FEVR);
+}
 
 /*
  *  シリアルインタフェースドライバの動作制御用のための定数

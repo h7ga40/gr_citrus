@@ -28,7 +28,7 @@
  *  含めて，いかなる保証も行わない．また，本ソフトウェアの利用により直
  *  接的または間接的に生じたいかなる損害に関しても，その責任を負わない．
  *
- *  @(#) $Id: ip_igmp.h 1605 2018-07-29 15:33:03Z coas-nagasima $
+ *  @(#) $Id$
  */
 
 #ifndef _IP_IGMP_H_
@@ -46,7 +46,7 @@ typedef struct t_igmpv1_hdr
 	uint8_t		unused;		/* 未使用			*/
 	uint16_t	sum;		/* チェックサム		*/
 	T_IN4_ADDR	addr;		/* グループアドレス */
-} __attribute__((packed))T_IGMPV1_HDR;
+} __attribute__((packed)) T_IGMPV1_HDR;
 
 /*
 *  IGMPv2 ヘッダの定義、RFC 2236
@@ -58,7 +58,7 @@ typedef struct t_igmpv2_hdr
 	uint8_t		time;		/* 最大応答時間		*/
 	uint16_t	sum;		/* チェックサム		*/
 	T_IN4_ADDR	addr;		/* グループアドレス */
-} __attribute__((packed))T_IGMPV2_HDR;
+} __attribute__((packed)) T_IGMPV2_HDR;
 
 typedef struct t_igmpv3_query_hdr
 {
@@ -70,7 +70,7 @@ typedef struct t_igmpv3_query_hdr
 	uint8_t		qqic;		/* Qurier's Query Interval Code */
 	uint16_t	num;		/* 送信元の数 */
 	T_IN4_ADDR	sdraddr;	/* 送信元アドレス */
-} __attribute__((packed))T_IGMPV3Q_HDR;
+} __attribute__((packed)) T_IGMPV3Q_HDR;
 
 typedef struct t_igmp_group_record
 {
@@ -80,7 +80,7 @@ typedef struct t_igmp_group_record
 	T_IN4_ADDR	grpaddr;	/* グループアドレス */
 	T_IN4_ADDR	sdraddr;	/* 送信元アドレス	*/
 							/* 補助データ		*/
-} __attribute__((packed))T_IGMP_GROUP_RECORD;
+} __attribute__((packed)) T_IGMP_GROUP_RECORD;
 
 typedef struct t_igmpv3_report_hdr
 {
@@ -90,7 +90,7 @@ typedef struct t_igmpv3_report_hdr
 	uint16_t	rsv2;		/* 予約				*/
 	uint16_t	num;		/* グループレコードの数 */
 	T_IGMP_GROUP_RECORD record;	/* グループレコード */
-} __attribute__((packed))T_IGMPV3R_HDR;
+} __attribute__((packed)) T_IGMPV3R_HDR;
 
 #define IGMP_HDR_SIZE			(sizeof(T_IGMPV1_HDR))
 #define IP4_IGMP_HDR_SIZE		(IP4_HDR_SIZE + IGMP_HDR_SIZE)

@@ -21,7 +21,7 @@
 
   Modified 28 September 2010 by Mark Sproul
 
-  $Id: wiring_analog.c 1607 2018-07-30 12:01:20Z coas-nagasima $
+  $Id$
 */
 
 #include "wiring_private.h"

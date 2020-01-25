@@ -36,7 +36,7 @@
  *  アの利用により直接的または間接的に生じたいかなる損害に関しても，そ
  *  の責任を負わない．
  * 
- *  $Id: itron.h 1008 2016-07-11 01:31:16Z coas-nagasima $
+ *  $Id$
  */
 
 /*
@@ -113,6 +113,11 @@ typedef	intptr_t		VP_INT;		/* ポインタまたは符号付き整数 */
 #define	FALSE		false			/* 偽 */
 
 /*
+ *  強制待ち状態からの強制再開
+ */
+#define frsm_tsk(tskid)		rsm_tsk(tskid)
+
+/*
  *  オブジェクト属性の定義
  */
 #define TA_HLNG			UINT_C(0x00)	/* 高級言語用インタフェース */
@@ -124,11 +129,6 @@ typedef	intptr_t		VP_INT;		/* ポインタまたは符号付き整数 */
  *  ネスト回数の最大値
  */
 #define TMAX_SUSCNT		UINT_C(1)		/* 強制待ち要求ネスト数の最大値 */
-
-/*
- *  強制待ち状態からの強制再開
- */
-#define frsm_tsk(tskid)		rsm_tsk(tskid)
 
 #ifdef __cplusplus
 }

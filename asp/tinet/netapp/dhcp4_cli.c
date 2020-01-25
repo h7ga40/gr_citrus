@@ -121,7 +121,7 @@
  *  含めて，いかなる保証も行わない．また，本ソフトウェアの利用により直
  *  接的または間接的に生じたいかなる損害に関しても，その責任を負わない．
  * 
- *  @(#) $Id: dhcp4_cli.c 1605 2018-07-29 15:33:03Z coas-nagasima $
+ *  @(#) $Id$
  */
 
 #include <string.h>
@@ -203,7 +203,7 @@ static uint8_t	request_plist[] = DHCP4_CLI_CFG_REQUEST_OLIST;
 #define DHCP4_CLI_READY_SIGNAL(ct) do { syscall(sig_sem(SEM_DHCP4_CLI_READY)); } while(0)
 #else
 #define DHCP4_CLI_READY_WAIT(ct) do { } while(0)
-#define DHCP4_CLI_READY_SIGNAL(ct) do { syscall(wup_tsk(ct->tskid)); } while(0)
+#define DHCP4_CLI_READY_SIGNAL(ct) do { ct->sig = 1; syscall(wup_tsk(ct->tskid)); } while(0)
 #endif
 
 /*
@@ -1904,8 +1904,7 @@ dhcp4c_renew_info (void)
 	else if (context.fsm == DHCP4_FSM_SLEEP) {
 
 		/* SLEEP を解除する。*/
-		context.fsm = DHCP4_FSM_WAKE;
-		context.timer = 0;
+		context.req = 1;
 		wup_tsk(context.tskid);
 		return E_OK;
 		}
@@ -2030,8 +2029,10 @@ dhcp4_cli_task (intptr_t exinf)
 		if (!(ct->flags & DHCP4C_FLAG_RENEW)) {
 
 			/* 休止する。*/
-			if (error == E_OK)
-				syslog(LOG_NOTICE, "[DHCP4C] lease released, go to sleep.");
+			if (error == E_OK) {
+				if (ct->fsm != DHCP4_FSM_SLEEP)
+					syslog(LOG_NOTICE, "[DHCP4C] lease released, go to sleep.");
+			}
 			else {
 				syslog(LOG_NOTICE, "[DHCP4C] server not available, go to sleep, error: %s.", itron_strerror(error));
 				ct->fsm = DHCP4_FSM_SLEEP;
@@ -2117,19 +2118,26 @@ dhcp4_cli_progress(T_DHCP4_CLI_CONTEXT *ct, int elapse)
 void
 dhcp4_cli_wakeup(T_DHCP4_CLI_CONTEXT *ct)
 {
-	if (ct->fsm == DHCP4_FSM_WAKE) {
-		ct->flags = 0;
-		ct->error = E_OK;
+	if (ct->req) {
+		ct->req = 0;
+		if (ct->snd_msg == NULL) {
+			ct->flags = 0;
+			ct->error = E_OK;
 
-		/* メッセージ構造体を初期化する。*/
-		if ((ct->error = init_cli_msg(ct)) != E_OK)
-			return;
+			/* メッセージ構造体を初期化する。*/
+			if ((ct->error = init_cli_msg(ct)) != E_OK)
+				return;
 
-		ct->timer = 1000 * 1000;
+			ct->timer = 1000 * 1000;
 
-		/* SELECT 状態に遷移する。*/
-		start_select(ct);
+			/* SELECT 状態に遷移する。*/
+			start_select(ct);
 		}
+	}
+
+	if (!ct->sig)
+		return;
+	ct->sig = 0;
 
 	if (ct->flags & DHCP4C_FLAG_RCV_MSG) {
 		while (ct->val_lst != NULL) {
@@ -2157,8 +2165,10 @@ dhcp4_cli_timeout(T_DHCP4_CLI_CONTEXT *ct)
 		if (!(ct->flags & DHCP4C_FLAG_RENEW)) {
 
 			/* 休止する。*/
-			if (ct->error == E_OK)
-				syslog(LOG_NOTICE, "[DHCP4C] lease released, go to sleep.");
+			if (ct->error == E_OK) {
+				if (ct->fsm != DHCP4_FSM_SLEEP)
+					syslog(LOG_NOTICE, "[DHCP4C] lease released, go to sleep.");
+			}
 			else {
 				syslog(LOG_NOTICE, "[DHCP4C] server not available, go to sleep, error: %s.", itron_strerror(ct->error));
 				ct->error = E_OK;

@@ -34,7 +34,7 @@ MRuby::Build.new do |conf|
   conf.gem "#{root}/mrbgems/mruby-bin-dump"
   #conf.gem "#{root}/mrbgems/mruby-class-ext"
   #conf.gem "#{root}/mrbgems/mruby-compar-ext"
-  #conf.gem "#{root}/mrbgems/mruby-compiler"
+  conf.gem "#{root}/mrbgems/mruby-compiler"
   #conf.gem "#{root}/mrbgems/mruby-enumerator"
   #conf.gem "#{root}/mrbgems/mruby-enum-ext"
   #conf.gem "#{root}/mrbgems/mruby-enum-lazy"
@@ -196,29 +196,25 @@ end
 MRuby::CrossBuild.new('rx630') do |conf|
    toolchain :rx630
 
-  conf.cc.defines << %w(MRB_GC_STRESS)
-  conf.cc.defines << %w(MRB_DISABLE_STDIO)
-  conf.cc.defines << %w(MRB_BYTECODE_DECODE_OPTION)
+  #conf.cc.defines << %w(MRB_GC_STRESS)
+  #conf.cc.defines << %w(MRB_DISABLE_STDIO)
+  #conf.cc.defines << %w(MRB_BYTECODE_DECODE_OPTION)
   conf.cc.defines << %w(MRB_USE_PRESET_SYMBOLS)
   conf.cc.defines << %w(MRB_USE_ETEXT_EDATA)
-  conf.cxx.defines << %w(MRB_GC_STRESS)
-  conf.cxx.defines << %w(MRB_DISABLE_STDIO)
-  conf.cxx.defines << %w(MRB_BYTECODE_DECODE_OPTION)
-  conf.cxx.defines << %w(MRB_USE_PRESET_SYMBOLS)
-  conf.cxx.defines << %w(MRB_USE_ETEXT_EDATA)
 
   #conf.build_mrbtest_lib_only
 
   #conf.gem "#{root}/mrbgems/mruby-array-ext"
-  ##conf.gem "#{root}/mrbgems/mruby-bin-debugger
+  ##conf.gem "#{root}/mrbgems/mruby-bin-debugger"
   ##conf.gem "#{root}/mrbgems/mruby-bin-mirb"
   ##conf.gem "#{root}/mrbgems/mruby-bin-mrbc"
   ##conf.gem "#{root}/mrbgems/mruby-bin-mruby"
   ##conf.gem "#{root}/mrbgems/mruby-bin-mruby-config"
   ##conf.gem "#{root}/mrbgems/mruby-bin-strip"
+  ##conf.gem "#{root}/mrbgems/mruby-bin-dump"
   #conf.gem "#{root}/mrbgems/mruby-class-ext"
   #conf.gem "#{root}/mrbgems/mruby-compar-ext"
-  #conf.gem "#{root}/mrbgems/mruby-compiler"
+  conf.gem "#{root}/mrbgems/mruby-compiler"
   #conf.gem "#{root}/mrbgems/mruby-enumerator"
   #conf.gem "#{root}/mrbgems/mruby-enum-ext"
   #conf.gem "#{root}/mrbgems/mruby-enum-lazy"
@@ -227,9 +223,11 @@ MRuby::CrossBuild.new('rx630') do |conf|
   #conf.gem "#{root}/mrbgems/mruby-exit"
   conf.gem "#{root}/mrbgems/mruby-fiber"
   #conf.gem "#{root}/mrbgems/mruby-hash-ext"
+  #conf.gem "#{root}/mrbgems/mruby-inline-struct"
   #conf.gem "#{root}/mrbgems/mruby-io"
   #conf.gem "#{root}/mrbgems/mruby-kernel-ext"
   conf.gem "#{root}/mrbgems/mruby-math"
+  #conf.gem "#{root}/mrbgems/mruby-method"
   conf.gem "#{root}/mrbgems/mruby-numeric-ext"  #10.chr
   #conf.gem "#{root}/mrbgems/mruby-object-ext"
   #conf.gem "#{root}/mrbgems/mruby-objectspace"
@@ -238,6 +236,7 @@ MRuby::CrossBuild.new('rx630') do |conf|
   #conf.gem "#{root}/mrbgems/mruby-proc-ext"
   #conf.gem "#{root}/mrbgems/mruby-random"
   #conf.gem "#{root}/mrbgems/mruby-range-ext"
+  #conf.gem "#{root}/mrbgems/mruby-socket"
   conf.gem "#{root}/mrbgems/mruby-sprintf"
   conf.gem "#{root}/mrbgems/mruby-string-ext"	#str.split(",")
   #conf.gem "#{root}/mrbgems/mruby-struct"
@@ -246,8 +245,8 @@ MRuby::CrossBuild.new('rx630') do |conf|
   #conf.gem "#{root}/mrbgems/mruby-time"
   #conf.gem "#{root}/mrbgems/mruby-toplevel-ext"
 
-  conf.gem '../mrbgems/mruby-ecnl'
-  conf.gem '../mrbgems/mruby-others'
+  conf.gem "#{root}/../mrbgems/mruby-ecnl"
+  conf.gem "#{root}/../mrbgems/mruby-others"
 
   conf.bins = []
 end

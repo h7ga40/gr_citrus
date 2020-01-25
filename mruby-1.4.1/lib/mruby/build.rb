@@ -45,8 +45,10 @@ module MRuby
     include Rake::DSL
     include LoadGems
     attr_accessor :name, :bins, :exts, :file_separator, :build_dir, :gem_clone_dir
-    attr_reader :libmruby, :gems, :toolchains
+    attr_reader :libmruby_objs, :gems, :toolchains
     attr_writer :enable_bintest, :enable_test
+
+    alias libmruby libmruby_objs
 
     COMPILERS = %w(cc cxx objc asm)
     COMMANDS = COMPILERS + %w(linker archiver yacc gperf git exts mrbc)
@@ -81,7 +83,7 @@ module MRuby
         @mrbc = Command::Mrbc.new(self)
 
         @bins = []
-        @gems, @libmruby = MRuby::Gem::List.new, []
+        @gems, @libmruby_objs = MRuby::Gem::List.new, []
         @build_mrbtest_lib_only = false
         @cxx_exception_enabled = false
         @cxx_exception_disabled = false
@@ -100,6 +102,10 @@ module MRuby
       build_mrbtest if test_enabled?
     end
 
+    def debug_enabled?
+      @enable_debug
+    end
+
     def enable_debug
       compilers.each do |c|
         c.defines += %w(MRB_DEBUG)
@@ -107,7 +113,7 @@ module MRuby
           c.flags += %w(-g3 -O0)
         end
         if toolchains.any? { |toolchain| toolchain == "visualcpp" }
-          c.flags.collect{ |a| a.collect{ |f|
+          c.flags = c.flags.collect{ |a| a.collect{ |f|
             case f
             when "/DNDEBUG"
               "/D_DEBUG"
@@ -121,11 +127,11 @@ module MRuby
                f
             end
           }.flatten }.flatten
-          c.flags += %w(/JMC /RTC1 /GL /Gy)
+          c.flags += %w(/JMC /RTC1 /Gy)
         end
       end
       if toolchains.any? { |toolchain| toolchain == "visualcpp" }
-        linker.flags.collect{ |a| a.collect{ |f|
+        linker.flags = linker.flags.collect{ |a| a.collect{ |f|
           case f
           when "/OPT:REF"
             ""
@@ -133,13 +139,16 @@ module MRuby
             ""
           when "/INCREMENTAL:NO"
             "/INCREMENTAL"
+          when "/LTCG:incremental"
+            ""
           else
             f
           end
         }.flatten }.flatten
-        linker.flags += %w(/LTCG:incremental)
       end
       @mrbc.compile_options += ' -g'
+
+      @enable_debug = true
     end
 
     def disable_cxx_exception
@@ -186,8 +195,6 @@ module MRuby
     end
 
     def compile_as_cxx src, cxx_src, obj = nil, includes = []
-      src = File.absolute_path src
-      cxx_src = File.absolute_path cxx_src
       obj = objfile(cxx_src) if obj.nil?
 
       file cxx_src => [src, __FILE__] do |t|
@@ -199,7 +206,7 @@ module MRuby
 #ifndef MRB_ENABLE_CXX_ABI
 extern "C" {
 #endif
-#include "#{src}"
+#include "#{File.absolute_path src}"
 #ifndef MRB_ENABLE_CXX_ABI
 }
 #endif
@@ -325,18 +332,21 @@ EOS
       @build_mrbtest_lib_only
     end
 
+    def verbose_flag
+      $verbose ? ' -v' : ''
+    end
+
     def run_test
       puts ">>> Test #{name} <<<"
       mrbtest = exefile("#{build_dir}/bin/mrbtest")
-      sh "#{filename mrbtest.relative_path}#{$verbose ? ' -v' : ''}"
+      sh "#{filename mrbtest.relative_path}#{verbose_flag}"
       puts
-      run_bintest if bintest_enabled?
     end
 
     def run_bintest
       targets = @gems.select { |v| File.directory? "#{v.dir}/bintest" }.map { |v| filename v.dir }
       targets << filename(".") if File.directory? "./bintest"
-      sh "ruby test/bintest.rb #{targets.join ' '}"
+      sh "ruby test/bintest.rb#{verbose_flag} #{targets.join ' '}"
     end
 
     def print_build_summary
@@ -355,6 +365,18 @@ EOS
       end
       puts "================================================"
       puts
+    end
+
+    def libmruby_static
+      libfile("#{build_dir}/lib/libmruby")
+    end
+
+    def libmruby_core_static
+      libfile("#{build_dir}/lib/libmruby_core")
+    end
+
+    def libraries
+      [libmruby_static]
     end
   end # Build
 

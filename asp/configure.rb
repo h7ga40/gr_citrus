@@ -38,7 +38,7 @@
 #  アの利用により直接的または間接的に生じたいかなる損害に関しても，そ
 #  の責任を負わない．
 # 
-#  $Id: configure.rb 1011 2016-07-11 02:20:01Z coas-nagasima $
+#  $Id$
 # 
 
 require "optparse"

@@ -28,7 +28,7 @@
  *  含めて，いかなる保証も行わない．また，本ソフトウェアの利用により直
  *  接的または間接的に生じたいかなる損害に関しても，その責任を負わない．
  * 
- *  @(#) $Id: in_itron.h 1605 2018-07-29 15:33:03Z coas-nagasima $
+ *  @(#) $Id$
  */
  
 #ifndef _IN_ITRON_H_
@@ -65,7 +65,7 @@ extern "C" {
 #define TFN_TCP_GET_OPT		(-0x213)
 #define TFN_TCP_ALL		(0)
 
-#define TEV_TCP_RCV_OOB		(-0x201)
+#define TEV_TCP_RCV_OOB		(0x201)
 
 /* UDP 関係 */
 
@@ -78,7 +78,7 @@ extern "C" {
 #define TFN_UDP_GET_OPT		(-0x227)
 #define TFN_UDP_ALL		(0)
 
-#define TEV_UDP_RCV_DAT		(-0x221)
+#define TEV_UDP_RCV_DAT		(0x221)
 
 /* 一般 */
 
@@ -142,6 +142,9 @@ ER	udp_set_opt (ID cepid, int_t optname, void *optval, int_t optlen);
 ER	udp_get_opt (ID cepid, int_t optname, void *optval, int_t optlen);
 ER	udp_cre_cep (ID cepid, T_UDP_CCEP *pk_ccep);
 
+ER	udp6_del_cep(ID cepid);
+ER	udp6_set_opt(ID cepid, int_t optname, void *optval, int_t optlen);
+ER	udp6_get_opt(ID cepid, int_t optname, void *optval, int_t optlen);
 ER	udp6_cre_cep (ID cepid, T_UDP6_CCEP *pk_ccep);
 
 #ifdef __cplusplus

@@ -28,7 +28,7 @@
  *  含めて，いかなる保証も行わない．また，本ソフトウェアの利用により直
  *  接的または間接的に生じたいかなる損害に関しても，その責任を負わない．
  * 
- *  @(#) $Id: tcp_usrreq.c 1605 2018-07-29 15:33:03Z coas-nagasima $
+ *  @(#) $Id$
  */
 
 /*
@@ -896,7 +896,7 @@ tcp_rel_buf (ID cepid, int_t len)
 	TCP_DROP_RWBUF(cep, (uint_t)len);
 
 	/* tcp_rcv_buf の割当て長をリセットする。*/
-	cep->rcv_buf_len = 0;
+	cep->rcv_buf_len -= len;
 
 	/* 通信端点のロックを解除する。*/
 	syscall(sig_sem(cep->semid_lock));

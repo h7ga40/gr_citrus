@@ -28,7 +28,7 @@
  *  含めて，いかなる保証も行わない．また，本ソフトウェアの利用により直
  *  接的または間接的に生じたいかなる損害に関しても，その責任を負わない．
  * 
- *  @(#) $Id: in6_subr.c 1605 2018-07-29 15:33:03Z coas-nagasima $
+ *  @(#) $Id$
  */
 
 /*
@@ -368,8 +368,11 @@ in6_get_datagram (T_NET_BUF **nbuf, uint_t len, uint_t maxlen,
 		(*nbuf)->len = IF_IP6_HDR_SIZE + len;
 
 	/* IPv6 ヘッダを設定する。*/
-	if ((error = in6_set_header(*nbuf, len, dstaddr, srcaddr, next, hlim)) != E_OK)
+	if ((error = in6_set_header(*nbuf, len, dstaddr, srcaddr, next, hlim)) != E_OK) {
+		syscall(rel_net_buf(*nbuf));
+		*nbuf = NULL;
 		return error;
+		}
 
 	/* 4 オクテット境界までパディングで埋める。*/
 	if (align > len)

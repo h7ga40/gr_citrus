@@ -28,7 +28,7 @@
  *  含めて，いかなる保証も行わない．また，本ソフトウェアの利用により直
  *  接的または間接的に生じたいかなる損害に関しても，その責任を負わない．
  * 
- *  @(#) $Id: nd6_nbr.c 1605 2018-07-29 15:33:03Z coas-nagasima $
+ *  @(#) $Id$
  */
 
 /*	$FreeBSD: src/sys/netinet6/nd6_nbr.c,v 1.13 2002/10/16 01:54:45 sam Exp $	*/
@@ -756,10 +756,10 @@ nd6_na_output (T_IFNET *ifp, const T_IN6_ADDR *daddr,
 		}
 	memcpy(&ip6h->src, &ifa->addr, sizeof(T_IN6_ADDR));
 
- 	/* 近隣通知ヘッダを設定する。*/
- 	nah = GET_NEIGHBOR_ADVERT_HDR(output, IF_IP6_NEIGHBOR_ADVERT_HDR_OFFSET);
- 	nah->hdr.type        = ND_NEIGHBOR_ADVERT;
- 	nah->hdr.code        = 0;
+	/* 近隣通知ヘッダを設定する。*/
+	nah = GET_NEIGHBOR_ADVERT_HDR(output, IF_IP6_NEIGHBOR_ADVERT_HDR_OFFSET);
+	nah->hdr.type        = ND_NEIGHBOR_ADVERT;
+	nah->hdr.code        = 0;
 	memcpy(&nah->target, taddr, sizeof(T_IN6_ADDR));
 
 	/* tlladdr が真ならネットワークインタフェースのアドレスを追加する。*/

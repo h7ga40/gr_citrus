@@ -29,7 +29,7 @@
 #   含めて，いかなる保証も行わない．また，本ソフトウェアの利用により直
 #   接的または間接的に生じたいかなる損害に関しても，その責任を負わない．
 #  
-#   @(#) $Id: Makefile.tinet 1.7 2017/6/1 8:50:42 abe $
+#   @(#) $Id$
 #
 
 #
@@ -87,11 +87,12 @@ endif
 
 #  汎用通信機能
 
-TINET_DIR = $(TINET_ROOT)/net:$(TINET_ROOT)/netinet:$(TINET_ROOT)/netinet6
+TINET_DIRS = $(TINET_ROOT)/net:$(TINET_ROOT)/netinet:$(TINET_ROOT)/netinet6
 TINET_COBJS := $(TINET_COBJS) \
 	       net_buf.o net_count.o net_subr.o net_timer.o if.o \
                in_subr.o route_cfg.o
 TINET_CFG_COBJS := $(TINET_CFG_COBJS) tinet_cfg.o
+TINET_CFG2_OUT_SRCS := $(TINET_CFG2_OUT_SRCS) tinet_cfg.h tinet_cfg.c
 
 #  IPv6
 
@@ -320,13 +321,14 @@ TINET_CFLAGS := $(TINET_CFLAGS) -fno-strict-aliasing
 
 ifeq ($(TARGET_KERNEL),ASP)
 
-	SYSSVC_DIR := $(SYSSVC_DIR):$(TINET_DIR)
+	SYSSVC_DIRS := $(SYSSVC_DIRS):$(TINET_DIRS)
 	SYSSVC_ASMOBJS := $(SYSSVC_ASMOBJS)
 	SYSSVC_COBJS := $(SYSSVC_COBJS) $(TINET_COBJS)
 	SYSSVC_CFLAGS := $(SYSSVC_CFLAGS) $(TINET_CFLAGS)
 	SYSSVC_LIBS := $(SYSSVC_LIBS) $(LIBTINET) -lc
 
 	CFG_COBJS := $(CFG_COBJS) $(TINET_CFG_COBJS)
+	CFG2_OUT_SRCS := $(CFG2_OUT_SRCS) $(TINET_CFG2_OUT_SRCS)
 
 	CLEAN_FILES := $(CLEAN_FILES) $(TINET_CFG_OUT) $(MAKE_TINET_LIB)
 
@@ -336,7 +338,7 @@ ifeq ($(TARGET_KERNEL),JSP)
 
 	MTASK_CFG := $(MTASK_CFG) $(TINET_CFG)
 	MTASK_KERNEL_CFG := $(MTASK_KERNEL_CFG) $(TINET_KERNEL_CFG)
-	MTASK_DIR := $(MTASK_DIRS):$(TINET_DIR)
+	MTASK_DIR := $(MTASK_DIRS):$(TINET_DIRS)
 	MTASK_LCSRCS := $(MTASK_LCSRCS) $(TINET_LCSRCS)
 	MTASK_ASMOBJS := $(MTASK_ASMOBJS)
 	ifdef USE_CXX

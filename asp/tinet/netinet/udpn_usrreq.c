@@ -28,7 +28,7 @@
  *  含めて，いかなる保証も行わない．また，本ソフトウェアの利用により直
  *  接的または間接的に生じたいかなる損害に関しても，その責任を負わない．
  * 
- *  @(#) $Id: udpn_usrreq.c 1605 2018-07-29 15:33:03Z coas-nagasima $
+ *  @(#) $Id$
  */
 
 /*
@@ -308,8 +308,7 @@ UDP_CRE_CEP (ID cepid, T_UDPN_CCEP *pk_ccep)
 		else 
 			error = UDP_ALLOC_PORT(cep, pk_ccep->myaddr.portno);
 		
-                if (error == E_OK) {
-
+		if (error == E_OK) {
 			/* UDP 通信端点生成情報をコピーする。*/
 			cep->cepatr        = pk_ccep->cepatr;			/* 通信端点属性		*/
 			cep->myaddr.ipaddr = pk_ccep->myaddr.ipaddr;		/* 自分のアドレス	*/
@@ -410,8 +409,7 @@ UDP_SET_OPTION (T_UDP_CEP *cep, int_t optname, void *optval, int_t optlen)
 	if (!VALID_UDP_CEP(cep))
 		return E_NOEXS;
 #if defined(SUPPORT_INET6)
-#endif
-#if defined(SUPPORT_INET4) && defined(SUPPORT_IGMP) && TNUM_UDP4_CEPID > 0
+#elif defined(SUPPORT_INET4) && defined(SUPPORT_IGMP) && TNUM_UDP4_CEPID > 0
 	switch (optname) {
 	case IP_MULTICAST_LOOP:
 		if (optlen >= sizeof(uint8_t)) {
@@ -487,8 +485,7 @@ UDP_GET_OPTION (T_UDP_CEP *cep, int_t optname, void *optval, int_t optlen)
 	if (!VALID_UDP_CEP(cep))
 		return E_NOEXS;
 #if defined(SUPPORT_INET6)
-#endif
-#if defined(SUPPORT_INET4) && defined(SUPPORT_IGMP) && TNUM_UDP4_CEPID > 0
+#elif defined(SUPPORT_INET4) && defined(SUPPORT_IGMP) && TNUM_UDP4_CEPID > 0
 	switch (optname) {
 	case IP_MULTICAST_LOOP:
 		if (optlen >= sizeof(uint8_t)) {

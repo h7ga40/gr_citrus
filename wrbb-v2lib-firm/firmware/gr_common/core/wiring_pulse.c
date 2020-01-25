@@ -19,7 +19,7 @@
   Free Software Foundation, Inc., 59 Temple Place, Suite 330,
   Boston, MA  02111-1307  USA
 
-  $Id: wiring_pulse.c 1008 2016-07-11 01:31:16Z coas-nagasima $
+  $Id$
 */
 
 #include "wiring_private.h"

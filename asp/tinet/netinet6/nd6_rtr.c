@@ -28,7 +28,7 @@
  *  含めて，いかなる保証も行わない．また，本ソフトウェアの利用により直
  *  接的または間接的に生じたいかなる損害に関しても，その責任を負わない．
  * 
- *  @(#) $Id: nd6_rtr.c 1605 2018-07-29 15:33:03Z coas-nagasima $
+ *  @(#) $Id$
  */
 
 /*	$FreeBSD: src/sys/netinet6/nd6_rtr.c,v 1.11 2002/04/19 04:46:23 suz Exp $	*/
@@ -998,11 +998,11 @@ nd6_rs_output (void)
 	                     IPV6_MAXHLIM, NBA_SEARCH_ASCENT, TMO_ND6_RS_OUTPUT) != E_OK)
 		return;
 
- 	/* ルータ要請ヘッダを設定する。*/
- 	rsh = GET_ROUTER_SOLICIT_HDR(output, IF_IP6_ROUTER_SOLICIT_HDR_OFFSET);
- 	rsh->hdr.type       = ND_ROUTER_SOLICIT;
- 	rsh->hdr.code       = 0;
- 	rsh->nd_rs_reserved = 0;
+	/* ルータ要請ヘッダを設定する。*/
+	rsh = GET_ROUTER_SOLICIT_HDR(output, IF_IP6_ROUTER_SOLICIT_HDR_OFFSET);
+	rsh->hdr.type       = ND_ROUTER_SOLICIT;
+	rsh->hdr.code       = 0;
+	rsh->nd_rs_reserved = 0;
 
 	/* チェックサムを計算する。*/
 	rsh->hdr.sum = 0;

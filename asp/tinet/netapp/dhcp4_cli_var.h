@@ -121,7 +121,7 @@
  *  含めて，いかなる保証も行わない．また，本ソフトウェアの利用により直
  *  接的または間接的に生じたいかなる損害に関しても，その責任を負わない．
  * 
- *  @(#) $Id: dhcp4_cli_var.h 1605 2018-07-29 15:33:03Z coas-nagasima $
+ *  @(#) $Id$
  */
 
 #ifndef DHCP4_CLI_VAR_H
@@ -170,6 +170,8 @@ typedef struct dhcp4_cli_context {
 	uint16_t	max_prefer;	/* 受信メッセージの最大推奨度	*/
 	uint16_t	secs;		/* seconds since boot began	*/
 	uint8_t		fsm;		/* 現在の状態			*/
+	uint8_t		req;
+	uint8_t		sig;
 	int timer;
 	} T_DHCP4_CLI_CONTEXT;
 
@@ -185,7 +187,6 @@ typedef struct dhcp4_cli_context {
 #define DHCP4_FSM_REBOOT	8
 #define DHCP4_FSM_REL_INFO	11	/* DHCPv4 の RFC2131 には無い。*/
 #define DHCP4_FSM_SLEEP		12	/* DHCPv4 の RFC2131 には無い。*/
-#define DHCP4_FSM_WAKE		13	/* DHCPv4 の RFC2131 には無い。*/
 
 /* flag の定義 */
 

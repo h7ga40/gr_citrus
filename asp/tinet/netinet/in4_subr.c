@@ -28,7 +28,7 @@
  *  含めて，いかなる保証も行わない．また，本ソフトウェアの利用により直
  *  接的または間接的に生じたいかなる損害に関しても，その責任を負わない．
  * 
- *  @(#) $Id: in4_subr.c 1605 2018-07-29 15:33:03Z coas-nagasima $
+ *  @(#) $Id$
  */
 
 /*
@@ -286,8 +286,11 @@ in4_get_datagram (T_NET_BUF **nbuf, uint_t len, uint_t maxlen,
 		(*nbuf)->len = (uint16_t)(IF_IP4_HDR_SIZE + len);
 
 	/* IP ヘッダを設定する。*/
-	if ((error = in4_set_header(*nbuf, len, dstaddr, srcaddr, proto, ttl)) != E_OK)
+	if ((error = in4_set_header(*nbuf, len, dstaddr, srcaddr, proto, ttl)) != E_OK) {
+		syscall(rel_net_buf(*nbuf));
+		*nbuf = NULL;
 		return error;
+		}
 
 	/* 4 オクテット境界までパディングで埋める。*/
 	if (align > len)

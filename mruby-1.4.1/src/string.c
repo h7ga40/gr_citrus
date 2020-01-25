@@ -2797,7 +2797,7 @@ mrb_init_string(mrb_state *mrb)
  * software for any purpose.  It is provided "as is" without
  * express or implied warranty.
  *
- * RCS: @(#) $Id: string.c 1626 2018-08-18 14:37:40Z coas-nagasima $
+ * RCS: @(#) $Id$
  */
 
 #include <ctype.h>

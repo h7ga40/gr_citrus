@@ -121,107 +121,143 @@
  *  含めて，いかなる保証も行わない．また，本ソフトウェアの利用により直
  *  接的または間接的に生じたいかなる損害に関しても，その責任を負わない．
  * 
- *  @(#) $Id: dhcp4_cli_var.h 1614 2018-08-01 23:13:43Z coas-nagasima $
+ *  @(#) $Id$
  */
 
-#ifndef DHCP4_CLI_VAR_H
-#define DHCP4_CLI_VAR_H
+#ifndef DHCP4_CLI_H
+#define DHCP4_CLI_H
+
+#include "dhcp4.h"
+
+/* 
+ *  DHCP クライアントのスタックサイズ
+ */
+
+#define DHCP4_CLI_STACK_SIZE		1024		/* DHCP クライアントタスクのスタックサイズ	*/
+
+/* 
+ *  DHCP クライアントの優先度
+ */
+
+#define DHCP4_CLI_MAIN_PRIORITY		5		/* DHCP クライアントタスクの優先度		*/
+
+/* 推奨度の定義 */
+#define DHCP4_CLI_CFG_PREFER_ADDR	100		/* アドレスの推奨度	*/
+
+/* DHCP クライアントメッセージの受信リストサイズ（2以上指定すること） */
+#define NUM_DHCP4_MSG_LIST		3
 
 /*
- *  DHCP クライアントコンテキスト構造体
+ *  DHCP クライアントメッセージ構造体数【変更禁止】
+ *  +1 は送信用
+ */
+#define NUM_MPF_DHCP4_CLI_MSG		(NUM_DHCP4_MSG_LIST+1)
+
+/* 
+ *  コンパイル時コンフィギュレーション
  */
 
-/* TIMER の定義 */
+/* DHCP 必須オプションリスト */
 
-#define DHCP4C_TIMER_SND_DISC	0
-#define DHCP4C_TIMER_SND_REQ	1
-#define DHCP4C_TIMER_SND_REL	2
-#define DHCP4C_TIMER_RCV_OFFER	3
-#define DHCP4C_TIMER_RCV_ACK	4
-#define DHCP4C_TIMER_RENEW	5
-#define DHCP4C_TIMER_REBIND	6
-#define DHCP4C_TIMER_EXPIRE	7
-#define NUM_DHCP4C_TIMERS	8
+#ifndef DHCP4_CLI_CFG_REQUIRED_OLIST
 
-#define DHCP4C_TIMER_HZ		1
+#define DHCP4_CLI_CFG_REQUIRED_OLIST {	\
+	DHCP4_OPT_SUBNET_MASK,		\
+	DHCP4_OPT_ROUTER,		\
+}
 
-typedef struct dhcp4_cli_context {
-	T_DHCP4_CLI_MSG	*rcv_lst;	/* 受信メッセージ構造体リスト		*/
-	T_DHCP4_CLI_MSG	*val_lst;	/* 検証メッセージ構造体リスト		*/
-	T_DHCP4_CLI_MSG	*prf_lst;	/* 推奨メッセージ構造体リスト		*/
-	T_DHCP4_CLI_MSG	*snd_msg;	/* 送信メッセージ構造体			*/
-	T_DHCP4_CLI_MSG	*off_msg;	/* 通知されたリース・メッセージ構造体	*/
-	T_DHCP4_CLI_MSG	*act_msg;	/* 有効なリース・メッセージ構造体	*/
-	T_IF_SOFTC	*sc;		/* IF のソフトウェア情報		*/
-	T_IPV4EP	dst;		/* 送信先のIPアドレス/ポート番号	*/
-	SYSTIM		snd_start;	/* 送信を開始した時間			*/
-	SYSTIM		bind_start;	/* BINDを開始した時間			*/
-	SYSTIM		expire;		/* リースの有効時間（ms）		*/
-	SYSTIM		renew;		/* RENEW（T1）までの時間（ms）	*/
-	SYSTIM		rebind;		/* REBIND（T2）までの時間（ms）	*/
-	SYSTIM		timers[NUM_DHCP4C_TIMERS];	
-					/* タイマー配列			*/
-	RELTIM		interval;	/* 送信間隔			*/
-	ER_UINT		error;		/* エラー・データ長		*/
-	ID			tskid;		/* タスクID */
-	ID			cepid;		/* CEP ID			*/
-	uint32_t	xid;		/* トランザクション ID		*/
-	uint16_t	flags;		/* 各種フラグ			*/
-	uint16_t	max_prefer;	/* 受信メッセージの最大推奨度	*/
-	uint16_t	secs;		/* seconds since boot began	*/
-	uint8_t		fsm;		/* 現在の状態			*/
-	int timer;
-	} T_DHCP4_CLI_CONTEXT;
+#endif	/* of #ifndef DHCP4_CLI_CFG_REQUIRED_OLIST */
 
-/* fsm（状態遷移）の定義 */
+/* DHCP 要求オプションリスト */
 
-#define DHCP4_FSM_INIT		1
-#define DHCP4_FSM_SELECT	2
-#define DHCP4_FSM_REQUEST	3
-#define DHCP4_FSM_BOUND		4
-#define DHCP4_FSM_RENEW		5
-#define DHCP4_FSM_REBIND	6
-#define DHCP4_FSM_INIT_REBOOT	7
-#define DHCP4_FSM_REBOOT	8
-#define DHCP4_FSM_REL_INFO	11	/* DHCPv4 の RFC2131 には無い。*/
-#define DHCP4_FSM_SLEEP		12	/* DHCPv4 の RFC2131 には無い。*/
-#define DHCP4_FSM_WAKE		13	/* DHCPv4 の RFC2131 には無い。*/
+#ifndef DHCP4_CLI_CFG_REQUEST_OLIST
 
-/* flag の定義 */
+#if defined(USE_RESOLVER)
 
-#define DHCP4C_FLAG_TMOUT_SND_DISC	(DHCP4C_FLAG_TMOUT_TIMER|DHCP4C_TIMER_SND_DISC)
-#define DHCP4C_FLAG_TMOUT_SND_REQ	(DHCP4C_FLAG_TMOUT_TIMER|DHCP4C_TIMER_SND_REQ)
-#define DHCP4C_FLAG_TMOUT_SND_REL	(DHCP4C_FLAG_TMOUT_TIMER|DHCP4C_TIMER_SND_REL)
-#define DHCP4C_FLAG_TMOUT_RCV_OFFER	(DHCP4C_FLAG_TMOUT_TIMER|DHCP4C_TIMER_RCV_OFFER)
-#define DHCP4C_FLAG_TMOUT_RCV_ACK	(DHCP4C_FLAG_TMOUT_TIMER|DHCP4C_TIMER_RCV_ACK)
-#define DHCP4C_FLAG_TMOUT_EXPIRE	(DHCP4C_FLAG_TMOUT_TIMER|DHCP4C_TIMER_EXPIRE)
-#define DHCP4C_FLAG_TMOUT_RENEW		(DHCP4C_FLAG_TMOUT_TIMER|DHCP4C_TIMER_RENEW)
-#define DHCP4C_FLAG_TMOUT_REBIND	(DHCP4C_FLAG_TMOUT_TIMER|DHCP4C_TIMER_REBIND)
-#define DHCP4C_FLAG_TMOUT_TIMER		UINT_C(0x0010)
-#define DHCP4C_FLAG_TMOUT_TIMER_MASK	UINT_C(0x000f)
-#define DHCP4C_FLAG_TMOUT_MASK		UINT_C(0x001f)
+#define DHCP4_CLI_CFG_REQUEST_OLIST {	\
+	DHCP4_OPT_DNS_SERVER,		\
+	DHCP4_OPT_DOMAIN_NAME,		\
+}
 
-#define DHCP4C_FLAG_RCV_MSG		UINT_C(0x0200)
-#define DHCP4C_FLAG_RENEW		UINT_C(0x0400)
+#endif	/* of #if defined(USE_RESOLVER) */
+
+#endif	/* of #ifndef DHCP4_CLI_CFG_REQUEST_OLIST */
 
 /*
- *  関数シミュレーションマクロ
+ *  タイムアウト値
  */
 
-/* タイムアウトの計算 */
+/* 受信タイムアウト	*/
+#define TMO_DHCP4C_OFFER	(ULONG_C(120)*SYSTIM_HZ)	/* OFFER メッセージ	*/
+#define TMO_DHCP4C_ACK		(ULONG_C(60)*SYSTIM_HZ)	/* ACK/NAK メッセージ	*/
 
-#define DHCP4C_TMOC(t)		(((t)-1000)+dhcp_rand()%2000)
+/* リース時間の既定値	*/
+#define TMO_DHCP4C_DEF_LEASE	(ULONG_C(12*60*60)*SYSTIM_HZ)	/* 標準時間	*/
+#define TMO_DHCP4C_MIN_LEASE	(ULONG_C(60)*SYSTIM_HZ)	/* 最小時間	*/
 
-/* 時間比較 */
+/* メッセージの送信周期	*/
+#define TMO_DHCP4C_INIT_INTVL	(ULONG_C(3)*SYSTIM_HZ)		/* 初期値	*/
+#define TMO_DHCP4C_MAX_BACKOFF	(ULONG_C(15)*SYSTIM_HZ)	/* 制限値	*/
 
-#define TIMEC_GT(a,b)		((int32_t)((a)-(b))>0)
-#define TIMEC_GE(a,b)		((int32_t)((a)-(b))>=0)
+/* DHCP サーバへの UDP 送信タイムアウト	*/
+#define TMO_DHCP4C_UDP_SND	ULONG_C(1000000)		/* [us] */
 
-/* 時間定数の変換 */
+/* メッセージ構造体獲得タイムアウト	*/
+#define TMO_DHCP4C_MPF_GET	ULONG_C(1000000)		/* [us] */
 
-#define SYSTIM2TIMER(t)		(((t)<SYSTIM_HZ/DHCP4C_TIMER_HZ)?(DHCP4C_TIMER_HZ):((t)*DHCP4C_TIMER_HZ)/SYSTIM_HZ)
-#define SYSTIM2SEC(t)		(((t)<SYSTIM_HZ)?1:((t)/SYSTIM_HZ))
-#define SEC2TIMER(t)		((t)*DHCP4C_TIMER_HZ)
-#define SEC2SYSTIM(t)		((t)*SYSTIM_HZ)
+/* ARP 要求を送信してからの待ち時間	*/
+#define TMO_DHCP4C_ARP_WAIT	ULONG_C(1000000)		/* [us] */
 
-#endif	/* of #ifndef DHCP4_CLI_VAR_H */
+/* RELEASE メッセージを送信してからの待ち時間	*/
+#define TMO_DHCP4C_SND_REL_WAIT	ULONG_C(1000000)	/* [us] */
+
+#ifndef _MACRO_ONLY
+
+#ifdef T_IPV4EP_DEFINED
+
+/*
+ *  DHCP クライアントメッセージ構造体
+ */
+
+typedef struct dhcp4_cli_msg {
+	/* 4バイト境界にアラインする。*/
+	T_DHCP4_MSG		msg;		/* DHCP メッセージ構造体	*/
+	struct dhcp4_cli_msg	*next;		/* リストの次のメッセージ構造体	*/
+	T_IPV4EP		srv;		/* サーバのIPv4アドレス/ポート番号 */
+	uint16_t		len;		/* msg の有効長			*/
+	uint16_t		prefer;		/* msg の推奨度			*/
+	uint8_t			type;		/* メッセージタイプ		*/
+	} T_DHCP4_CLI_MSG;
+
+#endif	/*of #ifdef T_IPV4EP_DEFINED */
+
+/*
+ *  コールバック関数
+ */
+#ifdef __cplusplus
+extern "C"
+#endif
+ER callback_nblk_dhcp4_cli (ID cepid, FN fncd, void *p_parblk);
+
+/*
+ *  タスク
+ */
+
+extern void	dhcp4_cli_task(intptr_t exinf);
+
+/*
+ *  関数
+ */
+
+#ifdef T_IN4_ADDR_DEFINED
+
+extern ER dhcp4c_rel_info (void);
+extern ER dhcp4c_renew_info (void);
+extern ER dhcp4c_get_info (T_IN4_ADDR *addr, uint32_t *expire, uint32_t *renew,
+                                             uint32_t *rebind, SYSTIM *bind_start);
+
+#endif	/* of #ifdef T_IN4_ADDR_DEFINED */
+
+#endif	/* of #ifndef _MACRO_ONLY */
+
+#endif	/* of #ifndef DHCP4_CLI_H */

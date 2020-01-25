@@ -28,7 +28,7 @@
  *  含めて，いかなる保証も行わない．また，本ソフトウェアの利用により直
  *  接的または間接的に生じたいかなる損害に関しても，その責任を負わない．
  * 
- *  @(#) $Id: udpn_input.c 1605 2018-07-29 15:33:03Z coas-nagasima $
+ *  @(#) $Id$
  */
 
 /*
@@ -74,10 +74,10 @@ void
 UDP_INPUT_SELECT (T_UDP_CEP *cep, T_NET_BUF *input, uint_t off)
 {
 	T_UDP_HDR	*udph;
-	uint_t		len;
+	T_UDP_RCV_DAT_PARA para;
 
 	udph = (T_UDP_HDR *)(input->buf + off);
-	len  = (uint_t)(ntohs(udph->ulen) - UDP_HDR_SIZE);
+	para.len  = (uint_t)(ntohs(udph->ulen) - UDP_HDR_SIZE);
 
 	if (cep->rcv_tskid != TA_NULL) {	/* 非ノンブロッキングコールでペンディング中 */
 		if (psnd_dtq(cep->rcvqid, (intptr_t)input) != E_OK) {
@@ -97,15 +97,15 @@ UDP_INPUT_SELECT (T_UDP_CEP *cep, T_NET_BUF *input, uint_t off)
 
 		/* データをバッファに移す。*/
 		memcpy(cep->rcv_data, GET_UDP_SDU(input, off),
-		       (size_t)(len < cep->rcv_len ? len : cep->rcv_len));
+		       (size_t)(para.len < cep->rcv_len ? para.len : cep->rcv_len));
 		syscall(rel_net_buf(input));
 
 		if (IS_PTR_DEFINED(cep->callback))
 
 #ifdef TCP_CFG_NON_BLOCKING_COMPAT14
-			(*cep->callback)(GET_UDP_CEPID(cep), TFN_UDP_RCV_DAT, (void*)(uint32_t)len);
+			(*cep->callback)(GET_UDP_CEPID(cep), TFN_UDP_RCV_DAT, (void*)(uint32_t)para.len);
 #else
-			(*cep->callback)(GET_UDP_CEPID(cep), TFN_UDP_RCV_DAT, (void*)&len);
+			(*cep->callback)(GET_UDP_CEPID(cep), TFN_UDP_RCV_DAT, (void*)&para.len);
 #endif
 		else
 			syslog(LOG_WARNING, "[UDP] no call back, CEP: %d.", GET_UDP_CEPID(cep));
@@ -120,16 +120,28 @@ UDP_INPUT_SELECT (T_UDP_CEP *cep, T_NET_BUF *input, uint_t off)
 		cep->cb_netbuf = input;
 
 #ifdef TCP_CFG_NON_BLOCKING_COMPAT14
-		(*cep->callback)(GET_UDP_CEPID(cep), TEV_UDP_RCV_DAT, (void*)(uint32_t)len);
+		(*cep->callback)(GET_UDP_CEPID(cep), TEV_UDP_RCV_DAT, (void*)(uint32_t)para.len);
 #else
-		(*cep->callback)(GET_UDP_CEPID(cep), TEV_UDP_RCV_DAT, (void*)&len);
+		para.input = input;
+		para.off = off;
+#if API_PROTO == API_PROTO_IPV4
+		para.rep4.portno = ntohs(udph->sport);
+		IN_COPY_TO_HOST(&para.rep4.ipaddr, input);
+#else
+		para.rep6.portno = ntohs(udph->sport);
+		IN_COPY_TO_HOST(&para.rep6.ipaddr, input);
+#endif
+		(*cep->callback)(GET_UDP_CEPID(cep), TEV_UDP_RCV_DAT, (void*)&para.len);
 #endif
 		/*
 		 *  ネットワークバッファがそのままであれば、コールバック関数内で
 		 *  データを読み出さなかったことになるので、捨てる。
 		 */
-		if (cep->cb_netbuf != NULL)
+		if (cep->cb_netbuf != NULL) {
+			if ((input->flags & NB_FLG_NOREL_IFOUT) == 0)
 			syscall(rel_net_buf(cep->cb_netbuf));
+			cep->cb_netbuf = NULL;
+			}
 		}
 	else {
 		NET_COUNT_UDP(net_count_udp.in_err_packets, 1);

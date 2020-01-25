@@ -27,7 +27,7 @@ LDFLAGS := $(LDFLAGS) -flto
 #
 #  カーネルに関する定義
 #
-KERNEL_DIR := $(KERNEL_DIR) $(PRCDIR)
+KERNEL_DIRS := $(KERNEL_DIRS) $(PRCDIR)
 KERNEL_ASMOBJS := $(KERNEL_ASMOBJS) prc_support.o prc_test.o
 KERNEL_COBJS := $(KERNEL_COBJS) prc_config.o rx630_config.o
 
@@ -35,8 +35,9 @@ KERNEL_COBJS := $(KERNEL_COBJS) prc_config.o rx630_config.o
 #  コンフィギュレータ関係の変数の定義
 #
 CFG_TABS := $(CFG_TABS) --symval-table $(PRCDIR)/prc_sym.def
+CFG_ASMOBJS := $(CFG_ASMOBJS) kernel_cfg_asm.o
 
 #
 #  オフセットファイル生成のための定義
 #
-OFFSET_TRB = $(PRCDIR)/prc_offset.trb
+TARGET_OFFSET_TRB = $(PRCDIR)/prc_offset.trb

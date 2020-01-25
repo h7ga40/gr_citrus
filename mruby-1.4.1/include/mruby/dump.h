@@ -69,9 +69,9 @@ MRB_API mrb_irep *mrb_read_irep(mrb_state*, const uint8_t*);
 
 #ifdef __CA850__
 #pragma pack(1)
-#elif __RX
+#elif defined(__RX)
 #pragma pack
-#elif _MSC_VER
+#elif defined(_MSC_VER)
 #pragma pack(push, 1)
 #endif
 #ifndef __GNUC__
@@ -123,9 +123,9 @@ struct rite_binary_footer {
 
 #ifdef __CA850__
 #pragma pack(8)
-#elif __RX
+#elif defined(__RX)
 #pragma unpack
-#elif _MSC_VER
+#elif defined(_MSC_VER)
 #pragma pack(pop)
 #endif
 
