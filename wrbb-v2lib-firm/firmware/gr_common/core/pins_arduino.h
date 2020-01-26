@@ -19,7 +19,7 @@
   Free Software Foundation, Inc., 59 Temple Place, Suite 330,
   Boston, MA  02111-1307  USA
 
-  $Id$
+  $Id: wiring.h 249 2007-02-03 16:52:51Z mellis $
 */
 /*
   Modified 13 July 2014 by Nozomu Fujita
@@ -165,7 +165,7 @@ static const uint8_t A7 = 21;
 #define PIN_LED2    63
 #define PIN_LED3    64
 #define PIN_SW      65
-
+#define LED_BUILTIN PIN_LED0
 // ANALOG IO PINS -------------------------------------------------------------/
 
 /** Analog pins, header CN15. */

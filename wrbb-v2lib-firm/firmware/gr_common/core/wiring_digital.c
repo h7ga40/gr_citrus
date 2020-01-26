@@ -21,7 +21,7 @@
 
   Modified 28 September 2010 by Mark Sproul
 
-  $Id$
+  $Id: wiring.c 248 2007-02-03 15:36:30Z mellis $
 */
 
 #define ARDUINO_MAIN

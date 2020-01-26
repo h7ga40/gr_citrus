@@ -21,7 +21,7 @@
 
   Modified 28 September 2010 by Mark Sproul
 
-  $Id$
+  $Id: wiring.c 248 2007-02-03 15:36:30Z mellis $
 */
 
 #include "wiring_private.h"
@@ -156,16 +156,18 @@ int analogRead(uint8_t pin)
 		S12AD.ADANS1.WORD = 0;
 		adcdr = (volatile uint16_t*)&S12AD.ADDR0 + an0;
 	} else if (pin == PIN_ANINT) {
-		S12AD.ADEXICR.BIT.TSS = 1;
-		S12AD.ADEXICR.BIT.OCS = 0;
+		S12AD.ADEXICR.BIT.TSS = 0;
+		S12AD.ADEXICR.BIT.OCS = 1;
 		S12AD.ADEXICR.BIT.TSSAD = 0;
+        S12AD.ADEXICR.BIT.OCSAD = 1;
 		S12AD.ADANS0.WORD = 0;
 		S12AD.ADANS1.WORD = 0;
 		adcdr = &S12AD.ADOCDR;
 	} else if (pin == PIN_ANTMP) {
-		S12AD.ADEXICR.BIT.TSS = 0;
-		S12AD.ADEXICR.BIT.OCS = 1;
-		S12AD.ADEXICR.BIT.OCSAD = 0;
+		S12AD.ADEXICR.BIT.TSS = 1;
+		S12AD.ADEXICR.BIT.OCS = 0;
+        S12AD.ADEXICR.BIT.TSSAD = 1;
+        S12AD.ADEXICR.BIT.OCSAD = 0;
 		S12AD.ADANS0.WORD = 0;
 		S12AD.ADANS1.WORD = 0;
 		adcdr = &S12AD.ADTSDR;

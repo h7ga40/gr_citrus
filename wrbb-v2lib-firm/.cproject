@@ -76,6 +76,8 @@
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/firmware/gr_common/lib/SoftwareSerial}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/firmware/gr_common/lib/SPI}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/firmware/gr_common/lib/Stepper}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/firmware/gr_common/lib/WiFiEsp}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/firmware/gr_common/lib/WiFiEsp/utility}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/firmware/gr_common/lib/Wire}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/firmware/gr_common/lib/Wire/utility}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/firmware/VL53L0X}&quot;"/>
@@ -203,6 +205,8 @@
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/firmware/gr_common/lib/SoftwareSerial}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/firmware/gr_common/lib/SPI}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/firmware/gr_common/lib/Stepper}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/firmware/gr_common/lib/WiFiEsp}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/firmware/gr_common/lib/WiFiEsp/utility}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/firmware/gr_common/lib/Wire}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/firmware/gr_common/lib/Wire/utility}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/firmware/VL53L0X}&quot;"/>

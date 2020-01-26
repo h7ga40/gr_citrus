@@ -68,7 +68,7 @@ void twi_rx_init(uint8_t channel, int freq){
         SCITABLE(1, &SYSTEM.MSTPCRB.LONG, 30, PIN_IO26, PIN_IO22),   // SCI1
         SCITABLE(2, &SYSTEM.MSTPCRB.LONG, 29, PIN_IO5,  PIN_IO6 ),   // SCI2
         SCITABLE(3, &SYSTEM.MSTPCRB.LONG, 28, PIN_IO29, PIN_IO23),   // SCI3
-        SCITABLE(5, &SYSTEM.MSTPCRB.LONG, 26, PIN_IO33, PIN_IO4),    // SCI5
+        SCITABLE(5, &SYSTEM.MSTPCRB.LONG, 26, PIN_IO33,  PIN_IO4),   // SCI5
         SCITABLE(6, &SYSTEM.MSTPCRB.LONG, 25, PIN_IO7,  PIN_IO8 ),   // SCI6
         SCITABLE(8, &SYSTEM.MSTPCRC.LONG, 27, PIN_IO12, PIN_IO11),   // SCI8
         SCITABLE(0x10, &SYSTEM.MSTPCRB.LONG, 21, PIN_IO31, PIN_IO30),   // RIIC0
@@ -188,6 +188,73 @@ uint8_t twi_rx_read(uint8_t channel, uint8_t last) {
     }
     return b;
 }
+
+uint8_t twi_rx_read_riic(uint8_t* buf, int quantity){
+    int read = 0;
+    while(!RIIC0.ICSR2.BIT.RDRF);
+    if(quantity <= 2){
+        RIIC0.ICMR3.BIT.WAIT = 1;
+        if(quantity == 2){
+            char b = RIIC0.ICDRR; // dummy read
+            while(!RIIC0.ICSR2.BIT.RDRF);
+        }
+        RIIC0.ICMR3.BIT.RDRFS = 1;
+        RIIC0.ICMR3.BIT.ACKWP = 1;
+        RIIC0.ICMR3.BIT.ACKBT = 1;
+        if(quantity == 2){
+            buf[read] = RIIC0.ICDRR;
+            read++;
+        } else {
+            char b = RIIC0.ICDRR; // dummy read
+        }
+        while(!RIIC0.ICSR2.BIT.RDRF);
+        RIIC0.ICSR2.BIT.STOP = 0;
+        RIIC0.ICCR2.BIT.SP = 1;
+        buf[read] = RIIC0.ICDRR;
+        read++;
+        RIIC0.ICMR3.BIT.ACKWP = 1;
+        RIIC0.ICMR3.BIT.ACKBT = 1;
+        RIIC0.ICMR3.BIT.WAIT = 0;
+        while(RIIC0.ICSR2.BIT.STOP == 0);
+        RIIC0.ICMR3.BIT.RDRFS = 0;
+        RIIC0.ICMR3.BIT.ACKWP = 1;
+        RIIC0.ICMR3.BIT.ACKBT = 0;
+        RIIC0.ICSR2.BIT.NACKF = 0;
+        RIIC0.ICSR2.BIT.STOP = 0;
+    } else {
+        char b = RIIC0.ICDRR; // dummy read
+        while(!RIIC0.ICSR2.BIT.RDRF);
+        while((quantity - read) > 2){ // loop until last byte
+            if((quantity - read) == 3){ // in case next byte is 2nd byte
+                RIIC0.ICMR3.BIT.WAIT = 1;
+            }
+            buf[read] = RIIC0.ICDRR;
+            read++;
+            while(!RIIC0.ICSR2.BIT.RDRF);
+        }
+        RIIC0.ICMR3.BIT.RDRFS = 1;
+        RIIC0.ICMR3.BIT.ACKWP = 1;
+        RIIC0.ICMR3.BIT.ACKBT = 1;
+        buf[read] = RIIC0.ICDRR;
+        read++;
+        while(!RIIC0.ICSR2.BIT.RDRF);
+        RIIC0.ICSR2.BIT.STOP = 0;
+        RIIC0.ICCR2.BIT.SP = 1;
+        buf[read] = RIIC0.ICDRR;
+        read++;
+        RIIC0.ICMR3.BIT.ACKWP = 1;
+        RIIC0.ICMR3.BIT.ACKBT = 1;
+        RIIC0.ICMR3.BIT.WAIT = 0;
+        while(RIIC0.ICSR2.BIT.STOP == 0);
+        RIIC0.ICMR3.BIT.RDRFS = 0;
+        RIIC0.ICMR3.BIT.ACKWP = 1;
+        RIIC0.ICMR3.BIT.ACKBT = 0;
+        RIIC0.ICSR2.BIT.NACKF = 0;
+        RIIC0.ICSR2.BIT.STOP = 0;
+    }
+    return read;
+
+}
 //------------------------------------------------------------------------------
 /** Issue a restart condition.
  *
@@ -218,7 +285,7 @@ bool twi_rx_start(uint8_t channel, uint8_t addressRW) {
     if(channel & 0x10){
         while(RIIC0.ICCR2.BIT.BBSY);
         RIIC0.ICCR2.BIT.ST = 1; // issue start condition
-        while(!RIIC0.ICCR2.BIT.MST){}
+        while(!RIIC0.ICSR2.BIT.TDRE);
     } else {
         SCIx_I2C_SCR_BYTE(channel) = 0xB4; // Enable TIE and TEIE
         SCIx_I2C_SIMR3_BYTE(channel) = 0x51; // Generate start condition

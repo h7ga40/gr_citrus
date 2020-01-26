@@ -2043,12 +2043,14 @@ static void HW_Init_Module0(void)
 #endif
 
     /* Enable port1 pins 4 an 6 for USB peripheral function */
-#ifdef GRSAKURA
+#if GRSAKURA
     assignPinFunction(PIN_IO32, 0x11, 0, 0);
     assignPinFunction(PIN_IO34, 0x11, 0, 0);
-#else
+#elif defined(GRCITRUS)
     assignPinFunction(PIN_IO41, 0x11, 0, 0);
     assignPinFunction(PIN_IO42, 0x11, 0, 0);
+#else
+#error "no target"
 #endif
     /* Use the USB0_DPUPE pin for peripheral functions */
     PORT1.PMR.BIT.B4 = 1;
