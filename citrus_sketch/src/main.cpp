@@ -48,9 +48,10 @@ extern "C" void __malloc_lock(struct _reent *r)
 	ER ret;
 	ID tskid;
 
+	// OS起動前に呼ばれるとタスク外なので、ロックせず続行。
 	ret = get_tid(&tskid);
 	if (ret != E_OK)
-		abort();
+		return;
 
 	if (lock_count[tskid] == 0) {
 		ret = wai_sem(MLOCK_SEM);
@@ -65,9 +66,10 @@ extern "C" void __malloc_unlock(struct _reent *r)
 	ER ret;
 	ID tskid;
 
+	// OS起動前に呼ばれるとタスク外なので、ロックせず続行。
 	ret = get_tid(&tskid);
 	if (ret != E_OK)
-		abort();
+		return;
 
 	lock_count[tskid]--;
 	if (lock_count[tskid] == 0) {
