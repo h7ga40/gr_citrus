@@ -22,7 +22,8 @@
 
 void wavmp3p_icu_init(void)
 {
-    IEN(MTU1, TGIA1) = 1;           //割り込み許可
+	//IEN(MTU1, TGIA1) = 1;           //割り込み許可
+	enableInterrupt(VECT_MTU1_TGIA1);
 
 	return;
 }

@@ -519,6 +519,7 @@ clean:
 ifndef KERNEL_LIB
 	rm -f libkernel.a
 endif
+	rm -f lib$(OBJNAME).a
 
 .PHONY: cleankernel
 cleankernel:

@@ -143,7 +143,8 @@ void MsTimer2::set(unsigned long ms, void (*f)()) {
     /* Set TGI1A interrupt priority level to 4*/
     IPR(TPU1,TGI1A) = 0x4;
     /* Enable TGI1A interrupts */
-    IEN(TPU1,TGI1A) = 0x1;
+    /*IEN(TPU1,TGI1A) = 0x1;*/
+	enableInterrupt(VECT_TPU1_TGI1A);
     /* Clear TGI1A interrupt flag */
     IR(TPU1,TGI1A) = 0x0;
     // Enable the module interrupt for the ms timer.
