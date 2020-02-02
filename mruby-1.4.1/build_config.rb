@@ -198,7 +198,7 @@ MRuby::CrossBuild.new('rx630') do |conf|
 
   #conf.cc.defines << %w(MRB_GC_STRESS)
   #conf.cc.defines << %w(MRB_DISABLE_STDIO)
-  #conf.cc.defines << %w(MRB_BYTECODE_DECODE_OPTION)
+  conf.cc.defines << %w(MRB_BYTECODE_DECODE_OPTION)
   conf.cc.defines << %w(MRB_USE_PRESET_SYMBOLS)
   conf.cc.defines << %w(MRB_USE_ETEXT_EDATA)
 
