@@ -30,6 +30,7 @@ do { \
   __asm __volatile("clrpsw i\n"); \
 } while (0)
 
+#if 0
 #define isNoInterrupts() \
 ({ \
   bool ret; \
@@ -43,6 +44,7 @@ do { \
   ); \
   ret; \
 })
+#endif
 
 #define pushi() \
 { \

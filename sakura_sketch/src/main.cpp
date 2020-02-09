@@ -56,6 +56,56 @@ extern "C" void disableInterrupt(int intno)
 	dis_int(intno);
 }
 
+
+int arduino_lock[TNUM_TSKID];
+
+extern "C" int isNoInterrupts()
+{
+	ER ret;
+	ID tskid;
+
+	// OS起動前に呼ばれるとタスク外なので、ロックせず続行。
+	ret = get_tid(&tskid);
+	if (ret != E_OK)
+		abort();
+
+	return arduino_lock[tskid];
+}
+
+extern "C" void interrupts()
+{
+	ER ret;
+	ID tskid;
+
+	ret = get_tid(&tskid);
+	if (ret != E_OK)
+		abort();
+
+	arduino_lock[tskid]--;
+	if (arduino_lock[tskid] == 0) {
+		ER ret = sig_sem(ARDUINO_SEM);
+		if (ret != E_OK)
+			abort();
+	}
+}
+
+extern "C" void noInterrupts()
+{
+	ER ret;
+	ID tskid;
+
+	ret = get_tid(&tskid);
+	if (ret != E_OK)
+		abort();
+
+	if (arduino_lock[tskid] == 0) {
+		ret = wai_sem(ARDUINO_SEM);
+		if (ret != E_OK)
+			abort();
+	}
+	arduino_lock[tskid]++;
+}
+
 int lock_count[TNUM_TSKID];
 
 extern "C" void __malloc_lock(struct _reent *r)
