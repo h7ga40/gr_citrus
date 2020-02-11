@@ -23,7 +23,7 @@ extern "C" {
 #endif
 
 #if !defined(__ATTRIBUTE_INTERRUPT)
-#define __ATTRIBUTE_INTERRUPT __attribute__ ((interrupt, weak))
+#define __ATTRIBUTE_INTERRUPT __attribute__ ((weak))
 #endif
 
 // Exception(Supervisor Instruction)
