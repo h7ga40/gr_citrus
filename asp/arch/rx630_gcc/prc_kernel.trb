@@ -241,18 +241,19 @@ __kernel_#{$cfgData[:DEF_EXC][excnoVal][:exchdr]}_#{excnoVal}_entry:
 	mov.l	\#_#{$cfgData[:DEF_EXC][excnoVal][:exchdr]}, r2
 	bra.a	_kernel_exception
 EOS
-    $kernelCfgAsm.add
-  end
-end
-
-$kernelCfgAsm.add(<<EOS)
-	.global	__kernel_default_exc_handler_entry
-__kernel_default_exc_handler_entry:
+  elsif excnoVal != 0
+    $kernelCfgAsm.add(<<EOS)
+	.global	__kernel_default_exc_#{excnoVal}_handler_entry
+__kernel_default_exc_#{excnoVal}_handler_entry:
 	pushm	r1-r5
-	mov.l	\#0FFFFFFFFH, r1
+	mov.l	\##{excnoVal}, r1
 	mov.l	\#__kernel_default_exc_handler, r2
 	bra.a	_kernel_exception
 EOS
+  end
+  $kernelCfgAsm.add
+end
+
 $kernelCfgAsm.add
 
 $kernelCfgAsm.append(<<EOS)
@@ -307,7 +308,7 @@ EOS
   if $cfgData[:DEF_EXC].has_key?(excnoVal)
     $kernelCfgAsm.append("	.word	 __kernel_#{$cfgData[:DEF_EXC][excnoVal][:exchdr]}_#{excnoVal}_entry")
   elsif $EXCNO_VALID.include?(excnoVal)
-    $kernelCfgAsm.append("	.word	 __kernel_default_exc_handler_entry")
+    $kernelCfgAsm.append("	.word	 __kernel_default_exc_#{excnoVal}_handler_entry")
   else
     $kernelCfgAsm.append("	.word	 0")
   end
