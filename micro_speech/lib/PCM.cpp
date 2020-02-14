@@ -1,7 +1,7 @@
 #include "PCM.h"
 #include "iodefine.h"
 
-int16_t __attribute__((aligned(512))) g_pcm_buffer[DEFAULT_PCM_BUFFER_SIZE / sizeof(int16_t)];
+uint16_t __attribute__((aligned(512))) g_pcm_buffer[DEFAULT_PCM_BUFFER_SIZE / sizeof(uint16_t)];
 
 PCMClass::PCMClass(int inputPin, int dmaCh) :
 	_inputPin(inputPin),
@@ -83,8 +83,8 @@ int PCMClass::begin(int channels, long sampleRate)
 	S12AD.ADCSR.BIT.ADCS = 0b0;
 	/* 自動クリアを禁止 */
 	S12AD.ADCER.BIT.ACE = 0b0;
-	/* A/Dデータレジスタのフォーマットを左詰めにする */
-	S12AD.ADCER.BIT.ADRFMT = 0b1;
+	/* A/Dデータレジスタのフォーマットを右詰めにする */
+	S12AD.ADCER.BIT.ADRFMT = 0b0;
 	/* TMR0.TCORAとTMR0.TCNT */
 	S12AD.ADSTRGR.BIT.ADSTRS = 0b1001;
 
@@ -178,26 +178,26 @@ void PCMClass::end()
 	DMAC.DMAST.BIT.DMST = 0;
 }
 
-int PCMClass::available()
-{
-	disableInterrupt(_intno);
-
-	size_t avail = _doubleBuffer.available();
-
-	enableInterrupt(_intno);
-
-	return avail;
-}
-
 int PCMClass::read(void *buffer, size_t size)
 {
-	disableInterrupt(_intno);
+	//disableInterrupt(_intno);
 
-	int read = _doubleBuffer.read(buffer, size);
+	int temp;
+	int16_t *pos = (int16_t *)buffer, *end = (int16_t *)((intptr_t)buffer + size);
+	uint16_t *src = g_pcm_buffer;
+	for (; pos < end; pos++, src++) {
+		//temp = _gain * (*src - 2048); 5V
+		temp = _gain * (*src - 1351); // 3.3V
+		if (temp > 32767)
+			temp = 32767;
+		else if (temp < -32768)
+			temp = -32768;
+		*pos = temp;
+	}
 
-	enableInterrupt(_intno);
+	//enableInterrupt(_intno);
 
-	return read;
+	return (intptr_t)pos - (intptr_t)buffer;
 }
 
 void PCMClass::onReceive(void(*function)(void))
@@ -207,18 +207,12 @@ void PCMClass::onReceive(void(*function)(void))
 
 void PCMClass::setGain(int gain)
 {
-}
-
-void PCMClass::setBufferSize(int bufferSize)
-{
-	_doubleBuffer.setSize(bufferSize);
+	_gain = gain;
 }
 
 void PCMClass::IrqHandler()
 {
 	disableInterrupt(_intno);
-
-	_doubleBuffer.write(g_pcm_buffer, sizeof(g_pcm_buffer));
 
 	// call receive callback if provided
 	if (_onReceive) {

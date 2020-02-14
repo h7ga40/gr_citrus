@@ -2,7 +2,7 @@
 #define _PCM_H_INCLUDED
 
 #include <Arduino.h>
-#include "utility/PCMDoubleBuffer.h"
+#define DEFAULT_PCM_BUFFER_SIZE 512
 
 class PCMClass
 {
@@ -13,13 +13,11 @@ public:
 	int begin(int channels, long sampleRate);
 	void end();
 
-	virtual int available();
-	virtual int read(void* buffer, size_t size);
+	int read(void* buffer, size_t size);
 
 	void onReceive(void(*)(void));
 
 	void setGain(int gain);
-	void setBufferSize(int bufferSize);
 
 	// private:
 	void IrqHandler();
@@ -30,9 +28,8 @@ private:
 	int _intno;
 	volatile struct st_dmac1 *_DMACm;
 
+	int _gain;
 	int _channels;
-
-	PCMDoubleBuffer _doubleBuffer;
 
 	void (*_onReceive)(void);
 };

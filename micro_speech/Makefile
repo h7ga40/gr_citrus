@@ -47,7 +47,6 @@ PROJECT := micro_speech
 # Objects and Paths
 
 OBJECTS += lib/PCM.o
-OBJECTS += lib/utility/PCMDoubleBuffer.o
 OBJECTS += src/arduino/audio_provider.o
 OBJECTS += src/arduino/command_responder.o
 OBJECTS += src/arduino/main.o
