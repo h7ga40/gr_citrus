@@ -17,6 +17,15 @@ GR-CITRUSよりもメモリ容量が少ないGR-SAKURAでも動作し、Ethernet
 |tools|ビルド用ツール|フォルダ|
 |citrus_sketch|GR-CITRUS向けメイン|./Debug/Makefileでビルド|
 |sakura_sketch|GR-SAKURA向けメイン|./Debug/Makefileでビルド|
+|hello_world|TensorFlow のサンプル Hello World|統合環境でビルド|
+|micro_speech|TensorFlow のサンプル Micro speech|統合環境でビルド|
+|magic_wand|TensorFlow のサンプル Magic wand|統合環境でビルド|
+
+## TensorFlow Lite for Microcontrollers
+
+- [Hello World](hello_world) - TensorFlowで用意されている[サンプル](https://github.com/tensorflow/tensorflow/tree/master/tensorflow/lite/micro/examples/hello_world)で、学習したサイン関数の出力でLEDを点滅させるプログラム。
+- [Micro speech](micro_speech) - TensorFlowで用意されている[サンプル](https://github.com/tensorflow/tensorflow/tree/master/tensorflow/lite/micro/examples/micro_speech)で、音声認識のプログラム。[SPU0414HR5H-SB使用した超小型シリコンマイクモジュール](http://akizukidenshi.com/catalog/g/gM-08940)をGR-SAKURAのアナログピン0（Pin14）に接続して確認し、"yes"と"no"が判定できる。
+- [Magic wand](magic_wand) - TensorFlowで用意されている[サンプル](https://github.com/tensorflow/tensorflow/tree/master/tensorflow/lite/micro/examples/magic_wand)で、加速度センサーでジェスチャーを認識するプログラム。[LSM9DS1 9軸慣性計測ユニット ピッチ変換済みモジュール](https://www.switch-science.com/catalog/2734)をGR-SAKURAのPin24と26のI2Cに接続してデバイスが動作することを確認。認識は時々するが思い通りに認識しない。ジェスチャー仕方がよくわからない。
 
 ## mrubyの省RAM化対策について
 
