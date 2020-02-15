@@ -479,11 +479,8 @@ void INT_Excep_POE_OEI1(void){ }
 // POE OEI2
 void INT_Excep_POE_OEI2(void){ }
 
-/**
- * MOD BW 12/11/13 : Moved to Servo.cpp.
- */
 // TMR0_CMIA0
-//void INT_Excep_TMR0_CMIA0(void){ }
+void INT_Excep_TMR0_CMIA0(void){ }
 
 // TMR0_CMIB0
 void INT_Excep_TMR0_CMIB0(void){ }
