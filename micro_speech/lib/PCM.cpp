@@ -95,9 +95,10 @@ int PCMClass::begin(int channels, long sampleRate)
 	TMR1.TCCR.BIT.CSS = 0b01;
 	TMR1.TCCR.BIT.CKS = 0b010;
 	/* PCLK(48MHz)/8/16kHz */
-	TMR0.TCORA = 375;
+	TMR01.TCORA = 375;
 	/* コンペアマッチAによりクリア */
 	TMR0.TCR.BIT.CCLR = 0b01;
+
 	/* IRQ端子機能を設定するが、許可はさせない */
 	ICU.IPR[intno].BIT.IPR = 0x1;
 
