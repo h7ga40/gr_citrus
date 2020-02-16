@@ -170,7 +170,7 @@ void PCMClass::end()
 	disableInterrupt(VECT_S12AD_S12ADI0);
 
 	/* コンペアマッチAによるA/D変換開始要求を禁止 */
-	((struct st_tmr0_tcsr *)&TMR0.TCSR)->BIT.ADTE = 0b1;
+	((struct st_tmr0_tcsr *)&TMR0.TCSR)->BIT.ADTE = 0b0;
 
 	/* AD変換停止 */
 	S12AD.ADCSR.BIT.ADST = 0;
